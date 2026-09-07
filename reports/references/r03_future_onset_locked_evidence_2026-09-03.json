@@ -1,0 +1,46 @@
+{
+  "schema_version": "r03_future_onset_locked_evidence_v1",
+  "locked_at": "2026-09-03",
+  "claim": "Routine two-minute ADS-B history contains cross-date predictive information about newly arising future proximity interactions; observed pairwise geometry adds stable value beyond eight aggregate current-state features and simple traffic-exposure baselines.",
+  "claim_boundary": "ADS-B geometric interaction proxy with KBTP date confirmation and short-horizon zero-shot KAGC transfer; not controller workload, official loss of separation, or accident risk.",
+  "selected_scheme": {
+    "features": "B: eight aggregate current-state features plus five observed pairwise-geometry features",
+    "count_models_by_horizon": {"30": "ridge_log1p", "120": "plain_poisson", "300": "plain_poisson"},
+    "probability_model": "logistic_ridge",
+    "history_seconds": 120,
+    "horizons_seconds": [30, 120, 300]
+  },
+  "confirmation": {
+    "scene_count": 2605,
+    "independent_source_groups": 8,
+    "passed_horizons": [30, 120, 300],
+    "route_passed": true,
+    "B_vs_A_day_wins": {"30": 7, "120": 5, "300": 6},
+    "logistic_vs_prevalence_day_wins": {"30": 7, "120": 8, "300": 8},
+    "pooled_ECE": {"30": 0.026697730104569616, "120": 0.05022771666823434, "300": 0.06347473151361001}
+  },
+  "KAGC_external_validation": {
+    "scene_count": 1268,
+    "independent_source_groups": 10,
+    "site_tuning_performed": false,
+    "passed_horizons": [30, 120],
+    "route_passed": true,
+    "B_vs_pair_exposure_group_wins": {"30": 9, "120": 8, "300": 7},
+    "logistic_vs_prevalence_group_wins": {"30": 6, "120": 6, "300": 7},
+    "interpretation": "The frozen complete scheme transfers at 30 and 120 seconds. Incremental B-versus-A transfer is supported only at 120 seconds, so cross-airport claims concern the complete short-horizon scheme rather than universal pairwise-feature superiority."
+  },
+  "artifacts": {
+    "configs/r03_future_onset_protocol.json": "11c7c0201f8ceba5942f105a2b1c07c87b2fd5ec9f3d874274559684e4e5f674",
+    "configs/r03_future_onset_confirmation_dates.json": "afe78e0f6eef63df019ebc39ad705bf8b3802e7a9656dc69ddf8d9b415aa519d",
+    "configs/r03_future_onset_confirmation_protocol.json": "f90fec36301780ccf5b6075f8ac259d37b635f59eb961002724828db0f9c8e37",
+    "reports/references/r03_future_onset_baselines_2026-09-03.json": "b38c53cbd6f0ebe5fdc2f719be4271907eb7ce596242e3a0423d54248446882e",
+    "reports/references/r03_future_event_reconstruction_audit_2026-09-03.json": "fb3bbaba3487b193606e45a97dda7ca3cd63dabee7ef52ce9bc5aa3b5c0de688",
+    "reports/references/r03_future_onset_threshold_sensitivity_2026-09-03.json": "b3a3ec54047aecfde71662ad24f9e19fb793948411920a5a80f7e0ea309020ee",
+    "reports/references/r03_future_onset_feature_ladder_2026-09-03.json": "36be49f4b0ad9441d94c28d873739c8a0fddf5b1ad876b654b4454528c08d808",
+    "reports/references/r03_feature_ladder_stability_decision_2026-09-03.json": "f5c892d380d105c114bd78e0dfd8e2cec9e385380f29068e6e3d17cf597fa70e",
+    "reports/references/r03_future_onset_confirmation_2026-09-03.json": "b22e7c24de31431f902fd89878a1597771679a309d6a37a61ce9f5a930436060",
+    "reports/references/r03_kagc_external_validation_2026-09-03.json": "5b5721ac54e79781ddc381b6d08d95881d20e8efaf0f0b0871a82faa2c530d42"
+  },
+  "manuscript_revision_allowed": true,
+  "next_required_task": "post-T13 manuscript revision"
+}

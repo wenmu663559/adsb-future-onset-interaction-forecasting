@@ -1,0 +1,96 @@
+{
+  "schema_version": "r03_future_onset_protocol_v1",
+  "frozen_at": "2026-09-03",
+  "research_question": "Using only the preceding two minutes of routine ADS-B state, which causal current-state information stably predicts newly arising geometric proximity interactions over the next 30, 120, and 300 seconds across unseen source days and a second airport?",
+  "claim_boundary": "Prediction of an ADS-B-derived geometric interaction proxy; not controller workload, an official loss of separation, accident probability, or universal airspace complexity.",
+  "history_seconds": 120,
+  "sampling_step_seconds": 10,
+  "stale_seconds_primary": 30,
+  "horizons_seconds": [30, 120, 300],
+  "independent_evaluation_unit": "source_day",
+  "primary_target": {
+    "target_id": "future_onset_proximity_event_count",
+    "horizontal_nm": 5,
+    "vertical_ft": 1000,
+    "exclude_pairs_active_at_cutoff": true,
+    "episode_rule": "Count one onset when a pair is inactive at cutoff and enters the joint horizontal/vertical proximity state in (cutoff, cutoff+horizon]; after clearing, a later re-entry is a new onset.",
+    "future_observation_rule": "Both aircraft must have post-cutoff reports no older than the frozen staleness bound at a future grid time."
+  },
+  "secondary_targets": [
+    "original_persistence_sensitive_proximity_event_count",
+    "future_minimum_horizontal_separation_m",
+    "future_minimum_vertical_separation_m"
+  ],
+  "existing_eight_features": [
+    "current_aircraft_count",
+    "current_altitude_mean_m",
+    "current_altitude_std_m",
+    "current_speed_mean_mps",
+    "current_speed_std_mps",
+    "current_altitude_range_m",
+    "current_min_pair_distance_m",
+    "current_low_altitude_fraction"
+  ],
+  "feature_ladder": {
+    "A": "existing_eight_current_state_features",
+    "B": "A_plus_observed_pairwise_geometry",
+    "C": "B_plus_constant_velocity_CPA_features"
+  },
+  "strong_baselines": [
+    "training_prevalence",
+    "cutoff_active_pair_persistence",
+    "current_aircraft_count",
+    "current_pair_opportunity",
+    "constant_velocity_CPA"
+  ],
+  "point_models": ["ridge_log1p", "hist_gradient_boosting_poisson"],
+  "probability_models": ["prevalence", "logistic_ridge"],
+  "count_models": ["plain_poisson"],
+  "model_policy": "Low-capacity models only, fixed random seed 1701, identical rows/splits/features within each comparison, and training-day-only preprocessing.",
+  "metrics": {
+    "point_primary": ["equal_day_count_MAE", "normalized_MAE"],
+    "point_secondary": ["count_RMSE", "mean_Poisson_deviance"],
+    "probability_primary": ["equal_day_Brier", "Bernoulli_log_loss"],
+    "calibration": ["ECE_10_bins", "calibration_intercept", "calibration_slope"],
+    "uncertainty": "paired source-day bootstrap and exact two-sided sign test"
+  },
+  "threshold_sensitivity": {
+    "design": "one_factor_at_a_time",
+    "horizontal_nm": [3, 5, 7],
+    "vertical_ft": [500, 1000, 1500],
+    "risk_quantiles": [0.70, 0.75, 0.80, 0.90],
+    "selection_from_outcomes": false
+  },
+  "development_dataset": {
+    "scene_path": "data/processed_research/kbtp-independent-expanded/pilot_scenes.jsonl",
+    "scene_sha256": "e2536152476e0dec69cc95515586fa1474cc407c7401cd39330553234e2bace4",
+    "airport_id": "KBTP",
+    "train_dates": ["2021-03-22", "2022-06-08", "2022-06-13", "2022-06-17", "2022-06-23", "2022-06-24", "2022-06-30", "2022-08-19", "2022-09-01", "2022-10-06"],
+    "validation_dates": ["2020-10-22", "2021-04-05", "2022-06-20"],
+    "retrospective_test_dates": ["2022-06-14", "2022-06-21", "2022-07-25", "2022-09-20"]
+  },
+  "confirmation": {
+    "airport_id": "KBTP",
+    "date_config_to_freeze_at_T10": "configs/r03_future_onset_confirmation_dates.json",
+    "selection_rule": "Mechanically select unused dates by predeclared year/season strata and authenticated row count without reading scene targets or model outputs.",
+    "run_count": 1,
+    "allow_retuning": false
+  },
+  "external_validation": {
+    "airport_id": "KAGC",
+    "freeze_KBTP_scheme_before_run": true,
+    "allow_site_tuning": false
+  },
+  "stopping_rules": [
+    "If future-onset performance loses useful signal after persistence and exposure controls, narrow the claim to persistence/nowcasting and do not imply prospective conflict emergence prediction.",
+    "If neither B nor C improves on A at at least two of three horizons under equal-day primary metrics, stop representation expansion and do not add a GNN or Transformer.",
+    "Do not retune after the one-shot KBTP confirmation or add another KBTP confirmation batch.",
+    "If the frozen KBTP scheme needs KAGC-specific tuning or materially reverses, retain a KBTP-only claim."
+  ],
+  "prohibited_repeats": [
+    "masked_temporal_AB_screen",
+    "full_threshold_grid_search",
+    "result_driven_date_selection",
+    "confirmation_set_hyperparameter_search"
+  ]
+}

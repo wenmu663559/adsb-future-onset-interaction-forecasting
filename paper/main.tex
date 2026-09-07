@@ -1,0 +1,267 @@
+\documentclass[conference]{IEEEtran}
+% User-supplied IEEE conference template, version 6/27/2024.
+% No funding footnote: IEEEoverridecommandlockouts is not needed.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+% Content helpers only; IEEE page and text geometry remain unchanged.
+\usepackage{booktabs}
+\usepackage{url}
+
+\title{Forecasting Future-Onset Proximity Interactions from ADS-B: Date Confirmation and Zero-Shot Airport Transfer}
+
+\author{\IEEEauthorblockN{Junwen Li}
+\IEEEauthorblockA{Sichuan University\\
+Chengdu, China}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Public Automatic Dependent Surveillance--Broadcast (ADS-B) data describe terminal traffic but rarely provide synchronized workload or operational-risk labels. We study how routine surveillance can support short-horizon screening of emerging aircraft interactions in this label-scarce setting. We define a future-onset proximity target that distinguishes new interaction episodes from persistence at the forecast cutoff, and predict its count and exceedance probability from a causal ADS-B history buffer. A controlled representation ladder tests the incremental information in additional observed pair summaries and constant-velocity projection beyond a compact base state, using matched scenes and low-capacity models. The evaluation separates development, held-out source-group confirmation, and frozen transfer between two airports. Observed geometry improves average within-airport prediction, with the clearest count evidence at shorter horizons; transfer results show that usefulness depends on the horizon and reference forecast. The contribution is a reproducible interaction-onset formulation and an interpretable evaluation framework for identifying which surveillance information supports anticipatory screening. The output describes geometric interaction demand, not validated controller workload or accident risk.
+\end{abstract}
+
+\begin{IEEEkeywords}
+ADS-B, airspace complexity, proximity interaction, short-horizon forecasting, date-blocked validation, airport transfer
+\end{IEEEkeywords}
+
+\section{Introduction}
+
+Terminal traffic complexity is relational. Two scenes with equal aircraft count can differ substantially in pair separation, convergence, vertical organization, and the number of interactions likely to emerge seconds later. Density-only descriptions therefore miss information that graph, dynamical, and task-based approaches are designed to capture \cite{isufaj2021spatiotemporal,pang2023workload,li2024mastgnn,perezsanz2024complexityreview}. The practical obstacle is that public surveillance archives rarely include synchronized controller ratings, clearances, weather decisions, or expert complexity labels.
+
+Automatic Dependent Surveillance--Broadcast (ADS-B) supports a useful intermediate problem. It provides time-stamped aircraft states from which a causal geometric interaction indicator can be reconstructed. Such an indicator does not replace operational workload or safety assessment, but it can support reproducible traffic screening, comparative research, and the design of later human-validated systems. TartanAviation and its TrajAir predecessor make this setting particularly suitable for multi-aircraft terminal studies \cite{patrikar2025tartanaviation,patrikar2022trajair}.
+
+A subtle target-definition issue arises in short-horizon forecasting. If the future event counter starts with an empty active-pair set, a pair that is already close at the first future sample is labeled as a new event. A model can then appear predictive by recognizing present persistence rather than anticipating a newly arising interaction. This distinction is most consequential at short horizons and has direct implications for whether an apparent result is forecasting or nowcasting.
+
+We ask three questions. First, after distinguishing onset from pairs persisting at the forecast cutoff, does the preceding two-minute ADS-B history retain predictive information about future interactions? Second, do additional explicit pair summaries improve on a compact base state that already includes minimum horizontal pair distance, and do closest-point-of-approach (CPA) features add enough stable value to justify greater complexity? Third, can a scheme selected at KBTP transfer without tuning to a second airport with lower interaction prevalence?
+
+The study makes four contributions:
+\begin{enumerate}
+    \item a future-onset proximity target that separates new interaction episodes from cutoff-time persistence;
+    \item a controlled representation ladder that attributes incremental gains to the base state, additional observed pair summaries, or CPA projection under identical dates and models;
+    \item one-shot confirmation on eight new KBTP source groups with complete-group rather than overlapping-scene evidence; and
+    \item zero-shot external validation on ten unused KAGC source groups using the frozen KBTP feature and model scheme.
+\end{enumerate}
+
+Together, these contributions turn a readily available surveillance stream into an interpretable short-horizon research endpoint, while testing which relational information adds predictive value. The matched comparisons and separated evaluation groups help distinguish useful forecasting information from persistence, overlapping-scene fit, and site-specific tuning.
+
+\subsection{Related Work}
+
+\subsubsection{ADS-B Terminal Prediction}
+
+TartanAviation provides raw and processed terminal ADS-B trajectories and supporting modalities \cite{patrikar2025tartanaviation}. TrajAir established a multi-aircraft trajectory-prediction problem at KBTP and documented the non-towered operational setting \cite{patrikar2022trajair}. Aircraft representation learning has subsequently been studied across airports and downstream tasks \cite{phisannupawong2025atscc,liu2025flight2vec}. ASCENT predicts multiple three-dimensional maneuver hypotheses with a lightweight Transformer on TrajAir and TartanAviation \cite{prutsch2026ascent}. Those studies focus on trajectories or general representations; our endpoint is a count and probability of newly arising pair interactions over operationally short horizons. A trajectory predictor could later supply intent-aware projected geometry, but its trajectory-error objective is not directly comparable with our interaction-count scores.
+
+\subsubsection{Complexity and Pair Interactions}
+
+Air-traffic complexity spans density, dynamic interactions, airspace structure, and human task demand \cite{perezsanz2024complexityreview}. Graph indicators represent evolving aircraft dependencies \cite{isufaj2021spatiotemporal}, while supervised studies connect traffic to controller workload, future clearances, expert refinement, or task-derived labels \cite{pang2023workload,li2024mastgnn,henderson2025taskdemand,jurinic2026taskbased}. Relevant-aircraft-pair forecasting likewise shows the value of relational traffic structure \cite{henderson2026relevantpairs}. Our geometric endpoint is weaker than these operational labels but can be reconstructed consistently from public ADS-B alone.
+
+\subsubsection{Probability and Evaluation}
+
+Conflict-detection research distinguishes nominal trajectory projection from uncertainty-aware prediction \cite{kuchar2000review}. Paielli and Erzberger explicitly model trajectory-error covariance when estimating conflict probability \cite{paielli1996conflict}. Our threshold-exceedance probability instead concerns an empirical ADS-B episode count; it is not a collision probability obtained from a trajectory-error model. Cross-airport forecasting is also studied by Amelia for airport surface movements \cite{navarro2025amelia}, but its surface trajectories and endpoint differ from our terminal interaction target, so performance numbers are not directly comparable.
+
+Probabilistic complexity studies propagate uncertainty in weather and traffic scenarios \cite{samardzic2024probabilistic}. Count distributions also matter when conditional variance exceeds the mean: the negative-binomial member of the Poisson--Tweedie family represents overdispersion and yields a complete probability mass function rather than only a point estimate \cite{bonat2016extended}. We use probability prediction for a different purpose: to test whether the observed state carries information beyond unconditional event prevalence. Brier score, Bernoulli log loss, and calibration diagnostics follow established probabilistic-forecast principles \cite{gneiting2007calibration,gneiting2007proper}. Because adjacent 10-s scenes overlap, complete source groups rather than scene rows are the evidence units.
+
+\section{Data and Problem Formulation}
+
+\subsection{ADS-B Sources and Terminal Scenes}
+
+We use raw TartanAviation ADS-B reports for KBTP and KAGC \cite{patrikar2025tartanaviation}. Raw files remain read-only. Records without a parseable aircraft identifier, timestamp, or required finite state are excluded, and duplicate natural keys are resolved deterministically rather than averaged.
+
+For each airport, the terminal region is a 10-NM-radius cylinder centered on the airport, from 150~m below to 1,524~m above field elevation. Within each selected source, we choose the two-hour interval beginning at the 10-min bin with the highest distinct-aircraft activity. Scenes are sampled every 10~s and require at least three active aircraft. The latest report for each aircraft is carried forward for at most 30~s. The two-minute history buffer contains twelve causal snapshots at 10-s spacing, from $t-110$~s through $t$. The models summarize this buffer rather than learn a full temporal sequence: current state and approximately 30-s changes supply the predictive variables.
+
+A post-review input check retained only the final six snapshots and reproduced all A/B/C feature values exactly on the frozen KBTP and KAGC scenes. Thus the implemented ladder needs less than 60~s of usable history; this is an input-equivalence check, not a model-performance ablation between 60- and 120-s histories.
+
+Development contains 6,008 KBTP scenes from 17 UTC dates: 3,318 training scenes on ten dates, 1,247 validation scenes on three dates, and 1,443 retrospective test scenes on four dates. After the complete method was frozen, eight previously unused KBTP source groups were selected mechanically across predefined temporal strata using authenticated row count only. They yield 2,605 confirmation scenes. For external validation, one unused high-volume KAGC source was selected from each represented month from November 2021 through August 2022, yielding 1,268 scenes in ten held-out source groups. A source crossing a UTC boundary remains one evidence group.
+
+\subsection{Future-Onset Target}
+
+Let $P(\tau)$ be the set of aircraft pairs observed at future grid time $\tau$ with horizontal separation below $d_H=5$~NM and vertical separation below $d_V=1{,}000$~ft. Let $P(t)$ be the corresponding set at the forecast cutoff. For grid times $\tau_k=t+10k$~s, the future-onset count is
+\begin{equation}
+Y_h(t)=\sum_{k=1}^{h/10}\left|P(\tau_k)\setminus P(\tau_{k-1})\right|,
+\quad P(\tau_0)=P(t),
+\end{equation}
+for $h\in\{30,120,300\}$~s. Thus, a pair active at $t$ is not counted merely because it remains active at the first future grid. If it clears and later re-enters, the re-entry is counted: $Y_h$ counts episodes, not distinct aircraft pairs. Future pairs use only post-cutoff reports within the same 30-s staleness bound. Report disappearance and reappearance can also change set membership, so this is an observed geometric onset measure, not an error-free physical event record. Target horizontal distances use a spherical haversine calculation with radius 6,371,008.8~m; altitude is converted from feet to metres. Unit conversion does not harmonize different physical altitude references in the source reports.
+
+This correction materially changes the task. Across the 6,008 development scenes, the previous window-initialized counter yields 18,615, 27,984, and 44,743 episodes at 30, 120, and 300~s. The future-onset definition yields 3,362, 12,731, and 29,490. The difference is largest at 30~s, where persistence would otherwise dominate.
+
+The interaction-count exceedance event is defined by a training-only 75th-percentile threshold using the higher-quantile rule. The resulting thresholds are $Y_{30}\geq1$, $Y_{120}\geq2$, and $Y_{300}\geq5$. These thresholds define forecast events; they are not regulatory separation minima or safety-risk levels.
+
+\section{Representations and Models}
+
+\subsection{Controlled Feature Ladder}
+
+Representation A contains the eight aggregate variables used by the initial system: aircraft count; altitude mean, standard deviation, and range; speed mean and standard deviation; minimum horizontal pair distance; and low-altitude aircraft fraction.
+
+Representation B adds five observed relational variables available at cutoff: total available pairs, active 5-NM/1,000-ft pairs, closing pairs within 10~NM, mean pairwise horizontal distance, and minimum pairwise vertical separation. Representation C adds nine constant-velocity CPA variables: projected close-pair count and minimum projected horizontal and vertical separation for 30, 120, and 300~s. All features are derived from history at or before $t$; changing target values leaves every feature unchanged.
+
+Feature geometry uses local coordinates $x=111320(\lambda-\lambda_0)\cos(\pi\phi_0/180)$, $y=111320(\phi-\phi_0)$ in metres for longitude and latitude in degrees, and reported altitude for $z$; $(\lambda_0,\phi_0)$ is the airport centre. The low-altitude fraction uses absolute reported altitude below 3,000~m, not height above terrain. For each aircraft, the prior state is the available observation 20--45~s earlier that is closest to a 30-s lag. A closing pair has smaller current than prior horizontal separation and current distance below 10~NM; both prior states are required, and equal distances are not counted as closing.
+
+For relative position $r$ and velocity $v$ estimated using each aircraft's actual observation interval, horizontal CPA time is
+\begin{equation}
+s_h=\operatorname{clip}\!\left(-\frac{r_{xy}^{\mathsf T}v_{xy}}{\|v_{xy}\|^2},0,h\right).
+\end{equation}
+It is set to zero when $\|v_{xy}\|^2\leq10^{-9}$. C evaluates horizontal distance and absolute vertical separation at this same instant. Its close-pair count is not a forecast of all onset episodes over the interval. Pairs without both prior states are omitted from CPA calculations; empty distance minima use a 100,000-m sentinel. Consequently, the C comparison tests this particular constant-velocity construction, not the general value of trajectory intent or uncertainty-aware prediction.
+
+The ladder is evaluated with identical scene IDs, split bytes, targets, and training-only preprocessing. Validation performance selects one representation globally rather than a different representation for each horizon. B improves validation date-equal count MAE and Logistic Brier over A at all three horizons. C adds small gains at 30 and 120~s but reverses at 300~s and provides no stable probability improvement over B. We therefore freeze the more parsimonious B and stop representation expansion; no graph neural network or Transformer is introduced.
+
+\subsection{Matched Low-Capacity Models}
+
+For point counts, standardized Ridge predicts $\log(1+Y_h)$ with fixed regularization 1.0. A Poisson regressor with log link and no penalty provides a count model, while histogram gradient boosting with Poisson loss is retained as a fixed nonlinear comparator. These model families and hyperparameters are prespecified candidates; validation selects Ridge at 30~s and Poisson at 120 and 300~s without implying a post-hoc mechanistic explanation for the horizon-specific choice. Interaction-count exceedance probability is predicted by standardized $L_2$-regularized Logistic regression with $C=1$. All models use seed 1701 where applicable.
+
+A post-review distributional comparison retains the frozen B inputs and corrected target but fits an unpenalized NB2 regression on KBTP training scenes. With conditional mean $\mu_i=\exp(\beta_0+x_i^{\mathsf T}\beta)$, its variance is $\mu_i+\alpha\mu_i^2$. Coefficients and positive dispersion $\alpha$ are estimated jointly by maximum likelihood after training-only standardization. The corresponding exceedance probability is $\Pr(Y_i\geq q)=1-F_{\mathrm{NB2}}(q-1;\mu_i,\alpha)$. An unpenalized Poisson regression with the same B inputs is the count-distribution reference; the existing Logistic model is the matched-input exceedance reference. This comparison is supplementary and cannot alter the frozen A/B/C selection or the original confirmation and transfer routes.
+
+Strong references are deliberately simple. The count references are a training mean, the cutoff active-pair count, a training-only event rate multiplied by current pair opportunity, and a constant-velocity CPA pair count. The probability reference is training prevalence. These references test whether learned predictions exceed persistence and traffic exposure rather than merely fitting scene frequency.
+
+Specifically, with $m_i=n_i(n_i-1)/2$ available pairs, the exposure reference is $\widehat Y_{ih}=m_i\widehat\lambda_h$, where $\widehat\lambda_h=\sum_{j\in\mathrm{train}}Y_{jh}/\sum_{j\in\mathrm{train}}m_j$. The constant probability reference is the training fraction satisfying the fixed horizon-specific threshold. Both are estimated on KBTP training scenes and remain unchanged in the original KAGC transfer evaluation.
+
+\subsection{Frozen Evaluation}
+
+MAE is the primary count metric. We also record normalized MAE, RMSE, and mean Poisson deviance. Exceedance-probability predictions use Brier score, Bernoulli log loss, and 10-bin expected calibration error (ECE). Metrics are first computed within each source group and then averaged with equal group weight. A one-shot KBTP horizon passes only if B improves count MAE over both the pair-opportunity reference and A, improves Brier over prevalence, and wins at least five of eight groups in each comparison. The route requires two successful horizons.
+
+Before KAGC extraction, the KBTP representation, model family, preprocessing rule, exceedance thresholds, and hashes are frozen. KAGC is never used for feature selection, normalization, threshold selection, or parameter tuning. The external route requires lower equal-group count MAE than the frozen pair-opportunity reference and lower equal-group Brier than frozen KBTP prevalence, with at least six of ten group wins, at two or more horizons.
+
+These prespecified route criteria are descriptive decision rules, not significance tests. Supplementary analysis resamples paired source-group metric differences 20,000 times with seed 170104 and reports pointwise percentile 95\% intervals for the equally weighted mean difference. Exact two-sided sign tests assess the direction of group differences, excluding ties, with Holm correction across 18 airport--horizon--comparison tests. The bootstrap mean and sign test address different aspects of the evidence; eight or ten groups limit precision, and calendar-separated groups can still share operational patterns.
+
+The post-review distributional comparison uses source-group-equal negative log likelihood (NLL) for NB2 versus Poisson. At the fixed 75th-percentile event threshold, NB2-derived and Logistic probabilities are compared by source-group-equal Brier score and Bernoulli log loss. A dataset-specific horizon passes only if NB2 lowers NLL with a strict majority of group wins and lowers either probability score with a strict majority of wins. Thresholds at training quantiles 0.70, 0.75, 0.80, and 0.90 are reported without selecting among them; all remain frozen when applied to KAGC.
+
+\section{Results}
+
+\subsection{Target and Sensitivity Checks}
+
+The 30-s target reduction confirms that the original definition mixed persistence with onset. The corrected scenes reproduce byte-for-byte under an independent reconstruction. Current-report age has median 0~s, 95th percentile 11.37~s, and maximum 30~s. Changing the staleness limit from 30 to 15 or 60~s changes the 120-s total from 12,731 to 12,601 or 13,471, respectively. This reconstruction check measures target sensitivity; it does not establish model-performance robustness to different staleness rules.
+
+We also vary one target factor at a time rather than search a Cartesian grid: horizontal separation is 3/5/7~NM, vertical separation is 500/1,000/1,500~ft, and exceedance-definition quantiles are 0.70/0.75/0.80/0.90. These settings are robustness checks and are never selected by performance. Pair-opportunity prediction remains informative across all five geometric settings. Wider cutoffs do not monotonically increase future-onset counts because they also classify more pairs as already active at $t$, illustrating why the onset definition must be explicit. In the distributional supplement, discrete counts make several quantiles share an integer threshold. KAGC retains the NB2 probability advantage at 30~s for q70--q80 and at 120~s for q70--q75, whereas the 300-s outcome changes with the threshold. We therefore retain q75 and treat long-horizon probability transfer as threshold-sensitive.
+
+\subsection{One-Shot KBTP Confirmation}
+
+Table~\ref{tab:kbtp} and Fig.~\ref{fig:kbtp-confirmation} report the one-shot result. B passes every frozen gate at every horizon. Its average count improvement over A is modest, while its probability prediction shows a larger average difference from unconditional prevalence. Supplementary paired analysis gives B-minus-A count differences of $-0.012$ (95\% interval $[-0.021,-0.003]$), $-0.034$ ($[-0.061,-0.007]$), and $-0.020$ ($[-0.137,0.131]$). Thus, the shorter-horizon mean gains are better resolved than the 300-s gain. None of the 18 sign tests remains significant at 0.05 after Holm correction; passing a frozen route criterion must not be read as simultaneous statistical significance.
+
+\begin{table*}[!t]
+\caption{One-shot KBTP confirmation on eight new source groups. Values are equal-group means; lower is better. Wins count groups in which B is better.}
+\label{tab:kbtp}
+\centering
+\setlength{\tabcolsep}{5.0pt}
+\begin{tabular}{c cc c cc c cc c}
+\toprule
+$h$ & B MAE & Pair-rate MAE & Wins & A MAE & Wins & B Brier & Prev. Brier & Wins & ECE \\
+\midrule
+30  & \textbf{0.580} & 0.630 & 8/8 & 0.592 & 7/8 & \textbf{0.183} & 0.213 & 7/8 & 0.027 \\
+120 & \textbf{1.589} & 1.622 & 6/8 & 1.623 & 5/8 & \textbf{0.200} & 0.239 & 8/8 & 0.050 \\
+300 & \textbf{3.109} & 3.136 & 5/8 & 3.129 & 6/8 & \textbf{0.187} & 0.220 & 8/8 & 0.063 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{figures/figure_1_kbtp_confirmation.png}
+\caption{One-shot KBTP confirmation. Pairwise representation B is compared with aggregate representation A and frozen reference predictions. Bars show equal-source-group means; lower values are better.}
+\label{fig:kbtp-confirmation}
+\end{figure*}
+
+At 30~s, B wins all eight groups over pair exposure and seven over A. At 120~s it wins six and five, and at 300~s five and six. Logistic exceedance-probability prediction beats prevalence on seven, eight, and eight groups. Pooled ECE remains between 0.027 and 0.063. No confirmation date, feature, threshold, or model is replaced after result access.
+
+\subsection{Zero-Shot KAGC Transfer}
+
+KAGC has lower target means than KBTP training: 0.345 versus 0.446 at 30~s, 1.258 versus 1.653 at 120~s, and 2.749 versus 3.739 at 300~s. Despite this shift, the frozen complete scheme passes the external route at 30 and 120~s (Table~\ref{tab:kagc}; Fig.~\ref{fig:kagc-transfer}).
+
+\begin{table*}[!t]
+\caption{Zero-shot KAGC evaluation on ten unused source groups. All models, transforms, and thresholds are frozen from KBTP.}
+\label{tab:kagc}
+\centering
+\setlength{\tabcolsep}{4.7pt}
+\begin{tabular}{c cc c cc c cc c}
+\toprule
+$h$ & B MAE & Pair-rate MAE & Wins & A MAE & Wins & B Brier & Prev. Brier & Wins & Gate \\
+\midrule
+30  & \textbf{0.352} & 0.399 & 9/10 & \textbf{0.343} & 4/10 & \textbf{0.1720} & 0.1728 & 6/10 & Pass \\
+120 & \textbf{1.029} & 1.098 & 8/10 & 1.032 & 6/10 & \textbf{0.200} & 0.210 & 6/10 & Pass \\
+300 & \textbf{2.041} & 2.116 & 7/10 & \textbf{2.024} & 5/10 & 0.180 & \textbf{0.173} & 7/10 & Fail \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{figures/figure_2_kagc_transfer.png}
+\caption{Zero-shot KAGC transfer with all KBTP choices frozen. The external gate passes at 30 and 120~s; the 300-s probability criterion does not pass.}
+\label{fig:kagc-transfer}
+\end{figure*}
+
+At 30 and 120~s, B beats the frozen pair-rate count reference on 9/10 and 8/10 groups, while Logistic beats frozen prevalence on 6/10 groups at each horizon. The 300-s probability criterion fails. B also does not consistently improve on A at KAGC: the incremental count advantage appears only at 120~s. We therefore interpret the external result as transfer of the complete short-horizon scheme, not universal cross-airport superiority of every pairwise feature.
+
+\subsection{Overdispersed Count Distribution Supplement}
+
+The observed count variance exceeds the mean in every airport--horizon combination. Variance-to-mean ratios are 2.29, 3.98, and 6.93 on KBTP confirmation and 1.30, 2.01, and 2.89 on KAGC at 30, 120, and 300~s. Relative to matched Poisson regression, NB2 reduces equal-group NLL by 0.062, 0.272, and 0.891 on KBTP and by 0.009, 0.131, and 0.489 on KAGC. The improvement occurs in 7/8, 7/8, and 8/8 KBTP groups and 7/10, 10/10, and 10/10 KAGC groups, respectively. Thus, the richer count variance is useful for distributional fit at every horizon.
+
+Direct PMF-derived exceedance probabilities give a narrower result. At the fixed q75 thresholds, NB2 improves over Logistic only at 120~s on KBTP; on KAGC it passes at 30 and 120~s but not 300~s. The equal-group NB2-minus-Logistic Brier differences are $+0.00047$, $-0.00085$, and $-0.00143$ on KBTP, and $-0.00758$, $-0.00275$, and $+0.00040$ on KAGC. The corresponding group directions fail the majority rule in the two KBTP edge horizons and KAGC 300~s. A coherent count PMF therefore adds uncertainty information, but does not consistently replace a separately fitted conditional exceedance model.
+
+Standardized NB2 coefficients are descriptive because B includes structurally related variables: current aircraft count and available pair count, for example, are deterministically linked. Across horizons, current aircraft count, altitude dispersion, available pair count, and mean pair distance have the largest absolute coefficients. KAGC also differs materially from KBTP training in speed, altitude, and pair-distance summaries. These conditional associations and distribution shifts help delimit transportability, but do not identify causal feature importance.
+
+\subsection{Local-History References and Operational Diagnostics}
+
+A supplementary retrospective comparison asks whether frozen transfer predictions remain useful once a receiving airport has accumulated its own observations (Table~\ref{tab:local}). For each KAGC source group, local rates use only complete earlier groups whose final forecast windows end before its first cutoff. The first group is warm-up; every method is evaluated on the same remaining nine groups (1,157 scenes). Local rates, mean and median are estimated by pooling historical scenes; evaluation remains source-group-equal. The original KBTP thresholds remain fixed. Local references use past KAGC labels, whereas A and B remain frozen; this is not another blind or pure zero-shot experiment.
+
+\begin{table}[!t]
+\caption{KAGC chronological local-history comparison. Equal-group MAE/Brier on the same nine groups; lower is better.}
+\label{tab:local}
+\centering
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrr}
+\toprule
+Reference or model & 30 s & 120 s & 300 s \\
+\midrule
+B count MAE & 0.352 & 1.033 & 2.038 \\
+A count MAE & 0.339 & 1.041 & 2.029 \\
+Frozen pair-rate MAE & 0.397 & 1.111 & 2.119 \\
+Local pair-rate MAE & 0.459 & 1.305 & 2.499 \\
+Local mean MAE & 0.498 & 1.371 & 2.563 \\
+Local median MAE & 0.268 & 1.120 & 2.301 \\
+\midrule
+B probability Brier & 0.168 & 0.188 & 0.163 \\
+Frozen prevalence Brier & 0.171 & 0.205 & 0.165 \\
+Local prevalence Brier & 0.179 & 0.218 & 0.185 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:local} shows that B improves probability score over both prevalence references on this subset at all horizons. The historical median, however, is better for 30-s count MAE. This distinction matters: forecasting a conditional event probability and minimizing absolute count error are different uses, particularly for sparse events. Excluding the warm-up group also changes the 300-s probability comparison; it does not overturn the original ten-group external result.
+
+Freshness strata use the maximum age among current aircraft reports, at most 10~s versus greater than 10~s. They contain 1,950/655 KBTP scenes and 329/939 KAGC scenes, respectively. KBTP Brier remains below prevalence in both strata at all horizons. KAGC results vary by horizon and stratum; for example, at 30~s Brier is 0.149 versus 0.162 in the fresher stratum and 0.178 versus 0.176 in the older stratum. Traffic composition and prevalence differ, so these are descriptive associations, not a causal estimate of delay sensitivity. Ten-bin reliability summaries retain scene and group counts rather than interpreting sparsely populated bins as evidence of calibration.
+
+The original group metrics were reproduced exactly from the frozen scenes and model choices before these analyses. A local CPU timing sample of 31 scenes with 3--11 aircraft measured the existing history-to-feature path plus all three count and three probability outputs. Warm-call median and 95th-percentile times were 1.68 and 2.43~ms. This includes unused CPA calculations in the current feature helper, but excludes network transfer, disk access, buffer maintenance and initial history accumulation. It demonstrates low computation cost at the observed scale, not a measured end-to-end deployment latency.
+
+A post-review coverage diagnostic further bounds the CPA comparison. Both aircraft had a usable 20--45-s prior report for 18,502 of 20,536 current KBTP pairs (90.1\%) and 3,438 of 5,527 KAGC pairs (62.2\%). Among eligible pairs, estimated relative horizontal velocity was degenerate for 0.07\% at KBTP and 8.14\% at KAGC, causing CPA time to be set to zero. These differences expose a site-dependent information-availability limitation; they do not establish that missing or degenerate histories caused C's performance.
+
+Fig.~\ref{fig:reliability} shows the pooled reliability curves. KAGC has few high-probability predictions, and several upper bins contain only one or two scenes. Their apparent deviations must be read with the displayed sample counts, not as precise calibration estimates. Separately, five fresh-process runs including library imports, model loading, one cached scene read, prediction and process exit took a median of 2.99~s (95th percentile 3.18~s). Imports account for most of this startup cost; the first feature-and-inference computation had median 4.10~ms. Operating-system caches were not cleared. These descriptive startup measurements are distinct from recurring prediction costs in a resident process.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{figures/figure_3_reliability.png}
+\caption{Reliability diagrams for frozen B probabilities, pooling scenes within each airport and horizon. Ten fixed equal-width bins are used; empty bins are omitted. Point labels give scene counts. The diagonal denotes equality between predicted probability and observed threshold-exceedance frequency. Curves are descriptive, not confidence bands.}
+\label{fig:reliability}
+\end{figure*}
+
+\section{Discussion}
+
+The practical contribution is an anticipatory indicator that can be studied without synchronized controller labels. Removing cutoff-time persistence makes its forecasting question explicit, and the matched ladder identifies what additional observed pair summaries add beyond a compact base state that already contains minimum horizontal pair distance. Within KBTP, average gains support this augmented representation, although long-horizon count uncertainty remains substantial. The NB2 supplement shows that this uncertainty is not well described by an equidispersed Poisson distribution, while its mixed PMF-probability result supports retaining the simpler task-specific Logistic output. The implemented constant-velocity CPA features add insufficiently stable development gains to be retained, and the lower KAGC prior-state coverage further limits their cross-site interpretation; this does not rule out intent-aware or uncertainty-aware trajectory predictors such as ASCENT \cite{prutsch2026ascent}. B requires neither flight plans nor weather fusion, making it a useful starting point for surveillance-only screening and later comparison with operational outcomes.
+
+The cross-airport result adds a second level of evidence. KAGC has lower observed event counts in the selected windows, yet the frozen system exceeds its original traffic-exposure and prevalence references on average at 30 and 120~s. The KAGC Brier-difference intervals include zero at all horizons, so this is bounded transfer evidence rather than a precisely established probability advantage. Local-history comparisons further show why the intended output matters: probability forecasting remains useful relative to local event rates, whereas a simple historical median is a stronger 30-s count reference. A practical research workflow would use probabilities to prioritize periods for inspection and assess whether this helps an actual operational task before introducing alerts.
+
+Several boundaries remain. The label is geometric and cannot establish controller workload, regulatory loss of separation, or accident risk. KAGC supports the complete scheme at 30 and 120~s, but not the 300-s probability gate, and it does not reproduce B-over-A gains at every horizon. The sample frame deliberately selects high-activity two-hour windows rather than full-day traffic. Target and exceedance-threshold sensitivity are bounded rather than exhaustive, and overlapping scenes make source-group analysis essential. The NB2 comparison addresses overdispersion but does not exhaust zero-inflated, Poisson--Tweedie, or heteroscedastic count families. Future work should first connect the indicator to controller tasks or clearances, then evaluate additional airports under the same no-tuning protocol and test whether intent-aware trajectory information improves the 300-s horizon.
+
+\section{Conclusion}
+
+This study formulates short-horizon terminal interaction forecasting as prediction of observed onset episodes from a causal ADS-B buffer. Distinguishing new entries from cutoff-time persistence creates a reproducible endpoint for settings without workload labels. A compact 13-feature representation combines aggregate traffic state with observed pair geometry and supports conditional probability screening at low measured computation cost. Held-out source-group confirmation and frozen airport transfer identify both its predictive value and its dependence on horizon and reference method. The resulting framework provides a testable foundation for connecting surveillance-derived interaction forecasts to operational tasks, rather than assuming that geometric proximity itself measures safety or workload.
+
+\section*{Data and Code Availability}
+
+Raw ADS-B data must be obtained from the official TartanAviation source under its applicable terms. Frozen source selections, target definitions, split hashes, model protocols, and derived result summaries are versioned with the project. A persistent public release identifier will be inserted before submission.
+
+\bibliographystyle{IEEEtran}
+\IEEEtriggeratref{8}
+\bibliography{references}
+\end{document}

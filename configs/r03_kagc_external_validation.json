@@ -1,0 +1,109 @@
+{
+  "airport_id": "KAGC",
+  "freeze_revision": 2,
+  "freeze_revision_note": "Added UTC spillover day from the already frozen 2022-01-03 source before any target or model-result access; the ten selected sources are unchanged.",
+  "derived_utc_dates": ["2022-01-04"],
+  "allow_site_tuning": false,
+  "excluded_dates": [
+    "2022-04-28",
+    "2022-07-15",
+    "2022-07-21",
+    "2022-07-30",
+    "2022-07-31",
+    "2022-08-12",
+    "2022-08-17",
+    "2022-08-25"
+  ],
+  "excluded_dates_sha256": "c8d8af27c1c1206f84d3974212a8cba6d6b83564462ae99e728294205e8911c5",
+  "max_hours_per_source": 2,
+  "minimum_authenticated_rows": 50000,
+  "month_strata": [
+    "2021-11",
+    "2021-12",
+    "2022-01",
+    "2022-02",
+    "2022-03",
+    "2022-04",
+    "2022-05",
+    "2022-06",
+    "2022-07",
+    "2022-08"
+  ],
+  "registry_id": "78d482203a79ac655a84d0356e0d6ee15b77a0d98bd79382044a097ff9272ec3",
+  "run_count": 1,
+  "schema_version": "r03_kagc_external_validation_dates_v1",
+  "selection_frozen_at": "2026-09-03",
+  "selection_rule": "For each of the ten months represented by KAGC data, exclude every KAGC date used in earlier pilots and select the remaining date whose largest authenticated source has the most rows; do not load targets or model outputs.",
+  "sources": [
+    {
+      "authenticated_rows": 181913,
+      "date": "2021-11-04",
+      "relative_path": "raw/2021/2021/11-04-21/1.csv",
+      "source_file_id": "30e052de48c72a4d5915f954159af19992a4036ed47628db2f5da6d30fff128a",
+      "stratum": "2021-11"
+    },
+    {
+      "authenticated_rows": 145511,
+      "date": "2021-12-20",
+      "relative_path": "raw/2021/2021/12-20-21/1.csv",
+      "source_file_id": "68274930a1c03bab7a8aecea8c657988342d6be0db9919c65d50ce6fa09f1e66",
+      "stratum": "2021-12"
+    },
+    {
+      "authenticated_rows": 114677,
+      "date": "2022-01-03",
+      "relative_path": "raw/2022/2022/01-03-22/1.csv",
+      "source_file_id": "7a0816e8406ac16746d0747732e52f70e01a6c7ac57ec8c5004228aad593dfc0",
+      "stratum": "2022-01"
+    },
+    {
+      "authenticated_rows": 125513,
+      "date": "2022-02-20",
+      "relative_path": "raw/2022/2022/02-20-22/1.csv",
+      "source_file_id": "adc836ca372ee6bc3a1ed6dd19a6b466a952b3f08dec60ceebeebe77cafe9859",
+      "stratum": "2022-02"
+    },
+    {
+      "authenticated_rows": 146270,
+      "date": "2022-03-21",
+      "relative_path": "raw/2022/2022/03-21-22/1.csv",
+      "source_file_id": "54bbceb58b8c5a8c21245e5598cbee29857fdf8f45ceed74b014b9460266c8a8",
+      "stratum": "2022-03"
+    },
+    {
+      "authenticated_rows": 146653,
+      "date": "2022-04-26",
+      "relative_path": "raw/2022/2022/04-26-22/1.csv",
+      "source_file_id": "1ed558d5d269401ed75a95778cc2ca8386a71a7fe70389c4a2d81dc4e34190d9",
+      "stratum": "2022-04"
+    },
+    {
+      "authenticated_rows": 128024,
+      "date": "2022-05-19",
+      "relative_path": "raw/2022/2022/05-19-22/1.csv",
+      "source_file_id": "b00dee491abd8aedf3dd1d743a147b2854398f99ae7fb39f21b8f15d63c4b833",
+      "stratum": "2022-05"
+    },
+    {
+      "authenticated_rows": 147685,
+      "date": "2022-06-20",
+      "relative_path": "raw/2022/2022/06-20-22/1.csv",
+      "source_file_id": "28c10869b52a97546ccddb291adea90fd86586d670b4ba61723583d0706fafdc",
+      "stratum": "2022-06"
+    },
+    {
+      "authenticated_rows": 172057,
+      "date": "2022-07-22",
+      "relative_path": "raw/2022/2022/07-22-22/1.csv",
+      "source_file_id": "731f8f6d9c94cc99e1bd29c611e7e5f38ed10911892d236d5e4acd4280fe5df3",
+      "stratum": "2022-07"
+    },
+    {
+      "authenticated_rows": 176580,
+      "date": "2022-08-26",
+      "relative_path": "raw/2022/2022/08-26-22/1.csv",
+      "source_file_id": "ce3a2d23d3eb98adc07c8902f4a954d6886f3b627899657bdfdfc659902e2b5f",
+      "stratum": "2022-08"
+    }
+  ]
+}

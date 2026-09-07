@@ -1,0 +1,2260 @@
+{
+  "decision": "ROBUSTNESS_ONLY_NO_THRESHOLD_SELECTION",
+  "design": "one_factor_at_a_time",
+  "pilot_reports_sha256": "22303df9d368157f22beb5352bd9cdf4d0b71b0f1ae2b87fbc9051f85ef62cfa",
+  "protocol_sha256": "11c7c0201f8ceba5942f105a2b1c07c87b2fd5ec9f3d874274559684e4e5f674",
+  "schema_version": "r03_future_onset_threshold_sensitivity_v1",
+  "selection_from_outcomes": false,
+  "settings": {
+    "h3nm_v1000ft": {
+      "horizons": {
+        "120": {
+          "risk_quantiles": {
+            "q70": {
+              "test_prevalence": 0.5183645183645184,
+              "threshold": 2,
+              "train_prevalence": 0.32670283303194697,
+              "validation_prevalence": 0.5156375300721732
+            },
+            "q75": {
+              "test_prevalence": 0.5183645183645184,
+              "threshold": 2,
+              "train_prevalence": 0.32670283303194697,
+              "validation_prevalence": 0.5156375300721732
+            },
+            "q80": {
+              "test_prevalence": 0.5183645183645184,
+              "threshold": 2,
+              "train_prevalence": 0.32670283303194697,
+              "validation_prevalence": 0.5156375300721732
+            },
+            "q90": {
+              "test_prevalence": 0.23700623700623702,
+              "threshold": 4,
+              "train_prevalence": 0.10880048221820374,
+              "validation_prevalence": 0.27586206896551724
+            }
+          },
+          "splits": {
+            "test": {
+              "days": {
+                "2022-06-14": {
+                  "mean_onset_count": 1.9887387387387387,
+                  "nonzero_rate": 0.7545045045045045,
+                  "scene_count": 444
+                },
+                "2022-06-21": {
+                  "mean_onset_count": 1.55,
+                  "nonzero_rate": 0.6055555555555555,
+                  "scene_count": 360
+                },
+                "2022-07-25": {
+                  "mean_onset_count": 1.5682539682539682,
+                  "nonzero_rate": 0.707936507936508,
+                  "scene_count": 315
+                },
+                "2022-09-20": {
+                  "mean_onset_count": 3.759259259259259,
+                  "nonzero_rate": 0.8425925925925926,
+                  "scene_count": 324
+                }
+              },
+              "mean_onset_count": 2.185031185031185,
+              "nonzero_rate": 0.726957726957727,
+              "pair_exposure_equal_day_mae": 1.3979171356774882,
+              "scene_count": 1443
+            },
+            "train": {
+              "days": {
+                "2021-03-22": {
+                  "mean_onset_count": 1.5971563981042654,
+                  "nonzero_rate": 0.6398104265402843,
+                  "scene_count": 422
+                },
+                "2022-06-08": {
+                  "mean_onset_count": 0.971830985915493,
+                  "nonzero_rate": 0.532394366197183,
+                  "scene_count": 355
+                },
+                "2022-06-13": {
+                  "mean_onset_count": 2.8040712468193383,
+                  "nonzero_rate": 0.7404580152671756,
+                  "scene_count": 393
+                },
+                "2022-06-17": {
+                  "mean_onset_count": 1.6565934065934067,
+                  "nonzero_rate": 0.5879120879120879,
+                  "scene_count": 364
+                },
+                "2022-06-23": {
+                  "mean_onset_count": 1.0124610591900312,
+                  "nonzero_rate": 0.48598130841121495,
+                  "scene_count": 321
+                },
+                "2022-06-24": {
+                  "mean_onset_count": 1.0375,
+                  "nonzero_rate": 0.5625,
+                  "scene_count": 80
+                },
+                "2022-06-30": {
+                  "mean_onset_count": 0.8895027624309392,
+                  "nonzero_rate": 0.5359116022099447,
+                  "scene_count": 362
+                },
+                "2022-08-19": {
+                  "mean_onset_count": 0.7877906976744186,
+                  "nonzero_rate": 0.4127906976744186,
+                  "scene_count": 344
+                },
+                "2022-09-01": {
+                  "mean_onset_count": 1.765472312703583,
+                  "nonzero_rate": 0.6221498371335505,
+                  "scene_count": 307
+                },
+                "2022-10-06": {
+                  "mean_onset_count": 0.8432432432432433,
+                  "nonzero_rate": 0.518918918918919,
+                  "scene_count": 370
+                }
+              },
+              "mean_onset_count": 1.3800482218203738,
+              "nonzero_rate": 0.5678119349005425,
+              "pair_exposure_equal_day_mae": 1.1945191553048828,
+              "scene_count": 3318
+            },
+            "validation": {
+              "days": {
+                "2020-10-22": {
+                  "mean_onset_count": 2.374760994263862,
+                  "nonzero_rate": 0.6481835564053537,
+                  "scene_count": 523
+                },
+                "2021-04-05": {
+                  "mean_onset_count": 4.2727272727272725,
+                  "nonzero_rate": 0.7987012987012987,
+                  "scene_count": 154
+                },
+                "2022-06-20": {
+                  "mean_onset_count": 2.1964912280701756,
+                  "nonzero_rate": 0.7175438596491228,
+                  "scene_count": 570
+                }
+              },
+              "mean_onset_count": 2.5276663993584605,
+              "nonzero_rate": 0.698476343223737,
+              "pair_exposure_equal_day_mae": 1.9428855263225966,
+              "scene_count": 1247
+            }
+          }
+        },
+        "30": {
+          "risk_quantiles": {
+            "q70": {
+              "test_prevalence": 0.367983367983368,
+              "threshold": 1,
+              "train_prevalence": 0.25587703435804704,
+              "validation_prevalence": 0.3664795509222133
+            },
+            "q75": {
+              "test_prevalence": 0.367983367983368,
+              "threshold": 1,
+              "train_prevalence": 0.25587703435804704,
+              "validation_prevalence": 0.3664795509222133
+            },
+            "q80": {
+              "test_prevalence": 0.367983367983368,
+              "threshold": 1,
+              "train_prevalence": 0.25587703435804704,
+              "validation_prevalence": 0.3664795509222133
+            },
+            "q90": {
+              "test_prevalence": 0.367983367983368,
+              "threshold": 1,
+              "train_prevalence": 0.25587703435804704,
+              "validation_prevalence": 0.3664795509222133
+            }
+          },
+          "splits": {
+            "test": {
+              "days": {
+                "2022-06-14": {
+                  "mean_onset_count": 0.5112612612612613,
+                  "nonzero_rate": 0.36486486486486486,
+                  "scene_count": 444
+                },
+                "2022-06-21": {
+                  "mean_onset_count": 0.4,
+                  "nonzero_rate": 0.2777777777777778,
+                  "scene_count": 360
+                },
+                "2022-07-25": {
+                  "mean_onset_count": 0.41904761904761906,
+                  "nonzero_rate": 0.3142857142857143,
+                  "scene_count": 315
+                },
+                "2022-09-20": {
+                  "mean_onset_count": 0.9722222222222222,
+                  "nonzero_rate": 0.5246913580246914,
+                  "scene_count": 324
+                }
+              },
+              "mean_onset_count": 0.5668745668745668,
+              "nonzero_rate": 0.367983367983368,
+              "pair_exposure_equal_day_mae": 0.5982673925727999,
+              "scene_count": 1443
+            },
+            "train": {
+              "days": {
+                "2021-03-22": {
+                  "mean_onset_count": 0.4194312796208531,
+                  "nonzero_rate": 0.2938388625592417,
+                  "scene_count": 422
+                },
+                "2022-06-08": {
+                  "mean_onset_count": 0.2535211267605634,
+                  "nonzero_rate": 0.18028169014084508,
+                  "scene_count": 355
+                },
+                "2022-06-13": {
+                  "mean_onset_count": 0.7709923664122137,
+                  "nonzero_rate": 0.44529262086513993,
+                  "scene_count": 393
+                },
+                "2022-06-17": {
+                  "mean_onset_count": 0.4423076923076923,
+                  "nonzero_rate": 0.28846153846153844,
+                  "scene_count": 364
+                },
+                "2022-06-23": {
+                  "mean_onset_count": 0.30218068535825543,
+                  "nonzero_rate": 0.2398753894080997,
+                  "scene_count": 321
+                },
+                "2022-06-24": {
+                  "mean_onset_count": 0.25,
+                  "nonzero_rate": 0.2375,
+                  "scene_count": 80
+                },
+                "2022-06-30": {
+                  "mean_onset_count": 0.20994475138121546,
+                  "nonzero_rate": 0.17403314917127072,
+                  "scene_count": 362
+                },
+                "2022-08-19": {
+                  "mean_onset_count": 0.23255813953488372,
+                  "nonzero_rate": 0.1686046511627907,
+                  "scene_count": 344
+                },
+                "2022-09-01": {
+                  "mean_onset_count": 0.4495114006514658,
+                  "nonzero_rate": 0.2996742671009772,
+                  "scene_count": 307
+                },
+                "2022-10-06": {
+                  "mean_onset_count": 0.22702702702702704,
+                  "nonzero_rate": 0.1945945945945946,
+                  "scene_count": 370
+                }
+              },
+              "mean_onset_count": 0.36949969861362264,
+              "nonzero_rate": 0.25587703435804704,
+              "pair_exposure_equal_day_mae": 0.4863039943326677,
+              "scene_count": 3318
+            },
+            "validation": {
+              "days": {
+                "2020-10-22": {
+                  "mean_onset_count": 0.6137667304015296,
+                  "nonzero_rate": 0.32122370936902483,
+                  "scene_count": 523
+                },
+                "2021-04-05": {
+                  "mean_onset_count": 1.1103896103896105,
+                  "nonzero_rate": 0.5324675324675324,
+                  "scene_count": 154
+                },
+                "2022-06-20": {
+                  "mean_onset_count": 0.5526315789473685,
+                  "nonzero_rate": 0.3631578947368421,
+                  "scene_count": 570
+                }
+              },
+              "mean_onset_count": 0.6471531676022454,
+              "nonzero_rate": 0.3664795509222133,
+              "pair_exposure_equal_day_mae": 0.7623733090320891,
+              "scene_count": 1247
+            }
+          }
+        },
+        "300": {
+          "risk_quantiles": {
+            "q70": {
+              "test_prevalence": 0.5162855162855163,
+              "threshold": 4,
+              "train_prevalence": 0.30319469559975887,
+              "validation_prevalence": 0.5629510825982358
+            },
+            "q75": {
+              "test_prevalence": 0.5162855162855163,
+              "threshold": 4,
+              "train_prevalence": 0.30319469559975887,
+              "validation_prevalence": 0.5629510825982358
+            },
+            "q80": {
+              "test_prevalence": 0.48163548163548164,
+              "threshold": 5,
+              "train_prevalence": 0.2082579867389994,
+              "validation_prevalence": 0.46912590216519645
+            },
+            "q90": {
+              "test_prevalence": 0.3575883575883576,
+              "threshold": 7,
+              "train_prevalence": 0.1323086196503918,
+              "validation_prevalence": 0.35525260625501204
+            }
+          },
+          "splits": {
+            "test": {
+              "days": {
+                "2022-06-14": {
+                  "mean_onset_count": 4.722972972972973,
+                  "nonzero_rate": 0.9211711711711712,
+                  "scene_count": 444
+                },
+                "2022-06-21": {
+                  "mean_onset_count": 3.65,
+                  "nonzero_rate": 0.8083333333333333,
+                  "scene_count": 360
+                },
+                "2022-07-25": {
+                  "mean_onset_count": 3.358730158730159,
+                  "nonzero_rate": 0.8634920634920635,
+                  "scene_count": 315
+                },
+                "2022-09-20": {
+                  "mean_onset_count": 8.993827160493828,
+                  "nonzero_rate": 0.8703703703703703,
+                  "scene_count": 324
+                }
+              },
+              "mean_onset_count": 5.116424116424116,
+              "nonzero_rate": 0.8690228690228691,
+              "pair_exposure_equal_day_mae": 2.8503653695748756,
+              "scene_count": 1443
+            },
+            "train": {
+              "days": {
+                "2021-03-22": {
+                  "mean_onset_count": 3.8317535545023698,
+                  "nonzero_rate": 0.8388625592417062,
+                  "scene_count": 422
+                },
+                "2022-06-08": {
+                  "mean_onset_count": 2.2647887323943663,
+                  "nonzero_rate": 0.7211267605633803,
+                  "scene_count": 355
+                },
+                "2022-06-13": {
+                  "mean_onset_count": 5.793893129770993,
+                  "nonzero_rate": 0.8269720101781171,
+                  "scene_count": 393
+                },
+                "2022-06-17": {
+                  "mean_onset_count": 3.826923076923077,
+                  "nonzero_rate": 0.6840659340659341,
+                  "scene_count": 364
+                },
+                "2022-06-23": {
+                  "mean_onset_count": 2.121495327102804,
+                  "nonzero_rate": 0.6542056074766355,
+                  "scene_count": 321
+                },
+                "2022-06-24": {
+                  "mean_onset_count": 2.6,
+                  "nonzero_rate": 0.9625,
+                  "scene_count": 80
+                },
+                "2022-06-30": {
+                  "mean_onset_count": 2.1298342541436464,
+                  "nonzero_rate": 0.7955801104972375,
+                  "scene_count": 362
+                },
+                "2022-08-19": {
+                  "mean_onset_count": 1.7122093023255813,
+                  "nonzero_rate": 0.7151162790697675,
+                  "scene_count": 344
+                },
+                "2022-09-01": {
+                  "mean_onset_count": 4.228013029315961,
+                  "nonzero_rate": 0.7980456026058632,
+                  "scene_count": 307
+                },
+                "2022-10-06": {
+                  "mean_onset_count": 1.9702702702702704,
+                  "nonzero_rate": 0.6972972972972973,
+                  "scene_count": 370
+                }
+              },
+              "mean_onset_count": 3.1244725738396624,
+              "nonzero_rate": 0.755877034358047,
+              "pair_exposure_equal_day_mae": 2.312432116790659,
+              "scene_count": 3318
+            },
+            "validation": {
+              "days": {
+                "2020-10-22": {
+                  "mean_onset_count": 5.74378585086042,
+                  "nonzero_rate": 0.8432122370936902,
+                  "scene_count": 523
+                },
+                "2021-04-05": {
+                  "mean_onset_count": 9.324675324675324,
+                  "nonzero_rate": 0.8051948051948052,
+                  "scene_count": 154
+                },
+                "2022-06-20": {
+                  "mean_onset_count": 5.445614035087719,
+                  "nonzero_rate": 0.9017543859649123,
+                  "scene_count": 570
+                }
+              },
+              "mean_onset_count": 6.04971932638332,
+              "nonzero_rate": 0.8652766639935846,
+              "pair_exposure_equal_day_mae": 4.088442021729953,
+              "scene_count": 1247
+            }
+          }
+        }
+      },
+      "horizontal_nm": 3.0,
+      "target_summary": {
+        "horizons": {
+          "120": {
+            "cutoff_active_pair_sum": 13059,
+            "future_onset_sum": 10884,
+            "legacy_event_sum": 22104,
+            "legacy_minus_onset_sum": 11220,
+            "missing_future_pair_scenes": 17
+          },
+          "30": {
+            "cutoff_active_pair_sum": 13059,
+            "future_onset_sum": 2851,
+            "legacy_event_sum": 14071,
+            "legacy_minus_onset_sum": 11220,
+            "missing_future_pair_scenes": 27
+          },
+          "300": {
+            "cutoff_active_pair_sum": 13059,
+            "future_onset_sum": 25294,
+            "legacy_event_sum": 36514,
+            "legacy_minus_onset_sum": 11220,
+            "missing_future_pair_scenes": 10
+          }
+        },
+        "independent_days": 17,
+        "scene_count": 6008
+      },
+      "vertical_ft": 1000.0
+    },
+    "h5nm_v1000ft": {
+      "horizons": {
+        "120": {
+          "risk_quantiles": {
+            "q70": {
+              "test_prevalence": 0.5419265419265419,
+              "threshold": 2,
+              "train_prevalence": 0.377335744424352,
+              "validation_prevalence": 0.5894145950280674
+            },
+            "q75": {
+              "test_prevalence": 0.5419265419265419,
+              "threshold": 2,
+              "train_prevalence": 0.377335744424352,
+              "validation_prevalence": 0.5894145950280674
+            },
+            "q80": {
+              "test_prevalence": 0.3880803880803881,
+              "threshold": 3,
+              "train_prevalence": 0.2359855334538879,
+              "validation_prevalence": 0.4418604651162791
+            },
+            "q90": {
+              "test_prevalence": 0.2875952875952876,
+              "threshold": 4,
+              "train_prevalence": 0.14255575647980712,
+              "validation_prevalence": 0.3271852445870088
+            }
+          },
+          "splits": {
+            "test": {
+              "days": {
+                "2022-06-14": {
+                  "mean_onset_count": 2.418918918918919,
+                  "nonzero_rate": 0.8040540540540541,
+                  "scene_count": 444
+                },
+                "2022-06-21": {
+                  "mean_onset_count": 1.7361111111111112,
+                  "nonzero_rate": 0.6833333333333333,
+                  "scene_count": 360
+                },
+                "2022-07-25": {
+                  "mean_onset_count": 1.7809523809523808,
+                  "nonzero_rate": 0.7619047619047619,
+                  "scene_count": 315
+                },
+                "2022-09-20": {
+                  "mean_onset_count": 3.728395061728395,
+                  "nonzero_rate": 0.808641975308642,
+                  "scene_count": 324
+                }
+              },
+              "mean_onset_count": 2.4033264033264032,
+              "nonzero_rate": 0.7657657657657657,
+              "pair_exposure_equal_day_mae": 1.5360054668513476,
+              "scene_count": 1443
+            },
+            "train": {
+              "days": {
+                "2021-03-22": {
+                  "mean_onset_count": 1.9265402843601895,
+                  "nonzero_rate": 0.7298578199052133,
+                  "scene_count": 422
+                },
+                "2022-06-08": {
+                  "mean_onset_count": 1.3380281690140845,
+                  "nonzero_rate": 0.6225352112676056,
+                  "scene_count": 355
+                },
+                "2022-06-13": {
+                  "mean_onset_count": 2.7404580152671754,
+                  "nonzero_rate": 0.727735368956743,
+                  "scene_count": 393
+                },
+                "2022-06-17": {
+                  "mean_onset_count": 2.340659340659341,
+                  "nonzero_rate": 0.7225274725274725,
+                  "scene_count": 364
+                },
+                "2022-06-23": {
+                  "mean_onset_count": 1.249221183800623,
+                  "nonzero_rate": 0.5919003115264797,
+                  "scene_count": 321
+                },
+                "2022-06-24": {
+                  "mean_onset_count": 1.625,
+                  "nonzero_rate": 0.475,
+                  "scene_count": 80
+                },
+                "2022-06-30": {
+                  "mean_onset_count": 1.0635359116022098,
+                  "nonzero_rate": 0.5469613259668509,
+                  "scene_count": 362
+                },
+                "2022-08-19": {
+                  "mean_onset_count": 0.8401162790697675,
+                  "nonzero_rate": 0.42151162790697677,
+                  "scene_count": 344
+                },
+                "2022-09-01": {
+                  "mean_onset_count": 2.03257328990228,
+                  "nonzero_rate": 0.6319218241042345,
+                  "scene_count": 307
+                },
+                "2022-10-06": {
+                  "mean_onset_count": 1.1837837837837837,
+                  "nonzero_rate": 0.5783783783783784,
+                  "scene_count": 370
+                }
+              },
+              "mean_onset_count": 1.6528028933092225,
+              "nonzero_rate": 0.6199517781796263,
+              "pair_exposure_equal_day_mae": 1.3815447028234071,
+              "scene_count": 3318
+            },
+            "validation": {
+              "days": {
+                "2020-10-22": {
+                  "mean_onset_count": 3.101338432122371,
+                  "nonzero_rate": 0.7017208413001912,
+                  "scene_count": 523
+                },
+                "2021-04-05": {
+                  "mean_onset_count": 4.487012987012987,
+                  "nonzero_rate": 0.9155844155844156,
+                  "scene_count": 154
+                },
+                "2022-06-20": {
+                  "mean_onset_count": 2.5719298245614035,
+                  "nonzero_rate": 0.7719298245614035,
+                  "scene_count": 570
+                }
+              },
+              "mean_onset_count": 3.0304731355252605,
+              "nonzero_rate": 0.7602245388933441,
+              "pair_exposure_equal_day_mae": 2.1493123837149795,
+              "scene_count": 1247
+            }
+          }
+        },
+        "30": {
+          "risk_quantiles": {
+            "q70": {
+              "test_prevalence": 0.37422037422037424,
+              "threshold": 1,
+              "train_prevalence": 0.2872212176009644,
+              "validation_prevalence": 0.42261427425821974
+            },
+            "q75": {
+              "test_prevalence": 0.37422037422037424,
+              "threshold": 1,
+              "train_prevalence": 0.2872212176009644,
+              "validation_prevalence": 0.42261427425821974
+            },
+            "q80": {
+              "test_prevalence": 0.37422037422037424,
+              "threshold": 1,
+              "train_prevalence": 0.2872212176009644,
+              "validation_prevalence": 0.42261427425821974
+            },
+            "q90": {
+              "test_prevalence": 0.14345114345114346,
+              "threshold": 2,
+              "train_prevalence": 0.10096443640747438,
+              "validation_prevalence": 0.1908580593424218
+            }
+          },
+          "splits": {
+            "test": {
+              "days": {
+                "2022-06-14": {
+                  "mean_onset_count": 0.6126126126126126,
+                  "nonzero_rate": 0.38288288288288286,
+                  "scene_count": 444
+                },
+                "2022-06-21": {
+                  "mean_onset_count": 0.4444444444444444,
+                  "nonzero_rate": 0.2972222222222222,
+                  "scene_count": 360
+                },
+                "2022-07-25": {
+                  "mean_onset_count": 0.49523809523809526,
+                  "nonzero_rate": 0.3523809523809524,
+                  "scene_count": 315
+                },
+                "2022-09-20": {
+                  "mean_onset_count": 0.9783950617283951,
+                  "nonzero_rate": 0.4691358024691358,
+                  "scene_count": 324
+                }
+              },
+              "mean_onset_count": 0.6271656271656272,
+              "nonzero_rate": 0.37422037422037424,
+              "pair_exposure_equal_day_mae": 0.6964671377537889,
+              "scene_count": 1443
+            },
+            "train": {
+              "days": {
+                "2021-03-22": {
+                  "mean_onset_count": 0.5071090047393365,
+                  "nonzero_rate": 0.3293838862559242,
+                  "scene_count": 422
+                },
+                "2022-06-08": {
+                  "mean_onset_count": 0.3492957746478873,
+                  "nonzero_rate": 0.2535211267605634,
+                  "scene_count": 355
+                },
+                "2022-06-13": {
+                  "mean_onset_count": 0.7684478371501272,
+                  "nonzero_rate": 0.4198473282442748,
+                  "scene_count": 393
+                },
+                "2022-06-17": {
+                  "mean_onset_count": 0.6236263736263736,
+                  "nonzero_rate": 0.3791208791208791,
+                  "scene_count": 364
+                },
+                "2022-06-23": {
+                  "mean_onset_count": 0.35514018691588783,
+                  "nonzero_rate": 0.2523364485981308,
+                  "scene_count": 321
+                },
+                "2022-06-24": {
+                  "mean_onset_count": 0.3875,
+                  "nonzero_rate": 0.2375,
+                  "scene_count": 80
+                },
+                "2022-06-30": {
+                  "mean_onset_count": 0.26795580110497236,
+                  "nonzero_rate": 0.20994475138121546,
+                  "scene_count": 362
+                },
+                "2022-08-19": {
+                  "mean_onset_count": 0.2441860465116279,
+                  "nonzero_rate": 0.18313953488372092,
+                  "scene_count": 344
+                },
+                "2022-09-01": {
+                  "mean_onset_count": 0.5407166123778502,
+                  "nonzero_rate": 0.31921824104234525,
+                  "scene_count": 307
+                },
+                "2022-10-06": {
+                  "mean_onset_count": 0.32432432432432434,
+                  "nonzero_rate": 0.22702702702702704,
+                  "scene_count": 370
+                }
+              },
+              "mean_onset_count": 0.445750452079566,
+              "nonzero_rate": 0.2872212176009644,
+              "pair_exposure_equal_day_mae": 0.564998380681271,
+              "scene_count": 3318
+            },
+            "validation": {
+              "days": {
+                "2020-10-22": {
+                  "mean_onset_count": 0.8126195028680688,
+                  "nonzero_rate": 0.3977055449330784,
+                  "scene_count": 523
+                },
+                "2021-04-05": {
+                  "mean_onset_count": 1.1883116883116882,
+                  "nonzero_rate": 0.5909090909090909,
+                  "scene_count": 154
+                },
+                "2022-06-20": {
+                  "mean_onset_count": 0.6491228070175439,
+                  "nonzero_rate": 0.4,
+                  "scene_count": 570
+                }
+              },
+              "mean_onset_count": 0.7842822774659182,
+              "nonzero_rate": 0.42261427425821974,
+              "pair_exposure_equal_day_mae": 0.8382444393065168,
+              "scene_count": 1247
+            }
+          }
+        },
+        "300": {
+          "risk_quantiles": {
+            "q70": {
+              "test_prevalence": 0.5661815661815662,
+              "threshold": 4,
+              "train_prevalence": 0.3818565400843882,
+              "validation_prevalence": 0.6222935044105854
+            },
+            "q75": {
+              "test_prevalence": 0.5114345114345115,
+              "threshold": 5,
+              "train_prevalence": 0.2820976491862568,
+              "validation_prevalence": 0.5629510825982358
+            },
+            "q80": {
+              "test_prevalence": 0.44282744282744285,
+              "threshold": 6,
+              "train_prevalence": 0.21308016877637131,
+              "validation_prevalence": 0.49318364073777066
+            },
+            "q90": {
+              "test_prevalence": 0.20097020097020096,
+              "threshold": 10,
+              "train_prevalence": 0.10458107293550331,
+              "validation_prevalence": 0.29190056134723336
+            }
+          },
+          "splits": {
+            "test": {
+              "days": {
+                "2022-06-14": {
+                  "mean_onset_count": 5.795045045045045,
+                  "nonzero_rate": 0.9391891891891891,
+                  "scene_count": 444
+                },
+                "2022-06-21": {
+                  "mean_onset_count": 4.155555555555556,
+                  "nonzero_rate": 0.8916666666666667,
+                  "scene_count": 360
+                },
+                "2022-07-25": {
+                  "mean_onset_count": 3.7174603174603176,
+                  "nonzero_rate": 0.8412698412698413,
+                  "scene_count": 315
+                },
+                "2022-09-20": {
+                  "mean_onset_count": 8.83641975308642,
+                  "nonzero_rate": 0.8950617283950617,
+                  "scene_count": 324
+                }
+              },
+              "mean_onset_count": 5.615384615384615,
+              "nonzero_rate": 0.896049896049896,
+              "pair_exposure_equal_day_mae": 2.9618223763380147,
+              "scene_count": 1443
+            },
+            "train": {
+              "days": {
+                "2021-03-22": {
+                  "mean_onset_count": 4.469194312796208,
+                  "nonzero_rate": 0.8649289099526066,
+                  "scene_count": 422
+                },
+                "2022-06-08": {
+                  "mean_onset_count": 2.9746478873239437,
+                  "nonzero_rate": 0.7718309859154929,
+                  "scene_count": 355
+                },
+                "2022-06-13": {
+                  "mean_onset_count": 5.824427480916031,
+                  "nonzero_rate": 0.8320610687022901,
+                  "scene_count": 393
+                },
+                "2022-06-17": {
+                  "mean_onset_count": 5.217032967032967,
+                  "nonzero_rate": 0.804945054945055,
+                  "scene_count": 364
+                },
+                "2022-06-23": {
+                  "mean_onset_count": 2.9221183800623054,
+                  "nonzero_rate": 0.7476635514018691,
+                  "scene_count": 321
+                },
+                "2022-06-24": {
+                  "mean_onset_count": 4.0375,
+                  "nonzero_rate": 0.9125,
+                  "scene_count": 80
+                },
+                "2022-06-30": {
+                  "mean_onset_count": 2.5027624309392267,
+                  "nonzero_rate": 0.8093922651933702,
+                  "scene_count": 362
+                },
+                "2022-08-19": {
+                  "mean_onset_count": 1.9244186046511629,
+                  "nonzero_rate": 0.7558139534883721,
+                  "scene_count": 344
+                },
+                "2022-09-01": {
+                  "mean_onset_count": 4.5602605863192185,
+                  "nonzero_rate": 0.7752442996742671,
+                  "scene_count": 307
+                },
+                "2022-10-06": {
+                  "mean_onset_count": 2.827027027027027,
+                  "nonzero_rate": 0.8162162162162162,
+                  "scene_count": 370
+                }
+              },
+              "mean_onset_count": 3.7386980108499097,
+              "nonzero_rate": 0.8031946955997589,
+              "pair_exposure_equal_day_mae": 2.653522677402383,
+              "scene_count": 3318
+            },
+            "validation": {
+              "days": {
+                "2020-10-22": {
+                  "mean_onset_count": 7.479923518164436,
+                  "nonzero_rate": 0.8374760994263862,
+                  "scene_count": 523
+                },
+                "2021-04-05": {
+                  "mean_onset_count": 9.402597402597403,
+                  "nonzero_rate": 0.9155844155844156,
+                  "scene_count": 154
+                },
+                "2022-06-20": {
+                  "mean_onset_count": 6.3543859649122805,
+                  "nonzero_rate": 0.9456140350877194,
+                  "scene_count": 570
+                }
+              },
+              "mean_onset_count": 7.2028869286287085,
+              "nonzero_rate": 0.896551724137931,
+              "pair_exposure_equal_day_mae": 4.322418185755201,
+              "scene_count": 1247
+            }
+          }
+        }
+      },
+      "horizontal_nm": 5.0,
+      "target_summary": {
+        "horizons": {
+          "120": {
+            "cutoff_active_pair_sum": 17449,
+            "future_onset_sum": 12731,
+            "legacy_event_sum": 27984,
+            "legacy_minus_onset_sum": 15253,
+            "missing_future_pair_scenes": 17
+          },
+          "30": {
+            "cutoff_active_pair_sum": 17449,
+            "future_onset_sum": 3362,
+            "legacy_event_sum": 18615,
+            "legacy_minus_onset_sum": 15253,
+            "missing_future_pair_scenes": 27
+          },
+          "300": {
+            "cutoff_active_pair_sum": 17449,
+            "future_onset_sum": 29490,
+            "legacy_event_sum": 44743,
+            "legacy_minus_onset_sum": 15253,
+            "missing_future_pair_scenes": 10
+          }
+        },
+        "independent_days": 17,
+        "scene_count": 6008
+      },
+      "vertical_ft": 1000.0
+    },
+    "h5nm_v1500ft": {
+      "horizons": {
+        "120": {
+          "risk_quantiles": {
+            "q70": {
+              "test_prevalence": 0.47124047124047125,
+              "threshold": 2,
+              "train_prevalence": 0.35714285714285715,
+              "validation_prevalence": 0.5645549318364074
+            },
+            "q75": {
+              "test_prevalence": 0.47124047124047125,
+              "threshold": 2,
+              "train_prevalence": 0.35714285714285715,
+              "validation_prevalence": 0.5645549318364074
+            },
+            "q80": {
+              "test_prevalence": 0.3575883575883576,
+              "threshold": 3,
+              "train_prevalence": 0.22362869198312235,
+              "validation_prevalence": 0.44025661587810744
+            },
+            "q90": {
+              "test_prevalence": 0.24185724185724186,
+              "threshold": 4,
+              "train_prevalence": 0.13321277878239904,
+              "validation_prevalence": 0.3319967923015237
+            }
+          },
+          "splits": {
+            "test": {
+              "days": {
+                "2022-06-14": {
+                  "mean_onset_count": 2.213963963963964,
+                  "nonzero_rate": 0.7522522522522522,
+                  "scene_count": 444
+                },
+                "2022-06-21": {
+                  "mean_onset_count": 1.3805555555555555,
+                  "nonzero_rate": 0.5555555555555556,
+                  "scene_count": 360
+                },
+                "2022-07-25": {
+                  "mean_onset_count": 1.6793650793650794,
+                  "nonzero_rate": 0.6,
+                  "scene_count": 315
+                },
+                "2022-09-20": {
+                  "mean_onset_count": 2.6944444444444446,
+                  "nonzero_rate": 0.6450617283950617,
+                  "scene_count": 324
+                }
+              },
+              "mean_onset_count": 1.9972279972279972,
+              "nonzero_rate": 0.6458766458766458,
+              "pair_exposure_equal_day_mae": 1.655148043649623,
+              "scene_count": 1443
+            },
+            "train": {
+              "days": {
+                "2021-03-22": {
+                  "mean_onset_count": 1.7085308056872037,
+                  "nonzero_rate": 0.6445497630331753,
+                  "scene_count": 422
+                },
+                "2022-06-08": {
+                  "mean_onset_count": 1.2901408450704226,
+                  "nonzero_rate": 0.5746478873239437,
+                  "scene_count": 355
+                },
+                "2022-06-13": {
+                  "mean_onset_count": 2.1297709923664123,
+                  "nonzero_rate": 0.648854961832061,
+                  "scene_count": 393
+                },
+                "2022-06-17": {
+                  "mean_onset_count": 2.0494505494505493,
+                  "nonzero_rate": 0.6236263736263736,
+                  "scene_count": 364
+                },
+                "2022-06-23": {
+                  "mean_onset_count": 1.1121495327102804,
+                  "nonzero_rate": 0.4797507788161994,
+                  "scene_count": 321
+                },
+                "2022-06-24": {
+                  "mean_onset_count": 1.05,
+                  "nonzero_rate": 0.3875,
+                  "scene_count": 80
+                },
+                "2022-06-30": {
+                  "mean_onset_count": 1.1160220994475138,
+                  "nonzero_rate": 0.5607734806629834,
+                  "scene_count": 362
+                },
+                "2022-08-19": {
+                  "mean_onset_count": 0.8953488372093024,
+                  "nonzero_rate": 0.45348837209302323,
+                  "scene_count": 344
+                },
+                "2022-09-01": {
+                  "mean_onset_count": 2.1107491856677525,
+                  "nonzero_rate": 0.6482084690553745,
+                  "scene_count": 307
+                },
+                "2022-10-06": {
+                  "mean_onset_count": 1.2351351351351352,
+                  "nonzero_rate": 0.5540540540540541,
+                  "scene_count": 370
+                }
+              },
+              "mean_onset_count": 1.512959614225437,
+              "nonzero_rate": 0.5744424352019288,
+              "pair_exposure_equal_day_mae": 1.4165159610737228,
+              "scene_count": 3318
+            },
+            "validation": {
+              "days": {
+                "2020-10-22": {
+                  "mean_onset_count": 3.338432122370937,
+                  "nonzero_rate": 0.7495219885277247,
+                  "scene_count": 523
+                },
+                "2021-04-05": {
+                  "mean_onset_count": 3.3376623376623376,
+                  "nonzero_rate": 0.7532467532467533,
+                  "scene_count": 154
+                },
+                "2022-06-20": {
+                  "mean_onset_count": 2.519298245614035,
+                  "nonzero_rate": 0.7526315789473684,
+                  "scene_count": 570
+                }
+              },
+              "mean_onset_count": 2.963913392141139,
+              "nonzero_rate": 0.7514033680834001,
+              "pair_exposure_equal_day_mae": 2.0352374434711904,
+              "scene_count": 1247
+            }
+          }
+        },
+        "30": {
+          "risk_quantiles": {
+            "q70": {
+              "test_prevalence": 0.28967428967428965,
+              "threshold": 1,
+              "train_prevalence": 0.2561784207353828,
+              "validation_prevalence": 0.4073777064955894
+            },
+            "q75": {
+              "test_prevalence": 0.28967428967428965,
+              "threshold": 1,
+              "train_prevalence": 0.2561784207353828,
+              "validation_prevalence": 0.4073777064955894
+            },
+            "q80": {
+              "test_prevalence": 0.28967428967428965,
+              "threshold": 1,
+              "train_prevalence": 0.2561784207353828,
+              "validation_prevalence": 0.4073777064955894
+            },
+            "q90": {
+              "test_prevalence": 0.28967428967428965,
+              "threshold": 1,
+              "train_prevalence": 0.2561784207353828,
+              "validation_prevalence": 0.4073777064955894
+            }
+          },
+          "splits": {
+            "test": {
+              "days": {
+                "2022-06-14": {
+                  "mean_onset_count": 0.5585585585585585,
+                  "nonzero_rate": 0.32882882882882886,
+                  "scene_count": 444
+                },
+                "2022-06-21": {
+                  "mean_onset_count": 0.36944444444444446,
+                  "nonzero_rate": 0.2222222222222222,
+                  "scene_count": 360
+                },
+                "2022-07-25": {
+                  "mean_onset_count": 0.4857142857142857,
+                  "nonzero_rate": 0.3047619047619048,
+                  "scene_count": 315
+                },
+                "2022-09-20": {
+                  "mean_onset_count": 0.7345679012345679,
+                  "nonzero_rate": 0.2962962962962963,
+                  "scene_count": 324
+                }
+              },
+              "mean_onset_count": 0.534996534996535,
+              "nonzero_rate": 0.28967428967428965,
+              "pair_exposure_equal_day_mae": 0.7090862743005737,
+              "scene_count": 1443
+            },
+            "train": {
+              "days": {
+                "2021-03-22": {
+                  "mean_onset_count": 0.48578199052132703,
+                  "nonzero_rate": 0.2938388625592417,
+                  "scene_count": 422
+                },
+                "2022-06-08": {
+                  "mean_onset_count": 0.3352112676056338,
+                  "nonzero_rate": 0.23943661971830985,
+                  "scene_count": 355
+                },
+                "2022-06-13": {
+                  "mean_onset_count": 0.6208651399491094,
+                  "nonzero_rate": 0.33078880407124683,
+                  "scene_count": 393
+                },
+                "2022-06-17": {
+                  "mean_onset_count": 0.5439560439560439,
+                  "nonzero_rate": 0.31868131868131866,
+                  "scene_count": 364
+                },
+                "2022-06-23": {
+                  "mean_onset_count": 0.3364485981308411,
+                  "nonzero_rate": 0.2118380062305296,
+                  "scene_count": 321
+                },
+                "2022-06-24": {
+                  "mean_onset_count": 0.2625,
+                  "nonzero_rate": 0.1625,
+                  "scene_count": 80
+                },
+                "2022-06-30": {
+                  "mean_onset_count": 0.27071823204419887,
+                  "nonzero_rate": 0.19613259668508287,
+                  "scene_count": 362
+                },
+                "2022-08-19": {
+                  "mean_onset_count": 0.2441860465116279,
+                  "nonzero_rate": 0.19186046511627908,
+                  "scene_count": 344
+                },
+                "2022-09-01": {
+                  "mean_onset_count": 0.5504885993485342,
+                  "nonzero_rate": 0.30944625407166126,
+                  "scene_count": 307
+                },
+                "2022-10-06": {
+                  "mean_onset_count": 0.33783783783783783,
+                  "nonzero_rate": 0.22162162162162163,
+                  "scene_count": 370
+                }
+              },
+              "mean_onset_count": 0.4132007233273056,
+              "nonzero_rate": 0.2561784207353828,
+              "pair_exposure_equal_day_mae": 0.5643264716431808,
+              "scene_count": 3318
+            },
+            "validation": {
+              "days": {
+                "2020-10-22": {
+                  "mean_onset_count": 0.8852772466539197,
+                  "nonzero_rate": 0.4149139579349904,
+                  "scene_count": 523
+                },
+                "2021-04-05": {
+                  "mean_onset_count": 0.8961038961038961,
+                  "nonzero_rate": 0.4155844155844156,
+                  "scene_count": 154
+                },
+                "2022-06-20": {
+                  "mean_onset_count": 0.6526315789473685,
+                  "nonzero_rate": 0.39824561403508774,
+                  "scene_count": 570
+                }
+              },
+              "mean_onset_count": 0.7802726543704892,
+              "nonzero_rate": 0.4073777064955894,
+              "pair_exposure_equal_day_mae": 0.8507827729659169,
+              "scene_count": 1247
+            }
+          }
+        },
+        "300": {
+          "risk_quantiles": {
+            "q70": {
+              "test_prevalence": 0.534996534996535,
+              "threshold": 4,
+              "train_prevalence": 0.3306208559373116,
+              "validation_prevalence": 0.6287089013632718
+            },
+            "q75": {
+              "test_prevalence": 0.4656964656964657,
+              "threshold": 5,
+              "train_prevalence": 0.2522603978300181,
+              "validation_prevalence": 0.5388933440256616
+            },
+            "q80": {
+              "test_prevalence": 0.4656964656964657,
+              "threshold": 5,
+              "train_prevalence": 0.2522603978300181,
+              "validation_prevalence": 0.5388933440256616
+            },
+            "q90": {
+              "test_prevalence": 0.2079002079002079,
+              "threshold": 9,
+              "train_prevalence": 0.10126582278481013,
+              "validation_prevalence": 0.32157177225340816
+            }
+          },
+          "splits": {
+            "test": {
+              "days": {
+                "2022-06-14": {
+                  "mean_onset_count": 5.367117117117117,
+                  "nonzero_rate": 0.9504504504504504,
+                  "scene_count": 444
+                },
+                "2022-06-21": {
+                  "mean_onset_count": 3.3222222222222224,
+                  "nonzero_rate": 0.8305555555555556,
+                  "scene_count": 360
+                },
+                "2022-07-25": {
+                  "mean_onset_count": 3.466666666666667,
+                  "nonzero_rate": 0.7523809523809524,
+                  "scene_count": 315
+                },
+                "2022-09-20": {
+                  "mean_onset_count": 6.416666666666667,
+                  "nonzero_rate": 0.7901234567901234,
+                  "scene_count": 324
+                }
+              },
+              "mean_onset_count": 4.6777546777546775,
+              "nonzero_rate": 0.8413028413028413,
+              "pair_exposure_equal_day_mae": 2.9591966749157814,
+              "scene_count": 1443
+            },
+            "train": {
+              "days": {
+                "2021-03-22": {
+                  "mean_onset_count": 4.007109004739337,
+                  "nonzero_rate": 0.8981042654028436,
+                  "scene_count": 422
+                },
+                "2022-06-08": {
+                  "mean_onset_count": 2.850704225352113,
+                  "nonzero_rate": 0.7943661971830986,
+                  "scene_count": 355
+                },
+                "2022-06-13": {
+                  "mean_onset_count": 4.597964376590331,
+                  "nonzero_rate": 0.8753180661577609,
+                  "scene_count": 393
+                },
+                "2022-06-17": {
+                  "mean_onset_count": 4.5576923076923075,
+                  "nonzero_rate": 0.7582417582417582,
+                  "scene_count": 364
+                },
+                "2022-06-23": {
+                  "mean_onset_count": 2.6448598130841123,
+                  "nonzero_rate": 0.6822429906542056,
+                  "scene_count": 321
+                },
+                "2022-06-24": {
+                  "mean_onset_count": 2.6625,
+                  "nonzero_rate": 0.8375,
+                  "scene_count": 80
+                },
+                "2022-06-30": {
+                  "mean_onset_count": 2.5138121546961325,
+                  "nonzero_rate": 0.850828729281768,
+                  "scene_count": 362
+                },
+                "2022-08-19": {
+                  "mean_onset_count": 2.136627906976744,
+                  "nonzero_rate": 0.7674418604651163,
+                  "scene_count": 344
+                },
+                "2022-09-01": {
+                  "mean_onset_count": 4.703583061889251,
+                  "nonzero_rate": 0.8664495114006515,
+                  "scene_count": 307
+                },
+                "2022-10-06": {
+                  "mean_onset_count": 2.9918918918918918,
+                  "nonzero_rate": 0.7810810810810811,
+                  "scene_count": 370
+                }
+              },
+              "mean_onset_count": 3.4439421338155514,
+              "nonzero_rate": 0.8119349005424955,
+              "pair_exposure_equal_day_mae": 2.6551954714987565,
+              "scene_count": 3318
+            },
+            "validation": {
+              "days": {
+                "2020-10-22": {
+                  "mean_onset_count": 7.892925430210325,
+                  "nonzero_rate": 0.8948374760994264,
+                  "scene_count": 523
+                },
+                "2021-04-05": {
+                  "mean_onset_count": 7.012987012987013,
+                  "nonzero_rate": 0.9155844155844156,
+                  "scene_count": 154
+                },
+                "2022-06-20": {
+                  "mean_onset_count": 6.159649122807018,
+                  "nonzero_rate": 0.8929824561403509,
+                  "scene_count": 570
+                }
+              },
+              "mean_onset_count": 6.991980753809142,
+              "nonzero_rate": 0.896551724137931,
+              "pair_exposure_equal_day_mae": 4.144096056164929,
+              "scene_count": 1247
+            }
+          }
+        }
+      },
+      "horizontal_nm": 5.0,
+      "target_summary": {
+        "horizons": {
+          "120": {
+            "cutoff_active_pair_sum": 22053,
+            "future_onset_sum": 11598,
+            "legacy_event_sum": 31061,
+            "legacy_minus_onset_sum": 19463,
+            "missing_future_pair_scenes": 17
+          },
+          "30": {
+            "cutoff_active_pair_sum": 22053,
+            "future_onset_sum": 3116,
+            "legacy_event_sum": 22579,
+            "legacy_minus_onset_sum": 19463,
+            "missing_future_pair_scenes": 27
+          },
+          "300": {
+            "cutoff_active_pair_sum": 22053,
+            "future_onset_sum": 26896,
+            "legacy_event_sum": 46359,
+            "legacy_minus_onset_sum": 19463,
+            "missing_future_pair_scenes": 10
+          }
+        },
+        "independent_days": 17,
+        "scene_count": 6008
+      },
+      "vertical_ft": 1500.0
+    },
+    "h5nm_v500ft": {
+      "horizons": {
+        "120": {
+          "risk_quantiles": {
+            "q70": {
+              "test_prevalence": 0.5634095634095634,
+              "threshold": 2,
+              "train_prevalence": 0.3921036769138035,
+              "validation_prevalence": 0.5966319165998396
+            },
+            "q75": {
+              "test_prevalence": 0.5634095634095634,
+              "threshold": 2,
+              "train_prevalence": 0.3921036769138035,
+              "validation_prevalence": 0.5966319165998396
+            },
+            "q80": {
+              "test_prevalence": 0.43173943173943174,
+              "threshold": 3,
+              "train_prevalence": 0.22814948764315854,
+              "validation_prevalence": 0.4458700882117081
+            },
+            "q90": {
+              "test_prevalence": 0.31185031185031187,
+              "threshold": 4,
+              "train_prevalence": 0.1383363471971067,
+              "validation_prevalence": 0.3376102646351243
+            }
+          },
+          "splits": {
+            "test": {
+              "days": {
+                "2022-06-14": {
+                  "mean_onset_count": 2.421171171171171,
+                  "nonzero_rate": 0.7927927927927928,
+                  "scene_count": 444
+                },
+                "2022-06-21": {
+                  "mean_onset_count": 2.0194444444444444,
+                  "nonzero_rate": 0.6777777777777778,
+                  "scene_count": 360
+                },
+                "2022-07-25": {
+                  "mean_onset_count": 1.6603174603174604,
+                  "nonzero_rate": 0.6412698412698413,
+                  "scene_count": 315
+                },
+                "2022-09-20": {
+                  "mean_onset_count": 4.222222222222222,
+                  "nonzero_rate": 0.8734567901234568,
+                  "scene_count": 324
+                }
+              },
+              "mean_onset_count": 2.5592515592515594,
+              "nonzero_rate": 0.7491337491337491,
+              "pair_exposure_equal_day_mae": 1.598707441108326,
+              "scene_count": 1443
+            },
+            "train": {
+              "days": {
+                "2021-03-22": {
+                  "mean_onset_count": 1.8578199052132702,
+                  "nonzero_rate": 0.7345971563981043,
+                  "scene_count": 422
+                },
+                "2022-06-08": {
+                  "mean_onset_count": 1.2028169014084507,
+                  "nonzero_rate": 0.5774647887323944,
+                  "scene_count": 355
+                },
+                "2022-06-13": {
+                  "mean_onset_count": 3.0025445292620865,
+                  "nonzero_rate": 0.72264631043257,
+                  "scene_count": 393
+                },
+                "2022-06-17": {
+                  "mean_onset_count": 1.8461538461538463,
+                  "nonzero_rate": 0.7115384615384616,
+                  "scene_count": 364
+                },
+                "2022-06-23": {
+                  "mean_onset_count": 1.5545171339563864,
+                  "nonzero_rate": 0.6355140186915887,
+                  "scene_count": 321
+                },
+                "2022-06-24": {
+                  "mean_onset_count": 3.35,
+                  "nonzero_rate": 0.9875,
+                  "scene_count": 80
+                },
+                "2022-06-30": {
+                  "mean_onset_count": 1.0497237569060773,
+                  "nonzero_rate": 0.5662983425414365,
+                  "scene_count": 362
+                },
+                "2022-08-19": {
+                  "mean_onset_count": 0.7558139534883721,
+                  "nonzero_rate": 0.47093023255813954,
+                  "scene_count": 344
+                },
+                "2022-09-01": {
+                  "mean_onset_count": 2.003257328990228,
+                  "nonzero_rate": 0.7328990228013029,
+                  "scene_count": 307
+                },
+                "2022-10-06": {
+                  "mean_onset_count": 1.1054054054054054,
+                  "nonzero_rate": 0.5864864864864865,
+                  "scene_count": 370
+                }
+              },
+              "mean_onset_count": 1.65581675708258,
+              "nonzero_rate": 0.6479807112718505,
+              "pair_exposure_equal_day_mae": 1.3491581762211042,
+              "scene_count": 3318
+            },
+            "validation": {
+              "days": {
+                "2020-10-22": {
+                  "mean_onset_count": 2.734225621414914,
+                  "nonzero_rate": 0.7877629063097514,
+                  "scene_count": 523
+                },
+                "2021-04-05": {
+                  "mean_onset_count": 6.175324675324675,
+                  "nonzero_rate": 0.8831168831168831,
+                  "scene_count": 154
+                },
+                "2022-06-20": {
+                  "mean_onset_count": 2.533333333333333,
+                  "nonzero_rate": 0.8157894736842105,
+                  "scene_count": 570
+                }
+              },
+              "mean_onset_count": 3.067361668003208,
+              "nonzero_rate": 0.8123496391339214,
+              "pair_exposure_equal_day_mae": 2.234327086382754,
+              "scene_count": 1247
+            }
+          }
+        },
+        "30": {
+          "risk_quantiles": {
+            "q70": {
+              "test_prevalence": 0.4164934164934165,
+              "threshold": 1,
+              "train_prevalence": 0.30349608197709466,
+              "validation_prevalence": 0.4603047313552526
+            },
+            "q75": {
+              "test_prevalence": 0.4164934164934165,
+              "threshold": 1,
+              "train_prevalence": 0.30349608197709466,
+              "validation_prevalence": 0.4603047313552526
+            },
+            "q80": {
+              "test_prevalence": 0.4164934164934165,
+              "threshold": 1,
+              "train_prevalence": 0.30349608197709466,
+              "validation_prevalence": 0.4603047313552526
+            },
+            "q90": {
+              "test_prevalence": 0.4164934164934165,
+              "threshold": 1,
+              "train_prevalence": 0.30349608197709466,
+              "validation_prevalence": 0.4603047313552526
+            }
+          },
+          "splits": {
+            "test": {
+              "days": {
+                "2022-06-14": {
+                  "mean_onset_count": 0.6193693693693694,
+                  "nonzero_rate": 0.43018018018018017,
+                  "scene_count": 444
+                },
+                "2022-06-21": {
+                  "mean_onset_count": 0.49722222222222223,
+                  "nonzero_rate": 0.3194444444444444,
+                  "scene_count": 360
+                },
+                "2022-07-25": {
+                  "mean_onset_count": 0.4253968253968254,
+                  "nonzero_rate": 0.30158730158730157,
+                  "scene_count": 315
+                },
+                "2022-09-20": {
+                  "mean_onset_count": 1.0895061728395061,
+                  "nonzero_rate": 0.6172839506172839,
+                  "scene_count": 324
+                }
+              },
+              "mean_onset_count": 0.6521136521136521,
+              "nonzero_rate": 0.4164934164934165,
+              "pair_exposure_equal_day_mae": 0.6321978139613392,
+              "scene_count": 1443
+            },
+            "train": {
+              "days": {
+                "2021-03-22": {
+                  "mean_onset_count": 0.47393364928909953,
+                  "nonzero_rate": 0.33649289099526064,
+                  "scene_count": 422
+                },
+                "2022-06-08": {
+                  "mean_onset_count": 0.3126760563380282,
+                  "nonzero_rate": 0.23943661971830985,
+                  "scene_count": 355
+                },
+                "2022-06-13": {
+                  "mean_onset_count": 0.8371501272264631,
+                  "nonzero_rate": 0.42493638676844786,
+                  "scene_count": 393
+                },
+                "2022-06-17": {
+                  "mean_onset_count": 0.45879120879120877,
+                  "nonzero_rate": 0.34615384615384615,
+                  "scene_count": 364
+                },
+                "2022-06-23": {
+                  "mean_onset_count": 0.4236760124610592,
+                  "nonzero_rate": 0.308411214953271,
+                  "scene_count": 321
+                },
+                "2022-06-24": {
+                  "mean_onset_count": 0.8625,
+                  "nonzero_rate": 0.575,
+                  "scene_count": 80
+                },
+                "2022-06-30": {
+                  "mean_onset_count": 0.26795580110497236,
+                  "nonzero_rate": 0.2292817679558011,
+                  "scene_count": 362
+                },
+                "2022-08-19": {
+                  "mean_onset_count": 0.2063953488372093,
+                  "nonzero_rate": 0.17151162790697674,
+                  "scene_count": 344
+                },
+                "2022-09-01": {
+                  "mean_onset_count": 0.511400651465798,
+                  "nonzero_rate": 0.3745928338762215,
+                  "scene_count": 307
+                },
+                "2022-10-06": {
+                  "mean_onset_count": 0.3,
+                  "nonzero_rate": 0.22972972972972974,
+                  "scene_count": 370
+                }
+              },
+              "mean_onset_count": 0.43640747438215793,
+              "nonzero_rate": 0.30349608197709466,
+              "pair_exposure_equal_day_mae": 0.5439281736094814,
+              "scene_count": 3318
+            },
+            "validation": {
+              "days": {
+                "2020-10-22": {
+                  "mean_onset_count": 0.7189292543021033,
+                  "nonzero_rate": 0.42065009560229444,
+                  "scene_count": 523
+                },
+                "2021-04-05": {
+                  "mean_onset_count": 1.5714285714285714,
+                  "nonzero_rate": 0.7077922077922078,
+                  "scene_count": 154
+                },
+                "2022-06-20": {
+                  "mean_onset_count": 0.631578947368421,
+                  "nonzero_rate": 0.4298245614035088,
+                  "scene_count": 570
+                }
+              },
+              "mean_onset_count": 0.7842822774659182,
+              "nonzero_rate": 0.4603047313552526,
+              "pair_exposure_equal_day_mae": 0.8352920254936748,
+              "scene_count": 1247
+            }
+          }
+        },
+        "300": {
+          "risk_quantiles": {
+            "q70": {
+              "test_prevalence": 0.589050589050589,
+              "threshold": 4,
+              "train_prevalence": 0.3866787221217601,
+              "validation_prevalence": 0.6391339214113874
+            },
+            "q75": {
+              "test_prevalence": 0.5287595287595288,
+              "threshold": 5,
+              "train_prevalence": 0.2917420132610006,
+              "validation_prevalence": 0.5340817963111467
+            },
+            "q80": {
+              "test_prevalence": 0.4733194733194733,
+              "threshold": 6,
+              "train_prevalence": 0.229957805907173,
+              "validation_prevalence": 0.46832397754611066
+            },
+            "q90": {
+              "test_prevalence": 0.3097713097713098,
+              "threshold": 9,
+              "train_prevalence": 0.12176009644364075,
+              "validation_prevalence": 0.3520449077786688
+            }
+          },
+          "splits": {
+            "test": {
+              "days": {
+                "2022-06-14": {
+                  "mean_onset_count": 5.882882882882883,
+                  "nonzero_rate": 0.9279279279279279,
+                  "scene_count": 444
+                },
+                "2022-06-21": {
+                  "mean_onset_count": 4.902777777777778,
+                  "nonzero_rate": 0.9111111111111111,
+                  "scene_count": 360
+                },
+                "2022-07-25": {
+                  "mean_onset_count": 3.533333333333333,
+                  "nonzero_rate": 0.7428571428571429,
+                  "scene_count": 315
+                },
+                "2022-09-20": {
+                  "mean_onset_count": 10.188271604938272,
+                  "nonzero_rate": 0.9166666666666666,
+                  "scene_count": 324
+                }
+              },
+              "mean_onset_count": 6.092169092169092,
+              "nonzero_rate": 0.8808038808038808,
+              "pair_exposure_equal_day_mae": 3.3092665915074013,
+              "scene_count": 1443
+            },
+            "train": {
+              "days": {
+                "2021-03-22": {
+                  "mean_onset_count": 4.485781990521327,
+                  "nonzero_rate": 0.8862559241706162,
+                  "scene_count": 422
+                },
+                "2022-06-08": {
+                  "mean_onset_count": 2.7830985915492956,
+                  "nonzero_rate": 0.7380281690140845,
+                  "scene_count": 355
+                },
+                "2022-06-13": {
+                  "mean_onset_count": 6.208651399491094,
+                  "nonzero_rate": 0.8600508905852418,
+                  "scene_count": 393
+                },
+                "2022-06-17": {
+                  "mean_onset_count": 4.076923076923077,
+                  "nonzero_rate": 0.7939560439560439,
+                  "scene_count": 364
+                },
+                "2022-06-23": {
+                  "mean_onset_count": 3.629283489096573,
+                  "nonzero_rate": 0.8099688473520249,
+                  "scene_count": 321
+                },
+                "2022-06-24": {
+                  "mean_onset_count": 7.8875,
+                  "nonzero_rate": 1.0,
+                  "scene_count": 80
+                },
+                "2022-06-30": {
+                  "mean_onset_count": 2.458563535911602,
+                  "nonzero_rate": 0.8425414364640884,
+                  "scene_count": 362
+                },
+                "2022-08-19": {
+                  "mean_onset_count": 1.8517441860465116,
+                  "nonzero_rate": 0.7965116279069767,
+                  "scene_count": 344
+                },
+                "2022-09-01": {
+                  "mean_onset_count": 4.791530944625407,
+                  "nonzero_rate": 0.9250814332247557,
+                  "scene_count": 307
+                },
+                "2022-10-06": {
+                  "mean_onset_count": 2.6405405405405404,
+                  "nonzero_rate": 0.8324324324324325,
+                  "scene_count": 370
+                }
+              },
+              "mean_onset_count": 3.790235081374322,
+              "nonzero_rate": 0.836045810729355,
+              "pair_exposure_equal_day_mae": 2.768910501559639,
+              "scene_count": 3318
+            },
+            "validation": {
+              "days": {
+                "2020-10-22": {
+                  "mean_onset_count": 6.516252390057361,
+                  "nonzero_rate": 0.8852772466539197,
+                  "scene_count": 523
+                },
+                "2021-04-05": {
+                  "mean_onset_count": 13.415584415584416,
+                  "nonzero_rate": 0.8831168831168831,
+                  "scene_count": 154
+                },
+                "2022-06-20": {
+                  "mean_onset_count": 6.2596491228070175,
+                  "nonzero_rate": 0.9947368421052631,
+                  "scene_count": 570
+                }
+              },
+              "mean_onset_count": 7.251002405773857,
+              "nonzero_rate": 0.9350441058540497,
+              "pair_exposure_equal_day_mae": 4.73462712297748,
+              "scene_count": 1247
+            }
+          }
+        }
+      },
+      "horizontal_nm": 5.0,
+      "target_summary": {
+        "horizons": {
+          "120": {
+            "cutoff_active_pair_sum": 9809,
+            "future_onset_sum": 13012,
+            "legacy_event_sum": 21152,
+            "legacy_minus_onset_sum": 8140,
+            "missing_future_pair_scenes": 17
+          },
+          "30": {
+            "cutoff_active_pair_sum": 9809,
+            "future_onset_sum": 3367,
+            "legacy_event_sum": 11507,
+            "legacy_minus_onset_sum": 8140,
+            "missing_future_pair_scenes": 27
+          },
+          "300": {
+            "cutoff_active_pair_sum": 9809,
+            "future_onset_sum": 30409,
+            "legacy_event_sum": 38549,
+            "legacy_minus_onset_sum": 8140,
+            "missing_future_pair_scenes": 10
+          }
+        },
+        "independent_days": 17,
+        "scene_count": 6008
+      },
+      "vertical_ft": 500.0
+    },
+    "h7nm_v1000ft": {
+      "horizons": {
+        "120": {
+          "risk_quantiles": {
+            "q70": {
+              "test_prevalence": 0.6243936243936244,
+              "threshold": 2,
+              "train_prevalence": 0.44333936106088007,
+              "validation_prevalence": 0.6503608660785886
+            },
+            "q75": {
+              "test_prevalence": 0.455994455994456,
+              "threshold": 3,
+              "train_prevalence": 0.29535864978902954,
+              "validation_prevalence": 0.529270248596632
+            },
+            "q80": {
+              "test_prevalence": 0.455994455994456,
+              "threshold": 3,
+              "train_prevalence": 0.29535864978902954,
+              "validation_prevalence": 0.529270248596632
+            },
+            "q90": {
+              "test_prevalence": 0.26403326403326405,
+              "threshold": 5,
+              "train_prevalence": 0.13471971066907776,
+              "validation_prevalence": 0.3400160384923817
+            }
+          },
+          "splits": {
+            "test": {
+              "days": {
+                "2022-06-14": {
+                  "mean_onset_count": 3.358108108108108,
+                  "nonzero_rate": 0.8603603603603603,
+                  "scene_count": 444
+                },
+                "2022-06-21": {
+                  "mean_onset_count": 1.9388888888888889,
+                  "nonzero_rate": 0.6805555555555556,
+                  "scene_count": 360
+                },
+                "2022-07-25": {
+                  "mean_onset_count": 2.488888888888889,
+                  "nonzero_rate": 0.8222222222222222,
+                  "scene_count": 315
+                },
+                "2022-09-20": {
+                  "mean_onset_count": 4.04320987654321,
+                  "nonzero_rate": 0.8611111111111112,
+                  "scene_count": 324
+                }
+              },
+              "mean_onset_count": 2.968121968121968,
+              "nonzero_rate": 0.8073458073458073,
+              "pair_exposure_equal_day_mae": 1.8423320634370317,
+              "scene_count": 1443
+            },
+            "train": {
+              "days": {
+                "2021-03-22": {
+                  "mean_onset_count": 2.3175355450236967,
+                  "nonzero_rate": 0.8127962085308057,
+                  "scene_count": 422
+                },
+                "2022-06-08": {
+                  "mean_onset_count": 1.9014084507042253,
+                  "nonzero_rate": 0.6985915492957746,
+                  "scene_count": 355
+                },
+                "2022-06-13": {
+                  "mean_onset_count": 3.2061068702290076,
+                  "nonzero_rate": 0.7480916030534351,
+                  "scene_count": 393
+                },
+                "2022-06-17": {
+                  "mean_onset_count": 2.7445054945054945,
+                  "nonzero_rate": 0.75,
+                  "scene_count": 364
+                },
+                "2022-06-23": {
+                  "mean_onset_count": 1.6386292834890965,
+                  "nonzero_rate": 0.6074766355140186,
+                  "scene_count": 321
+                },
+                "2022-06-24": {
+                  "mean_onset_count": 1.5375,
+                  "nonzero_rate": 0.5125,
+                  "scene_count": 80
+                },
+                "2022-06-30": {
+                  "mean_onset_count": 1.1464088397790055,
+                  "nonzero_rate": 0.494475138121547,
+                  "scene_count": 362
+                },
+                "2022-08-19": {
+                  "mean_onset_count": 1.0203488372093024,
+                  "nonzero_rate": 0.48255813953488375,
+                  "scene_count": 344
+                },
+                "2022-09-01": {
+                  "mean_onset_count": 2.52442996742671,
+                  "nonzero_rate": 0.6579804560260586,
+                  "scene_count": 307
+                },
+                "2022-10-06": {
+                  "mean_onset_count": 1.5216216216216216,
+                  "nonzero_rate": 0.6324324324324324,
+                  "scene_count": 370
+                }
+              },
+              "mean_onset_count": 2.0087402049427365,
+              "nonzero_rate": 0.6555153707052441,
+              "pair_exposure_equal_day_mae": 1.6048024932082705,
+              "scene_count": 3318
+            },
+            "validation": {
+              "days": {
+                "2020-10-22": {
+                  "mean_onset_count": 3.9388145315487573,
+                  "nonzero_rate": 0.7782026768642447,
+                  "scene_count": 523
+                },
+                "2021-04-05": {
+                  "mean_onset_count": 4.8441558441558445,
+                  "nonzero_rate": 0.9025974025974026,
+                  "scene_count": 154
+                },
+                "2022-06-20": {
+                  "mean_onset_count": 3.389473684210526,
+                  "nonzero_rate": 0.8473684210526315,
+                  "scene_count": 570
+                }
+              },
+              "mean_onset_count": 3.7995188452285484,
+              "nonzero_rate": 0.8251804330392943,
+              "pair_exposure_equal_day_mae": 2.4650464301502253,
+              "scene_count": 1247
+            }
+          }
+        },
+        "30": {
+          "risk_quantiles": {
+            "q70": {
+              "test_prevalence": 0.4268884268884269,
+              "threshold": 1,
+              "train_prevalence": 0.3176612417118746,
+              "validation_prevalence": 0.49398556535685645
+            },
+            "q75": {
+              "test_prevalence": 0.4268884268884269,
+              "threshold": 1,
+              "train_prevalence": 0.3176612417118746,
+              "validation_prevalence": 0.49398556535685645
+            },
+            "q80": {
+              "test_prevalence": 0.4268884268884269,
+              "threshold": 1,
+              "train_prevalence": 0.3176612417118746,
+              "validation_prevalence": 0.49398556535685645
+            },
+            "q90": {
+              "test_prevalence": 0.17463617463617465,
+              "threshold": 2,
+              "train_prevalence": 0.12869198312236288,
+              "validation_prevalence": 0.2453889334402566
+            }
+          },
+          "splits": {
+            "test": {
+              "days": {
+                "2022-06-14": {
+                  "mean_onset_count": 0.8490990990990991,
+                  "nonzero_rate": 0.4594594594594595,
+                  "scene_count": 444
+                },
+                "2022-06-21": {
+                  "mean_onset_count": 0.49722222222222223,
+                  "nonzero_rate": 0.30833333333333335,
+                  "scene_count": 360
+                },
+                "2022-07-25": {
+                  "mean_onset_count": 0.6888888888888889,
+                  "nonzero_rate": 0.44761904761904764,
+                  "scene_count": 315
+                },
+                "2022-09-20": {
+                  "mean_onset_count": 1.0432098765432098,
+                  "nonzero_rate": 0.49382716049382713,
+                  "scene_count": 324
+                }
+              },
+              "mean_onset_count": 0.7699237699237699,
+              "nonzero_rate": 0.4268884268884269,
+              "pair_exposure_equal_day_mae": 0.7931944365143333,
+              "scene_count": 1443
+            },
+            "train": {
+              "days": {
+                "2021-03-22": {
+                  "mean_onset_count": 0.6184834123222749,
+                  "nonzero_rate": 0.4146919431279621,
+                  "scene_count": 422
+                },
+                "2022-06-08": {
+                  "mean_onset_count": 0.476056338028169,
+                  "nonzero_rate": 0.323943661971831,
+                  "scene_count": 355
+                },
+                "2022-06-13": {
+                  "mean_onset_count": 0.905852417302799,
+                  "nonzero_rate": 0.455470737913486,
+                  "scene_count": 393
+                },
+                "2022-06-17": {
+                  "mean_onset_count": 0.7417582417582418,
+                  "nonzero_rate": 0.3873626373626374,
+                  "scene_count": 364
+                },
+                "2022-06-23": {
+                  "mean_onset_count": 0.4485981308411215,
+                  "nonzero_rate": 0.2772585669781931,
+                  "scene_count": 321
+                },
+                "2022-06-24": {
+                  "mean_onset_count": 0.3875,
+                  "nonzero_rate": 0.225,
+                  "scene_count": 80
+                },
+                "2022-06-30": {
+                  "mean_onset_count": 0.30386740331491713,
+                  "nonzero_rate": 0.20718232044198895,
+                  "scene_count": 362
+                },
+                "2022-08-19": {
+                  "mean_onset_count": 0.2819767441860465,
+                  "nonzero_rate": 0.19476744186046513,
+                  "scene_count": 344
+                },
+                "2022-09-01": {
+                  "mean_onset_count": 0.6547231270358306,
+                  "nonzero_rate": 0.32247557003257327,
+                  "scene_count": 307
+                },
+                "2022-10-06": {
+                  "mean_onset_count": 0.4081081081081081,
+                  "nonzero_rate": 0.2594594594594595,
+                  "scene_count": 370
+                }
+              },
+              "mean_onset_count": 0.5394816154309825,
+              "nonzero_rate": 0.3176612417118746,
+              "pair_exposure_equal_day_mae": 0.6490628025664212,
+              "scene_count": 3318
+            },
+            "validation": {
+              "days": {
+                "2020-10-22": {
+                  "mean_onset_count": 1.0497131931166348,
+                  "nonzero_rate": 0.4588910133843212,
+                  "scene_count": 523
+                },
+                "2021-04-05": {
+                  "mean_onset_count": 1.2987012987012987,
+                  "nonzero_rate": 0.6038961038961039,
+                  "scene_count": 154
+                },
+                "2022-06-20": {
+                  "mean_onset_count": 0.8526315789473684,
+                  "nonzero_rate": 0.4964912280701754,
+                  "scene_count": 570
+                }
+              },
+              "mean_onset_count": 0.9903769045709703,
+              "nonzero_rate": 0.49398556535685645,
+              "pair_exposure_equal_day_mae": 0.9300749960864215,
+              "scene_count": 1247
+            }
+          }
+        },
+        "300": {
+          "risk_quantiles": {
+            "q70": {
+              "test_prevalence": 0.5980595980595981,
+              "threshold": 5,
+              "train_prevalence": 0.379746835443038,
+              "validation_prevalence": 0.6551724137931034
+            },
+            "q75": {
+              "test_prevalence": 0.4546084546084546,
+              "threshold": 7,
+              "train_prevalence": 0.2513562386980108,
+              "validation_prevalence": 0.5060144346431436
+            },
+            "q80": {
+              "test_prevalence": 0.4060984060984061,
+              "threshold": 8,
+              "train_prevalence": 0.20223025919228452,
+              "validation_prevalence": 0.45228548516439454
+            },
+            "q90": {
+              "test_prevalence": 0.2626472626472626,
+              "threshold": 11,
+              "train_prevalence": 0.10819770946353224,
+              "validation_prevalence": 0.3360064153969527
+            }
+          },
+          "splits": {
+            "test": {
+              "days": {
+                "2022-06-14": {
+                  "mean_onset_count": 8.085585585585585,
+                  "nonzero_rate": 0.9391891891891891,
+                  "scene_count": 444
+                },
+                "2022-06-21": {
+                  "mean_onset_count": 4.6305555555555555,
+                  "nonzero_rate": 0.875,
+                  "scene_count": 360
+                },
+                "2022-07-25": {
+                  "mean_onset_count": 5.387301587301588,
+                  "nonzero_rate": 0.8666666666666667,
+                  "scene_count": 315
+                },
+                "2022-09-20": {
+                  "mean_onset_count": 9.617283950617283,
+                  "nonzero_rate": 0.9814814814814815,
+                  "scene_count": 324
+                }
+              },
+              "mean_onset_count": 6.9785169785169785,
+              "nonzero_rate": 0.9168399168399168,
+              "pair_exposure_equal_day_mae": 3.547732439699973,
+              "scene_count": 1443
+            },
+            "train": {
+              "days": {
+                "2021-03-22": {
+                  "mean_onset_count": 5.35781990521327,
+                  "nonzero_rate": 0.8791469194312796,
+                  "scene_count": 422
+                },
+                "2022-06-08": {
+                  "mean_onset_count": 4.23943661971831,
+                  "nonzero_rate": 0.8422535211267606,
+                  "scene_count": 355
+                },
+                "2022-06-13": {
+                  "mean_onset_count": 6.727735368956743,
+                  "nonzero_rate": 0.8422391857506362,
+                  "scene_count": 393
+                },
+                "2022-06-17": {
+                  "mean_onset_count": 6.230769230769231,
+                  "nonzero_rate": 0.8241758241758241,
+                  "scene_count": 364
+                },
+                "2022-06-23": {
+                  "mean_onset_count": 3.9283489096573208,
+                  "nonzero_rate": 0.7507788161993769,
+                  "scene_count": 321
+                },
+                "2022-06-24": {
+                  "mean_onset_count": 3.6125,
+                  "nonzero_rate": 0.8375,
+                  "scene_count": 80
+                },
+                "2022-06-30": {
+                  "mean_onset_count": 2.7320441988950277,
+                  "nonzero_rate": 0.7983425414364641,
+                  "scene_count": 362
+                },
+                "2022-08-19": {
+                  "mean_onset_count": 2.244186046511628,
+                  "nonzero_rate": 0.8052325581395349,
+                  "scene_count": 344
+                },
+                "2022-09-01": {
+                  "mean_onset_count": 5.644951140065147,
+                  "nonzero_rate": 0.755700325732899,
+                  "scene_count": 307
+                },
+                "2022-10-06": {
+                  "mean_onset_count": 3.7162162162162162,
+                  "nonzero_rate": 0.8675675675675676,
+                  "scene_count": 370
+                }
+              },
+              "mean_onset_count": 4.550030138637734,
+              "nonzero_rate": 0.8221820373719108,
+              "pair_exposure_equal_day_mae": 3.184707544802771,
+              "scene_count": 3318
+            },
+            "validation": {
+              "days": {
+                "2020-10-22": {
+                  "mean_onset_count": 9.506692160611856,
+                  "nonzero_rate": 0.9273422562141491,
+                  "scene_count": 523
+                },
+                "2021-04-05": {
+                  "mean_onset_count": 10.064935064935066,
+                  "nonzero_rate": 0.9025974025974026,
+                  "scene_count": 154
+                },
+                "2022-06-20": {
+                  "mean_onset_count": 8.322807017543859,
+                  "nonzero_rate": 0.9526315789473684,
+                  "scene_count": 570
+                }
+              },
+              "mean_onset_count": 9.03448275862069,
+              "nonzero_rate": 0.9358460304731355,
+              "pair_exposure_equal_day_mae": 5.144361450741638,
+              "scene_count": 1247
+            }
+          }
+        }
+      },
+      "horizontal_nm": 7.0,
+      "target_summary": {
+        "horizons": {
+          "120": {
+            "cutoff_active_pair_sum": 21122,
+            "future_onset_sum": 15686,
+            "legacy_event_sum": 34069,
+            "legacy_minus_onset_sum": 18383,
+            "missing_future_pair_scenes": 17
+          },
+          "30": {
+            "cutoff_active_pair_sum": 21122,
+            "future_onset_sum": 4136,
+            "legacy_event_sum": 22519,
+            "legacy_minus_onset_sum": 18383,
+            "missing_future_pair_scenes": 27
+          },
+          "300": {
+            "cutoff_active_pair_sum": 21122,
+            "future_onset_sum": 36433,
+            "legacy_event_sum": 54816,
+            "legacy_minus_onset_sum": 18383,
+            "missing_future_pair_scenes": 10
+          }
+        },
+        "independent_days": 17,
+        "scene_count": 6008
+      },
+      "vertical_ft": 1000.0
+    }
+  }
+}

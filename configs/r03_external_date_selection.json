@@ -1,0 +1,18 @@
+{
+  "schema_version": "r03_external_date_selection_v1",
+  "selection_frozen_at": "2026-08-29",
+  "airport_id": "KBTP",
+  "selection_rule": "Within eight predeclared year/season strata, choose the unused date whose largest authenticated source has the most rows; require at least 50000 rows and do not inspect targets or model outputs.",
+  "minimum_authenticated_rows": 50000,
+  "max_hours_per_source": 2,
+  "sources": [
+    {"stratum": "2020Q3", "date": "2020-09-23", "authenticated_rows": 200150, "source_file_id": "961692b542461943caf83afa15bedc170b4218b7193ab440868ecccee1bed734", "relative_path": "raw/2020/2020/09-23-20/1.csv"},
+    {"stratum": "2020Q4", "date": "2020-10-03", "authenticated_rows": 178624, "source_file_id": "83da819969ead6a5fcd7bc693b33285f203548a33b2ee4d28f1407106ea223d1", "relative_path": "raw/2020/2020/10-03-20/1.csv"},
+    {"stratum": "2021H1", "date": "2021-03-29", "authenticated_rows": 213389, "source_file_id": "7ede22041ac94ed77faff7522887a90611ff849e2c0c3d61b92bb486393bad46", "relative_path": "raw/2021/2021/03-29-21/1.csv"},
+    {"stratum": "2021H2", "date": "2021-11-10", "authenticated_rows": 204969, "source_file_id": "2d50f01d6522f792cd9091179cac645fb49c38908d1ef349ec6e51833bf2526f", "relative_path": "raw/2021/2021/11-10-21/1.csv"},
+    {"stratum": "2022Q1", "date": "2022-01-04", "authenticated_rows": 168414, "source_file_id": "1e19c7809f38a6833a5ba78a65b5d1667d1c80e2ff49719e890f14438b3bfb2b", "relative_path": "raw/2022/2022/01-04-22/1.csv"},
+    {"stratum": "2022Q2", "date": "2022-06-19", "authenticated_rows": 266119, "source_file_id": "175eb6b312b283eb9d05edc9259135eb2cfbb5c0bd9909b874b3d6f70e4b483c", "relative_path": "raw/2022/2022/06-19-22/1.csv"},
+    {"stratum": "2022Q3", "date": "2022-07-26", "authenticated_rows": 230988, "source_file_id": "a77eff38941cdfae802dd309a2c4e69d5eec6a3ac16df4126915e59d45867461", "relative_path": "raw/2022/2022/07-26-22/1.csv"},
+    {"stratum": "2022Q4", "date": "2022-10-22", "authenticated_rows": 221188, "source_file_id": "ae5f51c5f3e816bfd365972e6fa68f5098eae754a38a32ebc5563935e1c689ee", "relative_path": "raw/2022/2022/10-22-22/1.csv"}
+  ]
+}

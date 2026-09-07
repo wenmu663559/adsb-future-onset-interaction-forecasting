@@ -1,0 +1,188 @@
+{
+  "current_report_age_seconds": {
+    "count": 27192,
+    "max": 30.0,
+    "p50": 0.0,
+    "p95": 11.372300899999958
+  },
+  "dataset_root": "E:\\Desktop\\air_area_complex\\.worktrees\\r02-three-key-audit\\outputs\\experiments\\r03_future_onset_development\\20260903T040754Z-online-complexity-pilot",
+  "decision": "TARGET_RECONSTRUCTION_AUDIT_NOT_MODEL_SELECTION",
+  "deterministic_stratified_sample": {
+    "history_never_after_cutoff": true,
+    "onset_never_exceeds_legacy": true,
+    "positive_120s": 12,
+    "sample_size": 24,
+    "scene_ids": [
+      "KBTP\u00002021-03-22\u00001616431410255000",
+      "KBTP\u00002021-03-22\u00001616436350255000",
+      "KBTP\u00002022-06-13\u00001655137440000000",
+      "KBTP\u00002022-06-13\u00001655139720000000",
+      "KBTP\u00002022-06-14\u00001655234770000000",
+      "KBTP\u00002022-06-14\u00001655234800000000",
+      "KBTP\u00002022-06-14\u00001655235260000000",
+      "KBTP\u00002022-06-14\u00001655238270000000",
+      "KBTP\u00002022-06-17\u00001655480550000000",
+      "KBTP\u00002022-06-17\u00001655482970000000",
+      "KBTP\u00002022-06-20\u00001655740820000000",
+      "KBTP\u00002022-06-21\u00001655827480000000",
+      "KBTP\u00002022-06-21\u00001655827960000000",
+      "KBTP\u00002022-06-21\u00001655828120000000",
+      "KBTP\u00002022-06-23\u00001656027370000000",
+      "KBTP\u00002022-06-30\u00001656603730000000",
+      "KBTP\u00002022-06-30\u00001656604430000000",
+      "KBTP\u00002022-06-30\u00001656605700000000",
+      "KBTP\u00002022-06-30\u00001656610240000000",
+      "KBTP\u00002022-08-19\u00001660947000000000",
+      "KBTP\u00002022-09-20\u00001663707280000000",
+      "KBTP\u00002022-09-20\u00001663713060000000",
+      "KBTP\u00002022-10-06\u00001665071620000000",
+      "KBTP\u00002022-10-06\u00001665073260000000"
+    ],
+    "zero_120s": 12
+  },
+  "pilot_reports_sha256": "22303df9d368157f22beb5352bd9cdf4d0b71b0f1ae2b87fbc9051f85ef62cfa",
+  "pilot_scenes_sha256": "9ce1cd963db2ee99dbdbc9a0376a082cd79ce4ef732dbcf65f4aedeffbbc632b",
+  "primary_reconstruction_exact": true,
+  "primary_reconstruction_sha256": "9ce1cd963db2ee99dbdbc9a0376a082cd79ce4ef732dbcf65f4aedeffbbc632b",
+  "schema_version": "r03_future_event_reconstruction_audit_v1",
+  "staleness_sensitivity": {
+    "15": {
+      "horizons": {
+        "120": {
+          "cutoff_active_pair_sum": 16668,
+          "future_onset_sum": 12601,
+          "legacy_event_sum": 27738,
+          "legacy_minus_onset_sum": 15137,
+          "missing_future_pair_scenes": 8
+        },
+        "30": {
+          "cutoff_active_pair_sum": 16668,
+          "future_onset_sum": 3330,
+          "legacy_event_sum": 18467,
+          "legacy_minus_onset_sum": 15137,
+          "missing_future_pair_scenes": 10
+        },
+        "300": {
+          "cutoff_active_pair_sum": 16668,
+          "future_onset_sum": 29093,
+          "legacy_event_sum": 44230,
+          "legacy_minus_onset_sum": 15137,
+          "missing_future_pair_scenes": 6
+        }
+      },
+      "independent_days": 17,
+      "scene_count": 5758,
+      "source_days": [
+        "2020-10-22",
+        "2021-03-22",
+        "2021-04-05",
+        "2022-06-08",
+        "2022-06-13",
+        "2022-06-14",
+        "2022-06-17",
+        "2022-06-20",
+        "2022-06-21",
+        "2022-06-23",
+        "2022-06-24",
+        "2022-06-30",
+        "2022-07-25",
+        "2022-08-19",
+        "2022-09-01",
+        "2022-09-20",
+        "2022-10-06"
+      ]
+    },
+    "30": {
+      "horizons": {
+        "120": {
+          "cutoff_active_pair_sum": 17449,
+          "future_onset_sum": 12731,
+          "legacy_event_sum": 27984,
+          "legacy_minus_onset_sum": 15253,
+          "missing_future_pair_scenes": 17
+        },
+        "30": {
+          "cutoff_active_pair_sum": 17449,
+          "future_onset_sum": 3362,
+          "legacy_event_sum": 18615,
+          "legacy_minus_onset_sum": 15253,
+          "missing_future_pair_scenes": 27
+        },
+        "300": {
+          "cutoff_active_pair_sum": 17449,
+          "future_onset_sum": 29490,
+          "legacy_event_sum": 44743,
+          "legacy_minus_onset_sum": 15253,
+          "missing_future_pair_scenes": 10
+        }
+      },
+      "independent_days": 17,
+      "scene_count": 6008,
+      "source_days": [
+        "2020-10-22",
+        "2021-03-22",
+        "2021-04-05",
+        "2022-06-08",
+        "2022-06-13",
+        "2022-06-14",
+        "2022-06-17",
+        "2022-06-20",
+        "2022-06-21",
+        "2022-06-23",
+        "2022-06-24",
+        "2022-06-30",
+        "2022-07-25",
+        "2022-08-19",
+        "2022-09-01",
+        "2022-09-20",
+        "2022-10-06"
+      ]
+    },
+    "60": {
+      "horizons": {
+        "120": {
+          "cutoff_active_pair_sum": 18962,
+          "future_onset_sum": 13471,
+          "legacy_event_sum": 28862,
+          "legacy_minus_onset_sum": 15391,
+          "missing_future_pair_scenes": 45
+        },
+        "30": {
+          "cutoff_active_pair_sum": 18962,
+          "future_onset_sum": 3409,
+          "legacy_event_sum": 18800,
+          "legacy_minus_onset_sum": 15391,
+          "missing_future_pair_scenes": 89
+        },
+        "300": {
+          "cutoff_active_pair_sum": 18962,
+          "future_onset_sum": 31687,
+          "legacy_event_sum": 47078,
+          "legacy_minus_onset_sum": 15391,
+          "missing_future_pair_scenes": 24
+        }
+      },
+      "independent_days": 17,
+      "scene_count": 6442,
+      "source_days": [
+        "2020-10-22",
+        "2021-03-22",
+        "2021-04-05",
+        "2022-06-08",
+        "2022-06-13",
+        "2022-06-14",
+        "2022-06-17",
+        "2022-06-20",
+        "2022-06-21",
+        "2022-06-23",
+        "2022-06-24",
+        "2022-06-30",
+        "2022-07-25",
+        "2022-08-19",
+        "2022-09-01",
+        "2022-09-20",
+        "2022-10-06"
+      ]
+    }
+  }
+}

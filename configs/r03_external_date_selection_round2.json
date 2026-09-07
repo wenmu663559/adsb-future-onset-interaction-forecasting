@@ -1,0 +1,19 @@
+{
+  "schema_version": "r03_external_date_selection_v1",
+  "selection_frozen_at": "2026-08-30",
+  "airport_id": "KBTP",
+  "selection_round": 2,
+  "selection_rule": "Within the same eight predeclared year/season strata, exclude all 17 original dates and all eight round-1 external dates, then choose the remaining date whose largest authenticated source has the most rows; require at least 50000 rows and do not inspect targets or model outputs.",
+  "minimum_authenticated_rows": 50000,
+  "max_hours_per_source": 2,
+  "sources": [
+    {"stratum": "2020Q3", "date": "2020-09-24", "authenticated_rows": 177654, "source_file_id": "272240abb55dbca503d92ccfa52b903164ed20a3a94292445a71839883d0d983", "relative_path": "raw/2020/2020/09-24-20/1.csv"},
+    {"stratum": "2020Q4", "date": "2020-10-01", "authenticated_rows": 166502, "source_file_id": "4f8afd9c3497c3af5b0f070be722ca2036701f746cd24fd7ef7a4ae9087305ba", "relative_path": "raw/2020/2020/10-01-20/1.csv"},
+    {"stratum": "2021H1", "date": "2021-04-07", "authenticated_rows": 212678, "source_file_id": "92ca9fb843f5727ce80c3e6768d93c7bef70900f195525fd3c951f5e565bd8e6", "relative_path": "raw/2021/2021/04-07-21/1.csv"},
+    {"stratum": "2021H2", "date": "2021-11-08", "authenticated_rows": 203262, "source_file_id": "313c7647d266302a8da6680273edf66aa18b9f970e2f5ec0795ae386f6d7c6d2", "relative_path": "raw/2021/2021/11-08-21/2.csv"},
+    {"stratum": "2022Q1", "date": "2022-01-11", "authenticated_rows": 155642, "source_file_id": "a76155f6b043b16f5943be554ea4d7b7612132ed9db21a63191e0ce2bc1f2012", "relative_path": "raw/2022/2022/01-11-22/1.csv"},
+    {"stratum": "2022Q2", "date": "2022-06-11", "authenticated_rows": 265101, "source_file_id": "7d58c05745064d63d1fda1f18164f8692f0bb267498ebba1188b8c2f06798f31", "relative_path": "raw/2022/2022/06-11-22/1.csv"},
+    {"stratum": "2022Q3", "date": "2022-07-27", "authenticated_rows": 222206, "source_file_id": "7b858f56824af491ace250baca72696686e169ef5737d76fb51978190618106c", "relative_path": "raw/2022/2022/07-27-22/1.csv"},
+    {"stratum": "2022Q4", "date": "2022-10-05", "authenticated_rows": 218167, "source_file_id": "9459d277975859f55dd287aeadd2736b5c03e13a06fba3999cfd0594752ebf10", "relative_path": "raw/2022/2022/10-05-22/1.csv"}
+  ]
+}

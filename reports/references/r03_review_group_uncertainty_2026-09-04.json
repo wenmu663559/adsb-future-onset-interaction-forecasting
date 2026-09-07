@@ -1,0 +1,552 @@
+{
+  "analysis_status": "post-review supplementary; not new blind confirmation",
+  "input_sha256": {
+    "r03_future_onset_confirmation_2026-09-03.json": "b22e7c24de31431f902fd89878a1597771679a309d6a37a61ce9f5a930436060",
+    "r03_kagc_external_validation_2026-09-03.json": "5b5721ac54e79781ddc381b6d08d95881d20e8efaf0f0b0871a82faa2c530d42"
+  },
+  "protocol_sha256": "6851fc2ff5daf88e57014c02119a9d1fabe35ad7232ec2b008743f020095c785",
+  "ci_interpretation": "Pointwise percentile intervals for equal-source-group mean differences; not simultaneous; small samples and between-group dependence limit inference.",
+  "test_interpretation": "Exact two-sided sign tests concern the direction distribution, not the mean difference; Holm family is all 18 comparisons.",
+  "records": [
+    {
+      "group_count": 8,
+      "mean_difference": -0.012241245434770169,
+      "ci95": [
+        -0.02104084704380771,
+        -0.00258520200544508
+      ],
+      "wins": 7,
+      "losses": 1,
+      "ties": 0,
+      "sign_p_two_sided": 0.0703125,
+      "airport": "KBTP",
+      "horizon": 30,
+      "comparison": "count_B_vs_A",
+      "source_groups": [
+        "2020-09-26",
+        "2020-10-13",
+        "2021-03-27",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-06-16",
+        "2022-07-19",
+        "2022-10-24"
+      ],
+      "baseline_mean": 0.591826912763722,
+      "candidate_mean": 0.5795856673289519,
+      "relative_improvement_percent": 2.068382692771747,
+      "sign_p_holm_18": 0.984375
+    },
+    {
+      "group_count": 8,
+      "mean_difference": -0.050010244501432696,
+      "ci95": [
+        -0.061176201465352055,
+        -0.03939142196373972
+      ],
+      "wins": 8,
+      "losses": 0,
+      "ties": 0,
+      "sign_p_two_sided": 0.0078125,
+      "airport": "KBTP",
+      "horizon": 30,
+      "comparison": "count_B_vs_pair_rate",
+      "source_groups": [
+        "2020-09-26",
+        "2020-10-13",
+        "2021-03-27",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-06-16",
+        "2022-07-19",
+        "2022-10-24"
+      ],
+      "baseline_mean": 0.6295959118303845,
+      "candidate_mean": 0.5795856673289519,
+      "relative_improvement_percent": 7.943228912659401,
+      "sign_p_holm_18": 0.140625
+    },
+    {
+      "group_count": 8,
+      "mean_difference": -0.029778289521725898,
+      "ci95": [
+        -0.04134239792098135,
+        -0.01691867612944234
+      ],
+      "wins": 7,
+      "losses": 1,
+      "ties": 0,
+      "sign_p_two_sided": 0.0703125,
+      "airport": "KBTP",
+      "horizon": 30,
+      "comparison": "prob_B_vs_prevalence",
+      "source_groups": [
+        "2020-09-26",
+        "2020-10-13",
+        "2021-03-27",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-06-16",
+        "2022-07-19",
+        "2022-10-24"
+      ],
+      "baseline_mean": 0.21281542591011193,
+      "candidate_mean": 0.18303713638838603,
+      "relative_improvement_percent": 13.99254278414175,
+      "sign_p_holm_18": 0.984375
+    },
+    {
+      "group_count": 8,
+      "mean_difference": -0.03410290316108784,
+      "ci95": [
+        -0.06096062070095676,
+        -0.006682688175669263
+      ],
+      "wins": 5,
+      "losses": 3,
+      "ties": 0,
+      "sign_p_two_sided": 0.7265625,
+      "airport": "KBTP",
+      "horizon": 120,
+      "comparison": "count_B_vs_A",
+      "source_groups": [
+        "2020-09-26",
+        "2020-10-13",
+        "2021-03-27",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-06-16",
+        "2022-07-19",
+        "2022-10-24"
+      ],
+      "baseline_mean": 1.623032935595928,
+      "candidate_mean": 1.58893003243484,
+      "relative_improvement_percent": 2.1011836798349566,
+      "sign_p_holm_18": 1.0
+    },
+    {
+      "group_count": 8,
+      "mean_difference": -0.03277393214163338,
+      "ci95": [
+        -0.0867602490457896,
+        0.03424583699410053
+      ],
+      "wins": 6,
+      "losses": 2,
+      "ties": 0,
+      "sign_p_two_sided": 0.2890625,
+      "airport": "KBTP",
+      "horizon": 120,
+      "comparison": "count_B_vs_pair_rate",
+      "source_groups": [
+        "2020-09-26",
+        "2020-10-13",
+        "2021-03-27",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-06-16",
+        "2022-07-19",
+        "2022-10-24"
+      ],
+      "baseline_mean": 1.6217039645764735,
+      "candidate_mean": 1.58893003243484,
+      "relative_improvement_percent": 2.020956528289222,
+      "sign_p_holm_18": 1.0
+    },
+    {
+      "group_count": 8,
+      "mean_difference": -0.038578348439528606,
+      "ci95": [
+        -0.05215504961559818,
+        -0.026178829341904786
+      ],
+      "wins": 8,
+      "losses": 0,
+      "ties": 0,
+      "sign_p_two_sided": 0.0078125,
+      "airport": "KBTP",
+      "horizon": 120,
+      "comparison": "prob_B_vs_prevalence",
+      "source_groups": [
+        "2020-09-26",
+        "2020-10-13",
+        "2021-03-27",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-06-16",
+        "2022-07-19",
+        "2022-10-24"
+      ],
+      "baseline_mean": 0.23881561694019243,
+      "candidate_mean": 0.2002372685006638,
+      "relative_improvement_percent": 16.154030851839114,
+      "sign_p_holm_18": 0.140625
+    },
+    {
+      "group_count": 8,
+      "mean_difference": -0.020127756125361218,
+      "ci95": [
+        -0.13735591520606089,
+        0.13113092850140962
+      ],
+      "wins": 6,
+      "losses": 2,
+      "ties": 0,
+      "sign_p_two_sided": 0.2890625,
+      "airport": "KBTP",
+      "horizon": 300,
+      "comparison": "count_B_vs_A",
+      "source_groups": [
+        "2020-09-26",
+        "2020-10-13",
+        "2021-03-27",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-06-16",
+        "2022-07-19",
+        "2022-10-24"
+      ],
+      "baseline_mean": 3.1287860794878037,
+      "candidate_mean": 3.1086583233624427,
+      "relative_improvement_percent": 0.6433087981731311,
+      "sign_p_holm_18": 1.0
+    },
+    {
+      "group_count": 8,
+      "mean_difference": -0.027479694409848515,
+      "ci95": [
+        -0.23134099630679367,
+        0.2040057888639143
+      ],
+      "wins": 5,
+      "losses": 3,
+      "ties": 0,
+      "sign_p_two_sided": 0.7265625,
+      "airport": "KBTP",
+      "horizon": 300,
+      "comparison": "count_B_vs_pair_rate",
+      "source_groups": [
+        "2020-09-26",
+        "2020-10-13",
+        "2021-03-27",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-06-16",
+        "2022-07-19",
+        "2022-10-24"
+      ],
+      "baseline_mean": 3.136138017772291,
+      "candidate_mean": 3.1086583233624427,
+      "relative_improvement_percent": 0.876227202186985,
+      "sign_p_holm_18": 1.0
+    },
+    {
+      "group_count": 8,
+      "mean_difference": -0.03314946033572508,
+      "ci95": [
+        -0.04863029796564075,
+        -0.018860933368622892
+      ],
+      "wins": 8,
+      "losses": 0,
+      "ties": 0,
+      "sign_p_two_sided": 0.0078125,
+      "airport": "KBTP",
+      "horizon": 300,
+      "comparison": "prob_B_vs_prevalence",
+      "source_groups": [
+        "2020-09-26",
+        "2020-10-13",
+        "2021-03-27",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-06-16",
+        "2022-07-19",
+        "2022-10-24"
+      ],
+      "baseline_mean": 0.21965900447974418,
+      "candidate_mean": 0.1865095441440191,
+      "relative_improvement_percent": 15.09132776698073,
+      "sign_p_holm_18": 0.140625
+    },
+    {
+      "group_count": 10,
+      "mean_difference": 0.009287518769687905,
+      "ci95": [
+        -0.005146120706492109,
+        0.025884776849095622
+      ],
+      "wins": 4,
+      "losses": 6,
+      "ties": 0,
+      "sign_p_two_sided": 0.75390625,
+      "airport": "KAGC",
+      "horizon": 30,
+      "comparison": "count_B_vs_A",
+      "source_groups": [
+        "2021-11-04",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-02-20",
+        "2022-03-21",
+        "2022-04-26",
+        "2022-05-19",
+        "2022-06-20",
+        "2022-07-22",
+        "2022-08-26"
+      ],
+      "baseline_mean": 0.34287023470042366,
+      "candidate_mean": 0.3521577534701116,
+      "relative_improvement_percent": -2.7087562085413155,
+      "sign_p_holm_18": 1.0
+    },
+    {
+      "group_count": 10,
+      "mean_difference": -0.047171009580628795,
+      "ci95": [
+        -0.05957568405403181,
+        -0.03138847170173172
+      ],
+      "wins": 9,
+      "losses": 1,
+      "ties": 0,
+      "sign_p_two_sided": 0.021484375,
+      "airport": "KAGC",
+      "horizon": 30,
+      "comparison": "count_B_vs_pair_rate",
+      "source_groups": [
+        "2021-11-04",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-02-20",
+        "2022-03-21",
+        "2022-04-26",
+        "2022-05-19",
+        "2022-06-20",
+        "2022-07-22",
+        "2022-08-26"
+      ],
+      "baseline_mean": 0.3993287630507404,
+      "candidate_mean": 0.3521577534701116,
+      "relative_improvement_percent": 11.812574987150386,
+      "sign_p_holm_18": 0.322265625
+    },
+    {
+      "group_count": 10,
+      "mean_difference": -0.0007735896337581427,
+      "ci95": [
+        -0.01872704297411115,
+        0.023330058179507427
+      ],
+      "wins": 6,
+      "losses": 4,
+      "ties": 0,
+      "sign_p_two_sided": 0.75390625,
+      "airport": "KAGC",
+      "horizon": 30,
+      "comparison": "prob_B_vs_prevalence",
+      "source_groups": [
+        "2021-11-04",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-02-20",
+        "2022-03-21",
+        "2022-04-26",
+        "2022-05-19",
+        "2022-06-20",
+        "2022-07-22",
+        "2022-08-26"
+      ],
+      "baseline_mean": 0.17278119367269726,
+      "candidate_mean": 0.1720076040389391,
+      "relative_improvement_percent": 0.4477279137355472,
+      "sign_p_holm_18": 1.0
+    },
+    {
+      "group_count": 10,
+      "mean_difference": -0.003581660825827726,
+      "ci95": [
+        -0.027363971191650995,
+        0.02304044023731224
+      ],
+      "wins": 6,
+      "losses": 4,
+      "ties": 0,
+      "sign_p_two_sided": 0.75390625,
+      "airport": "KAGC",
+      "horizon": 120,
+      "comparison": "count_B_vs_A",
+      "source_groups": [
+        "2021-11-04",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-02-20",
+        "2022-03-21",
+        "2022-04-26",
+        "2022-05-19",
+        "2022-06-20",
+        "2022-07-22",
+        "2022-08-26"
+      ],
+      "baseline_mean": 1.0321664654846017,
+      "candidate_mean": 1.0285848046587742,
+      "relative_improvement_percent": 0.34700418446031744,
+      "sign_p_holm_18": 1.0
+    },
+    {
+      "group_count": 10,
+      "mean_difference": -0.06956737742885513,
+      "ci95": [
+        -0.13070937121944404,
+        -0.008959018405867318
+      ],
+      "wins": 8,
+      "losses": 2,
+      "ties": 0,
+      "sign_p_two_sided": 0.109375,
+      "airport": "KAGC",
+      "horizon": 120,
+      "comparison": "count_B_vs_pair_rate",
+      "source_groups": [
+        "2021-11-04",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-02-20",
+        "2022-03-21",
+        "2022-04-26",
+        "2022-05-19",
+        "2022-06-20",
+        "2022-07-22",
+        "2022-08-26"
+      ],
+      "baseline_mean": 1.0981521820876294,
+      "candidate_mean": 1.0285848046587742,
+      "relative_improvement_percent": 6.334948704159098,
+      "sign_p_holm_18": 1.0
+    },
+    {
+      "group_count": 10,
+      "mean_difference": -0.009252049653200011,
+      "ci95": [
+        -0.05897451859357908,
+        0.04952494386345131
+      ],
+      "wins": 6,
+      "losses": 4,
+      "ties": 0,
+      "sign_p_two_sided": 0.75390625,
+      "airport": "KAGC",
+      "horizon": 120,
+      "comparison": "prob_B_vs_prevalence",
+      "source_groups": [
+        "2021-11-04",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-02-20",
+        "2022-03-21",
+        "2022-04-26",
+        "2022-05-19",
+        "2022-06-20",
+        "2022-07-22",
+        "2022-08-26"
+      ],
+      "baseline_mean": 0.20955688573005488,
+      "candidate_mean": 0.20030483607685484,
+      "relative_improvement_percent": 4.415053994034935,
+      "sign_p_holm_18": 1.0
+    },
+    {
+      "group_count": 10,
+      "mean_difference": 0.017299582164102923,
+      "ci95": [
+        -0.028013974629407922,
+        0.0712984529560874
+      ],
+      "wins": 5,
+      "losses": 5,
+      "ties": 0,
+      "sign_p_two_sided": 1.0,
+      "airport": "KAGC",
+      "horizon": 300,
+      "comparison": "count_B_vs_A",
+      "source_groups": [
+        "2021-11-04",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-02-20",
+        "2022-03-21",
+        "2022-04-26",
+        "2022-05-19",
+        "2022-06-20",
+        "2022-07-22",
+        "2022-08-26"
+      ],
+      "baseline_mean": 2.023877427869487,
+      "candidate_mean": 2.04117701003359,
+      "relative_improvement_percent": -0.8547742035106344,
+      "sign_p_holm_18": 1.0
+    },
+    {
+      "group_count": 10,
+      "mean_difference": -0.0743053634538104,
+      "ci95": [
+        -0.2765425547176621,
+        0.10304246879530374
+      ],
+      "wins": 7,
+      "losses": 3,
+      "ties": 0,
+      "sign_p_two_sided": 0.34375,
+      "airport": "KAGC",
+      "horizon": 300,
+      "comparison": "count_B_vs_pair_rate",
+      "source_groups": [
+        "2021-11-04",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-02-20",
+        "2022-03-21",
+        "2022-04-26",
+        "2022-05-19",
+        "2022-06-20",
+        "2022-07-22",
+        "2022-08-26"
+      ],
+      "baseline_mean": 2.1154823734874,
+      "candidate_mean": 2.04117701003359,
+      "relative_improvement_percent": 3.5124548606527526,
+      "sign_p_holm_18": 1.0
+    },
+    {
+      "group_count": 10,
+      "mean_difference": 0.006852582037752882,
+      "ci95": [
+        -0.03812929032768885,
+        0.06047122720874279
+      ],
+      "wins": 7,
+      "losses": 3,
+      "ties": 0,
+      "sign_p_two_sided": 0.34375,
+      "airport": "KAGC",
+      "horizon": 300,
+      "comparison": "prob_B_vs_prevalence",
+      "source_groups": [
+        "2021-11-04",
+        "2021-12-20",
+        "2022-01-03",
+        "2022-02-20",
+        "2022-03-21",
+        "2022-04-26",
+        "2022-05-19",
+        "2022-06-20",
+        "2022-07-22",
+        "2022-08-26"
+      ],
+      "baseline_mean": 0.17293198741432952,
+      "candidate_mean": 0.17978456945208238,
+      "relative_improvement_percent": -3.962587916910196,
+      "sign_p_holm_18": 1.0
+    }
+  ]
+}

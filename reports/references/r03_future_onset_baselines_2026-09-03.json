@@ -1,0 +1,733 @@
+{
+  "dataset_scene_sha256": "9ce1cd963db2ee99dbdbc9a0376a082cd79ce4ef732dbcf65f4aedeffbbc632b",
+  "decision": "DESCRIPTIVE_BASELINE_EVIDENCE_NOT_CONFIRMATION",
+  "horizons": {
+    "120": {
+      "splits": {
+        "test": {
+          "days": {
+            "2022-06-14": {
+              "constant_velocity_CPA_120s": {
+                "count_mae": 1.6238738738738738,
+                "mean_target": 2.418918918918919,
+                "normalized_mae": 0.6713221601489758
+              },
+              "current_aircraft_count_rate": {
+                "count_mae": 1.433317099705242,
+                "mean_target": 2.418918918918919,
+                "normalized_mae": 0.5925444993194855
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 1.4561787519857592,
+                "mean_target": 2.418918918918919,
+                "normalized_mae": 0.6019956851784702
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 1.6509009009009008,
+                "mean_target": 2.418918918918919,
+                "normalized_mae": 0.6824953445065177
+              },
+              "training_mean": {
+                "count_mae": 1.6667236857110275,
+                "mean_target": 2.418918918918919,
+                "normalized_mae": 0.6890366075006482
+              }
+            },
+            "2022-06-21": {
+              "constant_velocity_CPA_120s": {
+                "count_mae": 1.9277777777777778,
+                "mean_target": 1.7361111111111112,
+                "normalized_mae": 1.1104
+              },
+              "current_aircraft_count_rate": {
+                "count_mae": 1.3450670880864153,
+                "mean_target": 1.7361111111111112,
+                "normalized_mae": 0.7747586427377752
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 1.2768042905463928,
+                "mean_target": 1.7361111111111112,
+                "normalized_mae": 0.7354392713547222
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 1.975,
+                "mean_target": 1.7361111111111112,
+                "normalized_mae": 1.1376
+              },
+              "training_mean": {
+                "count_mae": 1.5036317058468955,
+                "mean_target": 1.7361111111111112,
+                "normalized_mae": 0.8660918625678118
+              }
+            },
+            "2022-07-25": {
+              "constant_velocity_CPA_120s": {
+                "count_mae": 1.546031746031746,
+                "mean_target": 1.7809523809523808,
+                "normalized_mae": 0.8680926916221035
+              },
+              "current_aircraft_count_rate": {
+                "count_mae": 1.1745388198632405,
+                "mean_target": 1.7809523809523808,
+                "normalized_mae": 0.6595004068750816
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 1.3006206196819146,
+                "mean_target": 1.7809523809523808,
+                "normalized_mae": 0.7302950003561552
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 1.66984126984127,
+                "mean_target": 1.7809523809523808,
+                "normalized_mae": 0.9376114081996436
+              },
+              "training_mean": {
+                "count_mae": 1.2882287092052012,
+                "mean_target": 1.7809523809523808,
+                "normalized_mae": 0.7233369757569312
+              }
+            },
+            "2022-09-20": {
+              "constant_velocity_CPA_120s": {
+                "count_mae": 2.8703703703703702,
+                "mean_target": 3.728395061728395,
+                "normalized_mae": 0.7698675496688742
+              },
+              "current_aircraft_count_rate": {
+                "count_mae": 2.4584366027002083,
+                "mean_target": 3.728395061728395,
+                "normalized_mae": 0.659382002710983
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 2.110418205191324,
+                "mean_target": 3.728395061728395,
+                "normalized_mae": 0.5660393199354213
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 3.1049382716049383,
+                "mean_target": 3.728395061728395,
+                "normalized_mae": 0.8327814569536424
+              },
+              "training_mean": {
+                "count_mae": 2.8854508516955772,
+                "mean_target": 3.728395061728395,
+                "normalized_mae": 0.7739123145276217
+              }
+            }
+          },
+          "equal_scene_metrics": {
+            "constant_velocity_CPA_120s": {
+              "count_mae": 1.9625779625779627,
+              "mean_target": 2.4033264033264032,
+              "normalized_mae": 0.8166089965397925
+            },
+            "current_aircraft_count_rate": {
+              "count_mae": 1.5849827661205995,
+              "mean_target": 2.4033264033264032,
+              "normalized_mae": 0.6594954243114259
+            },
+            "current_pair_opportunity_rate": {
+              "count_mae": 1.5243686099516083,
+              "mean_target": 2.4033264033264032,
+              "normalized_mae": 0.6342744821684461
+            },
+            "cutoff_active_pair_persistence": {
+              "count_mae": 2.0623700623700625,
+              "mean_target": 2.4033264033264032,
+              "normalized_mae": 0.8581314878892734
+            },
+            "training_mean": {
+              "count_mae": 1.8170553360426778,
+              "mean_target": 2.4033264033264032,
+              "normalized_mae": 0.7560584919001108
+            }
+          },
+          "scene_count": 1443,
+          "training_prevalence_risk_baseline": {
+            "brier": 0.2753322957044888,
+            "observed_prevalence": 0.5419265419265419,
+            "threshold": 2,
+            "training_prevalence": 0.377335744424352
+          }
+        },
+        "validation": {
+          "days": {
+            "2020-10-22": {
+              "constant_velocity_CPA_120s": {
+                "count_mae": 2.0554493307839388,
+                "mean_target": 3.101338432122371,
+                "normalized_mae": 0.6627620221948212
+              },
+              "current_aircraft_count_rate": {
+                "count_mae": 2.192894213418108,
+                "mean_target": 3.101338432122371,
+                "normalized_mae": 0.7070799467433233
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 1.9391885626802594,
+                "mean_target": 3.101338432122371,
+                "normalized_mae": 0.6252747338358666
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 2.108986615678776,
+                "mean_target": 3.101338432122371,
+                "normalized_mae": 0.6800246609124537
+              },
+              "training_mean": {
+                "count_mae": 2.6367354841832658,
+                "mean_target": 3.101338432122371,
+                "normalized_mae": 0.8501927609296227
+              }
+            },
+            "2021-04-05": {
+              "constant_velocity_CPA_120s": {
+                "count_mae": 4.824675324675325,
+                "mean_target": 4.487012987012987,
+                "normalized_mae": 1.0752532561505066
+              },
+              "current_aircraft_count_rate": {
+                "count_mae": 2.825538735042477,
+                "mean_target": 4.487012987012987,
+                "normalized_mae": 0.6297148555666302
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 2.6933441958058353,
+                "mean_target": 4.487012987012987,
+                "normalized_mae": 0.6002532650565827
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 5.246753246753247,
+                "mean_target": 4.487012987012987,
+                "normalized_mae": 1.1693198263386397
+              },
+              "training_mean": {
+                "count_mae": 3.2912918907493953,
+                "mean_target": 4.487012987012987,
+                "normalized_mae": 0.7335151247111532
+              }
+            },
+            "2022-06-20": {
+              "constant_velocity_CPA_120s": {
+                "count_mae": 1.943859649122807,
+                "mean_target": 2.5719298245614035,
+                "normalized_mae": 0.7557980900409277
+              },
+              "current_aircraft_count_rate": {
+                "count_mae": 1.6742751669553888,
+                "mean_target": 2.5719298245614035,
+                "normalized_mae": 0.6509801126634186
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 1.8154043926588441,
+                "mean_target": 2.5719298245614035,
+                "normalized_mae": 0.7058530039669448
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 2.068421052631579,
+                "mean_target": 2.5719298245614035,
+                "normalized_mae": 0.8042291950886766
+              },
+              "training_mean": {
+                "count_mae": 1.9272865708575233,
+                "mean_target": 2.5719298245614035,
+                "normalized_mae": 0.749354260156063
+              }
+            }
+          },
+          "equal_scene_metrics": {
+            "constant_velocity_CPA_120s": {
+              "count_mae": 2.3464314354450684,
+              "mean_target": 3.0304731355252605,
+              "normalized_mae": 0.7742789097644881
+            },
+            "current_aircraft_count_rate": {
+              "count_mae": 2.033964301506643,
+              "mean_target": 3.0304731355252605,
+              "normalized_mae": 0.6711705435244202
+            },
+            "current_pair_opportunity_rate": {
+              "count_mae": 1.9757426850452406,
+              "mean_target": 3.0304731355252605,
+              "normalized_mae": 0.6519584885555478
+            },
+            "cutoff_active_pair_persistence": {
+              "count_mae": 2.4779470729751405,
+              "mean_target": 3.0304731355252605,
+              "normalized_mae": 0.8176766340301668
+            },
+            "training_mean": {
+              "count_mae": 2.393283845061783,
+              "mean_target": 3.0304731355252605,
+              "normalized_mae": 0.7897393370711944
+            }
+          },
+          "scene_count": 1247,
+          "training_prevalence_risk_baseline": {
+            "brier": 0.28698246906935976,
+            "observed_prevalence": 0.5894145950280674,
+            "threshold": 2,
+            "training_prevalence": 0.377335744424352
+          }
+        }
+      },
+      "training_mean_target": 1.6528028933092225,
+      "training_scene_count": 3318
+    },
+    "30": {
+      "splits": {
+        "test": {
+          "days": {
+            "2022-06-14": {
+              "current_aircraft_count_rate": {
+                "count_mae": 0.6965975821058288,
+                "mean_target": 0.6126126126126126,
+                "normalized_mae": 1.1370931119668677
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 0.6932229883120176,
+                "mean_target": 0.6126126126126126,
+                "normalized_mae": 1.131584583862264
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 2.2905405405405403,
+                "mean_target": 0.6126126126126126,
+                "normalized_mae": 3.738970588235294
+              },
+              "training_mean": {
+                "count_mae": 0.7170226284150335,
+                "mean_target": 0.6126126126126126,
+                "normalized_mae": 1.1704339963833637
+              }
+            },
+            "2022-06-21": {
+              "current_aircraft_count_rate": {
+                "count_mae": 0.587727158968894,
+                "mean_target": 0.4444444444444444,
+                "normalized_mae": 1.3223861076800116
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 0.5388346416491161,
+                "mean_target": 0.4444444444444444,
+                "normalized_mae": 1.2123779437105113
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 2.438888888888889,
+                "mean_target": 0.4444444444444444,
+                "normalized_mae": 5.487500000000001
+              },
+              "training_mean": {
+                "count_mae": 0.6252210166767129,
+                "mean_target": 0.4444444444444444,
+                "normalized_mae": 1.4067472875226041
+              }
+            },
+            "2022-07-25": {
+              "current_aircraft_count_rate": {
+                "count_mae": 0.61771070122447,
+                "mean_target": 0.49523809523809526,
+                "normalized_mae": 1.2473004543955644
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 0.6160267055319162,
+                "mean_target": 0.49523809523809526,
+                "normalized_mae": 1.2439000784779077
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 2.13015873015873,
+                "mean_target": 0.49523809523809526,
+                "normalized_mae": 4.301282051282051
+              },
+              "training_mean": {
+                "count_mae": 0.6268406096615862,
+                "mean_target": 0.49523809523809526,
+                "normalized_mae": 1.265735846432049
+              }
+            },
+            "2022-09-20": {
+              "current_aircraft_count_rate": {
+                "count_mae": 0.9488023893010693,
+                "mean_target": 0.9783950617283951,
+                "normalized_mae": 0.9697538616200203
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 0.9377842155221056,
+                "mean_target": 0.9783950617283951,
+                "normalized_mae": 0.9584923843191236
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 5.077160493827161,
+                "mean_target": 0.9783950617283951,
+                "normalized_mae": 5.1892744479495265
+              },
+              "training_mean": {
+                "count_mae": 1.0059105217333064,
+                "mean_target": 0.9783950617283951,
+                "normalized_mae": 1.0281230569135371
+              }
+            }
+          },
+          "equal_scene_metrics": {
+            "current_aircraft_count_rate": {
+              "count_mae": 0.7088440392952491,
+              "mean_target": 0.6271656271656272,
+              "normalized_mae": 1.1302341974619274
+            },
+            "current_pair_opportunity_rate": {
+              "count_mae": 0.6927664420484638,
+              "mean_target": 0.6271656271656272,
+              "normalized_mae": 1.104598868371197
+            },
+            "cutoff_active_pair_persistence": {
+              "count_mae": 2.918225918225918,
+              "mean_target": 0.6271656271656272,
+              "normalized_mae": 4.653038674033149
+            },
+            "training_mean": {
+              "count_mae": 0.7392982772729607,
+              "mean_target": 0.6271656271656272,
+              "normalized_mae": 1.1787927227678257
+            }
+          },
+          "scene_count": 1443,
+          "training_prevalence_risk_baseline": {
+            "brier": 0.24174833899122591,
+            "observed_prevalence": 0.37422037422037424,
+            "threshold": 1,
+            "training_prevalence": 0.2872212176009644
+          }
+        },
+        "validation": {
+          "days": {
+            "2020-10-22": {
+              "current_aircraft_count_rate": {
+                "count_mae": 0.8298791797610713,
+                "mean_target": 0.8126195028680688,
+                "normalized_mae": 1.0212395553295066
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 0.7857669230652164,
+                "mean_target": 0.8126195028680688,
+                "normalized_mae": 0.9669555312073134
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 2.4091778202676863,
+                "mean_target": 0.8126195028680688,
+                "normalized_mae": 2.9647058823529413
+              },
+              "training_mean": {
+                "count_mae": 0.9038151020506952,
+                "mean_target": 0.8126195028680688,
+                "normalized_mae": 1.1122242314647377
+              }
+            },
+            "2021-04-05": {
+              "current_aircraft_count_rate": {
+                "count_mae": 1.025025218188046,
+                "mean_target": 1.1883116883116882,
+                "normalized_mae": 0.8625895278740934
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 0.969565451369833,
+                "mean_target": 1.1883116883116882,
+                "normalized_mae": 0.8159184672729742
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 7.766233766233766,
+                "mean_target": 1.1883116883116882,
+                "normalized_mae": 6.53551912568306
+              },
+              "training_mean": {
+                "count_mae": 1.107266151569949,
+                "mean_target": 1.1883116883116882,
+                "normalized_mae": 0.9317977450370063
+              }
+            },
+            "2022-06-20": {
+              "current_aircraft_count_rate": {
+                "count_mae": 0.7122803193408211,
+                "mean_target": 0.6491228070175439,
+                "normalized_mae": 1.0972967081736975
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 0.759400943484501,
+                "mean_target": 0.6491228070175439,
+                "normalized_mae": 1.1698879399626096
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 2.8087719298245615,
+                "mean_target": 0.6491228070175439,
+                "normalized_mae": 4.327027027027027
+              },
+              "training_mean": {
+                "count_mae": 0.738272897433457,
+                "mean_target": 0.6491228070175439,
+                "normalized_mae": 1.137339328478569
+              }
+            }
+          },
+          "equal_scene_metrics": {
+            "current_aircraft_count_rate": {
+              "count_mae": 0.8002249211229089,
+              "mean_target": 0.7842822774659182,
+              "normalized_mae": 1.0203276857262449
+            },
+            "current_pair_opportunity_rate": {
+              "count_mae": 0.7964135670090041,
+              "mean_target": 0.7842822774659182,
+              "normalized_mae": 1.0154680143765114
+            },
+            "cutoff_active_pair_persistence": {
+              "count_mae": 3.2534081796311147,
+              "mean_target": 0.7842822774659182,
+              "normalized_mae": 4.1482617586912065
+            },
+            "training_mean": {
+              "count_mae": 0.8532717219337259,
+              "mean_target": 0.7842822774659182,
+              "normalized_mae": 1.087965068764168
+            }
+          },
+          "scene_count": 1247,
+          "training_prevalence_risk_baseline": {
+            "brier": 0.26234272924241275,
+            "observed_prevalence": 0.42261427425821974,
+            "threshold": 1,
+            "training_prevalence": 0.2872212176009644
+          }
+        }
+      },
+      "training_mean_target": 0.445750452079566,
+      "training_scene_count": 3318
+    },
+    "300": {
+      "splits": {
+        "test": {
+          "days": {
+            "2022-06-14": {
+              "current_aircraft_count_rate": {
+                "count_mae": 3.024743191203992,
+                "mean_target": 5.795045045045045,
+                "normalized_mae": 0.5219533528544782
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 2.8458629302971636,
+                "mean_target": 5.795045045045045,
+                "normalized_mae": 0.4910855581235681
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 3.6216216216216215,
+                "mean_target": 5.795045045045045,
+                "normalized_mae": 0.6249514185775359
+              },
+              "training_mean": {
+                "count_mae": 3.628105501523223,
+                "mean_target": 5.795045045045045,
+                "normalized_mae": 0.6260702847556592
+              }
+            },
+            "2022-06-21": {
+              "current_aircraft_count_rate": {
+                "count_mae": 2.6804447512251044,
+                "mean_target": 4.155555555555556,
+                "normalized_mae": 0.6450268117921374
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 2.707741856076147,
+                "mean_target": 4.155555555555556,
+                "normalized_mae": 0.6515956338151155
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 3.2555555555555555,
+                "mean_target": 4.155555555555556,
+                "normalized_mae": 0.783422459893048
+              },
+              "training_mean": {
+                "count_mae": 2.890034157122765,
+                "mean_target": 4.155555555555556,
+                "normalized_mae": 0.6954627650830183
+              }
+            },
+            "2022-07-25": {
+              "current_aircraft_count_rate": {
+                "count_mae": 2.2544503378623846,
+                "mean_target": 3.7174603174603176,
+                "normalized_mae": 0.606449066120112
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 2.489040755111158,
+                "mean_target": 3.7174603174603176,
+                "normalized_mae": 0.669554088693437
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 2.2793650793650793,
+                "mean_target": 3.7174603174603176,
+                "normalized_mae": 0.6131511528608027
+              },
+              "training_mean": {
+                "count_mae": 2.538646344613795,
+                "mean_target": 3.7174603174603176,
+                "normalized_mae": 0.6828980346313794
+              }
+            },
+            "2022-09-20": {
+              "current_aircraft_count_rate": {
+                "count_mae": 5.216414245386853,
+                "mean_target": 8.83641975308642,
+                "normalized_mae": 0.5903311964740973
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 3.8046439638675897,
+                "mean_target": 8.83641975308642,
+                "normalized_mae": 0.43056396936538566
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 4.768518518518518,
+                "mean_target": 8.83641975308642,
+                "normalized_mae": 0.5396437303527768
+              },
+              "training_mean": {
+                "count_mae": 6.370197352264862,
+                "mean_target": 8.83641975308642,
+                "normalized_mae": 0.7209025295612348
+              }
+            }
+          },
+          "equal_scene_metrics": {
+            "current_aircraft_count_rate": {
+              "count_mae": 3.2627970611695094,
+              "mean_target": 5.615384615384615,
+              "normalized_mae": 0.5810460519890908
+            },
+            "current_pair_opportunity_rate": {
+              "count_mae": 2.9487891139240934,
+              "mean_target": 5.615384615384615,
+              "normalized_mae": 0.5251268285070304
+            },
+            "cutoff_active_pair_persistence": {
+              "count_mae": 3.494802494802495,
+              "mean_target": 5.615384615384615,
+              "normalized_mae": 0.6223620881155129
+            },
+            "training_mean": {
+              "count_mae": 3.82183553702541,
+              "mean_target": 5.615384615384615,
+              "normalized_mae": 0.6806008490593196
+            }
+          },
+          "scene_count": 1443,
+          "training_prevalence_risk_baseline": {
+            "brier": 0.30246464833412895,
+            "observed_prevalence": 0.5114345114345115,
+            "threshold": 5,
+            "training_prevalence": 0.2820976491862568
+          }
+        },
+        "validation": {
+          "days": {
+            "2020-10-22": {
+              "current_aircraft_count_rate": {
+                "count_mae": 4.920182399425178,
+                "mean_target": 7.479923518164436,
+                "normalized_mae": 0.657785121395544
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 4.315217246349548,
+                "mean_target": 7.479923518164436,
+                "normalized_mae": 0.5769066001638072
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 5.038240917782026,
+                "mean_target": 7.479923518164436,
+                "normalized_mae": 0.6735685071574642
+              },
+              "training_mean": {
+                "count_mae": 5.8986321783838545,
+                "mean_target": 7.479923518164436,
+                "normalized_mae": 0.7885952528872076
+              }
+            },
+            "2021-04-05": {
+              "current_aircraft_count_rate": {
+                "count_mae": 5.288495127629037,
+                "mean_target": 9.402597402597403,
+                "normalized_mae": 0.5624504486566794
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 4.9143815690340675,
+                "mean_target": 9.402597402597403,
+                "normalized_mae": 0.5226621281983745
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 5.746753246753247,
+                "mean_target": 9.402597402597403,
+                "normalized_mae": 0.6111878453038675
+              },
+              "training_mean": {
+                "count_mae": 6.611822174209156,
+                "mean_target": 9.402597402597403,
+                "normalized_mae": 0.703191032339924
+              }
+            },
+            "2022-06-20": {
+              "current_aircraft_count_rate": {
+                "count_mae": 3.721611210326186,
+                "mean_target": 6.3543859649122805,
+                "normalized_mae": 0.5856759773290795
+              },
+              "current_pair_opportunity_rate": {
+                "count_mae": 3.7376557418819885,
+                "mean_target": 6.3543859649122805,
+                "normalized_mae": 0.5882009312183141
+              },
+              "cutoff_active_pair_persistence": {
+                "count_mae": 4.257894736842105,
+                "mean_target": 6.3543859649122805,
+                "normalized_mae": 0.6700717835450027
+              },
+              "training_mean": {
+                "count_mae": 4.299108530820723,
+                "mean_target": 6.3543859649122805,
+                "normalized_mae": 0.6765576649828305
+              }
+            }
+          },
+          "equal_scene_metrics": {
+            "current_aircraft_count_rate": {
+              "count_mae": 4.4178043580113595,
+              "mean_target": 7.2028869286287085,
+              "normalized_mae": 0.6133380131863911
+            },
+            "current_pair_opportunity_rate": {
+              "count_mae": 4.12521022802309,
+              "mean_target": 7.2028869286287085,
+              "normalized_mae": 0.5727162273819633
+            },
+            "cutoff_active_pair_persistence": {
+              "count_mae": 4.7690457097032875,
+              "mean_target": 7.2028869286287085,
+              "normalized_mae": 0.6621019817412602
+            },
+            "training_mean": {
+              "count_mae": 5.255571055886751,
+              "mean_target": 7.2028869286287085,
+              "normalized_mae": 0.7296478631363592
+            }
+          },
+          "scene_count": 1247,
+          "training_prevalence_risk_baseline": {
+            "brier": 0.324915812259007,
+            "observed_prevalence": 0.5629510825982358,
+            "threshold": 5,
+            "training_prevalence": 0.2820976491862568
+          }
+        }
+      },
+      "training_mean_target": 3.7386980108499097,
+      "training_scene_count": 3318
+    }
+  },
+  "independent_days": 17,
+  "protocol_sha256": "11c7c0201f8ceba5942f105a2b1c07c87b2fd5ec9f3d874274559684e4e5f674",
+  "scene_count": 6008,
+  "schema_version": "r03_future_onset_baselines_v1"
+}

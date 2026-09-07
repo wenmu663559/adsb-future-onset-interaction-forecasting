@@ -1,0 +1,68 @@
+{
+  "schema_version": "r03_probabilistic_multihorizon_protocol_v1",
+  "frozen_at": "2026-08-30",
+  "research_question": "At KBTP high-activity terminal windows, can causal current-state features provide calibrated probabilistic predictions of future proximity-event counts at 30, 120, and 300 seconds across unseen dates, and does a low-capacity overdispersed count model improve on Ridge without adding a new deep architecture?",
+  "claim_boundary": "Proximity-event proxy forecasting at KBTP; not controller workload, official separation violation, accident risk, or universal airspace complexity.",
+  "training_dataset_root": "data/processed_research/kbtp-independent-expanded",
+  "training_scene_sha256": "e2536152476e0dec69cc95515586fa1474cc407c7401cd39330553234e2bace4",
+  "horizons_seconds": [30, 120, 300],
+  "input_condition": "The same eight current, prediction-time-observable control features for all primary model families.",
+  "model_families": [
+    {
+      "model_id": "ridge_log1p_controls",
+      "role": "strong point baseline",
+      "configuration": "StandardScaler + Ridge(alpha=1.0), trained separately per horizon"
+    },
+    {
+      "model_id": "poisson_nb2_controls",
+      "role": "predeclared probabilistic candidate",
+      "configuration": "StandardScaler + PoissonRegressor; alpha in [0.01, 0.1, 1.0, 10.0] selected once per horizon on original validation days by equal-day mean NB2 negative log likelihood; NB2 dispersion estimated on original train rows only"
+    },
+    {
+      "model_id": "hist_gradient_boosting_poisson_controls",
+      "role": "fixed nonlinear shallow comparator",
+      "configuration": "HistGradientBoostingRegressor(loss='poisson', max_iter=100, max_leaf_nodes=15, learning_rate=0.05, l2_regularization=1.0, random_state=1701); no tuning"
+    }
+  ],
+  "supplemental_model": {
+    "model_id": "frozen_A_invariant_relation",
+    "horizon_seconds": 120,
+    "restriction": "Existing checkpoints were trained only for 120 seconds; A is not evaluated as a 30- or 300-second model and is not eligible to determine the primary route."
+  },
+  "risk_definition": {
+    "method": "training-set 75th percentile with numpy higher quantile",
+    "thresholds_by_horizon": {"30": 3, "120": 5, "300": 7},
+    "event": "future proximity_event_count >= threshold"
+  },
+  "distribution": {
+    "family": "NB2 with mean from PoissonRegressor",
+    "variance": "mu + dispersion * mu^2",
+    "dispersion_estimation": "training-only method of moments, clipped to at least 1e-8",
+    "prediction_interval": 0.90
+  },
+  "metrics": {
+    "point_primary": "count MAE",
+    "point_secondary": ["count RMSE", "mean Poisson deviance"],
+    "probability_primary": "Brier score for the frozen high-risk event",
+    "calibration_secondary": ["10-bin ECE", "90% NB2 interval coverage", "mean interval width"],
+    "inference_unit": "source day",
+    "uncertainty": "paired day bootstrap with 10000 resamples and exact two-sided sign test"
+  },
+  "evaluation_sets": {
+    "development": "original train and validation dates only",
+    "retrospective": "original four test dates plus the already observed round-1 and round-2 external dates; descriptive, never used for gate selection",
+    "confirmation": "exactly one mechanically selected round-3 batch of eight unseen dates, excluding all original and prior external dates"
+  },
+  "horizon_success_gate": [
+    "On the round-3 confirmation days, poisson_nb2_controls has lower equal-day mean count MAE than ridge_log1p_controls and wins at least five of eight days.",
+    "On the same days, poisson_nb2_controls has lower equal-day mean Brier score than the frozen training-prevalence probability baseline and wins at least five of eight days.",
+    "The aggregate 90% NB2 interval coverage is between 0.80 and 0.98 inclusive, and aggregate 10-bin ECE is at most 0.10."
+  ],
+  "route_success_gate": "At least two of the three horizons must pass every horizon-level gate.",
+  "stop_conditions": [
+    "If fewer than two horizons pass, stop probability-model development, retain Ridge as the final primary model, and frame the study as a cross-date benchmark/negative result.",
+    "If at least two horizons pass, proceed once to the second-airport low-capacity calibration experiment.",
+    "Regardless of outcome, do not add another KBTP confirmation batch, new neural architecture, new high-interaction threshold, or new hyperparameter search."
+  ],
+  "retrospective_results_are_nonconfirmatory": true
+}

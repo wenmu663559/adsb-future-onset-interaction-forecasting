@@ -1,0 +1,1175 @@
+{
+  "schema_version": "r03_posthoc_probability_comparison_result_v1",
+  "completed_at": "2026-08-31T09:10:05.827307+00:00",
+  "analysis_status": "protocol-after supplementary analysis requested by strict internal peer review",
+  "protocol_path": "E:\\Desktop\\air_area_complex\\.worktrees\\r02-three-key-audit\\configs\\r03_posthoc_probability_comparison.json",
+  "protocol_sha256": "2d8cac48c2a268ab6b77977765b91af1b35747586f04c18638ad1523a2115302",
+  "original_confirmation_result": {
+    "path": "E:\\Desktop\\air_area_complex\\.worktrees\\r02-three-key-audit\\reports\\references\\r03_probabilistic_multihorizon_confirmation_2026-08-30.json",
+    "sha256": "d6a3a8cc60352d3d219bf4fa05887ce660c8386623bf925780883840306e3108",
+    "original_gate_decision_unchanged": true
+  },
+  "data": {
+    "training_root": "E:\\Desktop\\air_area_complex_r03_online_pilot\\20260827T041432Z-kbtp-independent-expanded",
+    "training_scene_sha256": "e2536152476e0dec69cc95515586fa1474cc407c7401cd39330553234e2bace4",
+    "confirmation_root": "E:\\Desktop\\air_area_complex_r03_online_pilot\\20260830-kbtp-external-round3-final",
+    "confirmation_scene_sha256": "7f413acfdcf49452055f01116532c94a210dc70aa41fbcd2e2e358112147acbe",
+    "confirmation_days": [
+      "2020-09-25",
+      "2020-10-21",
+      "2021-04-03",
+      "2021-11-09",
+      "2022-01-15",
+      "2022-06-06",
+      "2022-07-03",
+      "2022-10-23"
+    ]
+  },
+  "model_selection": {
+    "frozen_poisson_selection": {
+      "30": {
+        "candidate_alphas": {
+          "0.01": {
+            "equal_day_mean_nb2_nll": 2.2382066181996016,
+            "daily_nb2_nll": {
+              "2020-10-22": 1.8126433583259813,
+              "2021-04-05": 2.682834289370713,
+              "2022-06-20": 2.219142206902111
+            },
+            "training_nb2_dispersion": 0.007669152908437864
+          },
+          "0.1": {
+            "equal_day_mean_nb2_nll": 2.252386190869853,
+            "daily_nb2_nll": {
+              "2020-10-22": 1.7969273754302637,
+              "2021-04-05": 2.7483711880306276,
+              "2022-06-20": 2.211860009148667
+            },
+            "training_nb2_dispersion": 0.009585631630527778
+          },
+          "1.0": {
+            "equal_day_mean_nb2_nll": 2.2834489392805746,
+            "daily_nb2_nll": {
+              "2020-10-22": 1.7590653347604888,
+              "2021-04-05": 3.0315168768991696,
+              "2022-06-20": 2.0597646061820645
+            },
+            "training_nb2_dispersion": 0.06476912869433972
+          },
+          "10.0": {
+            "equal_day_mean_nb2_nll": 2.693004822437592,
+            "daily_nb2_nll": {
+              "2020-10-22": 2.111205926075422,
+              "2021-04-05": 3.7170811213526305,
+              "2022-06-20": 2.2507274198847242
+            },
+            "training_nb2_dispersion": 0.6580988791581758
+          }
+        },
+        "selected_alpha": 0.01,
+        "criterion": "minimum equal-day mean NB2 negative log likelihood on original validation days"
+      },
+      "120": {
+        "candidate_alphas": {
+          "0.01": {
+            "equal_day_mean_nb2_nll": 2.6312402835728856,
+            "daily_nb2_nll": {
+              "2020-10-22": 2.221934334786706,
+              "2021-04-05": 3.191215961472191,
+              "2022-06-20": 2.4805705544597605
+            },
+            "training_nb2_dispersion": 0.07546413948440059
+          },
+          "0.1": {
+            "equal_day_mean_nb2_nll": 2.6382542175528467,
+            "daily_nb2_nll": {
+              "2020-10-22": 2.2125453660982335,
+              "2021-04-05": 3.2182655573040986,
+              "2022-06-20": 2.483951729256208
+            },
+            "training_nb2_dispersion": 0.07703043466236223
+          },
+          "1.0": {
+            "equal_day_mean_nb2_nll": 2.656773723151874,
+            "daily_nb2_nll": {
+              "2020-10-22": 2.2138203329795596,
+              "2021-04-05": 3.3468119267638543,
+              "2022-06-20": 2.409688909712208
+            },
+            "training_nb2_dispersion": 0.10912284204996947
+          },
+          "10.0": {
+            "equal_day_mean_nb2_nll": 3.0010583790751837,
+            "daily_nb2_nll": {
+              "2020-10-22": 2.5456427981281355,
+              "2021-04-05": 3.8970908706796994,
+              "2022-06-20": 2.560441468417717
+            },
+            "training_nb2_dispersion": 0.5169409739277121
+          }
+        },
+        "selected_alpha": 0.01,
+        "criterion": "minimum equal-day mean NB2 negative log likelihood on original validation days"
+      },
+      "300": {
+        "candidate_alphas": {
+          "0.01": {
+            "equal_day_mean_nb2_nll": 3.222383573188459,
+            "daily_nb2_nll": {
+              "2020-10-22": 2.879287109029759,
+              "2021-04-05": 3.7738778542856677,
+              "2022-06-20": 3.0139857562499515
+            },
+            "training_nb2_dispersion": 0.20014131318307807
+          },
+          "0.1": {
+            "equal_day_mean_nb2_nll": 3.2255778822610033,
+            "daily_nb2_nll": {
+              "2020-10-22": 2.8822106411714326,
+              "2021-04-05": 3.7816221775148575,
+              "2022-06-20": 3.01290082809672
+            },
+            "training_nb2_dispersion": 0.20188089018767674
+          },
+          "1.0": {
+            "equal_day_mean_nb2_nll": 3.2279027839027346,
+            "daily_nb2_nll": {
+              "2020-10-22": 2.903374669406506,
+              "2021-04-05": 3.7990322282744566,
+              "2022-06-20": 2.9813014540272404
+            },
+            "training_nb2_dispersion": 0.22681470233807327
+          },
+          "10.0": {
+            "equal_day_mean_nb2_nll": 3.430038408641547,
+            "daily_nb2_nll": {
+              "2020-10-22": 3.133439577603485,
+              "2021-04-05": 4.10326442301181,
+              "2022-06-20": 3.053411225309346
+            },
+            "training_nb2_dispersion": 0.4778914731159776
+          }
+        },
+        "selected_alpha": 0.01,
+        "criterion": "minimum equal-day mean NB2 negative log likelihood on original validation days"
+      }
+    },
+    "training_distribution": {
+      "30": {
+        "scene_count": 3318,
+        "mean": 2.4813140457548815,
+        "variance": 9.038078003492773,
+        "high_risk_threshold": 3,
+        "high_risk_prevalence": 0.3794454490657022,
+        "nb2_dispersion": 0.007669152908437864
+      },
+      "120": {
+        "scene_count": 3318,
+        "mean": 3.688366489427646,
+        "variance": 16.44176395134423,
+        "high_risk_threshold": 5,
+        "high_risk_prevalence": 0.2664255575647981,
+        "nb2_dispersion": 0.07546413948440059
+      },
+      "300": {
+        "scene_count": 3318,
+        "mean": 5.774261612429398,
+        "variance": 34.072912706921514,
+        "high_risk_threshold": 7,
+        "high_risk_prevalence": 0.2869198312236287,
+        "nb2_dispersion": 0.20014131318307807
+      }
+    },
+    "logistic_baseline": {
+      "model_id": "logistic_ridge_controls",
+      "configuration": "StandardScaler + LogisticRegression(C=1.0, penalty=l2, solver=lbfgs, max_iter=1000, random_state=1701)",
+      "selection": "no confirmation-set tuning and no hyperparameter search"
+    }
+  },
+  "evaluation": {
+    "scene_count": 2740,
+    "day_count": 8,
+    "horizons": {
+      "30": {
+        "threshold": 3,
+        "observed_event_rate": 0.39416058394160586,
+        "probability_metrics": {
+          "poisson_nb2": {
+            "brier": 0.11526558742186725,
+            "bernoulli_log_loss": 0.37738779021453805,
+            "ece_10bin": 0.043779182588416676,
+            "pooled_calibration": {
+              "intercept": -0.1139038627738663,
+              "slope": 1.0585552927036224,
+              "converged": true
+            }
+          },
+          "logistic_ridge": {
+            "brier": 0.11581670034820578,
+            "bernoulli_log_loss": 0.37000601681685796,
+            "ece_10bin": 0.04783933872134532,
+            "pooled_calibration": {
+              "intercept": -0.2782133187184748,
+              "slope": 1.1170735547483206,
+              "converged": true
+            }
+          },
+          "training_prevalence": {
+            "brier": 0.23901455320283413,
+            "bernoulli_log_loss": 0.6710304085481907,
+            "ece_10bin": 0.014715134875903646,
+            "pooled_calibration": {
+              "intercept": 0.049956717818103784,
+              "slope": 0.9754261674361315,
+              "converged": true
+            }
+          }
+        },
+        "paired_day_brier": {
+          "poisson_nb2_vs_logistic_ridge": {
+            "delta_definition": "candidate_mae_minus_comparator_mae",
+            "day_count": 8,
+            "delta_by_day": {
+              "2020-09-25": -0.006068479419765668,
+              "2020-10-21": -0.00368212351250434,
+              "2021-04-03": -8.320884059712097e-05,
+              "2021-11-09": 0.0018463725653726365,
+              "2022-01-15": 0.0018546551811954026,
+              "2022-06-06": -0.002837872257131162,
+              "2022-07-03": -0.0018345218668570917,
+              "2022-10-23": -0.0011422379040208208
+            },
+            "mean_delta": -0.0014934270067885206,
+            "bootstrap_95_interval": [
+              -0.003307259474571239,
+              0.00019726485430314903
+            ],
+            "bootstrap_resample_count": 10000,
+            "bootstrap_method": "monte_carlo_day_bootstrap",
+            "wins": 6,
+            "ties": 0,
+            "losses": 2,
+            "sign_test_non_tied_days": 8,
+            "exact_two_sided_sign_test_p": 0.2890625
+          },
+          "poisson_nb2_vs_training_prevalence": {
+            "delta_definition": "candidate_mae_minus_comparator_mae",
+            "day_count": 8,
+            "delta_by_day": {
+              "2020-09-25": -0.1322681860185272,
+              "2020-10-21": -0.11078876070300278,
+              "2021-04-03": -0.0991041002634489,
+              "2021-11-09": -0.19310484192618482,
+              "2022-01-15": -0.08184244062050788,
+              "2022-06-06": -0.12973381519752233,
+              "2022-07-03": -0.10659020895118834,
+              "2022-10-23": -0.12474848549465947
+            },
+            "mean_delta": -0.12227260489688022,
+            "bootstrap_95_interval": [
+              -0.14552995264750412,
+              -0.10338028936732015
+            ],
+            "bootstrap_resample_count": 10000,
+            "bootstrap_method": "monte_carlo_day_bootstrap",
+            "wins": 8,
+            "ties": 0,
+            "losses": 0,
+            "sign_test_non_tied_days": 8,
+            "exact_two_sided_sign_test_p": 0.0078125
+          }
+        },
+        "count_metrics": {
+          "ridge_log1p_controls": {
+            "count_mae": 1.1346768349288248,
+            "count_rmse": 1.6865263603993492,
+            "mean_poisson_deviance": 1.090544556786595
+          },
+          "poisson_nb2_controls": {
+            "count_mae": 1.2260114152291788,
+            "count_rmse": 1.912876387455566,
+            "mean_poisson_deviance": 1.0331956622935838
+          },
+          "hist_gradient_boosting_poisson_controls": {
+            "count_mae": 1.1703744485265264,
+            "count_rmse": 1.723199135278222,
+            "mean_poisson_deviance": 1.0062723311850625
+          }
+        },
+        "paired_day_count_mae": {
+          "poisson_nb2_vs_ridge": {
+            "delta_definition": "candidate_mae_minus_comparator_mae",
+            "day_count": 8,
+            "delta_by_day": {
+              "2020-09-25": 0.015291866786861119,
+              "2020-10-21": 0.008575474939419236,
+              "2021-04-03": 0.24736033124436307,
+              "2021-11-09": 0.169585390611948,
+              "2022-01-15": 0.0006270615073873387,
+              "2022-06-06": 0.08064267388795154,
+              "2022-07-03": -0.10504395209842299,
+              "2022-10-23": 0.08871675926104294
+            },
+            "mean_delta": 0.06321945076756878,
+            "bootstrap_95_interval": [
+              -0.004341555927179179,
+              0.13639088635321836
+            ],
+            "bootstrap_resample_count": 10000,
+            "bootstrap_method": "monte_carlo_day_bootstrap",
+            "wins": 1,
+            "ties": 0,
+            "losses": 7,
+            "sign_test_non_tied_days": 8,
+            "exact_two_sided_sign_test_p": 0.0703125
+          },
+          "hgb_poisson_vs_ridge": {
+            "delta_definition": "candidate_mae_minus_comparator_mae",
+            "day_count": 8,
+            "delta_by_day": {
+              "2020-09-25": 0.15581002638561492,
+              "2020-10-21": 0.08557173916678973,
+              "2021-04-03": 0.24440839972535855,
+              "2021-11-09": -0.12612678433099855,
+              "2022-01-15": -0.00640286463687656,
+              "2022-06-06": 0.04925448202814531,
+              "2022-07-03": -0.15457215471977348,
+              "2022-10-23": 0.04396750825090612
+            },
+            "mean_delta": 0.036488793983645754,
+            "bootstrap_95_interval": [
+              -0.04698101909568385,
+              0.12226875061732237
+            ],
+            "bootstrap_resample_count": 10000,
+            "bootstrap_method": "monte_carlo_day_bootstrap",
+            "wins": 3,
+            "ties": 0,
+            "losses": 5,
+            "sign_test_non_tied_days": 8,
+            "exact_two_sided_sign_test_p": 0.7265625
+          },
+          "hgb_poisson_vs_poisson_nb2": {
+            "delta_definition": "candidate_mae_minus_comparator_mae",
+            "day_count": 8,
+            "delta_by_day": {
+              "2020-09-25": 0.1405181595987538,
+              "2020-10-21": 0.07699626422737049,
+              "2021-04-03": -0.0029519315190045248,
+              "2021-11-09": -0.29571217494294655,
+              "2022-01-15": -0.007029926144263898,
+              "2022-06-06": -0.031388191859806236,
+              "2022-07-03": -0.04952820262135049,
+              "2022-10-23": -0.044749251010136826
+            },
+            "mean_delta": -0.02673065678392303,
+            "bootstrap_95_interval": [
+              -0.1143021369776092,
+              0.04832860899811375
+            ],
+            "bootstrap_resample_count": 10000,
+            "bootstrap_method": "monte_carlo_day_bootstrap",
+            "wins": 6,
+            "ties": 0,
+            "losses": 2,
+            "sign_test_non_tied_days": 8,
+            "exact_two_sided_sign_test_p": 0.2890625
+          }
+        },
+        "nb2_distribution_metrics": {
+          "count_nll": 1.607130762772474,
+          "interval_90_coverage": 0.9587591240875912,
+          "interval_90_mean_width": 4.884671532846715,
+          "interval_90_score": 6.505109558662359
+        },
+        "daily": {
+          "2020-09-25": {
+            "scene_count": 195,
+            "observed_event_rate": 0.2717948717948718,
+            "brier": {
+              "poisson_nb2": 0.07724288022909677,
+              "logistic_ridge": 0.08331135964886244,
+              "prevalence": 0.20951106624762397
+            },
+            "count_mae": {
+              "ridge": 0.9314214210957289,
+              "poisson_nb2": 0.94671328788259,
+              "hgb_poisson": 1.0872314474813438
+            },
+            "nb2_interval_90_coverage": 0.9846153846153847,
+            "nb2_interval_90_score": 4.241025641025641
+          },
+          "2020-10-21": {
+            "scene_count": 139,
+            "observed_event_rate": 0.02877697841726619,
+            "brier": {
+              "poisson_nb2": 0.04012847953434864,
+              "logistic_ridge": 0.04381060304685298,
+              "prevalence": 0.15091724023735142
+            },
+            "count_mae": {
+              "ridge": 0.6889985715635389,
+              "poisson_nb2": 0.6975740465029582,
+              "hgb_poisson": 0.7745703107303287
+            },
+            "nb2_interval_90_coverage": 1.0,
+            "nb2_interval_90_score": 3.035971223021583
+          },
+          "2021-04-03": {
+            "scene_count": 482,
+            "observed_event_rate": 0.3900414937759336,
+            "brier": {
+              "poisson_nb2": 0.1389173028090242,
+              "logistic_ridge": 0.13900051164962132,
+              "prevalence": 0.2380214030724731
+            },
+            "count_mae": {
+              "ridge": 1.1167209953672534,
+              "poisson_nb2": 1.3640813266116165,
+              "hgb_poisson": 1.361129395092612
+            },
+            "nb2_interval_90_coverage": 0.941908713692946,
+            "nb2_interval_90_score": 6.821576763485477
+          },
+          "2021-11-09": {
+            "scene_count": 494,
+            "observed_event_rate": 0.5688259109311741,
+            "brier": {
+              "poisson_nb2": 0.08802311139468867,
+              "logistic_ridge": 0.08617673882931604,
+              "prevalence": 0.2811279533208735
+            },
+            "count_mae": {
+              "ridge": 1.4886620049836181,
+              "poisson_nb2": 1.658247395595566,
+              "hgb_poisson": 1.3625352206526196
+            },
+            "nb2_interval_90_coverage": 0.917004048582996,
+            "nb2_interval_90_score": 10.556680200553616
+          },
+          "2022-01-15": {
+            "scene_count": 496,
+            "observed_event_rate": 0.4012096774193548,
+            "brier": {
+              "poisson_nb2": 0.15887171317973406,
+              "logistic_ridge": 0.15701705799853866,
+              "prevalence": 0.24071415380024194
+            },
+            "count_mae": {
+              "ridge": 1.0744546904874546,
+              "poisson_nb2": 1.075081751994842,
+              "hgb_poisson": 1.068051825850578
+            },
+            "nb2_interval_90_coverage": 0.969758064516129,
+            "nb2_interval_90_score": 5.65322599872466
+          },
+          "2022-06-06": {
+            "scene_count": 238,
+            "observed_event_rate": 0.14705882352941177,
+            "brier": {
+              "poisson_nb2": 0.049702254482178826,
+              "logistic_ridge": 0.05254012673930999,
+              "prevalence": 0.17943606967970116
+            },
+            "count_mae": {
+              "ridge": 0.5951132775468266,
+              "poisson_nb2": 0.6757559514347782,
+              "hgb_poisson": 0.6443677595749719
+            },
+            "nb2_interval_90_coverage": 1.0,
+            "nb2_interval_90_score": 3.168067226890756
+          },
+          "2022-07-03": {
+            "scene_count": 197,
+            "observed_event_rate": 0.2893401015228426,
+            "brier": {
+              "poisson_nb2": 0.10715117187822487,
+              "logistic_ridge": 0.10898569374508196,
+              "prevalence": 0.2137413808294132
+            },
+            "count_mae": {
+              "ridge": 1.0307956874597497,
+              "poisson_nb2": 0.9257517353613267,
+              "hgb_poisson": 0.8762235327399762
+            },
+            "nb2_interval_90_coverage": 1.0,
+            "nb2_interval_90_score": 4.050761421319797
+          },
+          "2022-10-23": {
+            "scene_count": 499,
+            "observed_event_rate": 0.5270541082164328,
+            "brier": {
+              "poisson_nb2": 0.14630790599023055,
+              "logistic_ridge": 0.14745014389425137,
+              "prevalence": 0.27105639148489
+            },
+            "count_mae": {
+              "ridge": 1.3633762747646572,
+              "poisson_nb2": 1.4520930340257001,
+              "hgb_poisson": 1.4073437830155633
+            },
+            "nb2_interval_90_coverage": 0.9478957915831663,
+            "nb2_interval_90_score": 7.446893940468828
+          }
+        }
+      },
+      "120": {
+        "threshold": 5,
+        "observed_event_rate": 0.34051094890510947,
+        "probability_metrics": {
+          "poisson_nb2": {
+            "brier": 0.11677069320292098,
+            "bernoulli_log_loss": 0.37056024693767176,
+            "ece_10bin": 0.03858584418098181,
+            "pooled_calibration": {
+              "intercept": 0.1894549670893344,
+              "slope": 1.0691421646854637,
+              "converged": true
+            }
+          },
+          "logistic_ridge": {
+            "brier": 0.11740495702874192,
+            "bernoulli_log_loss": 0.37059287580736483,
+            "ece_10bin": 0.0434545742891617,
+            "pooled_calibration": {
+              "intercept": 0.2955685297427685,
+              "slope": 1.0564081071333424,
+              "converged": true
+            }
+          },
+          "training_prevalence": {
+            "brier": 0.23005188779089858,
+            "bernoulli_log_loss": 0.654707335443381,
+            "ece_10bin": 0.07408539134031134,
+            "pooled_calibration": {
+              "intercept": 0.1736642566898684,
+              "slope": 0.8241067749643042,
+              "converged": true
+            }
+          }
+        },
+        "paired_day_brier": {
+          "poisson_nb2_vs_logistic_ridge": {
+            "delta_definition": "candidate_mae_minus_comparator_mae",
+            "day_count": 8,
+            "delta_by_day": {
+              "2020-09-25": -0.002826849337519144,
+              "2020-10-21": 0.0019634238905835016,
+              "2021-04-03": -0.0032238101619263826,
+              "2021-11-09": -0.0021105304133774566,
+              "2022-01-15": -0.0020684754381755377,
+              "2022-06-06": 0.003551349580760685,
+              "2022-07-03": 0.001498932223725033,
+              "2022-10-23": 0.0020488342857173936
+            },
+            "mean_delta": -0.00014589067127648847,
+            "bootstrap_95_interval": [
+              -0.0018942642563608142,
+              0.0015705392046120549
+            ],
+            "bootstrap_resample_count": 10000,
+            "bootstrap_method": "monte_carlo_day_bootstrap",
+            "wins": 4,
+            "ties": 0,
+            "losses": 4,
+            "sign_test_non_tied_days": 8,
+            "exact_two_sided_sign_test_p": 1.0
+          },
+          "poisson_nb2_vs_training_prevalence": {
+            "delta_definition": "candidate_mae_minus_comparator_mae",
+            "day_count": 8,
+            "delta_by_day": {
+              "2020-09-25": -0.10991870727362912,
+              "2020-10-21": -0.051076284920704554,
+              "2021-04-03": -0.0945617668720832,
+              "2021-11-09": -0.22457106329513854,
+              "2022-01-15": -0.05663302571225831,
+              "2022-06-06": -0.07542291460914799,
+              "2022-07-03": -0.07592523832321435,
+              "2022-10-23": -0.12894176025781515
+            },
+            "mean_delta": -0.1021313451579989,
+            "bootstrap_95_interval": [
+              -0.14140382893776218,
+              -0.07077374203556804
+            ],
+            "bootstrap_resample_count": 10000,
+            "bootstrap_method": "monte_carlo_day_bootstrap",
+            "wins": 8,
+            "ties": 0,
+            "losses": 0,
+            "sign_test_non_tied_days": 8,
+            "exact_two_sided_sign_test_p": 0.0078125
+          }
+        },
+        "count_metrics": {
+          "ridge_log1p_controls": {
+            "count_mae": 1.877793309666689,
+            "count_rmse": 2.7262540562959243,
+            "mean_poisson_deviance": 1.8470399443960546
+          },
+          "poisson_nb2_controls": {
+            "count_mae": 1.9151615192250335,
+            "count_rmse": 2.8187230483730548,
+            "mean_poisson_deviance": 1.6340334936166638
+          },
+          "hist_gradient_boosting_poisson_controls": {
+            "count_mae": 1.8980708294805086,
+            "count_rmse": 2.658979579939726,
+            "mean_poisson_deviance": 1.6988484596557858
+          }
+        },
+        "paired_day_count_mae": {
+          "poisson_nb2_vs_ridge": {
+            "delta_definition": "candidate_mae_minus_comparator_mae",
+            "day_count": 8,
+            "delta_by_day": {
+              "2020-09-25": -0.0176461089315032,
+              "2020-10-21": 0.10503517753590919,
+              "2021-04-03": 0.010393840107145724,
+              "2021-11-09": 0.1802422399877912,
+              "2022-01-15": -0.11346294847683458,
+              "2022-06-06": 0.14457511150591085,
+              "2022-07-03": -0.08683950527256079,
+              "2022-10-23": 0.07245817004649524
+            },
+            "mean_delta": 0.036844497062794204,
+            "bootstrap_95_interval": [
+              -0.03155032056182578,
+              0.10287073784223968
+            ],
+            "bootstrap_resample_count": 10000,
+            "bootstrap_method": "monte_carlo_day_bootstrap",
+            "wins": 3,
+            "ties": 0,
+            "losses": 5,
+            "sign_test_non_tied_days": 8,
+            "exact_two_sided_sign_test_p": 0.7265625
+          },
+          "hgb_poisson_vs_ridge": {
+            "delta_definition": "candidate_mae_minus_comparator_mae",
+            "day_count": 8,
+            "delta_by_day": {
+              "2020-09-25": 0.1281728812166909,
+              "2020-10-21": 0.21529050496957547,
+              "2021-04-03": 0.08805765339782701,
+              "2021-11-09": -0.27442696688091894,
+              "2022-01-15": 0.007810571548378498,
+              "2022-06-06": 0.17966021498925278,
+              "2022-07-03": -0.04646114830247705,
+              "2022-10-23": 0.11279382096876
+            },
+            "mean_delta": 0.05136219148838608,
+            "bootstrap_95_interval": [
+              -0.05572368725758661,
+              0.1408420458811641
+            ],
+            "bootstrap_resample_count": 10000,
+            "bootstrap_method": "monte_carlo_day_bootstrap",
+            "wins": 2,
+            "ties": 0,
+            "losses": 6,
+            "sign_test_non_tied_days": 8,
+            "exact_two_sided_sign_test_p": 0.2890625
+          },
+          "hgb_poisson_vs_poisson_nb2": {
+            "delta_definition": "candidate_mae_minus_comparator_mae",
+            "day_count": 8,
+            "delta_by_day": {
+              "2020-09-25": 0.1458189901481941,
+              "2020-10-21": 0.11025532743366628,
+              "2021-04-03": 0.07766381329068128,
+              "2021-11-09": -0.45466920686871015,
+              "2022-01-15": 0.12127352002521308,
+              "2022-06-06": 0.03508510348334193,
+              "2022-07-03": 0.04037835697008374,
+              "2022-10-23": 0.040335650922264765
+            },
+            "mean_delta": 0.014517694425591879,
+            "bootstrap_95_interval": [
+              -0.12709325093002102,
+              0.10398511615920529
+            ],
+            "bootstrap_resample_count": 10000,
+            "bootstrap_method": "monte_carlo_day_bootstrap",
+            "wins": 1,
+            "ties": 0,
+            "losses": 7,
+            "sign_test_non_tied_days": 8,
+            "exact_two_sided_sign_test_p": 0.0703125
+          }
+        },
+        "nb2_distribution_metrics": {
+          "count_nll": 2.087226125912821,
+          "interval_90_coverage": 0.9248175182481752,
+          "interval_90_mean_width": 7.068978102189781,
+          "interval_90_score": 10.360949152229477
+        },
+        "daily": {
+          "2020-09-25": {
+            "scene_count": 195,
+            "observed_event_rate": 0.23076923076923078,
+            "brier": {
+              "poisson_nb2": 0.06886745926633153,
+              "logistic_ridge": 0.07169430860385068,
+              "prevalence": 0.17878616653996066
+            },
+            "count_mae": {
+              "ridge": 1.6420429422467864,
+              "poisson_nb2": 1.6243968333152832,
+              "hgb_poisson": 1.7702158234634773
+            },
+            "nb2_interval_90_coverage": 0.9743589743589743,
+            "nb2_interval_90_score": 6.17948737511268
+          },
+          "2020-10-21": {
+            "scene_count": 139,
+            "observed_event_rate": 0.014388489208633094,
+            "brier": {
+              "poisson_nb2": 0.026627859491791764,
+              "logistic_ridge": 0.024664435601208262,
+              "prevalence": 0.07770414441249632
+            },
+            "count_mae": {
+              "ridge": 0.764840782382157,
+              "poisson_nb2": 0.8698759599180662,
+              "hgb_poisson": 0.9801312873517325
+            },
+            "nb2_interval_90_coverage": 1.0,
+            "nb2_interval_90_score": 4.690647482014389
+          },
+          "2021-04-03": {
+            "scene_count": 482,
+            "observed_event_rate": 0.3900414937759336,
+            "brier": {
+              "poisson_nb2": 0.15862825972224434,
+              "logistic_ridge": 0.16185206988417072,
+              "prevalence": 0.25319002659432754
+            },
+            "count_mae": {
+              "ridge": 1.8711878606021652,
+              "poisson_nb2": 1.881581700709311,
+              "hgb_poisson": 1.9592455139999922
+            },
+            "nb2_interval_90_coverage": 0.9439834024896265,
+            "nb2_interval_90_score": 8.65975109670172
+          },
+          "2021-11-09": {
+            "scene_count": 494,
+            "observed_event_rate": 0.5688259109311741,
+            "brier": {
+              "poisson_nb2": 0.11213790440546473,
+              "logistic_ridge": 0.11424843481884218,
+              "prevalence": 0.33670896770060327
+            },
+            "count_mae": {
+              "ridge": 2.5087745360396654,
+              "poisson_nb2": 2.6890167760274566,
+              "hgb_poisson": 2.2343475691587464
+            },
+            "nb2_interval_90_coverage": 0.888663967611336,
+            "nb2_interval_90_score": 14.789474128228933
+          },
+          "2022-01-15": {
+            "scene_count": 496,
+            "observed_event_rate": 0.2701612903225806,
+            "brier": {
+              "poisson_nb2": 0.14055509752079826,
+              "logistic_ridge": 0.1426235729589738,
+              "prevalence": 0.19718812323305657
+            },
+            "count_mae": {
+              "ridge": 1.8321660730477063,
+              "poisson_nb2": 1.7187031245708717,
+              "hgb_poisson": 1.8399766445960848
+            },
+            "nb2_interval_90_coverage": 0.9233870967741935,
+            "nb2_interval_90_score": 9.77217774621902
+          },
+          "2022-06-06": {
+            "scene_count": 238,
+            "observed_event_rate": 0.12605042016806722,
+            "brier": {
+              "poisson_nb2": 0.05444397633352407,
+              "logistic_ridge": 0.05089262675276338,
+              "prevalence": 0.12986689094267206
+            },
+            "count_mae": {
+              "ridge": 1.0623625116814084,
+              "poisson_nb2": 1.2069376231873192,
+              "hgb_poisson": 1.2420227266706612
+            },
+            "nb2_interval_90_coverage": 0.9831932773109243,
+            "nb2_interval_90_score": 5.2100840336134455
+          },
+          "2022-07-03": {
+            "scene_count": 197,
+            "observed_event_rate": 0.12690355329949238,
+            "brier": {
+              "poisson_nb2": 0.05434019281044897,
+              "logistic_ridge": 0.052841260586723934,
+              "prevalence": 0.13026543113366332
+            },
+            "count_mae": {
+              "ridge": 1.1429108710307154,
+              "poisson_nb2": 1.0560713657581546,
+              "hgb_poisson": 1.0964497227282384
+            },
+            "nb2_interval_90_coverage": 0.9593908629441624,
+            "nb2_interval_90_score": 6.456852791878172
+          },
+          "2022-10-23": {
+            "scene_count": 499,
+            "observed_event_rate": 0.45691382765531063,
+            "brier": {
+              "poisson_nb2": 0.15548760253694469,
+              "logistic_ridge": 0.1534387682512273,
+              "prevalence": 0.28442936279475983
+            },
+            "count_mae": {
+              "ridge": 2.386062454185887,
+              "poisson_nb2": 2.4585206242323823,
+              "hgb_poisson": 2.498856275154647
+            },
+            "nb2_interval_90_coverage": 0.8617234468937875,
+            "nb2_interval_90_score": 15.416834126015702
+          }
+        }
+      },
+      "300": {
+        "threshold": 7,
+        "observed_event_rate": 0.41788321167883213,
+        "probability_metrics": {
+          "poisson_nb2": {
+            "brier": 0.1622875597376356,
+            "bernoulli_log_loss": 0.4991169758472623,
+            "ece_10bin": 0.08531848689046206,
+            "pooled_calibration": {
+              "intercept": 0.49652909124637007,
+              "slope": 1.001212819554492,
+              "converged": true
+            }
+          },
+          "logistic_ridge": {
+            "brier": 0.16888740560461551,
+            "bernoulli_log_loss": 0.5156042963347336,
+            "ece_10bin": 0.10160274484782174,
+            "pooled_calibration": {
+              "intercept": 0.6384895627468571,
+              "slope": 0.9729470895681274,
+              "converged": true
+            }
+          },
+          "training_prevalence": {
+            "brier": 0.2604082400960709,
+            "bernoulli_log_loss": 0.7185985452486552,
+            "ece_10bin": 0.13096338045520345,
+            "pooled_calibration": {
+              "intercept": 0.3165546577794632,
+              "slope": 0.7118113490257002,
+              "converged": true
+            }
+          }
+        },
+        "paired_day_brier": {
+          "poisson_nb2_vs_logistic_ridge": {
+            "delta_definition": "candidate_mae_minus_comparator_mae",
+            "day_count": 8,
+            "delta_by_day": {
+              "2020-09-25": 0.005044245051061394,
+              "2020-10-21": 0.00036360696980939494,
+              "2021-04-03": -0.0057335787435608965,
+              "2021-11-09": -0.012282489653945683,
+              "2022-01-15": -0.014017296263042406,
+              "2022-06-06": 0.00863060636153716,
+              "2022-07-03": 0.0002521606131117987,
+              "2022-10-23": -0.010897380749899294
+            },
+            "mean_delta": -0.0035800158018660664,
+            "bootstrap_95_interval": [
+              -0.008854091784837287,
+              0.0018795049004007825
+            ],
+            "bootstrap_resample_count": 10000,
+            "bootstrap_method": "monte_carlo_day_bootstrap",
+            "wins": 4,
+            "ties": 0,
+            "losses": 4,
+            "sign_test_non_tied_days": 8,
+            "exact_two_sided_sign_test_p": 1.0
+          },
+          "poisson_nb2_vs_training_prevalence": {
+            "delta_definition": "candidate_mae_minus_comparator_mae",
+            "day_count": 8,
+            "delta_by_day": {
+              "2020-09-25": -0.06352230939969672,
+              "2020-10-21": -0.02916787953525911,
+              "2021-04-03": -0.1317237294962386,
+              "2021-11-09": -0.18132833724973843,
+              "2022-01-15": -0.022163225332680864,
+              "2022-06-06": -0.05894288749098864,
+              "2022-07-03": -0.05730403455869501,
+              "2022-10-23": -0.1263169951488681
+            },
+            "mean_delta": -0.08380867477652068,
+            "bootstrap_95_interval": [
+              -0.12107656154619541,
+              -0.04959665244603312
+            ],
+            "bootstrap_resample_count": 10000,
+            "bootstrap_method": "monte_carlo_day_bootstrap",
+            "wins": 8,
+            "ties": 0,
+            "losses": 0,
+            "sign_test_non_tied_days": 8,
+            "exact_two_sided_sign_test_p": 0.0078125
+          }
+        },
+        "count_metrics": {
+          "ridge_log1p_controls": {
+            "count_mae": 3.4374066393740854,
+            "count_rmse": 4.771658222880486,
+            "mean_poisson_deviance": 3.485120390636828
+          },
+          "poisson_nb2_controls": {
+            "count_mae": 3.415871075378778,
+            "count_rmse": 4.586253294864103,
+            "mean_poisson_deviance": 3.02623808484093
+          },
+          "hist_gradient_boosting_poisson_controls": {
+            "count_mae": 3.406069422682609,
+            "count_rmse": 4.545159284509817,
+            "mean_poisson_deviance": 3.1730697030828052
+          }
+        },
+        "paired_day_count_mae": {
+          "poisson_nb2_vs_ridge": {
+            "delta_definition": "candidate_mae_minus_comparator_mae",
+            "day_count": 8,
+            "delta_by_day": {
+              "2020-09-25": 0.012751727559471071,
+              "2020-10-21": 0.385666420974085,
+              "2021-04-03": -0.2792450081232376,
+              "2021-11-09": 0.007841633681155535,
+              "2022-01-15": -0.3113461875540895,
+              "2022-06-06": 0.48375009167539007,
+              "2022-07-03": 0.28886158222022895,
+              "2022-10-23": -0.003987740178414079
+            },
+            "mean_delta": 0.07303656503182368,
+            "bootstrap_95_interval": [
+              -0.10798572677658039,
+              0.26569058065386675
+            ],
+            "bootstrap_resample_count": 10000,
+            "bootstrap_method": "monte_carlo_day_bootstrap",
+            "wins": 3,
+            "ties": 0,
+            "losses": 5,
+            "sign_test_non_tied_days": 8,
+            "exact_two_sided_sign_test_p": 0.7265625
+          },
+          "hgb_poisson_vs_ridge": {
+            "delta_definition": "candidate_mae_minus_comparator_mae",
+            "day_count": 8,
+            "delta_by_day": {
+              "2020-09-25": 0.27202172962086557,
+              "2020-10-21": 0.40930133471375063,
+              "2021-04-03": -0.36608851430287714,
+              "2021-11-09": -0.4220501400601915,
+              "2022-01-15": -0.12504877999090036,
+              "2022-06-06": 0.6600344605411879,
+              "2022-07-03": 0.053269807444615846,
+              "2022-10-23": 0.16751137825228746
+            },
+            "mean_delta": 0.0811189095273423,
+            "bootstrap_95_interval": [
+              -0.15489216220383625,
+              0.3194562138569608
+            ],
+            "bootstrap_resample_count": 10000,
+            "bootstrap_method": "monte_carlo_day_bootstrap",
+            "wins": 3,
+            "ties": 0,
+            "losses": 5,
+            "sign_test_non_tied_days": 8,
+            "exact_two_sided_sign_test_p": 0.7265625
+          },
+          "hgb_poisson_vs_poisson_nb2": {
+            "delta_definition": "candidate_mae_minus_comparator_mae",
+            "day_count": 8,
+            "delta_by_day": {
+              "2020-09-25": 0.2592700020613945,
+              "2020-10-21": 0.02363491373966564,
+              "2021-04-03": -0.08684350617963954,
+              "2021-11-09": -0.429891773741347,
+              "2022-01-15": 0.18629740756318913,
+              "2022-06-06": 0.1762843688657978,
+              "2022-07-03": -0.2355917747756131,
+              "2022-10-23": 0.17149911843070154
+            },
+            "mean_delta": 0.008082344495518617,
+            "bootstrap_95_interval": [
+              -0.15394678622454436,
+              0.15627123123962552
+            ],
+            "bootstrap_resample_count": 10000,
+            "bootstrap_method": "monte_carlo_day_bootstrap",
+            "wins": 3,
+            "ties": 0,
+            "losses": 5,
+            "sign_test_non_tied_days": 8,
+            "exact_two_sided_sign_test_p": 0.7265625
+          }
+        },
+        "nb2_distribution_metrics": {
+          "count_nll": 2.7545392503383743,
+          "interval_90_coverage": 0.8751824817518248,
+          "interval_90_mean_width": 11.806569343065693,
+          "interval_90_score": 18.879562638971926
+        },
+        "daily": {
+          "2020-09-25": {
+            "scene_count": 195,
+            "observed_event_rate": 0.17435897435897435,
+            "brier": {
+              "poisson_nb2": 0.09310555951786939,
+              "logistic_ridge": 0.088061314466808,
+              "prevalence": 0.1566278689175661
+            },
+            "count_mae": {
+              "ridge": 2.4599874643179085,
+              "poisson_nb2": 2.4727391918773796,
+              "hgb_poisson": 2.732009193938774
+            },
+            "nb2_interval_90_coverage": 0.9794871794871794,
+            "nb2_interval_90_score": 9.928205128205128
+          },
+          "2020-10-21": {
+            "scene_count": 139,
+            "observed_event_rate": 0.0,
+            "brier": {
+              "poisson_nb2": 0.05315511001413645,
+              "logistic_ridge": 0.05279150304432705,
+              "prevalence": 0.08232298954939556
+            },
+            "count_mae": {
+              "ridge": 1.1573691325221989,
+              "poisson_nb2": 1.5430355534962839,
+              "hgb_poisson": 1.5666704672359495
+            },
+            "nb2_interval_90_coverage": 0.9784172661870504,
+            "nb2_interval_90_score": 8.683453237410072
+          },
+          "2021-04-03": {
+            "scene_count": 482,
+            "observed_event_rate": 0.5186721991701245,
+            "brier": {
+              "poisson_nb2": 0.17163677953072062,
+              "logistic_ridge": 0.17737035827428152,
+              "prevalence": 0.3033605090269592
+            },
+            "count_mae": {
+              "ridge": 3.6855548283865835,
+              "poisson_nb2": 3.406309820263346,
+              "hgb_poisson": 3.3194663140837064
+            },
+            "nb2_interval_90_coverage": 0.8941908713692946,
+            "nb2_interval_90_score": 17.815353013667824
+          },
+          "2021-11-09": {
+            "scene_count": 494,
+            "observed_event_rate": 0.6275303643724697,
+            "brier": {
+              "poisson_nb2": 0.1684232042052244,
+              "logistic_ridge": 0.1807056938591701,
+              "prevalence": 0.34975154145496284
+            },
+            "count_mae": {
+              "ridge": 4.671448482675591,
+              "poisson_nb2": 4.679290116356746,
+              "hgb_poisson": 4.249398342615399
+            },
+            "nb2_interval_90_coverage": 0.8117408906882592,
+            "nb2_interval_90_score": 28.42105371266724
+          },
+          "2022-01-15": {
+            "scene_count": 496,
+            "observed_event_rate": 0.4314516129032258,
+            "brier": {
+              "poisson_nb2": 0.24402732920922873,
+              "logistic_ridge": 0.25804462547227114,
+              "prevalence": 0.2661905545419096
+            },
+            "count_mae": {
+              "ridge": 3.486412743406911,
+              "poisson_nb2": 3.1750665558528217,
+              "hgb_poisson": 3.361363963416011
+            },
+            "nb2_interval_90_coverage": 0.8548387096774194,
+            "nb2_interval_90_score": 19.18346856870959
+          },
+          "2022-06-06": {
+            "scene_count": 238,
+            "observed_event_rate": 0.14705882352941177,
+            "brier": {
+              "poisson_nb2": 0.08605073993381032,
+              "logistic_ridge": 0.07742013357227316,
+              "prevalence": 0.14499362742479896
+            },
+            "count_mae": {
+              "ridge": 2.0053166004539538,
+              "poisson_nb2": 2.489066692129344,
+              "hgb_poisson": 2.6653510609951416
+            },
+            "nb2_interval_90_coverage": 0.9159663865546218,
+            "nb2_interval_90_score": 10.840336054313083
+          },
+          "2022-07-03": {
+            "scene_count": 197,
+            "observed_event_rate": 0.1218274111675127,
+            "brier": {
+              "poisson_nb2": 0.07693696565702451,
+              "logistic_ridge": 0.07668480504391272,
+              "prevalence": 0.13424100021571952
+            },
+            "count_mae": {
+              "ridge": 1.7241583404504708,
+              "poisson_nb2": 2.0130199226706997,
+              "hgb_poisson": 1.7774281478950866
+            },
+            "nb2_interval_90_coverage": 0.9441624365482234,
+            "nb2_interval_90_score": 10.390862944162437
+          },
+          "2022-10-23": {
+            "scene_count": 499,
+            "observed_event_rate": 0.5571142284569138,
+            "brier": {
+              "poisson_nb2": 0.19342598205516168,
+              "logistic_ridge": 0.20432336280506097,
+              "prevalence": 0.3197429772040298
+            },
+            "count_mae": {
+              "ridge": 4.303815800584629,
+              "poisson_nb2": 4.299828060406215,
+              "hgb_poisson": 4.471327178836916
+            },
+            "nb2_interval_90_coverage": 0.8236472945891784,
+            "nb2_interval_90_score": 23.6833678419461
+          }
+        }
+      }
+    }
+  },
+  "interpretation_rule": "The analysis cannot alter the original 0/3 gate or be described as a new untouched confirmation. NB2 superiority requires lower equal-day Brier than logistic at a horizon and at least five of eight day-level wins; otherwise probability evidence is attributed to the shared current-state inputs rather than uniquely to NB2.",
+  "stopping_rule": "Run once with the frozen configuration. Do not tune on the eight confirmation dates, add another KBTP confirmation batch, or search additional model families in response to the result.",
+  "claim_boundary": "KBTP high-activity-window ADS-B geometric interaction proxy only; not controller workload, official separation violation, accident risk, or universal airspace complexity.",
+  "environment": {
+    "python": "3.13.3",
+    "operating_system": "Windows-11-10.0.22631-SP0",
+    "numpy": "2.3.5",
+    "scipy": "1.16.2",
+    "scikit_learn": "1.7.2",
+    "code_version": "627f9e7bfc5db43af717099590675e662b5eb4ea"
+  }
+}

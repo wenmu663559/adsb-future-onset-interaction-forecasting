@@ -1,0 +1,12 @@
+{
+  "schema_version": "r03_review_supplement_v1",
+  "date": "2026-09-04",
+  "purpose": "Post-review supplementary analysis; not a new blind confirmation or model selection",
+  "group_bootstrap": {"repetitions": 20000, "seed": 170104, "confidence": 0.95, "interval": "pointwise percentile paired source-group bootstrap of equal-group mean difference"},
+  "sign_test": {"sidedness": "two-sided", "ties": "exclude exact zeros", "multiplicity": "Holm across all 18 primary comparisons: two airports x three horizons x three comparisons"},
+  "replay_tolerance": {"absolute": 1e-9},
+  "local_baseline": "KAGC expanding chronological complete-source-group history; include only groups whose final forecast window ends before the next group's first cutoff; first group is warmup; retain original KBTP event thresholds; compare frozen predictions on identical eligible scenes",
+  "calibration": {"bins": 10, "edges": "equal width [0,1]", "weighting": "pooled scenes, descriptive; group-equal Brier also reported"},
+  "freshness_strata": {"fresh": "maximum cutoff-time report age <= 10 seconds", "older": "maximum cutoff-time report age > 10 seconds"},
+  "constraints": ["No new model family", "No threshold or parameter search", "Do not overwrite frozen artifacts", "Do not select groups by outcomes", "No full-day or third-airport experiment in this revision"]
+}

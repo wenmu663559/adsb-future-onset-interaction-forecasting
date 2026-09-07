@@ -1,0 +1,15 @@
+schema_version: r03_qc_policy_v1
+coordinate_source:
+  authority: FAA_NASR_APT_BASE
+  effective_date: '2026-07-09'
+  source_url: https://www.faa.gov/air_traffic/flight_info/aeronav/aero_data/NASR_Subscription/2026-07-09/
+airports:
+  KAGC: {latitude_deg: 40.3544376, longitude_deg: -79.9290467}
+  KBTP: {latitude_deg: 40.7765833333, longitude_deg: -79.9510833333}
+geometry:
+  earth_model: mean_spherical_earth
+  earth_radius_m: 6371008.8
+  bearing_convention: initial_true_clockwise_from_north
+  range_absolute_tolerance_m: 500.0
+  range_relative_tolerance: 0.05
+  bearing_absolute_tolerance_deg: 5.0

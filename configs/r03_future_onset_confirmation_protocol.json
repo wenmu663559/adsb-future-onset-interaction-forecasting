@@ -1,0 +1,28 @@
+{
+  "schema_version": "r03_future_onset_confirmation_protocol_v1",
+  "frozen_at": "2026-09-03",
+  "run_count": 1,
+  "allow_retuning": false,
+  "development_protocol_sha256": "11c7c0201f8ceba5942f105a2b1c07c87b2fd5ec9f3d874274559684e4e5f674",
+  "confirmation_dates_sha256": "afe78e0f6eef63df019ebc39ad705bf8b3802e7a9656dc69ddf8d9b415aa519d",
+  "stability_decision_sha256": "f5c892d380d105c114bd78e0dfd8e2cec9e385380f29068e6e3d17cf597fa70e",
+  "development_feature_ladder_sha256": "36be49f4b0ad9441d94c28d873739c8a0fddf5b1ad876b654b4454528c08d808",
+  "development_scene_sha256": "9ce1cd963db2ee99dbdbc9a0376a082cd79ce4ef732dbcf65f4aedeffbbc632b",
+  "selected_feature_ladder": "B",
+  "selected_count_models_by_horizon": {
+    "30": "ridge_log1p",
+    "120": "plain_poisson",
+    "300": "plain_poisson"
+  },
+  "selected_probability_model": "logistic_ridge",
+  "strong_count_baseline": "current_pair_opportunity_rate",
+  "strong_probability_baseline": "training_prevalence",
+  "representation_baseline": "A",
+  "horizon_success_gate": [
+    "B selected count model has lower equal-day count MAE than the pair-opportunity baseline and wins at least five of eight dates.",
+    "B logistic has lower equal-day Brier score than training prevalence and wins at least five of eight dates.",
+    "B has lower equal-day count MAE than A under the same selected model and wins at least five of eight dates."
+  ],
+  "route_success_gate": "At least two of three horizons satisfy all horizon gates.",
+  "post_run_rule": "Report every horizon and date. Do not retune, replace dates, add a second KBTP batch, or add a model family after seeing results."
+}

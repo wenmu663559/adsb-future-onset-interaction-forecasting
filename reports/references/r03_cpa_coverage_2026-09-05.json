@@ -1,0 +1,381 @@
+{
+  "schema_version": "r03_cpa_coverage_v1",
+  "analysis_status": "Post-review descriptive diagnostic; frozen scenes; no model fitting, selection, or retuning.",
+  "definitions": {
+    "eligible_pair": "Both aircraft have a report 20–45 s before cutoff, nearest to 30 s.",
+    "same_report": "The latest report is itself 20–45 s old and is therefore selected as both current and prior.",
+    "degenerate_pair": "Eligible pair whose estimated relative horizontal speed squared is <=1e-9; CPA time is set to zero."
+  },
+  "inputs": {
+    "KBTP": {
+      "path": "outputs\\experiments\\r03_future_onset_confirmation\\20260903T075352Z-online-complexity-pilot\\pilot_scenes.jsonl",
+      "sha256": "a448361b29c295ceacbf56e935344af4f956d992d5c0355a5c74fa820cf79412"
+    },
+    "KAGC": {
+      "path": "outputs\\experiments\\r03_kagc_external_validation\\20260903T080631Z-online-complexity-pilot\\pilot_scenes.jsonl",
+      "sha256": "7efdb735b105896b15e83befb134eff1762b2d3cfc212674080959ca4038f8b7"
+    }
+  },
+  "by_airport": {
+    "KBTP": {
+      "overall": {
+        "n_scenes": 2605,
+        "totals": {
+          "current_aircraft": 11049,
+          "aircraft_with_prior_30": 10477,
+          "same_report_used_as_current_and_prior_aircraft": 77,
+          "current_pairs": 20536,
+          "cpa_eligible_pairs": 18502,
+          "missing_prior_pairs": 2034,
+          "degenerate_relative_horizontal_velocity_pairs": 13
+        },
+        "pair_weighted_eligible_fraction": 0.9009544215037009,
+        "scene_equal_eligible_fraction": 0.8976370057752016,
+        "scenes_with_any_missing_prior_pair": 523,
+        "scenes_with_any_degenerate_relative_velocity_pair": 13,
+        "degenerate_fraction_among_eligible_pairs": 0.0007026267430548049
+      },
+      "by_group": {
+        "2020-09-26": {
+          "n_scenes": 427,
+          "totals": {
+            "current_aircraft": 1868,
+            "aircraft_with_prior_30": 1770,
+            "same_report_used_as_current_and_prior_aircraft": 13,
+            "current_pairs": 3469,
+            "cpa_eligible_pairs": 3133,
+            "missing_prior_pairs": 336,
+            "degenerate_relative_horizontal_velocity_pairs": 0
+          },
+          "pair_weighted_eligible_fraction": 0.9031421158835399,
+          "scene_equal_eligible_fraction": 0.8913906546225048,
+          "scenes_with_any_missing_prior_pair": 93,
+          "scenes_with_any_degenerate_relative_velocity_pair": 0,
+          "degenerate_fraction_among_eligible_pairs": 0.0
+        },
+        "2020-10-13": {
+          "n_scenes": 193,
+          "totals": {
+            "current_aircraft": 740,
+            "aircraft_with_prior_30": 693,
+            "same_report_used_as_current_and_prior_aircraft": 11,
+            "current_pairs": 1147,
+            "cpa_eligible_pairs": 1000,
+            "missing_prior_pairs": 147,
+            "degenerate_relative_horizontal_velocity_pairs": 10
+          },
+          "pair_weighted_eligible_fraction": 0.8718395815170009,
+          "scene_equal_eligible_fraction": 0.8802615346656798,
+          "scenes_with_any_missing_prior_pair": 42,
+          "scenes_with_any_degenerate_relative_velocity_pair": 10,
+          "degenerate_fraction_among_eligible_pairs": 0.01
+        },
+        "2021-03-27": {
+          "n_scenes": 407,
+          "totals": {
+            "current_aircraft": 1652,
+            "aircraft_with_prior_30": 1553,
+            "same_report_used_as_current_and_prior_aircraft": 19,
+            "current_pairs": 2827,
+            "cpa_eligible_pairs": 2501,
+            "missing_prior_pairs": 326,
+            "degenerate_relative_horizontal_velocity_pairs": 3
+          },
+          "pair_weighted_eligible_fraction": 0.8846834099752388,
+          "scene_equal_eligible_fraction": 0.8842985842985843,
+          "scenes_with_any_missing_prior_pair": 87,
+          "scenes_with_any_degenerate_relative_velocity_pair": 3,
+          "degenerate_fraction_among_eligible_pairs": 0.0011995201919232307
+        },
+        "2021-12-20": {
+          "n_scenes": 294,
+          "totals": {
+            "current_aircraft": 1021,
+            "aircraft_with_prior_30": 965,
+            "same_report_used_as_current_and_prior_aircraft": 11,
+            "current_pairs": 1332,
+            "cpa_eligible_pairs": 1189,
+            "missing_prior_pairs": 143,
+            "degenerate_relative_horizontal_velocity_pairs": 0
+          },
+          "pair_weighted_eligible_fraction": 0.8926426426426426,
+          "scene_equal_eligible_fraction": 0.8914965986394559,
+          "scenes_with_any_missing_prior_pair": 54,
+          "scenes_with_any_degenerate_relative_velocity_pair": 0,
+          "degenerate_fraction_among_eligible_pairs": 0.0
+        },
+        "2022-01-03": {
+          "n_scenes": 291,
+          "totals": {
+            "current_aircraft": 1216,
+            "aircraft_with_prior_30": 1160,
+            "same_report_used_as_current_and_prior_aircraft": 7,
+            "current_pairs": 2091,
+            "cpa_eligible_pairs": 1898,
+            "missing_prior_pairs": 193,
+            "degenerate_relative_horizontal_velocity_pairs": 0
+          },
+          "pair_weighted_eligible_fraction": 0.9076996652319465,
+          "scene_equal_eligible_fraction": 0.9129438717067584,
+          "scenes_with_any_missing_prior_pair": 51,
+          "scenes_with_any_degenerate_relative_velocity_pair": 0,
+          "degenerate_fraction_among_eligible_pairs": 0.0
+        },
+        "2022-06-16": {
+          "n_scenes": 182,
+          "totals": {
+            "current_aircraft": 657,
+            "aircraft_with_prior_30": 617,
+            "same_report_used_as_current_and_prior_aircraft": 2,
+            "current_pairs": 903,
+            "cpa_eligible_pairs": 797,
+            "missing_prior_pairs": 106,
+            "degenerate_relative_horizontal_velocity_pairs": 0
+          },
+          "pair_weighted_eligible_fraction": 0.8826135105204873,
+          "scene_equal_eligible_fraction": 0.8813186813186813,
+          "scenes_with_any_missing_prior_pair": 37,
+          "scenes_with_any_degenerate_relative_velocity_pair": 0,
+          "degenerate_fraction_among_eligible_pairs": 0.0
+        },
+        "2022-07-19": {
+          "n_scenes": 371,
+          "totals": {
+            "current_aircraft": 1559,
+            "aircraft_with_prior_30": 1473,
+            "same_report_used_as_current_and_prior_aircraft": 9,
+            "current_pairs": 2786,
+            "cpa_eligible_pairs": 2472,
+            "missing_prior_pairs": 314,
+            "degenerate_relative_horizontal_velocity_pairs": 0
+          },
+          "pair_weighted_eligible_fraction": 0.8872936109117013,
+          "scene_equal_eligible_fraction": 0.8961494031574895,
+          "scenes_with_any_missing_prior_pair": 77,
+          "scenes_with_any_degenerate_relative_velocity_pair": 0,
+          "degenerate_fraction_among_eligible_pairs": 0.0
+        },
+        "2022-10-24": {
+          "n_scenes": 440,
+          "totals": {
+            "current_aircraft": 2336,
+            "aircraft_with_prior_30": 2246,
+            "same_report_used_as_current_and_prior_aircraft": 5,
+            "current_pairs": 5981,
+            "cpa_eligible_pairs": 5512,
+            "missing_prior_pairs": 469,
+            "degenerate_relative_horizontal_velocity_pairs": 0
+          },
+          "pair_weighted_eligible_fraction": 0.9215850192275539,
+          "scene_equal_eligible_fraction": 0.9256420347329438,
+          "scenes_with_any_missing_prior_pair": 82,
+          "scenes_with_any_degenerate_relative_velocity_pair": 0,
+          "degenerate_fraction_among_eligible_pairs": 0.0
+        }
+      },
+      "sixty_second_buffer_equivalence": {
+        "comparison": "Original 12 snapshots (t-110..t) versus final 6 snapshots (t-50..t) on identical frozen scenes.",
+        "checked_feature_values": 112015,
+        "mismatches": 0,
+        "interpretation": "The implemented A/B/C ladder uses current reports and approximately 30-s prior reports; this is an input-equivalence check, not a model-performance ablation."
+      }
+    },
+    "KAGC": {
+      "overall": {
+        "n_scenes": 1268,
+        "totals": {
+          "current_aircraft": 4341,
+          "aircraft_with_prior_30": 3427,
+          "same_report_used_as_current_and_prior_aircraft": 340,
+          "current_pairs": 5527,
+          "cpa_eligible_pairs": 3438,
+          "missing_prior_pairs": 2089,
+          "degenerate_relative_horizontal_velocity_pairs": 280
+        },
+        "pair_weighted_eligible_fraction": 0.6220372715759002,
+        "scene_equal_eligible_fraction": 0.6248422712933753,
+        "scenes_with_any_missing_prior_pair": 699,
+        "scenes_with_any_degenerate_relative_velocity_pair": 212,
+        "degenerate_fraction_among_eligible_pairs": 0.08144269924374636
+      },
+      "by_group": {
+        "2021-11-04": {
+          "n_scenes": 111,
+          "totals": {
+            "current_aircraft": 375,
+            "aircraft_with_prior_30": 281,
+            "same_report_used_as_current_and_prior_aircraft": 44,
+            "current_pairs": 461,
+            "cpa_eligible_pairs": 251,
+            "missing_prior_pairs": 210,
+            "degenerate_relative_horizontal_velocity_pairs": 30
+          },
+          "pair_weighted_eligible_fraction": 0.544468546637744,
+          "scene_equal_eligible_fraction": 0.5501501501501501,
+          "scenes_with_any_missing_prior_pair": 72,
+          "scenes_with_any_degenerate_relative_velocity_pair": 20,
+          "degenerate_fraction_among_eligible_pairs": 0.11952191235059761
+        },
+        "2021-12-20": {
+          "n_scenes": 134,
+          "totals": {
+            "current_aircraft": 476,
+            "aircraft_with_prior_30": 360,
+            "same_report_used_as_current_and_prior_aircraft": 46,
+            "current_pairs": 648,
+            "cpa_eligible_pairs": 367,
+            "missing_prior_pairs": 281,
+            "degenerate_relative_horizontal_velocity_pairs": 18
+          },
+          "pair_weighted_eligible_fraction": 0.566358024691358,
+          "scene_equal_eligible_fraction": 0.5624378109452736,
+          "scenes_with_any_missing_prior_pair": 88,
+          "scenes_with_any_degenerate_relative_velocity_pair": 16,
+          "degenerate_fraction_among_eligible_pairs": 0.04904632152588556
+        },
+        "2022-01-03": {
+          "n_scenes": 145,
+          "totals": {
+            "current_aircraft": 489,
+            "aircraft_with_prior_30": 366,
+            "same_report_used_as_current_and_prior_aircraft": 47,
+            "current_pairs": 607,
+            "cpa_eligible_pairs": 333,
+            "missing_prior_pairs": 274,
+            "degenerate_relative_horizontal_velocity_pairs": 16
+          },
+          "pair_weighted_eligible_fraction": 0.5485996705107083,
+          "scene_equal_eligible_fraction": 0.5494252873563219,
+          "scenes_with_any_missing_prior_pair": 94,
+          "scenes_with_any_degenerate_relative_velocity_pair": 14,
+          "degenerate_fraction_among_eligible_pairs": 0.04804804804804805
+        },
+        "2022-02-20": {
+          "n_scenes": 157,
+          "totals": {
+            "current_aircraft": 552,
+            "aircraft_with_prior_30": 418,
+            "same_report_used_as_current_and_prior_aircraft": 50,
+            "current_pairs": 737,
+            "cpa_eligible_pairs": 423,
+            "missing_prior_pairs": 314,
+            "degenerate_relative_horizontal_velocity_pairs": 21
+          },
+          "pair_weighted_eligible_fraction": 0.5739484396200815,
+          "scene_equal_eligible_fraction": 0.575583864118896,
+          "scenes_with_any_missing_prior_pair": 95,
+          "scenes_with_any_degenerate_relative_velocity_pair": 19,
+          "degenerate_fraction_among_eligible_pairs": 0.04964539007092199
+        },
+        "2022-03-21": {
+          "n_scenes": 125,
+          "totals": {
+            "current_aircraft": 419,
+            "aircraft_with_prior_30": 301,
+            "same_report_used_as_current_and_prior_aircraft": 44,
+            "current_pairs": 518,
+            "cpa_eligible_pairs": 273,
+            "missing_prior_pairs": 245,
+            "degenerate_relative_horizontal_velocity_pairs": 13
+          },
+          "pair_weighted_eligible_fraction": 0.527027027027027,
+          "scene_equal_eligible_fraction": 0.5410666666666666,
+          "scenes_with_any_missing_prior_pair": 79,
+          "scenes_with_any_degenerate_relative_velocity_pair": 11,
+          "degenerate_fraction_among_eligible_pairs": 0.047619047619047616
+        },
+        "2022-04-26": {
+          "n_scenes": 8,
+          "totals": {
+            "current_aircraft": 26,
+            "aircraft_with_prior_30": 20,
+            "same_report_used_as_current_and_prior_aircraft": 4,
+            "current_pairs": 30,
+            "cpa_eligible_pairs": 20,
+            "missing_prior_pairs": 10,
+            "degenerate_relative_horizontal_velocity_pairs": 2
+          },
+          "pair_weighted_eligible_fraction": 0.6666666666666666,
+          "scene_equal_eligible_fraction": 0.5833333333333334,
+          "scenes_with_any_missing_prior_pair": 4,
+          "scenes_with_any_degenerate_relative_velocity_pair": 2,
+          "degenerate_fraction_among_eligible_pairs": 0.1
+        },
+        "2022-05-19": {
+          "n_scenes": 36,
+          "totals": {
+            "current_aircraft": 114,
+            "aircraft_with_prior_30": 83,
+            "same_report_used_as_current_and_prior_aircraft": 17,
+            "current_pairs": 126,
+            "cpa_eligible_pairs": 63,
+            "missing_prior_pairs": 63,
+            "degenerate_relative_horizontal_velocity_pairs": 10
+          },
+          "pair_weighted_eligible_fraction": 0.5,
+          "scene_equal_eligible_fraction": 0.4861111111111111,
+          "scenes_with_any_missing_prior_pair": 27,
+          "scenes_with_any_degenerate_relative_velocity_pair": 8,
+          "degenerate_fraction_among_eligible_pairs": 0.15873015873015872
+        },
+        "2022-06-20": {
+          "n_scenes": 174,
+          "totals": {
+            "current_aircraft": 574,
+            "aircraft_with_prior_30": 493,
+            "same_report_used_as_current_and_prior_aircraft": 18,
+            "current_pairs": 683,
+            "cpa_eligible_pairs": 497,
+            "missing_prior_pairs": 186,
+            "degenerate_relative_horizontal_velocity_pairs": 66
+          },
+          "pair_weighted_eligible_fraction": 0.7276720351390923,
+          "scene_equal_eligible_fraction": 0.7379310344827587,
+          "scenes_with_any_missing_prior_pair": 71,
+          "scenes_with_any_degenerate_relative_velocity_pair": 45,
+          "degenerate_fraction_among_eligible_pairs": 0.13279678068410464
+        },
+        "2022-07-22": {
+          "n_scenes": 285,
+          "totals": {
+            "current_aircraft": 1022,
+            "aircraft_with_prior_30": 867,
+            "same_report_used_as_current_and_prior_aircraft": 50,
+            "current_pairs": 1393,
+            "cpa_eligible_pairs": 996,
+            "missing_prior_pairs": 397,
+            "degenerate_relative_horizontal_velocity_pairs": 83
+          },
+          "pair_weighted_eligible_fraction": 0.7150035893754487,
+          "scene_equal_eligible_fraction": 0.7209356725146199,
+          "scenes_with_any_missing_prior_pair": 127,
+          "scenes_with_any_degenerate_relative_velocity_pair": 60,
+          "degenerate_fraction_among_eligible_pairs": 0.08333333333333333
+        },
+        "2022-08-26": {
+          "n_scenes": 93,
+          "totals": {
+            "current_aircraft": 294,
+            "aircraft_with_prior_30": 238,
+            "same_report_used_as_current_and_prior_aircraft": 20,
+            "current_pairs": 324,
+            "cpa_eligible_pairs": 215,
+            "missing_prior_pairs": 109,
+            "degenerate_relative_horizontal_velocity_pairs": 21
+          },
+          "pair_weighted_eligible_fraction": 0.6635802469135802,
+          "scene_equal_eligible_fraction": 0.6684587813620071,
+          "scenes_with_any_missing_prior_pair": 42,
+          "scenes_with_any_degenerate_relative_velocity_pair": 17,
+          "degenerate_fraction_among_eligible_pairs": 0.09767441860465116
+        }
+      },
+      "sixty_second_buffer_equivalence": {
+        "comparison": "Original 12 snapshots (t-110..t) versus final 6 snapshots (t-50..t) on identical frozen scenes.",
+        "checked_feature_values": 54524,
+        "mismatches": 0,
+        "interpretation": "The implemented A/B/C ladder uses current reports and approximately 30-s prior reports; this is an input-equivalence check, not a model-performance ablation."
+      }
+    }
+  }
+}

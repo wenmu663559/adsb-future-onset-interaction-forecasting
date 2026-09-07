@@ -1,0 +1,61 @@
+{
+  "schema_version": "r03_nb2_review_protocol_v1",
+  "frozen_at": "2026-09-05",
+  "purpose": "Post-review corrected-target count-distribution comparison; not a new blind confirmation or a reopening of representation selection",
+  "target": "future_onset_proximity_event_count",
+  "feature_ladder": "B",
+  "horizons_seconds": [30, 120, 300],
+  "threshold_quantiles": [0.7, 0.75, 0.8, 0.9],
+  "threshold_interpolation": "higher",
+  "fit_scope": "KBTP development train split only",
+  "allow_site_tuning": false,
+  "primary_group_unit": "source_group",
+  "random_seed": 1701,
+  "datasets": {
+    "development": {
+      "airport": "KBTP",
+      "role": "training_and_development_diagnostics",
+      "relative_path": "outputs/experiments/r03_future_onset_development/20260903T040754Z-online-complexity-pilot/pilot_scenes.jsonl",
+      "sha256": "9ce1cd963db2ee99dbdbc9a0376a082cd79ce4ef732dbcf65f4aedeffbbc632b"
+    },
+    "confirmation": {
+      "airport": "KBTP",
+      "role": "unchanged_one_shot_confirmation",
+      "relative_path": "outputs/experiments/r03_future_onset_confirmation/20260903T075352Z-online-complexity-pilot/pilot_scenes.jsonl",
+      "sha256": "a448361b29c295ceacbf56e935344af4f956d992d5c0355a5c74fa820cf79412"
+    },
+    "external": {
+      "airport": "KAGC",
+      "role": "unchanged_zero_shot_external_evaluation",
+      "relative_path": "outputs/experiments/r03_kagc_external_validation/20260903T080631Z-online-complexity-pilot/pilot_scenes.jsonl",
+      "sha256": "7efdb735b105896b15e83befb134eff1762b2d3cfc212674080959ca4038f8b7"
+    }
+  },
+  "models": {
+    "count_distribution_candidate": "NB2 regression with log link, jointly optimized dispersion, standardized B features, no coefficient penalty",
+    "count_distribution_reference": "Poisson regression with log link, standardized B features, no coefficient penalty",
+    "exceedance_reference": "Logistic regression with standardized B features, C=1.0, L2, seed 1701"
+  },
+  "metrics": {
+    "count_distribution_primary": "source-group-equal negative log likelihood",
+    "count_point_descriptive": ["source-group-equal MAE", "pooled RMSE"],
+    "exceedance_primary": ["source-group-equal Brier", "source-group-equal Bernoulli log loss"],
+    "calibration_descriptive": ["pooled ECE with 10 equal-width bins"],
+    "distribution_diagnostics": ["mean", "variance", "variance_to_mean_ratio", "zero_fraction"]
+  },
+  "main_text_gate": {
+    "minimum_horizons": 2,
+    "scope": "dataset-specific; KBTP confirmation and KAGC are adjudicated separately",
+    "count_distribution": "NB2 group-equal NLL < Poisson group-equal NLL",
+    "exceedance": "NB2 group-equal Brier or log loss < Logistic at the frozen q75 threshold",
+    "direction": "strict majority of source groups on the relevant evaluation set"
+  },
+  "fallback": "supplementary_only_retain_current_primary_models",
+  "prohibited": [
+    "KAGC_parameter_fitting",
+    "site_specific_thresholds",
+    "representation_reselection",
+    "additional_model_families"
+  ],
+  "claim_boundary": "The outcome is an ADS-B-derived geometric interaction-onset count, not controller workload, certified separation loss, accident probability, or universal airspace complexity."
+}

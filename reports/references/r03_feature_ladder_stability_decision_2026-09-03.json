@@ -1,0 +1,427 @@
+{
+  "B_pass_horizons": [
+    30,
+    120,
+    300
+  ],
+  "comparisons": {
+    "120": {
+      "candidates": {
+        "B": {
+          "test": {
+            "count": {
+              "candidate_minus_A_mean": -0.08616731426194968,
+              "candidate_minus_A_median": -0.06307737661660628,
+              "candidate_wins": 4,
+              "day_count": 4,
+              "differences_by_day": {
+                "2022-06-14": -0.08374596182991878,
+                "2022-06-21": -0.04240879140329379,
+                "2022-07-25": -0.01666245150625678,
+                "2022-09-20": -0.20185205230832937
+              },
+              "ties": 0
+            },
+            "equal_day_brier_A": 0.2006536793567379,
+            "equal_day_brier_candidate": 0.18911783665595594,
+            "equal_day_count_mae_A": 1.5583633649577036,
+            "equal_day_count_mae_candidate": 1.472196050695754,
+            "probability": {
+              "candidate_minus_A_mean": -0.011535842700781937,
+              "candidate_minus_A_median": -0.012105290503592284,
+              "candidate_wins": 4,
+              "day_count": 4,
+              "differences_by_day": {
+                "2022-06-14": -0.0037500938896637415,
+                "2022-06-21": -0.011779391719568766,
+                "2022-07-25": -0.01818269590627944,
+                "2022-09-20": -0.012431189287615801
+              },
+              "ties": 0
+            }
+          },
+          "validation": {
+            "count": {
+              "candidate_minus_A_mean": -0.08343991922540865,
+              "candidate_minus_A_median": -0.08322361648919596,
+              "candidate_wins": 2,
+              "day_count": 3,
+              "differences_by_day": {
+                "2020-10-22": 0.02955500649027276,
+                "2021-04-05": -0.08322361648919596,
+                "2022-06-20": -0.19665114767730274
+              },
+              "ties": 0
+            },
+            "equal_day_brier_A": 0.1638078312055733,
+            "equal_day_brier_candidate": 0.1509078307761342,
+            "equal_day_count_mae_A": 2.103941379997599,
+            "equal_day_count_mae_candidate": 2.0205014607721905,
+            "probability": {
+              "candidate_minus_A_mean": -0.012900000429439118,
+              "candidate_minus_A_median": -0.006633947239777893,
+              "candidate_wins": 3,
+              "day_count": 3,
+              "differences_by_day": {
+                "2020-10-22": -0.006633947239777893,
+                "2021-04-05": -0.02730312028560858,
+                "2022-06-20": -0.004762933762930882
+              },
+              "ties": 0
+            }
+          }
+        },
+        "C": {
+          "test": {
+            "count": {
+              "candidate_minus_A_mean": -0.109294265700076,
+              "candidate_minus_A_median": -0.0806469791150567,
+              "candidate_wins": 4,
+              "day_count": 4,
+              "differences_by_day": {
+                "2022-06-14": -0.08591847480765336,
+                "2022-06-21": -0.04398006382304631,
+                "2022-07-25": -0.07537548342246003,
+                "2022-09-20": -0.2319030407471443
+              },
+              "ties": 0
+            },
+            "equal_day_brier_A": 0.2006536793567379,
+            "equal_day_brier_candidate": 0.1896037392173051,
+            "equal_day_count_mae_A": 1.5583633649577036,
+            "equal_day_count_mae_candidate": 1.4490690992576276,
+            "probability": {
+              "candidate_minus_A_mean": -0.011049940139432765,
+              "candidate_minus_A_median": -0.008018528887538595,
+              "candidate_wins": 3,
+              "day_count": 4,
+              "differences_by_day": {
+                "2022-06-14": 0.0020062704825370425,
+                "2022-06-21": -0.010219840512667944,
+                "2022-07-25": -0.030168973265190913,
+                "2022-09-20": -0.005817217262409247
+              },
+              "ties": 0
+            }
+          },
+          "validation": {
+            "count": {
+              "candidate_minus_A_mean": -0.10993357848156123,
+              "candidate_minus_A_median": -0.10222464046038127,
+              "candidate_wins": 3,
+              "day_count": 3,
+              "differences_by_day": {
+                "2020-10-22": -0.005327243010368132,
+                "2021-04-05": -0.10222464046038127,
+                "2022-06-20": -0.2222488519739343
+              },
+              "ties": 0
+            },
+            "equal_day_brier_A": 0.1638078312055733,
+            "equal_day_brier_candidate": 0.15264560961657414,
+            "equal_day_count_mae_A": 2.103941379997599,
+            "equal_day_count_mae_candidate": 1.994007801516038,
+            "probability": {
+              "candidate_minus_A_mean": -0.011162221588999164,
+              "candidate_minus_A_median": -0.006185313566779593,
+              "candidate_wins": 3,
+              "day_count": 3,
+              "differences_by_day": {
+                "2020-10-22": -0.003629292321720018,
+                "2021-04-05": -0.02367205887849788,
+                "2022-06-20": -0.006185313566779593
+              },
+              "ties": 0
+            }
+          }
+        }
+      },
+      "selected_count_model": "plain_poisson"
+    },
+    "30": {
+      "candidates": {
+        "B": {
+          "test": {
+            "count": {
+              "candidate_minus_A_mean": -0.012299690247069714,
+              "candidate_minus_A_median": -0.01269887068913092,
+              "candidate_wins": 4,
+              "day_count": 4,
+              "differences_by_day": {
+                "2022-06-14": -0.01151041971972866,
+                "2022-06-21": -0.01388732165853318,
+                "2022-07-25": -0.003918156057587607,
+                "2022-09-20": -0.01988286355242941
+              },
+              "ties": 0
+            },
+            "equal_day_brier_A": 0.21713650268839996,
+            "equal_day_brier_candidate": 0.2072087880274633,
+            "equal_day_count_mae_A": 0.6614560823965482,
+            "equal_day_count_mae_candidate": 0.6491563921494784,
+            "probability": {
+              "candidate_minus_A_mean": -0.009927714660936685,
+              "candidate_minus_A_median": -0.009039103610656976,
+              "candidate_wins": 4,
+              "day_count": 4,
+              "differences_by_day": {
+                "2022-06-14": -0.006751775949278338,
+                "2022-06-21": -0.014880875473154448,
+                "2022-07-25": -0.00991808977111483,
+                "2022-09-20": -0.008160117450199122
+              },
+              "ties": 0
+            }
+          },
+          "validation": {
+            "count": {
+              "candidate_minus_A_mean": -0.018684979858386946,
+              "candidate_minus_A_median": -0.02094874222613108,
+              "candidate_wins": 3,
+              "day_count": 3,
+              "differences_by_day": {
+                "2020-10-22": -0.009221447395455273,
+                "2021-04-05": -0.02094874222613108,
+                "2022-06-20": -0.025884749953574482
+              },
+              "ties": 0
+            },
+            "equal_day_brier_A": 0.2114025307727326,
+            "equal_day_brier_candidate": 0.2085874194001197,
+            "equal_day_count_mae_A": 0.8029215455988669,
+            "equal_day_count_mae_candidate": 0.7842365657404798,
+            "probability": {
+              "candidate_minus_A_mean": -0.002815111372612903,
+              "candidate_minus_A_median": -0.004570480247652331,
+              "candidate_wins": 2,
+              "day_count": 3,
+              "differences_by_day": {
+                "2020-10-22": -0.006423820257008578,
+                "2021-04-05": 0.002548966386822199,
+                "2022-06-20": -0.004570480247652331
+              },
+              "ties": 0
+            }
+          }
+        },
+        "C": {
+          "test": {
+            "count": {
+              "candidate_minus_A_mean": -0.026749198676483774,
+              "candidate_minus_A_median": -0.025499946633124382,
+              "candidate_wins": 4,
+              "day_count": 4,
+              "differences_by_day": {
+                "2022-06-14": -0.02925945397430918,
+                "2022-06-21": -0.021499023344258517,
+                "2022-07-25": -0.034497878095427814,
+                "2022-09-20": -0.021740439291939584
+              },
+              "ties": 0
+            },
+            "equal_day_brier_A": 0.21713650268839996,
+            "equal_day_brier_candidate": 0.20493311315307547,
+            "equal_day_count_mae_A": 0.6614560823965482,
+            "equal_day_count_mae_candidate": 0.6347068837200643,
+            "probability": {
+              "candidate_minus_A_mean": -0.012203389535324495,
+              "candidate_minus_A_median": -0.01220355804507535,
+              "candidate_wins": 3,
+              "day_count": 4,
+              "differences_by_day": {
+                "2022-06-14": -0.010903684087469528,
+                "2022-06-21": -0.01350343200268117,
+                "2022-07-25": -0.028484185856563204,
+                "2022-09-20": 0.004077743805415923
+              },
+              "ties": 0
+            }
+          },
+          "validation": {
+            "count": {
+              "candidate_minus_A_mean": -0.054567642767612355,
+              "candidate_minus_A_median": -0.0569542561395846,
+              "candidate_wins": 3,
+              "day_count": 3,
+              "differences_by_day": {
+                "2020-10-22": -0.033775827044455586,
+                "2021-04-05": -0.07297284511879687,
+                "2022-06-20": -0.0569542561395846
+              },
+              "ties": 0
+            },
+            "equal_day_brier_A": 0.2114025307727326,
+            "equal_day_brier_candidate": 0.2049327714087976,
+            "equal_day_count_mae_A": 0.8029215455988669,
+            "equal_day_count_mae_candidate": 0.7483539028312545,
+            "probability": {
+              "candidate_minus_A_mean": -0.006469759363935013,
+              "candidate_minus_A_median": -0.007936820188786081,
+              "candidate_wins": 2,
+              "day_count": 3,
+              "differences_by_day": {
+                "2020-10-22": -0.007936820188786081,
+                "2021-04-05": 0.0022850113212094514,
+                "2022-06-20": -0.013757469224228408
+              },
+              "ties": 0
+            }
+          }
+        }
+      },
+      "selected_count_model": "ridge_log1p"
+    },
+    "300": {
+      "candidates": {
+        "B": {
+          "test": {
+            "count": {
+              "candidate_minus_A_mean": -0.05600466383665903,
+              "candidate_minus_A_median": -0.05248691642331882,
+              "candidate_wins": 4,
+              "day_count": 4,
+              "differences_by_day": {
+                "2022-06-14": -0.0435084552641678,
+                "2022-06-21": -0.041522342215027486,
+                "2022-07-25": -0.06146537758246984,
+                "2022-09-20": -0.077522480284971
+              },
+              "ties": 0
+            },
+            "equal_day_brier_A": 0.22070670388731795,
+            "equal_day_brier_candidate": 0.21311829335737995,
+            "equal_day_count_mae_A": 3.1071599012488065,
+            "equal_day_count_mae_candidate": 3.0511552374121473,
+            "probability": {
+              "candidate_minus_A_mean": -0.007588410529937979,
+              "candidate_minus_A_median": -0.007172488935338978,
+              "candidate_wins": 3,
+              "day_count": 4,
+              "differences_by_day": {
+                "2022-06-14": 0.007258037853072524,
+                "2022-06-21": -0.008692135753522456,
+                "2022-07-25": -0.005652842117155499,
+                "2022-09-20": -0.023266702102146486
+              },
+              "ties": 0
+            }
+          },
+          "validation": {
+            "count": {
+              "candidate_minus_A_mean": -0.09969858406888014,
+              "candidate_minus_A_median": -0.14012373052081095,
+              "candidate_wins": 2,
+              "day_count": 3,
+              "differences_by_day": {
+                "2020-10-22": 0.10691474762291797,
+                "2021-04-05": -0.14012373052081095,
+                "2022-06-20": -0.26588676930874744
+              },
+              "ties": 0
+            },
+            "equal_day_brier_A": 0.18495755655588084,
+            "equal_day_brier_candidate": 0.15747380350430182,
+            "equal_day_count_mae_A": 4.241502285733328,
+            "equal_day_count_mae_candidate": 4.141803701664448,
+            "probability": {
+              "candidate_minus_A_mean": -0.027483753051579,
+              "candidate_minus_A_median": -0.012563899859985017,
+              "candidate_wins": 3,
+              "day_count": 3,
+              "differences_by_day": {
+                "2020-10-22": -0.00292483154034226,
+                "2021-04-05": -0.06696252775440972,
+                "2022-06-20": -0.012563899859985017
+              },
+              "ties": 0
+            }
+          }
+        },
+        "C": {
+          "test": {
+            "count": {
+              "candidate_minus_A_mean": -0.0332771174322084,
+              "candidate_minus_A_median": -0.014251059162541324,
+              "candidate_wins": 2,
+              "day_count": 4,
+              "differences_by_day": {
+                "2022-06-14": 0.0014953114632132447,
+                "2022-06-21": -0.028570414379376352,
+                "2022-07-25": -0.10610166286696421,
+                "2022-09-20": 6.829605429370389e-05
+              },
+              "ties": 0
+            },
+            "equal_day_brier_A": 0.22070670388731795,
+            "equal_day_brier_candidate": 0.21588985683598133,
+            "equal_day_count_mae_A": 3.1071599012488065,
+            "equal_day_count_mae_candidate": 3.0738827838165985,
+            "probability": {
+              "candidate_minus_A_mean": -0.004816847051336601,
+              "candidate_minus_A_median": -0.01039163815483407,
+              "candidate_wins": 3,
+              "day_count": 4,
+              "differences_by_day": {
+                "2022-06-14": 0.01699309633488158,
+                "2022-06-21": -0.006891700177300619,
+                "2022-07-25": -0.015477208230559841,
+                "2022-09-20": -0.013891576132367522
+              },
+              "ties": 0
+            }
+          },
+          "validation": {
+            "count": {
+              "candidate_minus_A_mean": -0.08481004342982186,
+              "candidate_minus_A_median": -0.048873248950757286,
+              "candidate_wins": 2,
+              "day_count": 3,
+              "differences_by_day": {
+                "2020-10-22": 0.03458904728370271,
+                "2021-04-05": -0.048873248950757286,
+                "2022-06-20": -0.24014592862241102
+              },
+              "ties": 0
+            },
+            "equal_day_brier_A": 0.18495755655588084,
+            "equal_day_brier_candidate": 0.16014581452737808,
+            "equal_day_count_mae_A": 4.241502285733328,
+            "equal_day_count_mae_candidate": 4.156692242303507,
+            "probability": {
+              "candidate_minus_A_mean": -0.024811742028502715,
+              "candidate_minus_A_median": -0.0074591853394654906,
+              "candidate_wins": 3,
+              "day_count": 3,
+              "differences_by_day": {
+                "2020-10-22": -0.0003846769961965979,
+                "2021-04-05": -0.06659136374984606,
+                "2022-06-20": -0.0074591853394654906
+              },
+              "ties": 0
+            }
+          }
+        }
+      },
+      "selected_count_model": "plain_poisson"
+    }
+  },
+  "confirmation_constraints": {
+    "allow_additional_KBTP_batch": false,
+    "allow_new_feature_selection": false,
+    "allow_new_model_family": false,
+    "allow_retuning": false
+  },
+  "decision": "PROCEED_TO_ONE_SHOT_CONFIRMATION_WITH_PAIRWISE_B",
+  "decision_basis": "validation equal-day count MAE and logistic Brier; test dates are retrospective stability evidence only",
+  "input_sha256": "36be49f4b0ad9441d94c28d873739c8a0fddf5b1ad876b654b4454528c08d808",
+  "reason_for_not_selecting_C": "CPA additions are modest and not directionally stable at 300 seconds; B is the parsimonious globally shared representation.",
+  "representation_expansion": "STOP_AFTER_B",
+  "schema_version": "r03_feature_ladder_stability_decision_v1",
+  "selected_count_models_by_horizon": {
+    "120": "plain_poisson",
+    "30": "ridge_log1p",
+    "300": "plain_poisson"
+  },
+  "selected_feature_ladder": "B",
+  "selected_probability_model": "logistic_ridge"
+}

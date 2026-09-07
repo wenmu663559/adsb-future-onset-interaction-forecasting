@@ -1,0 +1,43 @@
+{
+  "schema_version": "r03_future_onset_development_sources_v1",
+  "frozen_at": "2026-09-03",
+  "airport_id": "KBTP",
+  "max_hours_per_source": 2,
+  "exact_source_ids": [
+    "4d2a33012c959a3ea0eabeeac13af58708567837e4c0adb8bd76c2f79f3b6270",
+    "8ff2951e6f34a815f03e22c6caa45fb50e9bd647e2730ffb5798ae81ef977b6d",
+    "9af858c2aebbb36c166ce4f6dd555d6d83d5e0de62b105c2e9fa127dad0783ee",
+    "a36f7d50e4b4a474bd854c42be89724b5a13bed08c0c3f9b7cb2e8470d70b05f",
+    "afe2c7b08fac86676736653c999efced42f1759372eccfdb672e39c204f4b730",
+    "b8fada53b7ebb56bc2689293a635c8079cd068a2f9620fd2e08255e990253b2f",
+    "cf14c478a008b4ecdf3c294a42678970622753a7ef50913e22156e0768bf4eba",
+    "e4cbd9a968be0d33bb8de4f13af7e384ffe4fc56fe16a503f5b9444dce92514e",
+    "08da01ccdc34be1bb6e6a365dc7911593bd7bc217f66f8eaad6b9f56319e3e91",
+    "488c80d209dcae6288d9e27fa44b59f3cdb4b7f2bf8854b6bf6d0b07b7f8f083",
+    "72ef40385f16c67790d6182af224c467788d7df0d2defc25e8a3e1c6115c1b86",
+    "7430cb253db1594332455ff4a3e5b716caaf201555f3a3e62e2cac6120420b39",
+    "a550bb11459e7baa17664692a002095dc73524b22d4348af5f6174a7fe92058c",
+    "ad5ac7917138de2bd9fad55efba6bddc167bc3d7c662b2c6a1104ba6f9e8eb47",
+    "b2a4e6932de142ab5ea8b213b8a3e8a6034378c7418c0066b33c62d87ba308bf",
+    "d2f4990e258e002fb8eeac836b42ece29db3e751cade787d8f81e71e1f2a061a"
+  ],
+  "source_day_splits": {
+    "KBTP\u00002020-10-22": "validation",
+    "KBTP\u00002021-03-22": "train",
+    "KBTP\u00002021-04-05": "validation",
+    "KBTP\u00002022-06-08": "train",
+    "KBTP\u00002022-06-13": "train",
+    "KBTP\u00002022-06-14": "test",
+    "KBTP\u00002022-06-17": "train",
+    "KBTP\u00002022-06-20": "validation",
+    "KBTP\u00002022-06-21": "test",
+    "KBTP\u00002022-06-23": "train",
+    "KBTP\u00002022-06-24": "train",
+    "KBTP\u00002022-06-30": "train",
+    "KBTP\u00002022-07-25": "test",
+    "KBTP\u00002022-08-19": "train",
+    "KBTP\u00002022-09-01": "train",
+    "KBTP\u00002022-09-20": "test",
+    "KBTP\u00002022-10-06": "train"
+  }
+}

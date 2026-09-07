@@ -1,0 +1,20 @@
+schema_versions:
+  raw_v1_12:
+    columns: [ID, Time, Date, Altitude, Speed, Heading, Lat, Lon, Age, Range, Bearing, Tail]
+  raw_v2_13_altisgnss:
+    columns: [ID, Time, Date, Altitude, Speed, Heading, Lat, Lon, Age, Range, Bearing, Tail, AltisGNSS]
+types:
+  ID: string
+  Time: legacy_time
+  Date: legacy_date
+  Altitude: float_feet_msl
+  Speed: float_knots
+  Heading: float_degrees
+  Lat: float_decimal_degrees
+  Lon: float_decimal_degrees
+  Age: float_seconds
+  Range: float_kilometres
+  Bearing: float_degrees_from_north
+  Tail: string
+  AltisGNSS: boolean
+missing_tokens: ["", "None", "null", "nan", "NaN"]

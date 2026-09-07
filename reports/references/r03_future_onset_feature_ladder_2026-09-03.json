@@ -1,0 +1,3951 @@
+{
+  "dataset_scene_sha256": "9ce1cd963db2ee99dbdbc9a0376a082cd79ce4ef732dbcf65f4aedeffbbc632b",
+  "decision": "DEVELOPMENT_AND_RETROSPECTIVE_EVIDENCE_NOT_CONFIRMATION",
+  "horizons": {
+    "120": {
+      "ladders": {
+        "A": {
+          "feature_count": 8,
+          "feature_names": [
+            "current_aircraft_count",
+            "current_altitude_mean_m",
+            "current_altitude_std_m",
+            "current_speed_mean_mps",
+            "current_speed_std_mps",
+            "current_altitude_range_m",
+            "current_min_pair_distance_m",
+            "current_low_altitude_fraction"
+          ],
+          "feature_sha256": "4e32f976704522757507f93a36acb096dea5cec3b7dd755b5b9749b4f98ac424",
+          "test": {
+            "day_count": 4,
+            "days": {
+              "2022-06-14": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 1.518941862294021,
+                    "count_rmse": 2.037345201378828,
+                    "mean_poisson_deviance": 1.959057868486385
+                  },
+                  "plain_poisson": {
+                    "count_mae": 1.429406514248566,
+                    "count_rmse": 1.8845250241422633,
+                    "mean_poisson_deviance": 1.7026200908111282
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 1.4113759784932292,
+                    "count_rmse": 1.9630635422989542,
+                    "mean_poisson_deviance": 1.928879612410452
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.19822409332883156,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.5257150892484616,
+                      "slope": 1.0356432858054823
+                    },
+                    "ece_10_bins": 0.10975034047270253,
+                    "log_loss": 0.5817953068467683
+                  },
+                  "training_prevalence": {
+                    "brier": 0.29212106249325565,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.7592288088107552,
+                      "slope": 0.6197239112756681
+                    },
+                    "ece_10_bins": 0.23302461593600837,
+                    "log_loss": 0.779460295312462
+                  }
+                },
+                "scene_count": 444,
+                "target_mean": 2.418918918918919
+              },
+              "2022-06-21": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 1.2606632435749272,
+                    "count_rmse": 1.6831975987789878,
+                    "mean_poisson_deviance": 1.6623250977609272
+                  },
+                  "plain_poisson": {
+                    "count_mae": 1.3098841733073967,
+                    "count_rmse": 1.7499808385233893,
+                    "mean_poisson_deviance": 1.754222287537407
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 1.3077436961317261,
+                    "count_rmse": 1.838139218095221,
+                    "mean_poisson_deviance": 1.9975494301614378
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.2034543230739725,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.24298493486131018,
+                      "slope": 1.062695801132041
+                    },
+                    "ece_10_bins": 0.1047233521376715,
+                    "log_loss": 0.5849044710679134
+                  },
+                  "training_prevalence": {
+                    "brier": 0.23983220039426692,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.06700589419275056,
+                      "slope": 0.9664386523681956
+                    },
+                    "ece_10_bins": 0.019886477797870172,
+                    "log_loss": 0.6727053488952343
+                  }
+                },
+                "scene_count": 360,
+                "target_mean": 1.7361111111111112
+              },
+              "2022-07-25": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 1.380742694222515,
+                    "count_rmse": 1.7979744622475324,
+                    "mean_poisson_deviance": 1.994672798119029
+                  },
+                  "plain_poisson": {
+                    "count_mae": 1.2269125443929243,
+                    "count_rmse": 1.674936361402943,
+                    "mean_poisson_deviance": 1.5742638449056745
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 1.196709751922769,
+                    "count_rmse": 1.6474976642811736,
+                    "mean_poisson_deviance": 1.756955007802262
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.22625514654943926,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.19907204411260476,
+                      "slope": 0.6841001855870869
+                    },
+                    "ece_10_bins": 0.1920553575354712,
+                    "log_loss": 0.652971536173464
+                  },
+                  "training_prevalence": {
+                    "brier": 0.2592053645685161,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.3242233109175493,
+                      "slope": 0.8376061139743763
+                    },
+                    "ece_10_bins": 0.09885473176612414,
+                    "log_loss": 0.7122583439372534
+                  }
+                },
+                "scene_count": 315,
+                "target_mean": 1.7809523809523808
+              },
+              "2022-09-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 2.306765769945371,
+                    "count_rmse": 2.9504615753383554,
+                    "mean_poisson_deviance": 2.9009185972236335
+                  },
+                  "plain_poisson": {
+                    "count_mae": 2.2672502278819278,
+                    "count_rmse": 2.827850126649479,
+                    "mean_poisson_deviance": 2.4898126899880078
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 2.334776693894048,
+                    "count_rmse": 3.024302760331969,
+                    "mean_poisson_deviance": 3.0749755787394792
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.17468115447470817,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.5619322463295522,
+                      "slope": 0.9602800484063294
+                    },
+                    "ece_10_bins": 0.12105299538213012,
+                    "log_loss": 0.521292815326035
+                  },
+                  "training_prevalence": {
+                    "brier": 0.3074489783134359,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.9768597399878735,
+                      "slope": 0.5107182518442734
+                    },
+                    "ece_10_bins": 0.2955037617484875,
+                    "log_loss": 0.8107543561580272
+                  }
+                },
+                "scene_count": 324,
+                "target_mean": 3.728395061728395
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.2006536793567379,
+              "training_prevalence": 0.2746519014423686
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 1.6167783925092085,
+              "plain_poisson": 1.5583633649577036,
+              "ridge_log1p": 1.5626515301104429
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 1.6012300850228074,
+                "count_rmse": 2.155056030848,
+                "mean_poisson_deviance": 2.104281556278475,
+                "normalized_mae": 0.6662557706712546
+              },
+              "plain_poisson": {
+                "count_mae": 1.5435074982914356,
+                "count_rmse": 2.06511467327273,
+                "mean_poisson_deviance": 1.8642243704331318,
+                "normalized_mae": 0.6422379815555195
+              },
+              "ridge_log1p": {
+                "count_mae": 1.5459943768092579,
+                "count_rmse": 2.1621360338991122,
+                "mean_poisson_deviance": 2.165816533428733,
+                "normalized_mae": 0.643272746751949
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.2003618287993833,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.3946325781882664,
+                  "slope": 0.9766523821175687
+                },
+                "ece_10_bins": 0.08081950684156028,
+                "log_loss": 0.5845236534197439
+              },
+              "training_prevalence": {
+                "brier": 0.2753322957044888,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.5348340656107442,
+                  "slope": 0.7321163598732041
+                },
+                "ece_10_bins": 0.16459079750218986,
+                "log_loss": 0.7451837050980271
+              }
+            },
+            "scene_count": 1443
+          },
+          "validation": {
+            "day_count": 3,
+            "days": {
+              "2020-10-22": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 1.998346971539991,
+                    "count_rmse": 3.0572874083901516,
+                    "mean_poisson_deviance": 2.492859797072119
+                  },
+                  "plain_poisson": {
+                    "count_mae": 1.87634098748727,
+                    "count_rmse": 2.837781211647942,
+                    "mean_poisson_deviance": 2.323997520533962
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 1.9389989197107669,
+                    "count_rmse": 3.154587230589688,
+                    "mean_poisson_deviance": 3.4590969260205897
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.14545722579338416,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.4856111059862652,
+                      "slope": 1.2056627204077663
+                    },
+                    "ece_10_bins": 0.1065457474561123,
+                    "log_loss": 0.4675841525512141
+                  },
+                  "training_prevalence": {
+                    "brier": 0.27653896419096946,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.5506583376369546,
+                      "slope": 0.7241902134369833
+                    },
+                    "ece_10_bins": 0.16950937985863085,
+                    "log_loss": 0.7476472857621795
+                  }
+                },
+                "scene_count": 523,
+                "target_mean": 3.101338432122371
+              },
+              "2021-04-05": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 2.942493545952232,
+                    "count_rmse": 4.1001351954932685,
+                    "mean_poisson_deviance": 3.667930151076191
+                  },
+                  "plain_poisson": {
+                    "count_mae": 2.723175696620838,
+                    "count_rmse": 3.744595049011075,
+                    "mean_poisson_deviance": 3.0953262735892775
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 2.8128757212878988,
+                    "count_rmse": 4.086110940668688,
+                    "mean_poisson_deviance": 4.079883425431098
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.15011602403776642,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 1.0067563978576293,
+                      "slope": 1.2115635556365656
+                    },
+                    "ece_10_bins": 0.19557914241144417,
+                    "log_loss": 0.46406238000441735
+                  },
+                  "training_prevalence": {
+                    "brier": 0.33354733764466643,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 1.4086144308913644,
+                      "slope": 0.2944646294540278
+                    },
+                    "ece_10_bins": 0.4018850347964273,
+                    "log_loss": 0.8640377675795384
+                  }
+                },
+                "scene_count": 154,
+                "target_mean": 4.487012987012987
+              },
+              "2022-06-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 1.745239377414729,
+                    "count_rmse": 2.2047220017143956,
+                    "mean_poisson_deviance": 2.037656703923127
+                  },
+                  "plain_poisson": {
+                    "count_mae": 1.7123074558846894,
+                    "count_rmse": 2.1510761468029465,
+                    "mean_poisson_deviance": 1.869866330329119
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 1.6007397433300428,
+                    "count_rmse": 2.0727572568275074,
+                    "mean_poisson_deviance": 1.90430587621381
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.1958502437855693,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.09850005424337488,
+                      "slope": 0.8509761407333308
+                    },
+                    "ece_10_bins": 0.03903165043418964,
+                    "log_loss": 0.577709900758275
+                  },
+                  "training_prevalence": {
+                    "brier": 0.28398415905322094,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.6492526542740092,
+                      "slope": 0.6748075097070035
+                    },
+                    "ece_10_bins": 0.1998572380317884,
+                    "log_loss": 0.7628476811557685
+                  }
+                },
+                "scene_count": 570,
+                "target_mean": 2.5719298245614035
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.1638078312055733,
+              "training_prevalence": 0.2980234869629523
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 2.2286932983023173,
+              "plain_poisson": 2.103941379997599,
+              "ridge_log1p": 2.1175381281095693
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 1.999250936101407,
+                "count_rmse": 2.8667340306411138,
+                "mean_poisson_deviance": 2.429904762125609,
+                "normalized_mae": 0.6597157759509009
+              },
+              "plain_poisson": {
+                "count_mae": 1.9059427775378703,
+                "count_rmse": 2.687786124299719,
+                "mean_poisson_deviance": 2.2116718184920674,
+                "normalized_mae": 0.6289258120110411
+              },
+              "ridge_log1p": {
+                "count_mae": 1.8923022853129043,
+                "count_rmse": 2.863470043835929,
+                "mean_poisson_deviance": 2.825071442876527,
+                "normalized_mae": 0.6244247022453537
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.16906706956658415,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.31385724887659844,
+                  "slope": 1.0286667340242515
+                },
+                "ece_10_bins": 0.06357946535450952,
+                "log_loss": 0.5174873790995845
+              },
+              "training_prevalence": {
+                "brier": 0.28698246906935976,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.689452338779381,
+                  "slope": 0.6546724218863543
+                },
+                "ece_10_bins": 0.2120788506037154,
+                "log_loss": 0.7689691458858514
+              }
+            },
+            "scene_count": 1247
+          }
+        },
+        "B": {
+          "feature_count": 13,
+          "feature_names": [
+            "current_aircraft_count",
+            "current_altitude_mean_m",
+            "current_altitude_std_m",
+            "current_speed_mean_mps",
+            "current_speed_std_mps",
+            "current_altitude_range_m",
+            "current_min_pair_distance_m",
+            "current_low_altitude_fraction",
+            "observed_pair_count",
+            "current_active_pair_count_5nm_1000ft",
+            "closing_pair_count_10nm",
+            "mean_pair_horizontal_distance_m",
+            "minimum_pair_vertical_separation_m"
+          ],
+          "feature_sha256": "f56d533b7350ae6685ae56fafb50978810ec5d3e7131ab314abcb28145b2266f",
+          "test": {
+            "day_count": 4,
+            "days": {
+              "2022-06-14": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 1.4706042690524996,
+                    "count_rmse": 1.9554928314244495,
+                    "mean_poisson_deviance": 1.7733289841088302
+                  },
+                  "plain_poisson": {
+                    "count_mae": 1.3456605524186471,
+                    "count_rmse": 1.8188111760613654,
+                    "mean_poisson_deviance": 1.5652843914212644
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 1.379334659305635,
+                    "count_rmse": 1.9659256234905,
+                    "mean_poisson_deviance": 1.9021987803204607
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.19447399943916782,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.5734792951694945,
+                      "slope": 1.087423228182724
+                    },
+                    "ece_10_bins": 0.11312493321234517,
+                    "log_loss": 0.5745945177634746
+                  },
+                  "training_prevalence": {
+                    "brier": 0.29212106249325565,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.7592288088107552,
+                      "slope": 0.6197239112756681
+                    },
+                    "ece_10_bins": 0.23302461593600837,
+                    "log_loss": 0.779460295312462
+                  }
+                },
+                "scene_count": 444,
+                "target_mean": 2.418918918918919
+              },
+              "2022-06-21": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 1.2205170021130969,
+                    "count_rmse": 1.650168143734835,
+                    "mean_poisson_deviance": 1.6008107418558597
+                  },
+                  "plain_poisson": {
+                    "count_mae": 1.267475381904103,
+                    "count_rmse": 1.6859183234254942,
+                    "mean_poisson_deviance": 1.6717481945162174
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 1.2673835325492273,
+                    "count_rmse": 1.7632402264172589,
+                    "mean_poisson_deviance": 1.9336759078014445
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.19167493135440372,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.16403858249611747,
+                      "slope": 1.0606097359158246
+                    },
+                    "ece_10_bins": 0.06050420398102981,
+                    "log_loss": 0.5609184028679183
+                  },
+                  "training_prevalence": {
+                    "brier": 0.23983220039426692,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.06700589419275056,
+                      "slope": 0.9664386523681956
+                    },
+                    "ece_10_bins": 0.019886477797870172,
+                    "log_loss": 0.6727053488952343
+                  }
+                },
+                "scene_count": 360,
+                "target_mean": 1.7361111111111112
+              },
+              "2022-07-25": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 1.3239078170757328,
+                    "count_rmse": 1.7071145528334233,
+                    "mean_poisson_deviance": 1.7368833953183047
+                  },
+                  "plain_poisson": {
+                    "count_mae": 1.2102500928866675,
+                    "count_rmse": 1.6216360192018335,
+                    "mean_poisson_deviance": 1.443410749950223
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 1.1455365549821095,
+                    "count_rmse": 1.5997872571752956,
+                    "mean_poisson_deviance": 1.5485800679183106
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.20807245064315982,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.174856469281033,
+                      "slope": 0.7793822269113742
+                    },
+                    "ece_10_bins": 0.14629403825842477,
+                    "log_loss": 0.6138155185793438
+                  },
+                  "training_prevalence": {
+                    "brier": 0.2592053645685161,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.3242233109175493,
+                      "slope": 0.8376061139743763
+                    },
+                    "ece_10_bins": 0.09885473176612414,
+                    "log_loss": 0.7122583439372534
+                  }
+                },
+                "scene_count": 315,
+                "target_mean": 1.7809523809523808
+              },
+              "2022-09-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 2.364084854200084,
+                    "count_rmse": 2.980087531537297,
+                    "mean_poisson_deviance": 3.0451891565663747
+                  },
+                  "plain_poisson": {
+                    "count_mae": 2.0653981755735984,
+                    "count_rmse": 2.619337996095009,
+                    "mean_poisson_deviance": 2.1957149893729
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 2.170945449754184,
+                    "count_rmse": 2.8357197255679822,
+                    "mean_poisson_deviance": 2.7648109341586866
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.16224996518709237,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.5844034793450383,
+                      "slope": 1.1232727933758309
+                    },
+                    "ece_10_bins": 0.1227365591618004,
+                    "log_loss": 0.4879794564684988
+                  },
+                  "training_prevalence": {
+                    "brier": 0.3074489783134359,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.9768597399878735,
+                      "slope": 0.5107182518442734
+                    },
+                    "ece_10_bins": 0.2955037617484875,
+                    "log_loss": 0.8107543561580272
+                  }
+                },
+                "scene_count": 324,
+                "target_mean": 3.728395061728395
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.18911783665595594,
+              "training_prevalence": 0.2746519014423686
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 1.5947784856103533,
+              "plain_poisson": 1.472196050695754,
+              "ridge_log1p": 1.490800049147789
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 1.5768044846567624,
+                "count_rmse": 2.11805733629832,
+                "mean_poisson_deviance": 2.0079067860465702,
+                "normalized_mae": 0.6560925234601235
+              },
+              "plain_poisson": {
+                "count_mae": 1.4581997303565506,
+                "count_rmse": 1.9599805347054586,
+                "mean_poisson_deviance": 1.7067925589799167,
+                "normalized_mae": 0.6067422753473191
+              },
+              "ridge_log1p": {
+                "count_mae": 1.4781101877956644,
+                "count_rmse": 2.080636071499262,
+                "mean_poisson_deviance": 2.0265426537300666,
+                "normalized_mae": 0.6150268168942168
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.18950883001509988,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.3943096140869783,
+                  "slope": 1.045662220621196
+                },
+                "ece_10_bins": 0.08885060104907565,
+                "log_loss": 0.5602964817517119
+              },
+              "training_prevalence": {
+                "brier": 0.2753322957044888,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.5348340656107442,
+                  "slope": 0.7321163598732041
+                },
+                "ece_10_bins": 0.16459079750218986,
+                "log_loss": 0.7451837050980271
+              }
+            },
+            "scene_count": 1443
+          },
+          "validation": {
+            "day_count": 3,
+            "days": {
+              "2020-10-22": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 1.9804578389649155,
+                    "count_rmse": 3.0442028193255717,
+                    "mean_poisson_deviance": 2.5518274724288568
+                  },
+                  "plain_poisson": {
+                    "count_mae": 1.9058959939775428,
+                    "count_rmse": 2.8839717857778755,
+                    "mean_poisson_deviance": 2.3053868067575793
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 1.9705262254434412,
+                    "count_rmse": 3.1227384268137413,
+                    "mean_poisson_deviance": 3.1548116831478903
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.13882327855360627,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.47566039482838446,
+                      "slope": 1.2077839078205213
+                    },
+                    "ece_10_bins": 0.10371912868557613,
+                    "log_loss": 0.4538781848066866
+                  },
+                  "training_prevalence": {
+                    "brier": 0.27653896419096946,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.5506583376369546,
+                      "slope": 0.7241902134369833
+                    },
+                    "ece_10_bins": 0.16950937985863085,
+                    "log_loss": 0.7476472857621795
+                  }
+                },
+                "scene_count": 523,
+                "target_mean": 3.101338432122371
+              },
+              "2021-04-05": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 2.751787491805506,
+                    "count_rmse": 3.8869489585078414,
+                    "mean_poisson_deviance": 3.1972737357419243
+                  },
+                  "plain_poisson": {
+                    "count_mae": 2.639952080131642,
+                    "count_rmse": 3.629483232802136,
+                    "mean_poisson_deviance": 2.7100624880052786
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 2.684923362950179,
+                    "count_rmse": 3.8511745594942086,
+                    "mean_poisson_deviance": 3.3805162178484984
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.12281290375215784,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.7090633740827336,
+                      "slope": 1.2796671944711266
+                    },
+                    "ece_10_bins": 0.14283531852673043,
+                    "log_loss": 0.39434960936461383
+                  },
+                  "training_prevalence": {
+                    "brier": 0.33354733764466643,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 1.4086144308913644,
+                      "slope": 0.2944646294540278
+                    },
+                    "ece_10_bins": 0.4018850347964273,
+                    "log_loss": 0.8640377675795384
+                  }
+                },
+                "scene_count": 154,
+                "target_mean": 4.487012987012987
+              },
+              "2022-06-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 1.6143946764212787,
+                    "count_rmse": 2.0480806973317267,
+                    "mean_poisson_deviance": 1.9063443552681867
+                  },
+                  "plain_poisson": {
+                    "count_mae": 1.5156563082073866,
+                    "count_rmse": 1.8829964743731191,
+                    "mean_poisson_deviance": 1.6567385594958979
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 1.454706300098013,
+                    "count_rmse": 1.8974599978848594,
+                    "mean_poisson_deviance": 1.823175729039642
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.19108731002263843,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.14238227283206017,
+                      "slope": 0.8646388463770286
+                    },
+                    "ece_10_bins": 0.08534261975440682,
+                    "log_loss": 0.565474673547066
+                  },
+                  "training_prevalence": {
+                    "brier": 0.28398415905322094,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.6492526542740092,
+                      "slope": 0.6748075097070035
+                    },
+                    "ece_10_bins": 0.1998572380317884,
+                    "log_loss": 0.7628476811557685
+                  }
+                },
+                "scene_count": 570,
+                "target_mean": 2.5719298245614035
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.1509078307761342,
+              "training_prevalence": 0.2980234869629523
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 2.1155466690639,
+              "plain_poisson": 2.0205014607721905,
+              "ridge_log1p": 2.0367186294972113
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 1.9083878821786906,
+                "count_rmse": 2.7694578575172577,
+                "mean_poisson_deviance": 2.3364893391238293,
+                "normalized_mae": 0.6297326512508143
+              },
+              "plain_poisson": {
+                "count_mae": 1.8181718691810247,
+                "count_rmse": 2.595357710540665,
+                "mean_poisson_deviance": 2.058867603848989,
+                "normalized_mae": 0.5999630380705843
+              },
+              "ridge_log1p": {
+                "count_mae": 1.8229719365333719,
+                "count_rmse": 2.7508534901527764,
+                "mean_poisson_deviance": 2.5739985351945562,
+                "normalized_mae": 0.6015469713832006
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.16073578875242364,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.3075134099991194,
+                  "slope": 1.053065184595964
+                },
+                "ece_10_bins": 0.07242198582728321,
+                "log_loss": 0.4975370444409585
+              },
+              "training_prevalence": {
+                "brier": 0.28698246906935976,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.689452338779381,
+                  "slope": 0.6546724218863543
+                },
+                "ece_10_bins": 0.2120788506037154,
+                "log_loss": 0.7689691458858514
+              }
+            },
+            "scene_count": 1247
+          }
+        },
+        "C": {
+          "feature_count": 22,
+          "feature_names": [
+            "current_aircraft_count",
+            "current_altitude_mean_m",
+            "current_altitude_std_m",
+            "current_speed_mean_mps",
+            "current_speed_std_mps",
+            "current_altitude_range_m",
+            "current_min_pair_distance_m",
+            "current_low_altitude_fraction",
+            "observed_pair_count",
+            "current_active_pair_count_5nm_1000ft",
+            "closing_pair_count_10nm",
+            "mean_pair_horizontal_distance_m",
+            "minimum_pair_vertical_separation_m",
+            "cpa_pair_count_30s",
+            "minimum_projected_horizontal_cpa_m_30s",
+            "minimum_projected_vertical_separation_m_30s",
+            "cpa_pair_count_120s",
+            "minimum_projected_horizontal_cpa_m_120s",
+            "minimum_projected_vertical_separation_m_120s",
+            "cpa_pair_count_300s",
+            "minimum_projected_horizontal_cpa_m_300s",
+            "minimum_projected_vertical_separation_m_300s"
+          ],
+          "feature_sha256": "008d09df68454cea6f79782721358e697a552166bfdbd5332abbb3934f850181",
+          "test": {
+            "day_count": 4,
+            "days": {
+              "2022-06-14": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 1.480123851943312,
+                    "count_rmse": 1.9576448371842008,
+                    "mean_poisson_deviance": 1.8025051901171143
+                  },
+                  "plain_poisson": {
+                    "count_mae": 1.3434880394409126,
+                    "count_rmse": 1.8398096014098195,
+                    "mean_poisson_deviance": 1.6129752597352653
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 1.4052186212467914,
+                    "count_rmse": 1.9836597378939806,
+                    "mean_poisson_deviance": 1.9667668869934534
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.2002303638113686,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.6014788444730383,
+                      "slope": 0.9754044796816194
+                    },
+                    "ece_10_bins": 0.1250953745379517,
+                    "log_loss": 0.5884527372649263
+                  },
+                  "training_prevalence": {
+                    "brier": 0.29212106249325565,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.7592288088107552,
+                      "slope": 0.6197239112756681
+                    },
+                    "ece_10_bins": 0.23302461593600837,
+                    "log_loss": 0.779460295312462
+                  }
+                },
+                "scene_count": 444,
+                "target_mean": 2.418918918918919
+              },
+              "2022-06-21": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 1.2539968062642897,
+                    "count_rmse": 1.691889240550833,
+                    "mean_poisson_deviance": 1.657615493275555
+                  },
+                  "plain_poisson": {
+                    "count_mae": 1.2659041094843504,
+                    "count_rmse": 1.7051163595737318,
+                    "mean_poisson_deviance": 1.693055587506275
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 1.2655933139860684,
+                    "count_rmse": 1.777069750821168,
+                    "mean_poisson_deviance": 2.153659024947367
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.19323448256130454,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.1681573467799001,
+                      "slope": 0.9744362507257167
+                    },
+                    "ece_10_bins": 0.06713870119171172,
+                    "log_loss": 0.5629799018922131
+                  },
+                  "training_prevalence": {
+                    "brier": 0.23983220039426692,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.06700589419275056,
+                      "slope": 0.9664386523681956
+                    },
+                    "ece_10_bins": 0.019886477797870172,
+                    "log_loss": 0.6727053488952343
+                  }
+                },
+                "scene_count": 360,
+                "target_mean": 1.7361111111111112
+              },
+              "2022-07-25": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 1.309481177741406,
+                    "count_rmse": 1.6608163544083525,
+                    "mean_poisson_deviance": 1.5990618089843314
+                  },
+                  "plain_poisson": {
+                    "count_mae": 1.1515370609704643,
+                    "count_rmse": 1.5415274514741109,
+                    "mean_poisson_deviance": 1.3121465116468225
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 1.1038978459033808,
+                    "count_rmse": 1.5239370170906272,
+                    "mean_poisson_deviance": 1.3877813806361372
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.19608617328424835,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.15243452359180779,
+                      "slope": 0.8625813364943969
+                    },
+                    "ece_10_bins": 0.1156909630257043,
+                    "log_loss": 0.5854229391190805
+                  },
+                  "training_prevalence": {
+                    "brier": 0.2592053645685161,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.3242233109175493,
+                      "slope": 0.8376061139743763
+                    },
+                    "ece_10_bins": 0.09885473176612414,
+                    "log_loss": 0.7122583439372534
+                  }
+                },
+                "scene_count": 315,
+                "target_mean": 1.7809523809523808
+              },
+              "2022-09-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 2.3234950930741354,
+                    "count_rmse": 2.9189823594189854,
+                    "mean_poisson_deviance": 2.919570728266231
+                  },
+                  "plain_poisson": {
+                    "count_mae": 2.0353471871347835,
+                    "count_rmse": 2.5832899109675016,
+                    "mean_poisson_deviance": 2.167787480691673
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 2.1754183692995768,
+                    "count_rmse": 2.811775151487435,
+                    "mean_poisson_deviance": 2.7752841814499285
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.16886393721229892,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.639480905103941,
+                      "slope": 0.9864472362016456
+                    },
+                    "ece_10_bins": 0.11566762402343708,
+                    "log_loss": 0.5025620272820192
+                  },
+                  "training_prevalence": {
+                    "brier": 0.3074489783134359,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.9768597399878735,
+                      "slope": 0.5107182518442734
+                    },
+                    "ece_10_bins": 0.2955037617484875,
+                    "log_loss": 0.8107543561580272
+                  }
+                },
+                "scene_count": 324,
+                "target_mean": 3.728395061728395
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.1896037392173051,
+              "training_prevalence": 0.2746519014423686
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 1.5917742322557857,
+              "plain_poisson": 1.4490690992576276,
+              "ridge_log1p": 1.4875320376089545
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 1.5758231612352998,
+                "count_rmse": 2.0996594470129004,
+                "mean_poisson_deviance": 1.9727645653357742,
+                "normalized_mae": 0.6556842046316429
+              },
+              "plain_poisson": {
+                "count_mae": 1.4375750739871778,
+                "count_rmse": 1.945245130936019,
+                "mean_poisson_deviance": 1.6918574648215994,
+                "normalized_mae": 0.5981605627922427
+              },
+              "ridge_log1p": {
+                "count_mae": 1.477542643091606,
+                "count_rmse": 2.0689920507421187,
+                "mean_poisson_deviance": 2.068541203393143,
+                "normalized_mae": 0.6147906672379434
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.19053759909607787,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.4028650011053954,
+                  "slope": 0.9867842865928748
+                },
+                "ece_10_bins": 0.07932840169755812,
+                "log_loss": 0.5621511453144205
+              },
+              "training_prevalence": {
+                "brier": 0.2753322957044888,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.5348340656107442,
+                  "slope": 0.7321163598732041
+                },
+                "ece_10_bins": 0.16459079750218986,
+                "log_loss": 0.7451837050980271
+              }
+            },
+            "scene_count": 1443
+          },
+          "validation": {
+            "day_count": 3,
+            "days": {
+              "2020-10-22": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 1.9477493949343019,
+                    "count_rmse": 3.0166838033148675,
+                    "mean_poisson_deviance": 2.4987827203178243
+                  },
+                  "plain_poisson": {
+                    "count_mae": 1.871013744476902,
+                    "count_rmse": 2.823051731577773,
+                    "mean_poisson_deviance": 2.3047703680717095
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 1.9151229010332875,
+                    "count_rmse": 3.0432032787500907,
+                    "mean_poisson_deviance": 3.780852677214087
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.14182793347166414,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.5263846026205904,
+                      "slope": 1.072197448675387
+                    },
+                    "ece_10_bins": 0.10104163078018248,
+                    "log_loss": 0.4673851748248384
+                  },
+                  "training_prevalence": {
+                    "brier": 0.27653896419096946,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.5506583376369546,
+                      "slope": 0.7241902134369833
+                    },
+                    "ece_10_bins": 0.16950937985863085,
+                    "log_loss": 0.7476472857621795
+                  }
+                },
+                "scene_count": 523,
+                "target_mean": 3.101338432122371
+              },
+              "2021-04-05": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 2.7448323857050623,
+                    "count_rmse": 3.7834163040630164,
+                    "mean_poisson_deviance": 2.9952810689205474
+                  },
+                  "plain_poisson": {
+                    "count_mae": 2.6209510561604565,
+                    "count_rmse": 3.6014926527743794,
+                    "mean_poisson_deviance": 2.6843419945810583
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 2.6812553772006447,
+                    "count_rmse": 3.8285041989433974,
+                    "mean_poisson_deviance": 3.3771635675970693
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.12644396515926853,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.8238046666009674,
+                      "slope": 1.1418933944986327
+                    },
+                    "ece_10_bins": 0.18936080659755397,
+                    "log_loss": 0.39921754268176307
+                  },
+                  "training_prevalence": {
+                    "brier": 0.33354733764466643,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 1.4086144308913644,
+                      "slope": 0.2944646294540278
+                    },
+                    "ece_10_bins": 0.4018850347964273,
+                    "log_loss": 0.8640377675795384
+                  }
+                },
+                "scene_count": 154,
+                "target_mean": 4.487012987012987
+              },
+              "2022-06-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 1.594059537681252,
+                    "count_rmse": 2.0220539193174383,
+                    "mean_poisson_deviance": 1.8448636630873065
+                  },
+                  "plain_poisson": {
+                    "count_mae": 1.490058603910755,
+                    "count_rmse": 1.8773506362893695,
+                    "mean_poisson_deviance": 1.638313864630801
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 1.4295592893019282,
+                    "count_rmse": 1.8878042659496699,
+                    "mean_poisson_deviance": 1.8635378355433632
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.18966493021878972,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.16473157306542754,
+                      "slope": 0.8536961528142368
+                    },
+                    "ece_10_bins": 0.07250492458388082,
+                    "log_loss": 0.5660820041564736
+                  },
+                  "training_prevalence": {
+                    "brier": 0.28398415905322094,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.6492526542740092,
+                      "slope": 0.6748075097070035
+                    },
+                    "ece_10_bins": 0.1998572380317884,
+                    "log_loss": 0.7628476811557685
+                  }
+                },
+                "scene_count": 570,
+                "target_mean": 2.5719298245614035
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.15264560961657414,
+              "training_prevalence": 0.2980234869629523
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 2.095547106106872,
+              "plain_poisson": 1.994007801516038,
+              "ridge_log1p": 2.008645855845287
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 1.884515683582625,
+                "count_rmse": 2.730100755221694,
+                "mean_poisson_deviance": 2.2611940138730966,
+                "normalized_mae": 0.6218552679088472
+              },
+              "plain_poisson": {
+                "count_mae": 1.7894948317876986,
+                "count_rmse": 2.56034485221005,
+                "mean_poisson_deviance": 2.047010803934678,
+                "normalized_mae": 0.5905001469275629
+              },
+              "ridge_log1p": {
+                "count_mae": 1.7877878109313619,
+                "count_rmse": 2.706160861079767,
+                "mean_poisson_deviance": 2.854599603731061,
+                "normalized_mae": 0.5899368616648342
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.16179421817555562,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.35511349607630616,
+                  "slope": 0.9785313306076665
+                },
+                "ece_10_bins": 0.07370404753465397,
+                "log_loss": 0.5040807460910761
+              },
+              "training_prevalence": {
+                "brier": 0.28698246906935976,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.689452338779381,
+                  "slope": 0.6546724218863543
+                },
+                "ece_10_bins": 0.2120788506037154,
+                "log_loss": 0.7689691458858514
+              }
+            },
+            "scene_count": 1247
+          }
+        }
+      },
+      "risk_threshold": 2,
+      "target_sha256": "df0a5971842e01206c446ffd110361c4f2905ab2d45d2afda2e6149e291f4101",
+      "training_risk_prevalence": 0.377335744424352
+    },
+    "30": {
+      "ladders": {
+        "A": {
+          "feature_count": 8,
+          "feature_names": [
+            "current_aircraft_count",
+            "current_altitude_mean_m",
+            "current_altitude_std_m",
+            "current_speed_mean_mps",
+            "current_speed_std_mps",
+            "current_altitude_range_m",
+            "current_min_pair_distance_m",
+            "current_low_altitude_fraction"
+          ],
+          "feature_sha256": "4e32f976704522757507f93a36acb096dea5cec3b7dd755b5b9749b4f98ac424",
+          "test": {
+            "day_count": 4,
+            "days": {
+              "2022-06-14": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.729956820164199,
+                    "count_rmse": 0.9838554228762058,
+                    "mean_poisson_deviance": 1.3833141865808811
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.6930125778247517,
+                    "count_rmse": 0.9391393050641916,
+                    "mean_poisson_deviance": 1.2745684805256638
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.6525963460316458,
+                    "count_rmse": 0.9426419697360732,
+                    "mean_poisson_deviance": 1.332483439131401
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.2232990233898195,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": -0.08770506368721288,
+                      "slope": 0.6960347384106192
+                    },
+                    "ece_10_bins": 0.06625086673630039,
+                    "log_loss": 0.6389605113075572
+                  },
+                  "training_prevalence": {
+                    "brier": 0.2454347350826853,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.23633948055228493,
+                      "slope": 0.7851868226782258
+                    },
+                    "ece_10_bins": 0.09566166528191838,
+                    "log_loss": 0.6865934660770846
+                  }
+                },
+                "scene_count": 444,
+                "target_mean": 0.6126126126126126
+              },
+              "2022-06-21": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.550243109016429,
+                    "count_rmse": 0.7788506580996332,
+                    "mean_poisson_deviance": 1.0558094301713932
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.5349308162662038,
+                    "count_rmse": 0.7602060451364249,
+                    "mean_poisson_deviance": 0.9947710806673822
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.5043612769606156,
+                    "count_rmse": 0.7832830511729191,
+                    "mean_poisson_deviance": 1.064917400181352
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.18561064059058335,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.4803696158656019,
+                      "slope": 1.375665885935511
+                    },
+                    "ece_10_bins": 0.09339478329889549,
+                    "log_loss": 0.5461956097798103
+                  },
+                  "training_prevalence": {
+                    "brier": 0.20898119293294057,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.026479963306793954,
+                      "slope": 0.9759319465909985
+                    },
+                    "ece_10_bins": 0.010001004621257747,
+                    "log_loss": 0.6087349156801507
+                  }
+                },
+                "scene_count": 360,
+                "target_mean": 0.4444444444444444
+              },
+              "2022-07-25": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.6170057120343486,
+                    "count_rmse": 0.8577827578462665,
+                    "mean_poisson_deviance": 1.23487143790602
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.6214821356039444,
+                    "count_rmse": 0.8774651381459678,
+                    "mean_poisson_deviance": 1.216293394871238
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.5721894787490743,
+                    "count_rmse": 0.8662107696637462,
+                    "mean_poisson_deviance": 1.2899109097771442
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.23854013612143057,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": -0.29298805520617544,
+                      "slope": 0.36086387021452254
+                    },
+                    "ece_10_bins": 0.1488912909885207,
+                    "log_loss": 0.6705660010717324
+                  },
+                  "training_prevalence": {
+                    "brier": 0.23245440781664373,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.1644613327539332,
+                      "slope": 0.8505181417555497
+                    },
+                    "ece_10_bins": 0.06515973477998793,
+                    "log_loss": 0.6588697002915731
+                  }
+                },
+                "scene_count": 315,
+                "target_mean": 0.49523809523809526
+              },
+              "2022-09-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.950090559608163,
+                    "count_rmse": 1.3696782836148018,
+                    "mean_poisson_deviance": 1.7528016955674963
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.9562136068840542,
+                    "count_rmse": 1.3760785976608174,
+                    "mean_poisson_deviance": 1.7500788511537118
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.9166772278448567,
+                    "count_rmse": 1.406866826957919,
+                    "mean_poisson_deviance": 1.9444660489728582
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.22109621065176643,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.13632970565565514,
+                      "slope": 0.89039319329751
+                    },
+                    "ece_10_bins": 0.0867582539810668,
+                    "log_loss": 0.6266760538696293
+                  },
+                  "training_prevalence": {
+                    "brier": 0.2821403174985349,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.4300357312298184,
+                      "slope": 0.609132311770389
+                    },
+                    "ece_10_bins": 0.1819145848681713,
+                    "log_loss": 0.7649903315074378
+                  }
+                },
+                "scene_count": 324,
+                "target_mean": 0.9783950617283951
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.21713650268839996,
+              "training_prevalence": 0.24225266333270112
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 0.7118240502057849,
+              "plain_poisson": 0.7014097841447385,
+              "ridge_log1p": 0.6614560823965482
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 0.7098922300780897,
+                "count_rmse": 1.0153918099461319,
+                "mean_poisson_deviance": 1.3521657283491875,
+                "normalized_mae": 1.131905511605175
+              },
+              "plain_poisson": {
+                "count_mae": 0.6970566595673591,
+                "count_rmse": 1.004392865881584,
+                "mean_poisson_deviance": 1.2988107841662473,
+                "normalized_mae": 1.111439513542209
+              },
+              "ridge_log1p": {
+                "count_mae": 0.6573568572221513,
+                "count_rmse": 1.0171892212163183,
+                "mean_poisson_deviance": 1.3938474341556724,
+                "normalized_mae": 1.0481391657144357
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.216728975833065,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.010969142917515102,
+                  "slope": 0.7891639088474971
+                },
+                "ece_10_bins": 0.06288029843498175,
+                "log_loss": 0.6199585712630926
+              },
+              "training_prevalence": {
+                "brier": 0.24174833899122591,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.21617483505114188,
+                  "slope": 0.803514851484538
+                },
+                "ece_10_bins": 0.08699915661940977,
+                "log_loss": 0.6787199525872039
+              }
+            },
+            "scene_count": 1443
+          },
+          "validation": {
+            "day_count": 3,
+            "days": {
+              "2020-10-22": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.7963490821460394,
+                    "count_rmse": 1.2898878781635408,
+                    "mean_poisson_deviance": 1.4649013190632834
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.7702615518389149,
+                    "count_rmse": 1.2475276726530984,
+                    "mean_poisson_deviance": 1.3693262365060483
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.7461485117959367,
+                    "count_rmse": 1.3138253861915665,
+                    "mean_poisson_deviance": 1.8418462064672156
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.18577704548586507,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.10158006320765381,
+                      "slope": 1.0072693984373116
+                    },
+                    "ece_10_bins": 0.04501468543238819,
+                    "log_loss": 0.554957011940208
+                  },
+                  "training_prevalence": {
+                    "brier": 0.25174263104859124,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.27045229350426286,
+                      "slope": 0.7541810850627836
+                    },
+                    "ece_10_bins": 0.11048432733211394,
+                    "log_loss": 0.7000660563110502
+                  }
+                },
+                "scene_count": 523,
+                "target_mean": 0.8126195028680688
+              },
+              "2021-04-05": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 1.0243624554907602,
+                    "count_rmse": 1.434151391554116,
+                    "mean_poisson_deviance": 1.5614026231743225
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.989251273904953,
+                    "count_rmse": 1.3982815055736175,
+                    "mean_poisson_deviance": 1.560349251424447
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.9951705655104554,
+                    "count_rmse": 1.5193689981190062,
+                    "mean_poisson_deviance": 1.9337338587829704
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.23342562731401245,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.44956547707608413,
+                      "slope": 0.7748870247721885
+                    },
+                    "ece_10_bins": 0.10295421435224703,
+                    "log_loss": 0.6597970773417099
+                  },
+                  "training_prevalence": {
+                    "brier": 0.3339618615844953,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.6990898531119446,
+                      "slope": 0.36458440982570234
+                    },
+                    "ece_10_bins": 0.30368787330812647,
+                    "log_loss": 0.8756723136668022
+                  }
+                },
+                "scene_count": 154,
+                "target_mean": 1.1883116883116882
+              },
+              "2022-06-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.7190280328671442,
+                    "count_rmse": 0.9533791147751955,
+                    "mean_poisson_deviance": 1.2567390871974522
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.7266346396249048,
+                    "count_rmse": 0.9513689233153849,
+                    "mean_poisson_deviance": 1.2236699398533297
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.6674455594902085,
+                    "count_rmse": 0.9323065590534587,
+                    "mean_poisson_deviance": 1.224008935418782
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.21500491951832026,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": -0.17684441242001997,
+                      "slope": 0.8476771913993597
+                    },
+                    "ece_10_bins": 0.06355227675079374,
+                    "log_loss": 0.6211388794942093
+                  },
+                  "training_prevalence": {
+                    "brier": 0.252719053759409,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.2756923882340836,
+                      "slope": 0.7494179865950538
+                    },
+                    "ece_10_bins": 0.11277878239903555,
+                    "log_loss": 0.702151528733089
+                  }
+                },
+                "scene_count": 570,
+                "target_mean": 0.6491228070175439
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.2114025307727326,
+              "training_prevalence": 0.2794745154641652
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 0.846579856834648,
+              "plain_poisson": 0.8287158217895909,
+              "ridge_log1p": 0.8029215455988669
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 0.7891646887267265,
+                "count_rmse": 1.1693114783787948,
+                "mean_poisson_deviance": 1.381668543337202,
+                "normalized_mae": 1.0062253239695582
+              },
+              "plain_poisson": {
+                "count_mae": 0.7773642601277554,
+                "count_rmse": 1.1436397742935789,
+                "mean_poisson_deviance": 1.3263378284911194,
+                "normalized_mae": 0.9911791742119744
+              },
+              "ridge_log1p": {
+                "count_mae": 0.740926950815801,
+                "count_rmse": 1.1858959389377466,
+                "mean_poisson_deviance": 1.5707824165386024,
+                "normalized_mae": 0.9447197419911082
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.20502144789166632,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.013409324777952059,
+                  "slope": 0.9291961423023836
+                },
+                "ece_10_bins": 0.042146959553181595,
+                "log_loss": 0.5981559169743796
+              },
+              "training_prevalence": {
+                "brier": 0.26234272924241275,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.326846257147397,
+                  "slope": 0.7029232586787499
+                },
+                "ece_10_bins": 0.13539305665725526,
+                "log_loss": 0.7227060586473356
+              }
+            },
+            "scene_count": 1247
+          }
+        },
+        "B": {
+          "feature_count": 13,
+          "feature_names": [
+            "current_aircraft_count",
+            "current_altitude_mean_m",
+            "current_altitude_std_m",
+            "current_speed_mean_mps",
+            "current_speed_std_mps",
+            "current_altitude_range_m",
+            "current_min_pair_distance_m",
+            "current_low_altitude_fraction",
+            "observed_pair_count",
+            "current_active_pair_count_5nm_1000ft",
+            "closing_pair_count_10nm",
+            "mean_pair_horizontal_distance_m",
+            "minimum_pair_vertical_separation_m"
+          ],
+          "feature_sha256": "f56d533b7350ae6685ae56fafb50978810ec5d3e7131ab314abcb28145b2266f",
+          "test": {
+            "day_count": 4,
+            "days": {
+              "2022-06-14": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.7068273278237984,
+                    "count_rmse": 0.9517247245862247,
+                    "mean_poisson_deviance": 1.3488056224757499
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.6729292149522923,
+                    "count_rmse": 0.923503713251182,
+                    "mean_poisson_deviance": 1.216970598835508
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.6410859263119172,
+                    "count_rmse": 0.9395101161376007,
+                    "mean_poisson_deviance": 1.2998810858261838
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.21654724744054116,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": -0.060440790078197616,
+                      "slope": 0.7588962136424621
+                    },
+                    "ece_10_bins": 0.06985607911823237,
+                    "log_loss": 0.6209633495227881
+                  },
+                  "training_prevalence": {
+                    "brier": 0.2454347350826853,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.23633948055228493,
+                      "slope": 0.7851868226782258
+                    },
+                    "ece_10_bins": 0.09566166528191838,
+                    "log_loss": 0.6865934660770846
+                  }
+                },
+                "scene_count": 444,
+                "target_mean": 0.6126126126126126
+              },
+              "2022-06-21": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.5224845683274693,
+                    "count_rmse": 0.7568538373684407,
+                    "mean_poisson_deviance": 0.980059592003152
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.5189227923704111,
+                    "count_rmse": 0.732433606553904,
+                    "mean_poisson_deviance": 0.917289275501109
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.49047395530208243,
+                    "count_rmse": 0.7619114288561546,
+                    "mean_poisson_deviance": 0.9835716680806358
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.1707297651174289,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.6066181319585395,
+                      "slope": 1.5938645792081623
+                    },
+                    "ece_10_bins": 0.06008515692517867,
+                    "log_loss": 0.5087268268040103
+                  },
+                  "training_prevalence": {
+                    "brier": 0.20898119293294057,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.026479963306793954,
+                      "slope": 0.9759319465909985
+                    },
+                    "ece_10_bins": 0.010001004621257747,
+                    "log_loss": 0.6087349156801507
+                  }
+                },
+                "scene_count": 360,
+                "target_mean": 0.4444444444444444
+              },
+              "2022-07-25": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.6211093315033909,
+                    "count_rmse": 0.8877127407686829,
+                    "mean_poisson_deviance": 1.2568328226674184
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.6142634982225171,
+                    "count_rmse": 0.8725141317955469,
+                    "mean_poisson_deviance": 1.191696106313516
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.5682713226914867,
+                    "count_rmse": 0.8571947040976695,
+                    "mean_poisson_deviance": 1.2608072618912416
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.22862204635031574,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": -0.25547536290145123,
+                      "slope": 0.4606643203578438
+                    },
+                    "ece_10_bins": 0.0830040945867411,
+                    "log_loss": 0.6534046744868446
+                  },
+                  "training_prevalence": {
+                    "brier": 0.23245440781664373,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.1644613327539332,
+                      "slope": 0.8505181417555497
+                    },
+                    "ece_10_bins": 0.06515973477998793,
+                    "log_loss": 0.6588697002915731
+                  }
+                },
+                "scene_count": 315,
+                "target_mean": 0.49523809523809526
+              },
+              "2022-09-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.9567394608519891,
+                    "count_rmse": 1.3884655907512338,
+                    "mean_poisson_deviance": 1.860516994913128
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.9320952685615052,
+                    "count_rmse": 1.3383374762287963,
+                    "mean_poisson_deviance": 1.6988025530665951
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.8967943642924273,
+                    "count_rmse": 1.387720152305019,
+                    "mean_poisson_deviance": 1.9267342403912189
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.2129360932015673,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.18036032378410954,
+                      "slope": 0.9059334490476921
+                    },
+                    "ece_10_bins": 0.06988203278659509,
+                    "log_loss": 0.6119883604185606
+                  },
+                  "training_prevalence": {
+                    "brier": 0.2821403174985349,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.4300357312298184,
+                      "slope": 0.609132311770389
+                    },
+                    "ece_10_bins": 0.1819145848681713,
+                    "log_loss": 0.7649903315074378
+                  }
+                },
+                "scene_count": 324,
+                "target_mean": 0.9783950617283951
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.2072087880274633,
+              "training_prevalence": 0.24225266333270112
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 0.701790172126662,
+              "plain_poisson": 0.6845526935266815,
+              "ridge_log1p": 0.6491563921494784
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 0.6982389486425974,
+                "count_rmse": 1.0131615000864174,
+                "mean_poisson_deviance": 1.3516292411590143,
+                "normalized_mae": 1.1133246440787492
+              },
+              "plain_poisson": {
+                "count_mae": 0.6798923393251465,
+                "count_rmse": 0.9821447740412982,
+                "mean_poisson_deviance": 1.2448755271972967,
+                "normalized_mae": 1.0840714316532445
+              },
+              "ridge_log1p": {
+                "count_mae": 0.6450309188286941,
+                "count_rmse": 1.0045971907563167,
+                "mean_poisson_deviance": 1.3531872376980947,
+                "normalized_mae": 1.0284857633920503
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.2069417408894885,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.0358151286818928,
+                  "slope": 0.8560353519677981
+                },
+                "ece_10_bins": 0.037703964505974866,
+                "log_loss": 0.5980291656802018
+              },
+              "training_prevalence": {
+                "brier": 0.24174833899122591,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.21617483505114188,
+                  "slope": 0.803514851484538
+                },
+                "ece_10_bins": 0.08699915661940977,
+                "log_loss": 0.6787199525872039
+              }
+            },
+            "scene_count": 1443
+          },
+          "validation": {
+            "day_count": 3,
+            "days": {
+              "2020-10-22": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.7809992024879119,
+                    "count_rmse": 1.2748236738630698,
+                    "mean_poisson_deviance": 1.4145740329856176
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.7472936187764816,
+                    "count_rmse": 1.2232421733904335,
+                    "mean_poisson_deviance": 1.2904240725007505
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.7369270644004814,
+                    "count_rmse": 1.2952920297577681,
+                    "mean_poisson_deviance": 1.5983542229870056
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.1793532252288565,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.001293527904033722,
+                      "slope": 0.9410021352891954
+                    },
+                    "ece_10_bins": 0.049987422842658454,
+                    "log_loss": 0.5379919070180137
+                  },
+                  "training_prevalence": {
+                    "brier": 0.25174263104859124,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.27045229350426286,
+                      "slope": 0.7541810850627836
+                    },
+                    "ece_10_bins": 0.11048432733211394,
+                    "log_loss": 0.7000660563110502
+                  }
+                },
+                "scene_count": 523,
+                "target_mean": 0.8126195028680688
+              },
+              "2021-04-05": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.9409564429146112,
+                    "count_rmse": 1.3892511321665646,
+                    "mean_poisson_deviance": 1.514617931043547
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.9972196017141836,
+                    "count_rmse": 1.4107155809333396,
+                    "mean_poisson_deviance": 1.5724013311912752
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.9742218232843243,
+                    "count_rmse": 1.4807731955856946,
+                    "mean_poisson_deviance": 1.8003147451086263
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.23597459370083465,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.47702805304442686,
+                      "slope": 0.7723098637205383
+                    },
+                    "ece_10_bins": 0.11206997429536368,
+                    "log_loss": 0.6646529104889038
+                  },
+                  "training_prevalence": {
+                    "brier": 0.3339618615844953,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.6990898531119446,
+                      "slope": 0.36458440982570234
+                    },
+                    "ece_10_bins": 0.30368787330812647,
+                    "log_loss": 0.8756723136668022
+                  }
+                },
+                "scene_count": 154,
+                "target_mean": 1.1883116883116882
+              },
+              "2022-06-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.6649987966903684,
+                    "count_rmse": 0.9006086863451433,
+                    "mean_poisson_deviance": 1.1370300572771892
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.6728750027518166,
+                    "count_rmse": 0.8908404664783252,
+                    "mean_poisson_deviance": 1.124172526901237
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.641560809536634,
+                    "count_rmse": 0.9044097393235898,
+                    "mean_poisson_deviance": 1.1762907689564983
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.21043443927066793,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": -0.22965062780207687,
+                      "slope": 0.7783277205471735
+                    },
+                    "ece_10_bins": 0.05445921424948819,
+                    "log_loss": 0.6082082556624582
+                  },
+                  "training_prevalence": {
+                    "brier": 0.252719053759409,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.2756923882340836,
+                      "slope": 0.7494179865950538
+                    },
+                    "ece_10_bins": 0.11277878239903555,
+                    "log_loss": 0.702151528733089
+                  }
+                },
+                "scene_count": 570,
+                "target_mean": 0.6491228070175439
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.2085874194001197,
+              "training_prevalence": 0.2794745154641652
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 0.7956514806976305,
+              "plain_poisson": 0.8057960744141606,
+              "ridge_log1p": 0.7842365657404798
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 0.7477299031463818,
+                "count_rmse": 1.136093822135306,
+                "mean_poisson_deviance": 1.3000645655815415,
+                "normalized_mae": 0.9533938540117977
+              },
+              "plain_poisson": {
+                "count_mae": 0.7441420471953645,
+                "count_rmse": 1.111795935159465,
+                "mean_poisson_deviance": 1.249254158183684,
+                "normalized_mae": 0.9488191542460322
+              },
+              "ridge_log1p": {
+                "count_mae": 0.7226404786713064,
+                "count_rmse": 1.1611836578275105,
+                "mean_poisson_deviance": 1.4303716661380403,
+                "normalized_mae": 0.9214035551156637
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.2005528906246201,
+                "calibration": {
+                  "converged": true,
+                  "intercept": -0.04299073971006858,
+                  "slope": 0.864128766959486
+                },
+                "ece_10_bins": 0.03597169165819713,
+                "log_loss": 0.5857297684950389
+              },
+              "training_prevalence": {
+                "brier": 0.26234272924241275,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.326846257147397,
+                  "slope": 0.7029232586787499
+                },
+                "ece_10_bins": 0.13539305665725526,
+                "log_loss": 0.7227060586473356
+              }
+            },
+            "scene_count": 1247
+          }
+        },
+        "C": {
+          "feature_count": 22,
+          "feature_names": [
+            "current_aircraft_count",
+            "current_altitude_mean_m",
+            "current_altitude_std_m",
+            "current_speed_mean_mps",
+            "current_speed_std_mps",
+            "current_altitude_range_m",
+            "current_min_pair_distance_m",
+            "current_low_altitude_fraction",
+            "observed_pair_count",
+            "current_active_pair_count_5nm_1000ft",
+            "closing_pair_count_10nm",
+            "mean_pair_horizontal_distance_m",
+            "minimum_pair_vertical_separation_m",
+            "cpa_pair_count_30s",
+            "minimum_projected_horizontal_cpa_m_30s",
+            "minimum_projected_vertical_separation_m_30s",
+            "cpa_pair_count_120s",
+            "minimum_projected_horizontal_cpa_m_120s",
+            "minimum_projected_vertical_separation_m_120s",
+            "cpa_pair_count_300s",
+            "minimum_projected_horizontal_cpa_m_300s",
+            "minimum_projected_vertical_separation_m_300s"
+          ],
+          "feature_sha256": "008d09df68454cea6f79782721358e697a552166bfdbd5332abbb3934f850181",
+          "test": {
+            "day_count": 4,
+            "days": {
+              "2022-06-14": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.6812740351780492,
+                    "count_rmse": 0.9407353659024903,
+                    "mean_poisson_deviance": 1.2857630659760813
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.6547881927677481,
+                    "count_rmse": 0.9051103240341243,
+                    "mean_poisson_deviance": 1.1834825931840631
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.6233368920573367,
+                    "count_rmse": 0.9311167096722975,
+                    "mean_poisson_deviance": 1.312576048384635
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.21239533930234997,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.00865459486544651,
+                      "slope": 0.7638110042586072
+                    },
+                    "ece_10_bins": 0.052844597889991816,
+                    "log_loss": 0.6129486039164245
+                  },
+                  "training_prevalence": {
+                    "brier": 0.2454347350826853,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.23633948055228493,
+                      "slope": 0.7851868226782258
+                    },
+                    "ece_10_bins": 0.09566166528191838,
+                    "log_loss": 0.6865934660770846
+                  }
+                },
+                "scene_count": 444,
+                "target_mean": 0.6126126126126126
+              },
+              "2022-06-21": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.5246297769325917,
+                    "count_rmse": 0.7569547222137805,
+                    "mean_poisson_deviance": 1.0129097175610464
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.5112593398444988,
+                    "count_rmse": 0.7386729270944045,
+                    "mean_poisson_deviance": 0.9291683742618014
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.4828622536163571,
+                    "count_rmse": 0.7619756731687403,
+                    "mean_poisson_deviance": 1.0074479630148614
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.17210720858790218,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.3773503263643215,
+                      "slope": 1.2440430866853687
+                    },
+                    "ece_10_bins": 0.07665307050571318,
+                    "log_loss": 0.5132560083327553
+                  },
+                  "training_prevalence": {
+                    "brier": 0.20898119293294057,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.026479963306793954,
+                      "slope": 0.9759319465909985
+                    },
+                    "ece_10_bins": 0.010001004621257747,
+                    "log_loss": 0.6087349156801507
+                  }
+                },
+                "scene_count": 360,
+                "target_mean": 0.4444444444444444
+              },
+              "2022-07-25": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.5844160998519978,
+                    "count_rmse": 0.8532423582225627,
+                    "mean_poisson_deviance": 1.135744755364175
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.5810685599152051,
+                    "count_rmse": 0.8328388207653347,
+                    "mean_poisson_deviance": 1.1043497183402435
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.5376916006536465,
+                    "count_rmse": 0.8340662226788104,
+                    "mean_poisson_deviance": 1.5777550550271826
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.21005595026486737,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": -0.09773501824110421,
+                      "slope": 0.6748647304354465
+                    },
+                    "ece_10_bins": 0.06562595586247857,
+                    "log_loss": 0.6101917891354887
+                  },
+                  "training_prevalence": {
+                    "brier": 0.23245440781664373,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.1644613327539332,
+                      "slope": 0.8505181417555497
+                    },
+                    "ece_10_bins": 0.06515973477998793,
+                    "log_loss": 0.6588697002915731
+                  }
+                },
+                "scene_count": 315,
+                "target_mean": 0.49523809523809526
+              },
+              "2022-09-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.9454930851866457,
+                    "count_rmse": 1.3723833269931645,
+                    "mean_poisson_deviance": 1.8299622343806738
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.9344728971668526,
+                    "count_rmse": 1.3462984959706956,
+                    "mean_poisson_deviance": 1.7461742751198506
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.8949367885529171,
+                    "count_rmse": 1.385514831846491,
+                    "mean_poisson_deviance": 2.3462092213569954
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.22517395445718236,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.09522500919565992,
+                      "slope": 0.6139988499264091
+                    },
+                    "ece_10_bins": 0.08201840315744048,
+                    "log_loss": 0.6503069517395228
+                  },
+                  "training_prevalence": {
+                    "brier": 0.2821403174985349,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.4300357312298184,
+                      "slope": 0.609132311770389
+                    },
+                    "ece_10_bins": 0.1819145848681713,
+                    "log_loss": 0.7649903315074378
+                  }
+                },
+                "scene_count": 324,
+                "target_mean": 0.9783950617283951
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.20493311315307547,
+              "training_prevalence": 0.24225266333270112
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 0.683953249287321,
+              "plain_poisson": 0.6703972474235762,
+              "ridge_log1p": 0.6347068837200643
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 0.6803764534779205,
+                "count_rmse": 0.9985317649764742,
+                "mean_poisson_deviance": 1.3071335145491407,
+                "normalized_mae": 1.0848433396338555
+              },
+              "plain_poisson": {
+                "count_mae": 0.6656861642330212,
+                "count_rmse": 0.9729224385735792,
+                "mean_poisson_deviance": 1.2291043052834238,
+                "normalized_mae": 1.0614200386610493
+              },
+              "ridge_log1p": {
+                "count_mae": 0.6305782155733817,
+                "count_rmse": 0.9972445905557901,
+                "mean_poisson_deviance": 1.5264238823432825,
+                "normalized_mae": 1.0054412873728062
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.20470277984715762,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.028623847353385246,
+                  "slope": 0.7873444060535973
+                },
+                "ece_10_bins": 0.03858446865279356,
+                "log_loss": 0.5958636237560421
+              },
+              "training_prevalence": {
+                "brier": 0.24174833899122591,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.21617483505114188,
+                  "slope": 0.803514851484538
+                },
+                "ece_10_bins": 0.08699915661940977,
+                "log_loss": 0.6787199525872039
+              }
+            },
+            "scene_count": 1443
+          },
+          "validation": {
+            "day_count": 3,
+            "days": {
+              "2020-10-22": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.7583065678424259,
+                    "count_rmse": 1.2659852860054865,
+                    "mean_poisson_deviance": 1.3865451715487032
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.7217565715916812,
+                    "count_rmse": 1.2034249218616468,
+                    "mean_poisson_deviance": 1.2832167006382076
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.7123726847514811,
+                    "count_rmse": 1.2781558710892975,
+                    "mean_poisson_deviance": 1.6736641651321802
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.177840225297079,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.04447601981455721,
+                      "slope": 0.8864923821048789
+                    },
+                    "ece_10_bins": 0.06616995973933905,
+                    "log_loss": 0.5320042081049032
+                  },
+                  "training_prevalence": {
+                    "brier": 0.25174263104859124,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.27045229350426286,
+                      "slope": 0.7541810850627836
+                    },
+                    "ece_10_bins": 0.11048432733211394,
+                    "log_loss": 0.7000660563110502
+                  }
+                },
+                "scene_count": 523,
+                "target_mean": 0.8126195028680688
+              },
+              "2021-04-05": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.9430113255224196,
+                    "count_rmse": 1.3780979028566094,
+                    "mean_poisson_deviance": 1.5313082315244748
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.8980047573017295,
+                    "count_rmse": 1.2635884274400047,
+                    "mean_poisson_deviance": 1.3937649722294159
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.9221977203916585,
+                    "count_rmse": 1.3776395967326505,
+                    "mean_poisson_deviance": 1.8403922646415183
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.2357106386352219,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.47413786252472045,
+                      "slope": 0.640587783884871
+                    },
+                    "ece_10_bins": 0.1517626750255192,
+                    "log_loss": 0.6639325796207671
+                  },
+                  "training_prevalence": {
+                    "brier": 0.3339618615844953,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.6990898531119446,
+                      "slope": 0.36458440982570234
+                    },
+                    "ece_10_bins": 0.30368787330812647,
+                    "log_loss": 0.8756723136668022
+                  }
+                },
+                "scene_count": 154,
+                "target_mean": 1.1883116883116882
+              },
+              "2022-06-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 0.6826234633473813,
+                    "count_rmse": 0.9207184558364295,
+                    "mean_poisson_deviance": 1.164431609501627
+                  },
+                  "plain_poisson": {
+                    "count_mae": 0.6391258487152943,
+                    "count_rmse": 0.8328827474420167,
+                    "mean_poisson_deviance": 1.0403121214544022
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 0.6104913033506238,
+                    "count_rmse": 0.8565641102759018,
+                    "mean_poisson_deviance": 1.200815400451887
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.20124745029409186,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": -0.23140142705946948,
+                      "slope": 0.8182497627834633
+                    },
+                    "ece_10_bins": 0.05059544879003678,
+                    "log_loss": 0.5861453554815833
+                  },
+                  "training_prevalence": {
+                    "brier": 0.252719053759409,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.2756923882340836,
+                      "slope": 0.7494179865950538
+                    },
+                    "ece_10_bins": 0.11277878239903555,
+                    "log_loss": 0.702151528733089
+                  }
+                },
+                "scene_count": 570,
+                "target_mean": 0.6491228070175439
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.2049327714087976,
+              "training_prevalence": 0.2794745154641652
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 0.7946471189040757,
+              "plain_poisson": 0.7529623925362351,
+              "ridge_log1p": 0.7483539028312545
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 0.7465224163753398,
+                "count_rmse": 1.1376382786712274,
+                "mean_poisson_deviance": 1.3028954368810493,
+                "normalized_mae": 0.9518542466462666
+              },
+              "plain_poisson": {
+                "count_mae": 0.7057523282555199,
+                "count_rmse": 1.0590865733373758,
+                "mean_poisson_deviance": 1.1858380508308917,
+                "normalized_mae": 0.8998702999331629
+              },
+              "ridge_log1p": {
+                "count_mae": 0.6917156423217287,
+                "count_rmse": 1.1202378621975562,
+                "mean_poisson_deviance": 1.478116716420609,
+                "normalized_mae": 0.8819728077455988
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.195686385603712,
+                "calibration": {
+                  "converged": true,
+                  "intercept": -0.031123068916730442,
+                  "slope": 0.8338370198478376
+                },
+                "ece_10_bins": 0.03266658160004461,
+                "log_loss": 0.5730446437249117
+              },
+              "training_prevalence": {
+                "brier": 0.26234272924241275,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.326846257147397,
+                  "slope": 0.7029232586787499
+                },
+                "ece_10_bins": 0.13539305665725526,
+                "log_loss": 0.7227060586473356
+              }
+            },
+            "scene_count": 1247
+          }
+        }
+      },
+      "risk_threshold": 1,
+      "target_sha256": "9042ac6619b6994f944c7e17286f9acb13f31a830453d69dad8c906a2adff12c",
+      "training_risk_prevalence": 0.2872212176009644
+    },
+    "300": {
+      "ladders": {
+        "A": {
+          "feature_count": 8,
+          "feature_names": [
+            "current_aircraft_count",
+            "current_altitude_mean_m",
+            "current_altitude_std_m",
+            "current_speed_mean_mps",
+            "current_speed_std_mps",
+            "current_altitude_range_m",
+            "current_min_pair_distance_m",
+            "current_low_altitude_fraction"
+          ],
+          "feature_sha256": "4e32f976704522757507f93a36acb096dea5cec3b7dd755b5b9749b4f98ac424",
+          "test": {
+            "day_count": 4,
+            "days": {
+              "2022-06-14": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 3.354787949091635,
+                    "count_rmse": 4.228550485385868,
+                    "mean_poisson_deviance": 3.506393989778694
+                  },
+                  "plain_poisson": {
+                    "count_mae": 2.939566636468164,
+                    "count_rmse": 3.770973413935375,
+                    "mean_poisson_deviance": 2.798294132694988
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 3.1107449918366807,
+                    "count_rmse": 4.1668111589200505,
+                    "mean_poisson_deviance": 3.6464276064995422
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.2200382052523737,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.7027259059424975,
+                      "slope": 0.977402529038824
+                    },
+                    "ece_10_bins": 0.14190158790344923,
+                    "log_loss": 0.6348960160445929
+                  },
+                  "training_prevalence": {
+                    "brier": 0.3180938190265908,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.6001778933135159,
+                      "slope": 0.4393858097115593
+                    },
+                    "ece_10_bins": 0.2651996481110404,
+                    "log_loss": 0.8426413299462926
+                  }
+                },
+                "scene_count": 444,
+                "target_mean": 5.795045045045045
+              },
+              "2022-06-21": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 2.751407447321375,
+                    "count_rmse": 3.613114200226885,
+                    "mean_poisson_deviance": 3.350464695694143
+                  },
+                  "plain_poisson": {
+                    "count_mae": 2.8029492711953687,
+                    "count_rmse": 3.6825207648583036,
+                    "mean_poisson_deviance": 3.2999069771344978
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 2.876293966109117,
+                    "count_rmse": 3.9331138981154226,
+                    "mean_poisson_deviance": 4.411991407278904
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.24399449124802214,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.15704549115467648,
+                      "slope": 0.5126186594773591
+                    },
+                    "ece_10_bins": 0.1469653187732159,
+                    "log_loss": 0.7069628413790343
+                  },
+                  "training_prevalence": {
+                    "brier": 0.2502692584805112,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.2636924970427206,
+                      "slope": 0.7536898513012832
+                    },
+                    "ece_10_bins": 0.10956901748040981,
+                    "log_loss": 0.6972698279315586
+                  }
+                },
+                "scene_count": 360,
+                "target_mean": 4.155555555555556
+              },
+              "2022-07-25": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 2.5261102504244417,
+                    "count_rmse": 3.2770465389109966,
+                    "mean_poisson_deviance": 3.1276042402661575
+                  },
+                  "plain_poisson": {
+                    "count_mae": 2.210969884491392,
+                    "count_rmse": 2.9636511391417315,
+                    "mean_poisson_deviance": 2.4491650548161594
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 2.2306445768968253,
+                    "count_rmse": 2.9973896041970103,
+                    "mean_poisson_deviance": 2.82124430031921
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.20114636407653802,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.12960321672922723,
+                      "slope": 0.8182348343388837
+                    },
+                    "ece_10_bins": 0.12820949447411145,
+                    "log_loss": 0.5871799792082119
+                  },
+                  "training_prevalence": {
+                    "brier": 0.23591537346659008,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.1886240750855313,
+                      "slope": 0.8238101610834605
+                    },
+                    "ece_10_bins": 0.07663250954390194,
+                    "log_loss": 0.6665044855921438
+                  }
+                },
+                "scene_count": 315,
+                "target_mean": 3.7174603174603176
+              },
+              "2022-09-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 5.186996932552265,
+                    "count_rmse": 6.374275144637867,
+                    "mean_poisson_deviance": 5.998285286801914
+                  },
+                  "plain_poisson": {
+                    "count_mae": 4.4751538128403014,
+                    "count_rmse": 5.514537705712187,
+                    "mean_poisson_deviance": 4.331094261665503
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 5.037386878512011,
+                    "count_rmse": 6.264808238282174,
+                    "mean_poisson_deviance": 6.213233053907072
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.21764775497233788,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 1.5278325387036773,
+                      "slope": 0.9443607202487947
+                    },
+                    "ece_10_bins": 0.2612504481365048,
+                    "log_loss": 0.6281690977623748
+                  },
+                  "training_prevalence": {
+                    "brier": 0.40374245741784526,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 1.068104937981112,
+                      "slope": 0.0023041168706431645
+                    },
+                    "ece_10_bins": 0.46172951130757034,
+                    "log_loss": 1.0262159982995716
+                  }
+                },
+                "scene_count": 324,
+                "target_mean": 8.83641975308642
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.22070670388731795,
+              "training_prevalence": 0.30200522709788435
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 3.4548256448474293,
+              "plain_poisson": 3.1071599012488065,
+              "ridge_log1p": 3.3137676033386585
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 3.4347500107158795,
+                "count_rmse": 4.497325126093608,
+                "mean_poisson_deviance": 3.9443146157444846,
+                "normalized_mae": 0.6116678101274854
+              },
+              "plain_poisson": {
+                "count_mae": 3.091222919748609,
+                "count_rmse": 4.062516467085158,
+                "mean_poisson_deviance": 3.1913864447205174,
+                "normalized_mae": 0.5504917528319441
+              },
+              "ridge_log1p": {
+                "count_mae": 3.292725567938434,
+                "count_rmse": 4.469362049056696,
+                "mean_poisson_deviance": 4.233617621602663,
+                "normalized_mae": 0.586375786071228
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.22135409374670054,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.6927675295492743,
+                  "slope": 0.90296364165258
+                },
+                "ece_10_bins": 0.14508307416101918,
+                "log_loss": 0.6409486730047455
+              },
+              "training_prevalence": {
+                "brier": 0.30246464833412895,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.5232706330151913,
+                  "slope": 0.5112232492933438
+                },
+                "ece_10_bins": 0.2293368622482546,
+                "log_loss": 0.8091426091213455
+              }
+            },
+            "scene_count": 1443
+          },
+          "validation": {
+            "day_count": 3,
+            "days": {
+              "2020-10-22": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 4.451979469450692,
+                    "count_rmse": 6.7593962228094915,
+                    "mean_poisson_deviance": 5.260784731150468
+                  },
+                  "plain_poisson": {
+                    "count_mae": 4.188644793883348,
+                    "count_rmse": 6.397005604298392,
+                    "mean_poisson_deviance": 4.870507192700287
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 4.489538099393345,
+                    "count_rmse": 7.109455137620304,
+                    "mean_poisson_deviance": 6.434132232877008
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.12800427097359288,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 1.159129823594309,
+                      "slope": 1.7619575148264408
+                    },
+                    "ece_10_bins": 0.14438174334285186,
+                    "log_loss": 0.40341346983355103
+                  },
+                  "training_prevalence": {
+                    "brier": 0.2928984022550674,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.47637149391086137,
+                      "slope": 0.555030622970946
+                    },
+                    "ece_10_bins": 0.20738609842368577,
+                    "log_loss": 0.7886388336459269
+                  }
+                },
+                "scene_count": 523,
+                "target_mean": 7.479923518164436
+              },
+              "2021-04-05": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 5.75357383528402,
+                    "count_rmse": 7.63874731174815,
+                    "mean_poisson_deviance": 7.80308041786713
+                  },
+                  "plain_poisson": {
+                    "count_mae": 4.993458488747334,
+                    "count_rmse": 6.881721466641568,
+                    "mean_poisson_deviance": 5.902806346236157
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 5.47295139577229,
+                    "count_rmse": 7.589506576858885,
+                    "mean_poisson_deviance": 8.373440364504411
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.19515910371934186,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 3.259108824463926,
+                      "slope": 1.9649707889031207
+                    },
+                    "ece_10_bins": 0.3274943951609203,
+                    "log_loss": 0.5572981136961581
+                  },
+                  "training_prevalence": {
+                    "brier": 0.44463626880593027,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 1.375171323346091,
+                      "slope": -0.2845206088341179
+                    },
+                    "ece_10_bins": 0.5555646884760809,
+                    "log_loss": 1.1138655862472044
+                  }
+                },
+                "scene_count": 154,
+                "target_mean": 9.402597402597403
+              },
+              "2022-06-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 3.9281284134180487,
+                    "count_rmse": 4.908770722811755,
+                    "mean_poisson_deviance": 4.258835812206441
+                  },
+                  "plain_poisson": {
+                    "count_mae": 3.542403574569302,
+                    "count_rmse": 4.432513656668965,
+                    "mean_poisson_deviance": 3.463767887299277
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 3.586185581460012,
+                    "count_rmse": 4.579769380057053,
+                    "mean_poisson_deviance": 4.039155984950613
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.23170929497470769,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.3318999227583048,
+                      "slope": 0.565334376071243
+                    },
+                    "ece_10_bins": 0.0991401239994253,
+                    "log_loss": 0.6751148380402096
+                  },
+                  "training_prevalence": {
+                    "brier": 0.3219476633534531,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.6192720492286591,
+                      "slope": 0.4215499818628464
+                    },
+                    "ece_10_bins": 0.2740427016909361,
+                    "log_loss": 0.8509014518522252
+                  }
+                },
+                "scene_count": 570,
+                "target_mean": 6.3543859649122805
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.18495755655588084,
+              "training_prevalence": 0.3531607781381503
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 4.711227239384254,
+              "plain_poisson": 4.241502285733328,
+              "ridge_log1p": 4.516225025541882
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 4.373270913235556,
+                "count_rmse": 6.114143077429382,
+                "mean_poisson_deviance": 5.116761196231679,
+                "normalized_mae": 0.6071552915614272
+              },
+              "plain_poisson": {
+                "count_mae": 3.9926414370269314,
+                "count_rmse": 5.656150784086487,
+                "mean_poisson_deviance": 4.354976050411552,
+                "normalized_mae": 0.554311274991381
+              },
+              "ridge_log1p": {
+                "count_mae": 4.198066337100128,
+                "count_rmse": 6.15624770836355,
+                "mean_poisson_deviance": 5.578893252085169,
+                "normalized_mae": 0.5828310757474794
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.18370090924422702,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.7001143796480155,
+                  "slope": 1.0405739400339504
+                },
+                "ece_10_bins": 0.11930010016102344,
+                "log_loss": 0.5466115572695067
+              },
+              "training_prevalence": {
+                "brier": 0.324915812259007,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.6340296019275518,
+                  "slope": 0.40776519629714153
+                },
+                "ece_10_bins": 0.28085343341197894,
+                "log_loss": 0.8572632220005274
+              }
+            },
+            "scene_count": 1247
+          }
+        },
+        "B": {
+          "feature_count": 13,
+          "feature_names": [
+            "current_aircraft_count",
+            "current_altitude_mean_m",
+            "current_altitude_std_m",
+            "current_speed_mean_mps",
+            "current_speed_std_mps",
+            "current_altitude_range_m",
+            "current_min_pair_distance_m",
+            "current_low_altitude_fraction",
+            "observed_pair_count",
+            "current_active_pair_count_5nm_1000ft",
+            "closing_pair_count_10nm",
+            "mean_pair_horizontal_distance_m",
+            "minimum_pair_vertical_separation_m"
+          ],
+          "feature_sha256": "f56d533b7350ae6685ae56fafb50978810ec5d3e7131ab314abcb28145b2266f",
+          "test": {
+            "day_count": 4,
+            "days": {
+              "2022-06-14": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 3.078172162012887,
+                    "count_rmse": 3.969376840391372,
+                    "mean_poisson_deviance": 3.1184578035714963
+                  },
+                  "plain_poisson": {
+                    "count_mae": 2.8960581812039963,
+                    "count_rmse": 3.764291133853981,
+                    "mean_poisson_deviance": 2.7498938072114023
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 3.1903531791103283,
+                    "count_rmse": 4.294936606579841,
+                    "mean_poisson_deviance": 3.8515341352528383
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.22729624310544622,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.77484199944306,
+                      "slope": 0.9571366209987522
+                    },
+                    "ece_10_bins": 0.1669842457403196,
+                    "log_loss": 0.6532904937174369
+                  },
+                  "training_prevalence": {
+                    "brier": 0.3180938190265908,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.6001778933135159,
+                      "slope": 0.4393858097115593
+                    },
+                    "ece_10_bins": 0.2651996481110404,
+                    "log_loss": 0.8426413299462926
+                  }
+                },
+                "scene_count": 444,
+                "target_mean": 5.795045045045045
+              },
+              "2022-06-21": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 2.731607672998513,
+                    "count_rmse": 3.6868877068718326,
+                    "mean_poisson_deviance": 3.4338324159594475
+                  },
+                  "plain_poisson": {
+                    "count_mae": 2.7614269289803413,
+                    "count_rmse": 3.6154868579420416,
+                    "mean_poisson_deviance": 3.2073243642048106
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 2.750382690132846,
+                    "count_rmse": 3.790698606506647,
+                    "mean_poisson_deviance": 4.156248425310152
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.23530235549449968,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.07702316439548845,
+                      "slope": 0.5048027702495469
+                    },
+                    "ece_10_bins": 0.13320280292827313,
+                    "log_loss": 0.6891750078966663
+                  },
+                  "training_prevalence": {
+                    "brier": 0.2502692584805112,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.2636924970427206,
+                      "slope": 0.7536898513012832
+                    },
+                    "ece_10_bins": 0.10956901748040981,
+                    "log_loss": 0.6972698279315586
+                  }
+                },
+                "scene_count": 360,
+                "target_mean": 4.155555555555556
+              },
+              "2022-07-25": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 2.404064793386057,
+                    "count_rmse": 3.066155799856006,
+                    "mean_poisson_deviance": 2.738686336189802
+                  },
+                  "plain_poisson": {
+                    "count_mae": 2.1495045069089223,
+                    "count_rmse": 2.902545723394742,
+                    "mean_poisson_deviance": 2.2584605087155913
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 2.205513337853378,
+                    "count_rmse": 2.940052432912115,
+                    "mean_poisson_deviance": 2.5087729734170763
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.19549352195938252,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.058035056073250435,
+                      "slope": 0.8093484994919682
+                    },
+                    "ece_10_bins": 0.16213180583962533,
+                    "log_loss": 0.5744470052806928
+                  },
+                  "training_prevalence": {
+                    "brier": 0.23591537346659008,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.1886240750855313,
+                      "slope": 0.8238101610834605
+                    },
+                    "ece_10_bins": 0.07663250954390194,
+                    "log_loss": 0.6665044855921438
+                  }
+                },
+                "scene_count": 315,
+                "target_mean": 3.7174603174603176
+              },
+              "2022-09-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 5.132284939873516,
+                    "count_rmse": 6.361303437499872,
+                    "mean_poisson_deviance": 6.455873163237337
+                  },
+                  "plain_poisson": {
+                    "count_mae": 4.3976313325553305,
+                    "count_rmse": 5.421312501923238,
+                    "mean_poisson_deviance": 4.044073463297757
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 4.872796525178574,
+                    "count_rmse": 6.021259092489271,
+                    "mean_poisson_deviance": 5.758610844929263
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.1943810528701914,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 1.3332599698186058,
+                      "slope": 0.8797825809962023
+                    },
+                    "ece_10_bins": 0.247931101683173,
+                    "log_loss": 0.5745945852492017
+                  },
+                  "training_prevalence": {
+                    "brier": 0.40374245741784526,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 1.068104937981112,
+                      "slope": 0.0023041168706431645
+                    },
+                    "ece_10_bins": 0.46172951130757034,
+                    "log_loss": 1.0262159982995716
+                  }
+                },
+                "scene_count": 324,
+                "target_mean": 8.83641975308642
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.21311829335737995,
+              "training_prevalence": 0.30200522709788435
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 3.336532392067743,
+              "plain_poisson": 3.0511552374121473,
+              "ridge_log1p": 3.2547614330687815
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 3.3057712630968905,
+                "count_rmse": 4.4019800816210655,
+                "mean_poisson_deviance": 3.863592540069183,
+                "normalized_mae": 0.5886989920583504
+              },
+              "plain_poisson": {
+                "count_mae": 3.036652805482838,
+                "count_rmse": 4.007410442397616,
+                "mean_poisson_deviance": 3.047321194642743,
+                "normalized_mae": 0.5407737872777657
+              },
+              "ridge_log1p": {
+                "count_mae": 3.2433661507654072,
+                "count_rmse": 4.3918317644798215,
+                "mean_poisson_deviance": 4.062636167392498,
+                "normalized_mae": 0.5775857528760314
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.21496070718224913,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.6027978057178633,
+                  "slope": 0.85369555374007
+                },
+                "ece_10_bins": 0.15323309693109732,
+                "log_loss": 0.6273620473579359
+              },
+              "training_prevalence": {
+                "brier": 0.30246464833412895,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.5232706330151913,
+                  "slope": 0.5112232492933438
+                },
+                "ece_10_bins": 0.2293368622482546,
+                "log_loss": 0.8091426091213455
+              }
+            },
+            "scene_count": 1443
+          },
+          "validation": {
+            "day_count": 3,
+            "days": {
+              "2020-10-22": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 4.392390189378575,
+                    "count_rmse": 6.793533039346336,
+                    "mean_poisson_deviance": 5.49796411344909
+                  },
+                  "plain_poisson": {
+                    "count_mae": 4.295559541506266,
+                    "count_rmse": 6.669009643424894,
+                    "mean_poisson_deviance": 5.180134994278901
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 4.63218541848425,
+                    "count_rmse": 7.3370562640852865,
+                    "mean_poisson_deviance": 6.835277918255507
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.12507943943325062,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 1.1470516194345606,
+                      "slope": 1.692479060290857
+                    },
+                    "ece_10_bins": 0.11480424440041458,
+                    "log_loss": 0.39836053387275633
+                  },
+                  "training_prevalence": {
+                    "brier": 0.2928984022550674,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.47637149391086137,
+                      "slope": 0.555030622970946
+                    },
+                    "ece_10_bins": 0.20738609842368577,
+                    "log_loss": 0.7886388336459269
+                  }
+                },
+                "scene_count": 523,
+                "target_mean": 7.479923518164436
+              },
+              "2021-04-05": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 5.054385867783562,
+                    "count_rmse": 6.863162145500784,
+                    "mean_poisson_deviance": 5.633897987263824
+                  },
+                  "plain_poisson": {
+                    "count_mae": 4.853334758226523,
+                    "count_rmse": 6.5733546522567705,
+                    "mean_poisson_deviance": 4.901821706808856
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 5.274013413405684,
+                    "count_rmse": 7.15651591414709,
+                    "mean_poisson_deviance": 6.6639987108987775
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.12819657596493214,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 2.1720236110822855,
+                      "slope": 1.643308015586199
+                    },
+                    "ece_10_bins": 0.2272148276308106,
+                    "log_loss": 0.3877321450211916
+                  },
+                  "training_prevalence": {
+                    "brier": 0.44463626880593027,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 1.375171323346091,
+                      "slope": -0.2845206088341179
+                    },
+                    "ece_10_bins": 0.5555646884760809,
+                    "log_loss": 1.1138655862472044
+                  }
+                },
+                "scene_count": 154,
+                "target_mean": 9.402597402597403
+              },
+              "2022-06-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 3.591915693068837,
+                    "count_rmse": 4.703842898615839,
+                    "mean_poisson_deviance": 3.946373936061551
+                  },
+                  "plain_poisson": {
+                    "count_mae": 3.2765168052605547,
+                    "count_rmse": 4.134376980555827,
+                    "mean_poisson_deviance": 3.244425316214406
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 3.3384275415108315,
+                    "count_rmse": 4.45386609987394,
+                    "mean_poisson_deviance": 3.999027120566561
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.21914539511472267,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.4395698229565319,
+                      "slope": 0.6671575086317371
+                    },
+                    "ece_10_bins": 0.12594389324937474,
+                    "log_loss": 0.6463326101734979
+                  },
+                  "training_prevalence": {
+                    "brier": 0.3219476633534531,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.6192720492286591,
+                      "slope": 0.4215499818628464
+                    },
+                    "ece_10_bins": 0.2740427016909361,
+                    "log_loss": 0.8509014518522252
+                  }
+                },
+                "scene_count": 570,
+                "target_mean": 6.3543859649122805
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.15747380350430182,
+              "training_prevalence": 0.3531607781381503
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 4.346230583410325,
+              "plain_poisson": 4.141803701664448,
+              "ridge_log1p": 4.414875457800256
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 4.108249749585324,
+                "count_rmse": 5.9403141677531,
+                "mean_poisson_deviance": 4.805524189998064,
+                "normalized_mae": 0.5703615495137943
+              },
+              "plain_poisson": {
+                "count_mae": 3.8986413568349456,
+                "count_rmse": 5.639392179939783,
+                "mean_poisson_deviance": 4.260957157256327,
+                "normalized_mae": 0.541260940990111
+              },
+              "ridge_log1p": {
+                "count_mae": 4.120075972889264,
+                "count_rmse": 6.16198147113553,
+                "mean_poisson_deviance": 5.517683730111453,
+                "normalized_mae": 0.5720034221991664
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.16846166378314478,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.7404347456877804,
+                  "slope": 1.1046225450455205
+                },
+                "ece_10_bins": 0.11101486050553909,
+                "log_loss": 0.5103952665177296
+              },
+              "training_prevalence": {
+                "brier": 0.324915812259007,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.6340296019275518,
+                  "slope": 0.40776519629714153
+                },
+                "ece_10_bins": 0.28085343341197894,
+                "log_loss": 0.8572632220005274
+              }
+            },
+            "scene_count": 1247
+          }
+        },
+        "C": {
+          "feature_count": 22,
+          "feature_names": [
+            "current_aircraft_count",
+            "current_altitude_mean_m",
+            "current_altitude_std_m",
+            "current_speed_mean_mps",
+            "current_speed_std_mps",
+            "current_altitude_range_m",
+            "current_min_pair_distance_m",
+            "current_low_altitude_fraction",
+            "observed_pair_count",
+            "current_active_pair_count_5nm_1000ft",
+            "closing_pair_count_10nm",
+            "mean_pair_horizontal_distance_m",
+            "minimum_pair_vertical_separation_m",
+            "cpa_pair_count_30s",
+            "minimum_projected_horizontal_cpa_m_30s",
+            "minimum_projected_vertical_separation_m_30s",
+            "cpa_pair_count_120s",
+            "minimum_projected_horizontal_cpa_m_120s",
+            "minimum_projected_vertical_separation_m_120s",
+            "cpa_pair_count_300s",
+            "minimum_projected_horizontal_cpa_m_300s",
+            "minimum_projected_vertical_separation_m_300s"
+          ],
+          "feature_sha256": "008d09df68454cea6f79782721358e697a552166bfdbd5332abbb3934f850181",
+          "test": {
+            "day_count": 4,
+            "days": {
+              "2022-06-14": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 3.14064265234482,
+                    "count_rmse": 4.062199843326443,
+                    "mean_poisson_deviance": 3.338982849609412
+                  },
+                  "plain_poisson": {
+                    "count_mae": 2.9410619479313773,
+                    "count_rmse": 3.8265733288952637,
+                    "mean_poisson_deviance": 2.8792139829259105
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 3.267886456974386,
+                    "count_rmse": 4.369943827332694,
+                    "mean_poisson_deviance": 4.048641367392769
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.23703130158725527,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.7217502634573069,
+                      "slope": 0.7976538505593215
+                    },
+                    "ece_10_bins": 0.1779396636814285,
+                    "log_loss": 0.6830707169337672
+                  },
+                  "training_prevalence": {
+                    "brier": 0.3180938190265908,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.6001778933135159,
+                      "slope": 0.4393858097115593
+                    },
+                    "ece_10_bins": 0.2651996481110404,
+                    "log_loss": 0.8426413299462926
+                  }
+                },
+                "scene_count": 444,
+                "target_mean": 5.795045045045045
+              },
+              "2022-06-21": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 2.7576736143122687,
+                    "count_rmse": 3.7132721314060197,
+                    "mean_poisson_deviance": 3.4828073090023457
+                  },
+                  "plain_poisson": {
+                    "count_mae": 2.7743788568159924,
+                    "count_rmse": 3.6376424325520325,
+                    "mean_poisson_deviance": 3.2636498029028895
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 2.7402352510105104,
+                    "count_rmse": 3.7869713265568894,
+                    "mean_poisson_deviance": 4.197528768999699
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.23710279107072152,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.07507487849182412,
+                      "slope": 0.47878824921627666
+                    },
+                    "ece_10_bins": 0.13944274747869767,
+                    "log_loss": 0.6971002400330756
+                  },
+                  "training_prevalence": {
+                    "brier": 0.2502692584805112,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.2636924970427206,
+                      "slope": 0.7536898513012832
+                    },
+                    "ece_10_bins": 0.10956901748040981,
+                    "log_loss": 0.6972698279315586
+                  }
+                },
+                "scene_count": 360,
+                "target_mean": 4.155555555555556
+              },
+              "2022-07-25": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 2.3390349674299564,
+                    "count_rmse": 2.961739962850487,
+                    "mean_poisson_deviance": 2.474870073390426
+                  },
+                  "plain_poisson": {
+                    "count_mae": 2.104868221624428,
+                    "count_rmse": 2.7845430191546785,
+                    "mean_poisson_deviance": 2.0626993877343875
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 2.183467083097642,
+                    "count_rmse": 2.810435577441112,
+                    "mean_poisson_deviance": 2.2034993713317563
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.18566915584597818,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.08176019408724038,
+                      "slope": 0.931840980578933
+                    },
+                    "ece_10_bins": 0.18593052504901436,
+                    "log_loss": 0.545053872024866
+                  },
+                  "training_prevalence": {
+                    "brier": 0.23591537346659008,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.1886240750855313,
+                      "slope": 0.8238101610834605
+                    },
+                    "ece_10_bins": 0.07663250954390194,
+                    "log_loss": 0.6665044855921438
+                  }
+                },
+                "scene_count": 315,
+                "target_mean": 3.7174603174603176
+              },
+              "2022-09-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 5.11829938300449,
+                    "count_rmse": 6.375416344786648,
+                    "mean_poisson_deviance": 6.536593083443302
+                  },
+                  "plain_poisson": {
+                    "count_mae": 4.475222108894595,
+                    "count_rmse": 5.545055506699964,
+                    "mean_poisson_deviance": 4.217425202418502
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 4.979628935369218,
+                    "count_rmse": 6.168118220279123,
+                    "mean_poisson_deviance": 6.130555935953943
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.20375617883997035,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 1.3468592323026018,
+                      "slope": 0.7745394417762229
+                    },
+                    "ece_10_bins": 0.2243234041069049,
+                    "log_loss": 0.6018161103775337
+                  },
+                  "training_prevalence": {
+                    "brier": 0.40374245741784526,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 1.068104937981112,
+                      "slope": 0.0023041168706431645
+                    },
+                    "ece_10_bins": 0.46172951130757034,
+                    "log_loss": 1.0262159982995716
+                  }
+                },
+                "scene_count": 324,
+                "target_mean": 8.83641975308642
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.21588985683598133,
+              "training_prevalence": 0.30200522709788435
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 3.3389126542728835,
+              "plain_poisson": 3.0738827838165985,
+              "ridge_log1p": 3.2928044316129386
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 3.3141599817237752,
+                "count_rmse": 4.422498398990342,
+                "mean_poisson_deviance": 3.9041990634934427,
+                "normalized_mae": 0.5901928734576587
+              },
+              "plain_poisson": {
+                "count_mae": 3.0614091104842913,
+                "count_rmse": 4.050073495618851,
+                "mean_poisson_deviance": 3.097353437410999,
+                "normalized_mae": 0.545182444332819
+              },
+              "ridge_log1p": {
+                "count_mae": 3.2838656850282706,
+                "count_rmse": 4.4407599906111015,
+                "mean_poisson_deviance": 4.1504570680394055,
+                "normalized_mae": 0.5847979987036647
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.21836568865269204,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.5780224203834103,
+                  "slope": 0.7823865491068018
+                },
+                "ece_10_bins": 0.1506141846425694,
+                "log_loss": 0.6381981110053039
+              },
+              "training_prevalence": {
+                "brier": 0.30246464833412895,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.5232706330151913,
+                  "slope": 0.5112232492933438
+                },
+                "ece_10_bins": 0.2293368622482546,
+                "log_loss": 0.8091426091213455
+              }
+            },
+            "scene_count": 1443
+          },
+          "validation": {
+            "day_count": 3,
+            "days": {
+              "2020-10-22": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 4.353968744299782,
+                    "count_rmse": 6.7734589828219605,
+                    "mean_poisson_deviance": 5.502233534686247
+                  },
+                  "plain_poisson": {
+                    "count_mae": 4.223233841167051,
+                    "count_rmse": 6.61447540396852,
+                    "mean_poisson_deviance": 5.184245260642682
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 4.4993682190463415,
+                    "count_rmse": 7.156435020055933,
+                    "mean_poisson_deviance": 6.708306454791578
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.12761959397739628,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 1.2197996685581802,
+                      "slope": 1.5506499026756786
+                    },
+                    "ece_10_bins": 0.11391164649930284,
+                    "log_loss": 0.3980941730201531
+                  },
+                  "training_prevalence": {
+                    "brier": 0.2928984022550674,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.47637149391086137,
+                      "slope": 0.555030622970946
+                    },
+                    "ece_10_bins": 0.20738609842368577,
+                    "log_loss": 0.7886388336459269
+                  }
+                },
+                "scene_count": 523,
+                "target_mean": 7.479923518164436
+              },
+              "2021-04-05": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 5.128610223084761,
+                    "count_rmse": 6.978044703307559,
+                    "mean_poisson_deviance": 5.782489901610241
+                  },
+                  "plain_poisson": {
+                    "count_mae": 4.944585239796576,
+                    "count_rmse": 6.653533427671752,
+                    "mean_poisson_deviance": 4.9405964469776436
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 5.284077422293652,
+                    "count_rmse": 7.143610009026539,
+                    "mean_poisson_deviance": 6.645387567691175
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.1285677399694958,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 2.3103269692698545,
+                      "slope": 1.5273686660295163
+                    },
+                    "ece_10_bins": 0.22361978510372138,
+                    "log_loss": 0.385143421771819
+                  },
+                  "training_prevalence": {
+                    "brier": 0.44463626880593027,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 1.375171323346091,
+                      "slope": -0.2845206088341179
+                    },
+                    "ece_10_bins": 0.5555646884760809,
+                    "log_loss": 1.1138655862472044
+                  }
+                },
+                "scene_count": 154,
+                "target_mean": 9.402597402597403
+              },
+              "2022-06-20": {
+                "count_models": {
+                  "hist_gradient_boosting_poisson": {
+                    "count_mae": 3.5228476410818432,
+                    "count_rmse": 4.613946239132291,
+                    "mean_poisson_deviance": 3.8304733013236354
+                  },
+                  "plain_poisson": {
+                    "count_mae": 3.302257645946891,
+                    "count_rmse": 4.2237644546027715,
+                    "mean_poisson_deviance": 3.330574091141141
+                  },
+                  "ridge_log1p": {
+                    "count_mae": 3.3957814901637478,
+                    "count_rmse": 4.549247492617505,
+                    "mean_poisson_deviance": 4.140834942775342
+                  }
+                },
+                "probability_models": {
+                  "logistic_ridge": {
+                    "brier": 0.2242501096352422,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.45915608727589646,
+                      "slope": 0.608295815665064
+                    },
+                    "ece_10_bins": 0.12770856411670137,
+                    "log_loss": 0.6691635445529062
+                  },
+                  "training_prevalence": {
+                    "brier": 0.3219476633534531,
+                    "calibration": {
+                      "converged": true,
+                      "intercept": 0.6192720492286591,
+                      "slope": 0.4215499818628464
+                    },
+                    "ece_10_bins": 0.2740427016909361,
+                    "log_loss": 0.8509014518522252
+                  }
+                },
+                "scene_count": 570,
+                "target_mean": 6.3543859649122805
+              }
+            },
+            "equal_day_brier": {
+              "logistic_ridge": 0.16014581452737808,
+              "training_prevalence": 0.3531607781381503
+            },
+            "equal_day_count_mae": {
+              "hist_gradient_boosting_poisson": 4.335142202822129,
+              "plain_poisson": 4.156692242303507,
+              "ridge_log1p": 4.393075710501248
+            },
+            "pooled_count_metrics": {
+              "hist_gradient_boosting_poisson": {
+                "count_mae": 4.069731181267434,
+                "count_rmse": 5.914947223767523,
+                "mean_poisson_deviance": 4.772687542296196,
+                "normalized_mae": 0.5650138925674115
+              },
+              "plain_poisson": {
+                "count_mae": 3.8913426495980494,
+                "count_rmse": 5.654325521805763,
+                "mean_poisson_deviance": 4.306847919888637,
+                "normalized_mae": 0.5402476379479813
+              },
+              "ridge_log1p": {
+                "count_mae": 4.091830754601279,
+                "count_rmse": 6.102606838150555,
+                "mean_poisson_deviance": 5.52695258914385,
+                "normalized_mae": 0.5680820475381647
+              }
+            },
+            "pooled_probability_metrics": {
+              "logistic_ridge": {
+                "brier": 0.1719062085786437,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.7815085905623027,
+                  "slope": 1.018957128106753
+                },
+                "ece_10_bins": 0.12064419349206172,
+                "log_loss": 0.5203998074078241
+              },
+              "training_prevalence": {
+                "brier": 0.324915812259007,
+                "calibration": {
+                  "converged": true,
+                  "intercept": 0.6340296019275518,
+                  "slope": 0.40776519629714153
+                },
+                "ece_10_bins": 0.28085343341197894,
+                "log_loss": 0.8572632220005274
+              }
+            },
+            "scene_count": 1247
+          }
+        }
+      },
+      "risk_threshold": 5,
+      "target_sha256": "c70cc2a92cc05a031485049a6ebbccdf4717bae7b2ddea2c3789211fb97f785b",
+      "training_risk_prevalence": 0.2820976491862568
+    }
+  },
+  "independent_days": 17,
+  "protocol_sha256": "11c7c0201f8ceba5942f105a2b1c07c87b2fd5ec9f3d874274559684e4e5f674",
+  "scene_count": 6008,
+  "scene_id_sha256": "bc01d9a1a0ee145c6b83e841f2aefe9b5a1fce4ef191139815dfda01f2acf713",
+  "schema_version": "r03_future_onset_feature_ladder_v1",
+  "split_sha256": "0316ce6f7171a25de8193067934a1cac63f8ce0e9c69081c205fe35103c69dea"
+}

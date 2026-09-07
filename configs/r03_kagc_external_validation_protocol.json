@@ -1,0 +1,22 @@
+{
+  "schema_version": "r03_kagc_external_validation_protocol_v1",
+  "frozen_at": "2026-09-03",
+  "run_count": 1,
+  "allow_site_tuning": false,
+  "KAGC_date_config_sha256": "c44fb71e2738ff238f14919178145b16736e84a78a150bc7508ba1c88c3c248f",
+  "locked_KBTP_evidence_sha256": "fdef6d1ec617f7e79d81002dbff3dbac689b46287f0c653260dedcea1b8bc846",
+  "KBTP_confirmation_sha256": "b22e7c24de31431f902fd89878a1597771679a309d6a37a61ce9f5a930436060",
+  "training_airport": "KBTP",
+  "external_airport": "KAGC",
+  "selected_feature_ladder": "B",
+  "selected_count_models_by_horizon": {"30": "ridge_log1p", "120": "plain_poisson", "300": "plain_poisson"},
+  "selected_probability_model": "logistic_ridge",
+  "normalization": "fit on frozen KBTP training scenes only",
+  "risk_thresholds": "frozen from KBTP training q75 with higher interpolation",
+  "external_success_gate": [
+    "At least two horizons have lower equal-source-group count MAE for B than the KBTP-trained pair-opportunity baseline.",
+    "At least two horizons have lower equal-source-group Brier for B logistic than KBTP training prevalence.",
+    "For those horizons the candidate wins at least six of ten KAGC source groups."
+  ],
+  "interpretation": "Success supports transport of the predictive relation to a smaller second airport without site tuning. Failure retains the confirmed KBTP result and narrows the claim to single-site evidence."
+}

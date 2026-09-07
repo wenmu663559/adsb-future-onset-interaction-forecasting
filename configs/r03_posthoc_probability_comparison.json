@@ -1,0 +1,46 @@
+{
+  "schema_version": "r03_posthoc_probability_comparison_v1",
+  "frozen_at": "2026-08-31",
+  "analysis_status": "protocol-after supplementary analysis requested by strict internal peer review",
+  "original_confirmation_result": "reports/references/r03_probabilistic_multihorizon_confirmation_2026-08-30.json",
+  "original_confirmation_result_sha256": "d6a3a8cc60352d3d219bf4fa05887ce660c8386623bf925780883840306e3108",
+  "original_protocol": "configs/r03_probabilistic_multihorizon_protocol.json",
+  "original_protocol_sha256": "e3031acbe6e8385cb1bcf2b20e13ae6365532a4eab3c5009caf6368f632d7f53",
+  "research_question": "Does the frozen Poisson+NB2 exceedance probability add predictive value beyond a simple conditional probability model using the same eight prediction-time features, and are the three frozen point models stable across confirmation dates?",
+  "training_dataset_root": "data/processed_research/kbtp-independent-expanded",
+  "training_scene_sha256": "e2536152476e0dec69cc95515586fa1474cc407c7401cd39330553234e2bace4",
+  "confirmation_dataset_root": "data/processed_research/kbtp-external-round3-final",
+  "confirmation_scene_sha256": "7f413acfdcf49452055f01116532c94a210dc70aa41fbcd2e2e358112147acbe",
+  "input_condition": "same frozen eight current-state control features",
+  "conditional_probability_baseline": {
+    "model_id": "logistic_ridge_controls",
+    "configuration": "StandardScaler + LogisticRegression(C=1.0, penalty=l2, solver=lbfgs, max_iter=1000, random_state=1701)",
+    "selection": "no confirmation-set tuning and no hyperparameter search"
+  },
+  "frozen_count_models": [
+    "ridge_log1p_controls",
+    "poisson_nb2_controls",
+    "hist_gradient_boosting_poisson_controls"
+  ],
+  "horizons_seconds": [30, 120, 300],
+  "probability_metrics": [
+    "Brier score",
+    "Bernoulli log loss",
+    "10-bin ECE",
+    "pooled calibration intercept and slope",
+    "paired source-day Brier difference"
+  ],
+  "distribution_metrics": [
+    "NB2 count log loss",
+    "90% interval coverage",
+    "90% interval mean width",
+    "90% proper interval score"
+  ],
+  "point_metrics": [
+    "source-day count MAE for all three frozen point models",
+    "paired source-day MAE differences"
+  ],
+  "interpretation_rule": "The analysis cannot alter the original 0/3 gate or be described as a new untouched confirmation. NB2 superiority requires lower equal-day Brier than logistic at a horizon and at least five of eight day-level wins; otherwise probability evidence is attributed to the shared current-state inputs rather than uniquely to NB2.",
+  "stopping_rule": "Run once with the frozen configuration. Do not tune on the eight confirmation dates, add another KBTP confirmation batch, or search additional model families in response to the result.",
+  "claim_boundary": "KBTP high-activity-window ADS-B geometric interaction proxy only; not controller workload, official separation violation, accident risk, or universal airspace complexity."
+}

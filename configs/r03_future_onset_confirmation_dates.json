@@ -1,0 +1,85 @@
+{
+  "airport_id": "KBTP",
+  "freeze_revision": 2,
+  "freeze_revision_note": "Added the UTC spillover day produced by the already frozen 2022-07-19 source before any target or model-result access; source selection is unchanged.",
+  "derived_utc_dates": ["2022-07-20"],
+  "allow_retuning": false,
+  "excluded_date_count": 41,
+  "excluded_dates_sha256": "cb91af78d5dec079607ab910aeba2b6f199eda90ea9d1c67030d4d2c6c4ba645",
+  "max_hours_per_source": 2,
+  "minimum_authenticated_rows": 50000,
+  "registry_id": "78d482203a79ac655a84d0356e0d6ee15b77a0d98bd79382044a097ff9272ec3",
+  "required_strata": [
+    "2020Q3",
+    "2020Q4",
+    "2021H1",
+    "2021H2",
+    "2022Q1",
+    "2022Q2",
+    "2022Q3",
+    "2022Q4"
+  ],
+  "run_count": 1,
+  "schema_version": "r03_future_onset_confirmation_dates_v1",
+  "selection_frozen_at": "2026-09-03",
+  "selection_role": "single_untouched_future_onset_confirmation",
+  "selection_rule": "For each frozen stratum, after excluding every development and three earlier external-round date, select the unused date whose largest authenticated source has the most rows; never load targets or model outputs.",
+  "sources": [
+    {
+      "authenticated_rows": 162164,
+      "date": "2020-09-26",
+      "relative_path": "raw/2020/2020/09-26-20/1.csv",
+      "source_file_id": "37455d37d68951b2f67cde2e81947c9e8c69474ca36ff408b0162da501d7b086",
+      "stratum": "2020Q3"
+    },
+    {
+      "authenticated_rows": 137059,
+      "date": "2020-10-13",
+      "relative_path": "raw/2020/2020/10-13-20/1.csv",
+      "source_file_id": "4dd0d1240a9c0c1695c949d7304e5be03647ac4c94250f997c858091facd9608",
+      "stratum": "2020Q4"
+    },
+    {
+      "authenticated_rows": 209383,
+      "date": "2021-03-27",
+      "relative_path": "raw/2021/2021/03-27-21/1.csv",
+      "source_file_id": "e016ead37f082138c740e7e1ddea02ca266cf80ca206da04b1139565c76b0017",
+      "stratum": "2021H1"
+    },
+    {
+      "authenticated_rows": 164085,
+      "date": "2021-12-20",
+      "relative_path": "raw/2021/2021/12-20-21/1.csv",
+      "source_file_id": "66d8b7a5be3b7c070a68e3db9496552a762d898d77c5e102e9bd3316e5391547",
+      "stratum": "2021H2"
+    },
+    {
+      "authenticated_rows": 143724,
+      "date": "2022-01-03",
+      "relative_path": "raw/2022/2022/01-03-22/1.csv",
+      "source_file_id": "fb31e0b093f6b8d6ccee12b7eb325f53f49008fe249b44eec0687e5d0ea31d2f",
+      "stratum": "2022Q1"
+    },
+    {
+      "authenticated_rows": 246803,
+      "date": "2022-06-16",
+      "relative_path": "raw/2022/2022/06-16-22/1.csv",
+      "source_file_id": "9f39288d559d1b9aacba97688d1443f4f69676e18d133d7e0017c24812c90b41",
+      "stratum": "2022Q2"
+    },
+    {
+      "authenticated_rows": 214837,
+      "date": "2022-07-19",
+      "relative_path": "raw/2022/2022/07-19-22/1.csv",
+      "source_file_id": "7e543376c2c20e92bd7ee3eae3c7781c1086cac944b3b6a78dd0de147fb69122",
+      "stratum": "2022Q3"
+    },
+    {
+      "authenticated_rows": 209571,
+      "date": "2022-10-24",
+      "relative_path": "raw/2022/2022/10-24-22/1.csv",
+      "source_file_id": "2b29f0c08e69c60d351fee957d670c23ac61093a24e765e95779fb4c7a458951",
+      "stratum": "2022Q4"
+    }
+  ]
+}

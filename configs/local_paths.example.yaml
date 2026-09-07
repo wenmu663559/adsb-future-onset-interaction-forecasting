@@ -1,0 +1,20 @@
+project_root: "CHANGE_ME"
+
+official_dataset_root: "CHANGE_ME"
+
+raw_data_root: "CHANGE_ME"
+
+raw_airport_dirs:
+  kagc: "CHANGE_ME"
+  kbtp: "CHANGE_ME"
+
+processed_official_root: null
+
+legacy_project_root: null
+
+local_output_root: "CHANGE_ME"
+
+local_interim_root: "CHANGE_ME"
+
+local_processed_research_root: "CHANGE_ME"
+
