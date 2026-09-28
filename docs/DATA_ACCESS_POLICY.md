@@ -1,26 +1,7 @@
-# Data Access Policy
+# Data access and redistribution
 
-## Official Raw Data
+The exact derived scenes and normalized reports used in this paper are packaged in `data/reproduction/paper-data-v1.zip`. That directory contains attribution, upstream licensing sources, hashes and instructions. This research subset is not the full TartanAviation corpus.
 
-Path: configured locally in `configs/local_paths.yaml`
+For an audit beginning with the upstream raw files, obtain the complete corpus from https://theairlab.org/tartanaviation/ and configure the ignored `configs/local_paths.yaml` using the example file. Keep upstream originals read-only and generate outputs elsewhere.
 
-Access mode: **READ ONLY**
-
-## Prohibited Actions
-
-- Modify, rename, move, delete, overwrite, or re-encode raw data.
-- Generate outputs inside the raw directory.
-- Commit raw data to Git or copy it into the project repository.
-
-## Allowed Actions in R00
-
-- Directory existence and read-permission checks.
-- Top-level inventory, recursive file count, directory size estimate, and sample filenames.
-
-## Derived Data
-
-Derived data belongs under `data/interim` or `data/processed_research`, or in an explicitly configured external workspace.
-
-## Traceability Requirement
-
-Future derived records must retain source file identifiers and source row references.
+Preserve the historical splits and results. Write reproduced evaluations under ignored `outputs/` paths and compare their metrics with `reports/references/`. The package preserves original scene bytes and source identifiers; publication does not create new independent evaluation data.

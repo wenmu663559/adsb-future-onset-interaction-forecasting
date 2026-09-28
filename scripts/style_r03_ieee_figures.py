@@ -6,7 +6,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'paper_rewriting_output/final_paper/figures'
+OUT=ROOT/'outputs/figures'
 records=json.loads((ROOT/'reports/references/r03_review_group_uncertainty_2026-09-04.json').read_text())['records']
 diag=json.loads((ROOT/'reports/references/r03_review_diagnostics_2026-09-04.json').read_text())['by_airport']
 plt.rcParams.update({'font.family':'Times New Roman','font.size':8,'axes.titlesize':8,'axes.labelsize':8,'xtick.labelsize':8,'ytick.labelsize':8,'legend.fontsize':8,'pdf.fonttype':42})

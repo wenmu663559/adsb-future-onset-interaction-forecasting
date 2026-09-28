@@ -1,0 +1,21 @@
+{
+  "scope": "Recomputation from distributed derived scenes in the existing recorded environment; not a fresh-environment or raw-corpus replication.",
+  "tolerance": 1e-09,
+  "results": {
+    "kbtp": {
+      "numeric_values_compared": 273,
+      "maximum_absolute_difference": 0.0,
+      "status": "pass"
+    },
+    "kagc": {
+      "numeric_values_compared": 339,
+      "maximum_absolute_difference": 0.0,
+      "status": "pass"
+    },
+    "nb2": {
+      "numeric_values_compared": 2255,
+      "maximum_absolute_difference": 0,
+      "status": "pass"
+    }
+  }
+}

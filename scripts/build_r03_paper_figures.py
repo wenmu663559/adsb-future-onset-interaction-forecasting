@@ -14,7 +14,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 REFERENCE_DIR = ROOT / "reports" / "references"
-FIGURE_DIR = ROOT / "paper_rewriting_output" / "final_paper" / "figures"
+FIGURE_DIR = ROOT / "outputs" / "figures"
 HORIZONS = ("30", "120", "300")
 
 

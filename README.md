@@ -11,10 +11,11 @@ The study uses the preceding two minutes of observed traffic state to forecast f
 - `configs/` — frozen experiment protocols and source selections.
 - `reports/references/` — machine-readable results supporting the paper's tables and figures.
 - `tests/` — tests for the retained research pipeline.
-- `paper/` — IEEE LaTeX source, bibliography, figures, and the current PDF.
+- `paper/` — IEEE LaTeX sources, bibliography, manuscript PDF and two-page supplement.
+- `data/reproduction/` — the actual compressed paper dataset, manifest and complete replay commands.
 - `docs/` — data access, schema, execution, and timezone documentation.
 
-Internal planning notes, progress reports, reviewer prompts, translation intermediates, Word reading copies, raw ADS-B data, derived scenes, checkpoints, and temporary files are intentionally excluded.
+Internal planning notes, progress reports, reviewer prompts, translation intermediates, Word reading copies, the full upstream raw corpus, checkpoints, generated figures and temporary files are excluded. The paper's derived scenes and normalized reports are included once in a compressed data archive.
 
 ## Scientific scope
 
@@ -29,7 +30,9 @@ The main methodological components are:
 
 ## Data
 
-Raw TartanAviation ADS-B files are not redistributed. Obtain the dataset from its official source under the applicable terms, copy `configs/local_paths.example.yaml` to `configs/local_paths.yaml`, and configure local read-only data paths. Large raw and derived data remain outside Git.
+The [paper reproduction dataset](data/reproduction/README.md) is committed in `data/reproduction/paper-data-v1.zip` (9.27 MiB): 6,008 development scenes, 2,605 KBTP confirmation scenes and 1,268 KAGC external scenes, plus corresponding normalized observation reports. The package includes hashes, attribution, preserved splits and tested reproduction commands. No Git LFS or separate download is required for these derived inputs.
+
+To repeat parsing from the complete upstream raw corpus, obtain TartanAviation from its official source, copy `configs/local_paths.example.yaml` to `configs/local_paths.yaml`, and configure local read-only paths. The full upstream corpus is not mirrored here.
 
 ## Environment
 
@@ -57,7 +60,7 @@ Run the retained tests with:
 python -m pytest -q
 ```
 
-Artifact-integrity tests that require non-redistributed derived ADS-B scenes are skipped when those files are absent.
+The packaged-data integrity test verifies the archive without skipping. Tests for an older pre-onset dataset may skip when that non-packaged historical artifact is absent. See the data README for the explicitly documented historical KAGC summary-checksum limitation and its separate reproduction configuration.
 
 ## Paper
 
@@ -65,7 +68,7 @@ The revised IEEE Signal Processing Letters manuscript is available as [paper/pap
 
 The accompanying [paper/supplement.pdf](paper/supplement.pdf) contains one page of Supplementary Material and one page of Information for Reproducibility. Its source is `paper/supplement.tex`. The manuscript and supplement include clickable links to this repository. Author metadata is still awaiting final confirmation; these files are not a record of journal submission or acceptance.
 
-From the `paper/` directory, compile the manuscript with `pdflatex main`, `bibtex main`, and two further runs of `pdflatex main`; copy the resulting `main.pdf` to `paper.pdf`. Compile the supplement with two runs of `pdflatex supplement`. The existing figure assets are retained for the research record.
+From the `paper/` directory, compile the manuscript with `pdflatex main`, `bibtex main`, and two further runs of `pdflatex main`; copy the resulting `main.pdf` to `paper.pdf`. Compile the supplement with two runs of `pdflatex supplement`. The current PDFs do not reference external figure files; historical figures can be regenerated from retained results or retrieved from Git history.
 
 ## Author
 

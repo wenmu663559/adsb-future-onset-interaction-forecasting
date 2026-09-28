@@ -2,4 +2,4 @@
 
 `references/` contains the machine-readable result records used to support the manuscript's tables, figures, sensitivity analyses, cross-airport evaluation, diagnostics, and NB2 supplement.
 
-Raw ADS-B files and derived scene rows are not redistributed. Path fields in frozen records describe the original execution environment; use `configs/local_paths.yaml` and command-line path options for a new local run.
+The paper's derived scenes and normalized observation reports are packaged in `data/reproduction/paper-data-v1.zip`, with source attribution, hashes and instructions in that directory. The complete upstream raw ADS-B corpus is not mirrored. Path fields in historical records describe the original execution environment; use the documented extraction paths and command-line options for a new run.

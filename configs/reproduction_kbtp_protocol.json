@@ -1,0 +1,56 @@
+{
+  "schema_version": "r03_future_onset_confirmation_protocol_v1",
+  "frozen_at": "2026-09-03",
+  "run_count": 1,
+  "allow_retuning": false,
+  "development_protocol_sha256": "bdee9535c5429920002e0b883b31b802a2d49cf85dd1ec9482c6e8af5f55abdc",
+  "confirmation_dates_sha256": "a35db9b10c7aac8e86135096fa5dad985bd6556580a4c8a7e25c2b46b8d8f69b",
+  "stability_decision_sha256": "4acc6b93c311f3f7ef620a2cf1a0b09fc6b617d2aa07bb202305002991abea3c",
+  "development_feature_ladder_sha256": "693d91888776a21e771feacdcee616240181812ad21088f13eeeadfa4c90ae64",
+  "development_scene_sha256": "9ce1cd963db2ee99dbdbc9a0376a082cd79ce4ef732dbcf65f4aedeffbbc632b",
+  "selected_feature_ladder": "B",
+  "selected_count_models_by_horizon": {
+    "30": "ridge_log1p",
+    "120": "plain_poisson",
+    "300": "plain_poisson"
+  },
+  "selected_probability_model": "logistic_ridge",
+  "strong_count_baseline": "current_pair_opportunity_rate",
+  "strong_probability_baseline": "training_prevalence",
+  "representation_baseline": "A",
+  "horizon_success_gate": [
+    "B selected count model has lower equal-day count MAE than the pair-opportunity baseline and wins at least five of eight dates.",
+    "B logistic has lower equal-day Brier score than training prevalence and wins at least five of eight dates.",
+    "B has lower equal-day count MAE than A under the same selected model and wins at least five of eight dates."
+  ],
+  "route_success_gate": "At least two of three horizons satisfy all horizon gates.",
+  "post_run_rule": "Report every horizon and date. Do not retune, replace dates, add a second KBTP batch, or add a model family after seeing results.",
+  "reproduction_note": {
+    "purpose": "Replay the distributed snapshot; only dependency checksums are updated. Original protocol and results are retained. No model, data split, threshold or source-group choice is changed.",
+    "original_protocol": "configs/r03_future_onset_confirmation_protocol.json",
+    "original_protocol_sha256": "f90fec36301780ccf5b6075f8ac259d37b635f59eb961002724828db0f9c8e37",
+    "dependency_updates": [
+      {
+        "file": "configs/r03_future_onset_protocol.json",
+        "historical_sha256": "11c7c0201f8ceba5942f105a2b1c07c87b2fd5ec9f3d874274559684e4e5f674",
+        "distributed_sha256": "bdee9535c5429920002e0b883b31b802a2d49cf85dd1ec9482c6e8af5f55abdc"
+      },
+      {
+        "file": "configs/r03_future_onset_confirmation_dates.json",
+        "historical_sha256": "afe78e0f6eef63df019ebc39ad705bf8b3802e7a9656dc69ddf8d9b415aa519d",
+        "distributed_sha256": "a35db9b10c7aac8e86135096fa5dad985bd6556580a4c8a7e25c2b46b8d8f69b"
+      },
+      {
+        "file": "reports/references/r03_feature_ladder_stability_decision_2026-09-03.json",
+        "historical_sha256": "f5c892d380d105c114bd78e0dfd8e2cec9e385380f29068e6e3d17cf597fa70e",
+        "distributed_sha256": "4acc6b93c311f3f7ef620a2cf1a0b09fc6b617d2aa07bb202305002991abea3c"
+      },
+      {
+        "file": "reports/references/r03_future_onset_feature_ladder_2026-09-03.json",
+        "historical_sha256": "36be49f4b0ad9441d94c28d873739c8a0fddf5b1ad876b654b4454528c08d808",
+        "distributed_sha256": "693d91888776a21e771feacdcee616240181812ad21088f13eeeadfa4c90ae64"
+      }
+    ],
+    "explanation": "The development protocol has a portable replacement for a historical local path. Published result metadata may likewise contain portable paths. The descriptive locked-evidence summary has a previously recorded unresolved historical checksum change; the original earlier bytes are unavailable. This replay does not establish historical provenance of that change."
+  }
+}
