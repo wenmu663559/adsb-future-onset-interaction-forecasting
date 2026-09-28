@@ -1,0 +1,95 @@
+\documentclass[10pt,journal,letterpaper]{IEEEtran}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,url}
+\usepackage[hidelinks]{hyperref}
+\renewcommand{\small}{\normalsize}
+\renewcommand{\footnotesize}{\normalsize}
+\raggedbottom
+\begin{document}
+\begin{center}
+{\large Supplementary Material}\\[3pt]
+Forecasting Interaction Onsets from Aircraft Surveillance\\
+with Compact Relational Features
+\end{center}
+\setcounter{table}{1}
+\setcounter{equation}{2}
+\section{Additional Analyses}
+These analyses use the primary evaluation data; they are not additional independent transfer trials. Horizons are ordered as 30, 120, and 300~s throughout.
+
+\subsection{Target Sensitivity}
+Changing the report-staleness bound from 30 to 15 or 60~s changes the 120-s development episode total from 12,731 to 12,601 or 13,471. This tests target construction, not prediction robustness. Separate one-factor checks use horizontal cutoffs 3/5/7~NM, vertical cutoffs 500/1,000/1,500~ft, and training quantiles 0.70/0.75/0.80/0.90. Larger geometric cutoffs need not increase onsets because more pairs are already active at the cutoff. Integer counts can make different quantiles share a threshold. In the distributional comparison below, KAGC retains the NB2 probability advantage at 30~s for q70--q80 and at 120~s for q70--q75; the 300-s result depends on the threshold. The primary analysis uses q75 throughout.
+
+\subsection{Exploratory Count Distributions}
+After the primary evaluation, an unpenalized negative-binomial (NB2) model was fitted on the same standardized B inputs and KBTP training scenes. Its mean is $\mu=\exp(\beta_0+x^{\mathsf T}\beta)$ and variance $\mu+\alpha\mu^2$; coefficients and positive dispersion are jointly estimated by maximum likelihood. Exceedance probability is $1-F_{\mathrm{NB2}}(q-1;\mu,\alpha)$.
+
+Against matched Poisson models, NB2 reduces group-equal negative log likelihood by 0.062/0.272/0.891 at KBTP and 0.009/0.131/0.489 at KAGC, with wins in 7/8, 7/8, 8/8 and 7/10, 10/10, 10/10 groups. NB2-minus-Logistic Brier differences are $+0.00047/-0.00085/-0.00143$ and $-0.00758/-0.00275/+0.00040$, respectively. Requiring lower likelihood loss and at least one lower probability score (Brier or log loss), each with a strict majority of group wins, yields improvement only at KBTP 120~s and KAGC 30/120~s. Count-distribution fit does not guarantee better exceedance probabilities.
+
+\subsection{Local History and Measurement Limits}
+For each KAGC group, local references pool only earlier groups whose last forecast windows end before its first cutoff. Excluding the initial warm-up group leaves nine groups and 1,157 scenes. All methods use this same subset and KBTP thresholds; local references additionally use past KAGC labels.
+
+\begin{center}
+\refstepcounter{table}\label{tab:local}
+TABLE \thetable\\
+KAGC LOCAL-HISTORY COMPARISON (LOWER IS BETTER)\par
+\medskip
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrr}
+\toprule
+Model / metric & 30 s & 120 s & 300 s\\
+\midrule
+B MAE & 0.352 & 1.033 & 2.038\\
+A MAE & 0.339 & 1.041 & 2.029\\
+KBTP pair-rate MAE & 0.397 & 1.111 & 2.119\\
+Local pair-rate MAE & 0.459 & 1.305 & 2.499\\
+Local mean MAE & 0.498 & 1.371 & 2.563\\
+Local median MAE & 0.268 & 1.120 & 2.301\\
+B Brier & 0.168 & 0.188 & 0.163\\
+KBTP prevalence Brier & 0.171 & 0.205 & 0.165\\
+Local prevalence Brier & 0.179 & 0.218 & 0.185\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The local median is better for 30-s count MAE. The nine-group probability results differ from the full ten-group evaluation and must be read on their own sample set. Both aircraft have usable prior states for 90.1\% of KBTP pairs but 62.2\% of KAGC pairs. Degenerate relative velocity occurs in 0.07\% and 8.14\% of eligible pairs. These differences limit the CPA comparison without establishing a causal explanation. Reliability summaries use ten equal-width bins; sparsely occupied upper bins do not provide precise calibration evidence.
+
+\clearpage
+\section{Information for Reproducibility}
+\subsection{Data and Partitions}
+Obtain raw ADS-B reports from TartanAviation under its applicable terms. The main article specifies the observation cylinder, busiest-bin window selection, report staleness, target construction, and features. The development source dates are partitioned as follows (all UTC): training, 2021-03-22 and 2022-06-08/13/17/23/24/30, 2022-08-19, 2022-09-01, 2022-10-06; validation, 2020-10-22, 2021-04-05, 2022-06-20; retrospective testing, 2022-06-14/21, 2022-07-25, 2022-09-20.
+
+KBTP confirmation source groups are identified by 2020-09-26, 2020-10-13, 2021-03-27, 2021-12-20, 2022-01-03, 2022-06-16, 2022-07-19, and 2022-10-24. KAGC groups are 2021-11-04, 2021-12-20, and 2022-01-03, 02-20, 03-21, 04-26, 05-19, 06-20, 07-22, 08-26. A source crossing midnight remains one group. Scene totals are 6,008 development, 2,605 confirmation, and 1,268 external. Source selection must reproduce these groups rather than sample replacement dates.
+
+\subsection{Environment and Estimators}
+The recorded CPU recomputation environment uses Windows~11, Python~3.13.12, NumPy~2.3.5, scikit-learn~1.7.2, and joblib~1.6.0. Fit standardization on training scenes only. Ridge uses regularization 1.0 on $\log(1+Y)$ and returns $\max\{\exp(\widehat z)-1,0\}$. Poisson regression is unpenalized with 1,000 maximum iterations. Logistic regression uses $L_2$, $C=1$, lbfgs, 1,000 maximum iterations, and seed 1701. Histogram gradient boosting uses Poisson loss, 100 iterations, 15 maximum leaf nodes, learning rate 0.05, $L_2=1$, and seed 1701.
+
+\begin{center}
+\refstepcounter{table}\label{tab:validation}
+TABLE \thetable\\
+DEVELOPMENT VALIDATION (EQUAL-DATE MEANS)\par
+\medskip
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{ccrrrr}
+\toprule
+$h$ & Set & Ridge & Poisson & Boosting & Logistic\\
+\midrule
+30 & A & .8029 & .8287 & .8466 & .2114\\
+30 & B & .7842 & .8058 & .7957 & .2086\\
+30 & C & .7484 & .7530 & .7946 & .2049\\
+120 & A & 2.1175 & 2.1039 & 2.2287 & .1638\\
+120 & B & 2.0367 & 2.0205 & 2.1155 & .1509\\
+120 & C & 2.0086 & 1.9940 & 2.0955 & .1526\\
+300 & A & 4.5162 & 4.2415 & 4.7112 & .1850\\
+300 & B & 4.4149 & 4.1418 & 4.3462 & .1575\\
+300 & C & 4.3931 & 4.1567 & 4.3351 & .1601\\
+\bottomrule
+\end{tabular}
+\end{center}
+Count columns report MAE; Logistic reports Brier score. These three-date validation results guide model development, not confirmation. Use B with Ridge at 30~s, Poisson at 120/300~s, and Logistic for all exceedance probabilities.
+
+\subsection{Evaluation and Verification}
+Compute the higher-rule training 75th percentiles, giving thresholds 1/2/5, and retain them at KAGC. Compute MAE and Brier within each source group, then average groups equally. Reconstruct exposure rates and prevalence from KBTP training only. For uncertainty, resample paired group differences 20,000 times with seed 170104; use pointwise percentile 95\% intervals and two-sided sign tests excluding ties, with Holm correction across the 18 primary comparisons.
+
+A separate implementation reproduces the development onset-target scenes exactly. Recorded recomputation of the primary group metrics gives zero difference across 18 comparisons (absolute tolerance $10^{-9}$). This is an internal reconstruction and recomputation check, not an independent replication or a new test set. The numerical results remain subject to the small number of source groups and selected high-activity windows described in the main article.
+\subsection{Code and Supporting Artifacts}
+Source code, source-selection configurations, dependency requirements, and machine-readable result summaries are available in the \href{https://github.com/wenmu663559/adsb-future-onset-interaction-forecasting}{public GitHub repository} (code revision \href{https://github.com/wenmu663559/adsb-future-onset-interaction-forecasting/tree/9275afc5b6befa4f9e9525234ddca2b2b103f647}{\texttt{9275afc}}). The README describes environment setup; experiment runners are in \texttt{scripts/}, configurations in \texttt{configs/}, and results in \texttt{reports/references/}. Raw data, derived scenes, and model checkpoints are not redistributed in this repository. Obtain the raw data separately and configure local paths before reconstructing scenes and running the analyses. Repository availability is distinct from independent end-to-end replication.
+\end{document}

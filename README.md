@@ -61,7 +61,11 @@ Artifact-integrity tests that require non-redistributed derived ADS-B scenes are
 
 ## Paper
 
-The current manuscript is available as `paper/paper.pdf`; its source is `paper/main.tex` with bibliography in `paper/references.bib`.
+The revised IEEE Signal Processing Letters manuscript is available as [paper/paper.pdf](paper/paper.pdf) (4 pages). Its source is `paper/main.tex`, with bibliography in `paper/references.bib` and generated bibliography in `paper/main.bbl`.
+
+The accompanying [paper/supplement.pdf](paper/supplement.pdf) contains one page of Supplementary Material and one page of Information for Reproducibility. Its source is `paper/supplement.tex`. The manuscript and supplement include clickable links to this repository. Author metadata is still awaiting final confirmation; these files are not a record of journal submission or acceptance.
+
+From the `paper/` directory, compile the manuscript with `pdflatex main`, `bibtex main`, and two further runs of `pdflatex main`; copy the resulting `main.pdf` to `paper.pdf`. Compile the supplement with two runs of `pdflatex supplement`. The existing figure assets are retained for the research record.
 
 ## Author
 
