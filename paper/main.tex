@@ -39,6 +39,8 @@ Y_h(t)=\sum_{k=1}^{h/10}|P(\tau_k)\setminus P(\tau_{k-1})|,
 \end{equation}
 where $h\in\{30,120,300\}$~s. A pair active at $t$ contributes nothing while continuously active; clearing and re-entering produces another episode. Thus $Y_h$ counts episodes, not distinct pairs. Future sets use post-cutoff reports with the same staleness bound. Report disappearance and reappearance can also produce observed onsets. Horizontal target distances use the haversine formula with Earth radius 6,371,008.8~m; altitude conversion does not reconcile different physical altitude references.
 
+For example, a pair already close at $t$ and still close at $t+10$~s contributes zero onsets. If it clears at $t+20$~s and returns at $t+30$~s, it contributes one. This definition separates event initiation from occupancy while retaining recurrent episodes; it does not infer unobserved continuous trajectories between surveillance samples.
+
 We predict both $Y_h$ and $\Pr(Y_h\geq q_h\mid x_t)$. The training-only 75th percentile, using the higher-quantile rule, gives $q_h=1,2,5$ for the three horizons. These are statistical event thresholds, not regulatory separation or risk levels.
 
 \subsection{Matched Feature Sets}
@@ -55,8 +57,6 @@ Both separations are evaluated at $s_h$; it is zero when $\|v_{xy}\|^2\leq10^{-9
 
 \subsection{Estimators and Reference Predictions}
 Identical scene IDs, targets, splits, and training-only preprocessing are used across A/B/C. Count candidates are standardized Ridge on $\log(1+Y_h)$ with regularization 1.0, unpenalized Poisson regression, and histogram gradient boosting with Poisson loss. Validation selects Ridge at 30~s and Poisson at 120 and 300~s. Standardized $L_2$-regularized Logistic regression with $C=1$ predicts exceedance probability; seed 1701 is used where applicable. For a single representation shared across horizons, we retain B as the parsimonious specification. B yields lower validation date-equal count error and Brier score than A throughout. C adds nine features and lowers the selected count models' errors at 30/120~s, but has higher count error at 300~s and higher Brier scores at 120/300~s. This development choice favors a compact shared representation; it does not imply horizon-specific optimality. Development scores and model settings appear in the supplementary material.
-
-For scene $i$ with $n_i$ aircraft, the exposure reference predicts $m_i\widehat\lambda_h$, where $m_i=n_i(n_i-1)/2$ and $\widehat\lambda_h=\sum_{j\in\mathrm{train}}Y_{jh}/\sum_{j\in\mathrm{train}}m_j$. The probability reference is the KBTP training exceedance frequency. Both retain their training values at KAGC. Training means, cutoff active-pair counts, and CPA counts provide additional simple count references. These controls separate predictive information from exposure and present-state persistence.
 
 \begin{table*}[!t]
 \caption{Held-out prediction with KBTP-trained models. Values are equal-group means; lower is better. Win counts compare B with the column's reference. The count and probability columns evaluate distinct fitted models.}
@@ -78,6 +78,14 @@ KAGC & 30 & 0.352 & 0.343 & 0.399 & 4/10, 9/10 & 0.1720 & 0.1728 & 6/10 \\
 \end{tabular}
 \end{table*}
 
+On the three validation dates, the selected count models give A/B/C mean errors of 0.8029/0.7842/0.7484 at 30~s, 2.1039/2.0205/1.9940 at 120~s, and 4.2415/4.1418/4.1567 at 300~s. Corresponding B/C Brier scores are 0.2086/0.2049, 0.1509/0.1526, and 0.1575/0.1601. These values make the tradeoff explicit: projection helps some validation comparisons but supplies no uniform improvement across the two tasks and three horizons. The shared B specification therefore tests a compact observed representation rather than a horizon-wise combination of feature sets.
+
+The selected Ridge output is $\max\{\exp(\widehat z)-1,0\}$, where $\widehat z$ predicts $\log(1+Y_h)$. Poisson and Logistic fits use at most 1,000 iterations; Logistic uses the lbfgs solver. The boosting candidate uses Poisson loss, 100 iterations, at most 15 leaves, learning rate 0.05, and $L_2$ regularization 1.0. Standardization parameters are estimated only on KBTP training scenes and reused at both evaluation airports.
+
+For scene $i$ with $n_i$ aircraft, the exposure reference predicts $m_i\widehat\lambda_h$, where $m_i=n_i(n_i-1)/2$ and $\widehat\lambda_h=\sum_{j\in\mathrm{train}}Y_{jh}/\sum_{j\in\mathrm{train}}m_j$. The probability reference is the KBTP training exceedance frequency. Both retain their training values at KAGC. Training means, cutoff active-pair counts, and CPA counts provide additional simple count references. These controls separate predictive information from exposure and present-state persistence.
+
+
+
 \section{Evaluation and Results}
 \subsection{Partitions and Statistical Units}
 KBTP development comprises 6,008 scenes on 17 UTC dates: 3,318 training scenes on ten dates, 1,247 validation scenes on three dates, and 1,443 retrospective test scenes on four dates. After completion of model development, eight unused KBTP source groups were selected by a predefined temporal-stratification procedure using authenticated row count only, without inspecting targets or model outputs, yielding 2,605 confirmation scenes. KAGC contributes 1,268 scenes from ten unused groups, one high-volume source per represented month from November 2021 to August 2022. Sources crossing a UTC boundary remain single groups. KAGC supplies no feature selection, normalization, threshold selection, or parameter tuning.
@@ -98,7 +106,17 @@ KAGC has lower mean targets than KBTP training: 0.345 versus 0.446, 1.258 versus
 \subsection{Sensitivity and Scope}
 The supplementary material summarizes target sensitivity, distributional prediction, local-history references, and reproduction settings. Changing the staleness bound to 15 or 60~s changes the 120-s development episode total from 12,731 to 12,601 or 13,471. This does not establish prediction robustness to altered staleness. Separate geometric and exceedance-threshold checks also leave long-horizon probability transfer threshold-sensitive.
 
-An exploratory negative-binomial analysis conducted after the primary evaluation improves count likelihood over matched Poisson models, but its exceedance probabilities do not consistently improve on Logistic regression. When past KAGC target labels are available, a chronological local median yields lower 30-s count MAE than B (0.268 versus 0.352) on nine groups after warm-up. This comparison uses additional local label information absent from the primary transfer setting; usefulness depends on the prediction objective and available history. These supplemental results are not additional independent transfer trials.
+An exploratory negative-binomial analysis conducted after the primary evaluation improves count likelihood over matched Poisson models, but its exceedance probabilities do not consistently improve on Logistic regression. Relative to matched Poisson models, its group-equal negative log likelihood is lower by 0.062/0.272/0.891 at KBTP and 0.009/0.131/0.489 at KAGC for 30/120/300~s. However, the joint likelihood-and-probability comparison criterion is met only at KBTP 120~s and KAGC 30/120~s. A fuller count distribution therefore need not improve the specific threshold-exceedance prediction task. The supplementary material gives the comparison rule and probability-score differences.
+
+When past KAGC target labels are available, a chronological local median yields lower 30-s count MAE than B (0.268 versus 0.352) on nine groups after warm-up. This comparison uses additional local label information absent from the primary transfer setting; usefulness depends on the prediction objective and available history. These supplemental results are not additional independent transfer trials.
+
+\subsection{Observation Coverage and Calibration}
+The observed-pair and CPA representations depend on the availability of earlier reports. Both aircraft have usable prior states for 18,502 of 20,536 current KBTP pairs (90.1\%) and 3,438 of 5,527 KAGC pairs (62.2\%). Among eligible pairs, relative horizontal velocity is degenerate for 0.07\% and 8.14\%, respectively, setting CPA time to zero. Thus the comparison concerns the CPA features that can be constructed from the available reports; it does not isolate the benefit of ideal motion estimates. These coverage differences do not establish why C lacks consistent gains.
+
+Freshness strata defined by maximum current-report age of at most 10~s versus greater than 10~s contain 1,950/655 KBTP scenes and 329/939 KAGC scenes. KBTP Brier scores are below prevalence in both strata at all horizons. At KAGC, the 30-s Brier scores are 0.149 versus 0.162 for the fresher stratum and 0.178 versus 0.176 for the older stratum. Differences in traffic composition and prevalence prevent a causal interpretation of this association. Reliability summaries use ten equal-width probability bins, and upper KAGC bins can contain only one or two scenes; apparent bin-level deviations are therefore imprecise.
+
+\subsection{Practical Scope}
+A local CPU timing sample of 31 scenes with 3--11 aircraft gives warm-call median and 95th-percentile times of 1.68 and 2.43~ms for history-to-feature computation and all three count and three probability outputs. The feature helper also computes unused CPA quantities. These measurements exclude network transfer, disk access, buffer maintenance, and initial history accumulation, so they describe computation at the observed scale rather than end-to-end deployment latency.
 
 The selected high-activity windows do not represent full-day traffic. Missing reports can affect the target, and usable prior-state coverage is lower at KAGC. Low-capacity relational summaries cannot resolve unobserved intent, weather, or controller actions. The target measures observed geometry and requires separate operational validation before it can support workload or safety decisions.
 
@@ -111,6 +129,7 @@ The raw surveillance data are available from TartanAviation \cite{patrikar2025ta
 \section*{Acknowledgment}
 OpenAI Codex assisted with manuscript restructuring and language revision of the existing methods and results.
 
+\clearpage
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 \end{document}
